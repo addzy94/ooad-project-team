@@ -6,7 +6,15 @@ public class Main {
         System.out.println("Your input: ");
         Scanner scanner = new Scanner(System.in);
         //set a value to keep the input entered by user through scanner
-        int input = scanner.nextInt();
+        int input = -1;
+        if(scanner.hasNextInt()) {
+            System.out.println("input is valid Integer");
+            input = scanner.nextInt();
+        }
+        else
+        {
+            System.out.println("input is not valid Integer!!!");
+        }
         System.out.println("Received input is: "+input);
         return input;
     }
