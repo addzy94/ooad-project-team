@@ -18,10 +18,14 @@ public class Main {
 
     public static void main(String[] args) {
         //print welcome word and read the user input
-        int input=hello();
+        //int input=hello();
+        Music test2=new Music("random");
+        System.out.println("the name is: " + test2.getName());
         Music test=new Music();
         test.setName("Gundam");
+        test.setCondition(5);
         System.out.println("the name is: " + test.getName());
+        System.out.println("the condition is: " + test.getCondition());
     }
 }
 
