@@ -19,6 +19,9 @@ public class Main {
     public static void main(String[] args) {
         //print welcome word and read the user input
         int input=hello();
+        Music test=new Music();
+        test.setName("Gundam");
+        System.out.println("the name is: " + test.getName());
     }
 }
 
