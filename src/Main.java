@@ -19,13 +19,10 @@ public class Main {
     public static void main(String[] args) {
         //print welcome word and read the user input
         //int input=hello();
-        Music test2=new Music("random");
-        System.out.println("the name is: " + test2.getName());
-        Music test=new Music();
-        test.setName("Gundam");
-        test.setCondition(5);
-        System.out.println("the name is: " + test.getName());
+        Music test=new Music("Stars", 12.5, 2, 5, "Fun.", "Some Nights");
+        System.out.println("the name of the song is: " + test.getName());
         System.out.println("the condition is: " + test.getCondition());
+        System.out.println("the band name is: " + test.getBand());
     }
 }
 
