@@ -19,6 +19,8 @@ public class Main {
     public static void main(String[] args) {
         //print welcome word and read the user input
         //int input=hello();
+
+        //test cases
         Music test=new Music("Stars", 12.5, 2, 5, "Fun.", "Some Nights");
         System.out.println("the name of the song is: " + test.getName());
         System.out.println("the condition is: " + test.getCondition());
