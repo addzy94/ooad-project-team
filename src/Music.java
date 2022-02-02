@@ -1,30 +1,24 @@
-class Music extends Item{
-    private String band;
-    private String album;
+public abstract class Music extends Item {
 
-    //constructor
-    Music(){
+    String band;
+    String album;
 
-    }
-    Music(String item_name, double purchase_price, int day_arrived, int new_condition, String new_band, String new_album){
-        //set all instance variables/attributes inherited from Item class
-        super(item_name,purchase_price,day_arrived,new_condition);
-        //set exculsive variables/attributes defined in Music class
-        setBand(new_band);
-        setAlbum(new_album);
+    Music (String name, double purchasePrice, int dayArrived, int condition, boolean isNew, String band, String album) {
+        super(name, purchasePrice, dayArrived, condition, isNew);
+        this.band = band;
+        this.album = album;
     }
 
-    //method
-    String getBand(){
+    String getBand() {
         return band;
     }
-    void setBand(String new_band){
-        band = new_band;
+    void setBand(String new_band) {
+        this.band = new_band;
     }
-    String getAlbum(){
+    String getAlbum() {
         return band;
     }
-    void setAlbum(String new_album){
-        album = new_album;
+    void setAlbum(String new_album) {
+        this.album = new_album;
     }
 }
