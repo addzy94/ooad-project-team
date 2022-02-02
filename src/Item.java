@@ -26,79 +26,48 @@ public abstract class Item {
         return name;
     }
     void setName(String new_name){
-        name=new_name;
+        name = new_name;
     }
     double getPurchasePrice(){
         return purchasePrice;
     }
     void setPurchasePrice(Double new_price){
-        purchasePrice=new_price;
+        purchasePrice = new_price;
     }
     double getListPrice(){
         return listPrice;
     }
     void setListPrice(Double new_price){
-        listPrice=new_price;
+        listPrice = new_price;
     }
     int getNewOrUsed(){
         return newOrUsed;
     }
     void setNewOrUsed(int result){
-        newOrUsed=result;
+        newOrUsed = result;
     }
     int getDayArrived(){
         return dayArrived;
     }
     void setDayArrived(int new_day){
-        dayArrived=new_day;
+        dayArrived = new_day;
     }
     int getCondition(){
         return condition;
     }
     void setCondition(int new_condition){
-        condition=new_condition;
+        condition = new_condition;
     }
     double getSalePrice(){
         return salePrice;
     }
     void setSalePrice(double new_price){
-        salePrice=new_price;
+        salePrice = new_price;
     }
     int getDaySold(){
         return daySold;
     }
     void setDaySold(int new_day){
-        daySold=new_day;
-    }
-}
-
-class Music extends Item{
-    private String band;
-    private String album;
-
-    //constructor
-    Music(){
-
-    }
-    Music(String item_name, double purchase_price, int day_arrived, int new_condition, String new_band, String new_album){
-        //set all instance variables/attributes inherited from Item class
-        super(item_name,purchase_price,day_arrived,new_condition);
-        //set exculsive variables/attributes defined in Music class
-        setBand(new_band);
-        setAlbum(new_album);
-    }
-
-    //method
-    String getBand(){
-        return band;
-    }
-    void setBand(String new_band){
-        band=new_band;
-    }
-    String getAlbum(){
-        return band;
-    }
-    void setAlbum(String new_album){
-        album=new_album;
+        daySold = new_day;
     }
 }
