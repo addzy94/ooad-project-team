@@ -42,20 +42,44 @@ public class Main {
         //2. Simulation starts
         //run daily-based loops - can we define what day of the week as the starting day????????
         //assign a clerk to work for that day (allow work for maximum 3 days in a row) - if Fri/Sat/Sun(break)/Mon, then is it still 3 days in a row?
-        //print announcement for reporting who arrives at the store on which day
-        //check delivered orders called by PlaceAnOrder action, and put them into the inventory item list for selling
-        //
 
         //our_shop.run_business();
-            //which contains:
-            //ArriveAtStore
-            //CheckRegister
-            //GoToBank
-            //DoInventory
-            //PlaceAnOrder
-            //OpenTheStore
-            //CleanTheStore
-            //LeaveTheStore
+        //which contains:
+            //ArriveAtStore:
+                // clerk announce their arrival at the store
+                // check delivered orders called by PlaceAnOrder action, and put them into the inventory item list for selling
+            //CheckRegister:
+                // clerk will count and announce the amount of money found in the register
+                // if there is insufficient money in the register, the clerk must perform the GoToBank action next before going on to DoInventory
+            //GoToBank:
+                // performed if there is less than $75 in the register
+                // goto bank, withdraw $1000, put money in the store register with an announcement  - can the bank offer infinite amount of money?????
+                // the amount of money withdrawn from the bank in this manner should be tracked
+            //DoInventory:
+                // the clerk will add up the value of all the items in the store based on purchasePrice, announce that total value
+                // if any of the ite subclasses has a count of 0 (e.g. 0 CD player item in the inventory), perform PlaceAnOrder action for each missing item
+                // announce this action
+            //PlaceAnOrder:
+                // works for each subclass item that has 0 inventory
+                // orders 3 for each missing item subclass, each with random purchasePrice and other randomly determined characteristics
+                // purchasePrice paid for each item should be done by removing the funds from Cash Register
+                // these ordered items should arrive at store in teh next 1 to 3 days (handled by ArriveAtStore method)
+                // all activity should be announced
+            //OpenTheStore:
+                // clerk will respond to arriving customers.
+                // customers will come in to either buy or sell a single item.
+                // wil be 4 to 10 buying customers and 1 to 4 selling customers each day
+                // all actions taken by customers should be announced
+                // customer that didn't buy or sell due to possible reasons still counts as 1 buying/selling customer???????
+            //CleanTheStore:
+                // Velma is a careful cleaner and only damages a random item in inventory 5% of the time
+                // Shaggy is less careful and damages a random item in inventory 20% of the time
+                // When damaged, lower that damaged item condition by 1.
+                // If item condition was already poor (1) before damaging, remove it from the list of inventory
+                // anything that occurs in this phase should be announced
+            //LeaveTheStore:
+                // clerk lock up the store and go home.
+                // announce this action.
 
         //or............
 
@@ -66,5 +90,13 @@ public class Main {
         //3. At the end of the 30th day, print out a summary of the state of the simulated store
         //4. Record all console output in Output.txt
     }
+
+
+//    public static void main(String[] args) {
+//        Store our_shop = new Store();
+//        our_shop.initialize_inventory();
+//        our_shop.run_daily_based_business();
+//        our_shop.report();
+//    }
 }
 
