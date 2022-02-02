@@ -1,73 +1,92 @@
 public abstract class Item {
-    //attributes
+
     String name;
     double purchasePrice;
     double listPrice;
-    int newOrUsed;
+    boolean isNew;
     int dayArrived;
     int condition;
     double salePrice;
     int daySold;
 
-    //constructor
-    Item(){
+    Item() {}
 
-    }
-    Item(String item_name, double purchase_price, int day_arrived, int new_condition) {
-        //set all instance variables/attributes
-        setName(item_name);
-        setPurchasePrice(purchase_price);
-        setDayArrived(day_arrived);
-        setCondition(new_condition);
+    Item(String name, double purchasePrice, int dayArrived, int condition, boolean isNew) {
+
+        this.name = name;
+
+        this.purchasePrice = purchasePrice;
+        this.listPrice = 2 * purchasePrice;
+
+        this.dayArrived = dayArrived;
+        this.condition = condition;
+        this.isNew = isNew;
+
+        this.daySold = -1;
+        this.salePrice = -1;
     }
 
-    //methods
-    String getName(){
+    String getName() {
         return name;
     }
-    void setName(String new_name){
-        name = new_name;
+
+    void setName(String name) {
+        this.name = name;
     }
-    double getPurchasePrice(){
+
+    double getPurchasePrice() {
         return purchasePrice;
     }
-    void setPurchasePrice(Double new_price){
-        purchasePrice = new_price;
+
+    void setPurchasePrice(double purchasePrice) {
+        this.purchasePrice = purchasePrice;
     }
-    double getListPrice(){
+
+    double getListPrice() {
         return listPrice;
     }
-    void setListPrice(Double new_price){
-        listPrice = new_price;
+
+    void setListPrice(double listPrice) {
+        this.listPrice = listPrice;
     }
-    int getNewOrUsed(){
-        return newOrUsed;
+
+    boolean getIsNew() {
+        return isNew;
     }
-    void setNewOrUsed(int result){
-        newOrUsed = result;
+
+    void setIsNew(boolean isNew) {
+        this.isNew = isNew;
     }
-    int getDayArrived(){
+
+    int getDayArrived() {
         return dayArrived;
     }
-    void setDayArrived(int new_day){
-        dayArrived = new_day;
+
+    void setDayArrived(int dayArrived) {
+        this.dayArrived = dayArrived;
     }
-    int getCondition(){
+
+    int getCondition() {
         return condition;
     }
-    void setCondition(int new_condition){
-        condition = new_condition;
+
+    void setCondition(int condition) {
+        this.condition = condition;
     }
-    double getSalePrice(){
+
+    double getSalePrice() {
         return salePrice;
     }
-    void setSalePrice(double new_price){
-        salePrice = new_price;
+
+    void setSalePrice(double salePrice){
+        this.salePrice = salePrice;
     }
-    int getDaySold(){
+
+    int getDaySold() {
         return daySold;
     }
-    void setDaySold(int new_day){
-        daySold = new_day;
+
+    void setDaySold(int daySold) {
+        this.daySold = daySold;
     }
 }
