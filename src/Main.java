@@ -57,7 +57,7 @@ public class Main {
             //CleanTheStore
             //LeaveTheStore
 
-        //or...........
+        //or............
 
         //for(int i=0;i<30;i++){
         //  our_shop.run_a_day();
