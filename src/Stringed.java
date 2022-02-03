@@ -1,4 +1,4 @@
-public abstract class Stringed extends Item {
+public abstract class Stringed extends Instrument {
 
     boolean isElectric;
 
