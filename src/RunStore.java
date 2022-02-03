@@ -4,5 +4,6 @@ public class RunStore {
         Store a = new Store();
         a.initialize();
         a.run();
+        a.displayInventory();
     }
 }
