@@ -16,7 +16,7 @@ public abstract class Music extends Item {
         this.band = new_band;
     }
     String getAlbum() {
-        return band;
+        return album;
     }
     void setAlbum(String new_album) {
         this.album = new_album;

@@ -2,7 +2,7 @@ public class Cable extends Accessory {
 
     double length;
 
-    Cable (String name, double purchasePrice, int dayArrived, int condition, boolean isNew, double length) {
+    public Cable (String name, double purchasePrice, int dayArrived, int condition, boolean isNew, double length) {
         super(name, purchasePrice, dayArrived, condition, isNew);
         this.length = length;
     }

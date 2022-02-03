@@ -2,7 +2,7 @@ public class PracticeAmp extends Accessory {
 
     double wattage;
 
-    PracticeAmp (String name, double purchasePrice, int dayArrived, int condition, boolean isNew, double wattage) {
+    public PracticeAmp (String name, double purchasePrice, int dayArrived, int condition, boolean isNew, double wattage) {
         super(name, purchasePrice, dayArrived, condition, isNew);
         this.wattage = wattage;
     }
