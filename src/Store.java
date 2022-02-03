@@ -14,48 +14,25 @@ public class Store {
     Store() {
     }
 
-    public void initialize() {
+    public void initialize(int numberofObjects) {
 
         /*
-        Is Going to Create all the Initial Objects in the Store
+        Is Going to create 'numberofObjects' Objects of each type in the Store
         on the 0th Day.
          */
 
-        Constants.generateMaps();
+        Constants.generateMaps(); // Declares all the constants and initializes them
         this.random = new Random();
-
-        //Code in Progress
         this.inventory = new HashMap<>();
 
-        int n = 3;
-
         try {
-            ArrayList<String> classNames = new ArrayList<>(Arrays.asList(
-                    "PaperScore",
-                    "CD",
-                    "Vinyl",
-                    "CDPlayer",
-                    "RecordPlayer",
-                    "MP3Player",
-                    "Guitar",
-                    "Bass",
-                    "Mandolin",
-                    "Flute",
-                    "Harmonica",
-                    "Hat",
-                    "Shirt",
-                    "Bandana",
-                    "PracticeAmp",
-                    "Cable",
-                    "Strings"));
-
-            for (String className : classNames) {
+            for (String className : Constants.CLASS_NAMES) {
                 Class[] parameters = Constants.CLASS_PARAMETER_MAPPING.get(className);
 
                 Class classObj = Class.forName(className);
                 Constructor constructor = classObj.getConstructor(parameters);
 
-                for(int i = 0; i < n; i++) {
+                for(int i = 0; i < numberofObjects; i++) {
                     Object classInstance = constructor.newInstance(getParams(className, i).toArray());
                     Item it = ((Item) classInstance);
                     if (inventory.containsKey(className)) {
@@ -75,11 +52,14 @@ public class Store {
     }
 
     public ArrayList<Object> getParams(String classType, int i) {
+        /*
+        Generates randomized but relevant parameters for each type of Item.
+         */
 
         ArrayList<Object> params = new ArrayList<>(Arrays.asList(
                 random.nextDouble(500) + 500,
-                random.nextInt(5),
                 0,
+                random.nextInt(5) + 1,
                 random.nextBoolean()));
         switch (classType) {
             case "PaperScore":
@@ -135,73 +115,64 @@ public class Store {
     }
 
     public void displayInventory() {
+        /*
+        Displays everything in the inventory
+         */
 
         for(String itemType: inventory.keySet()) {
             System.out.println("Type of Item: " + itemType);
             for (Item i: inventory.get(itemType)) {
-                System.out.println("\t Name: " + i.getName());
-                System.out.println("\t Purchase Price: " + i.getPurchasePrice());
-                System.out.println("\t List Price: " + i.getListPrice());
-                System.out.println("\t New? " + Constants.NEW_OR_USED_MAPPING.get(i.getIsNew()));
-                System.out.println("\t Day Arrived: " + i.getDayArrived());
-                System.out.println("\t Condition: " + Constants.CONDITION_MAPPING.get(i.getCondition()));
-                System.out.println("\t Sale Price: " + i.getSalePrice());
-                System.out.println("\t Day Sold: " + i.getDaySold());
+                if (i.getDaySold() == -1) { // If it is not yet sold, display it.
+                    System.out.println("\t Name: " + i.getName());
+                    System.out.println("\t Purchase Price: " + i.getPurchasePrice());
+                    System.out.println("\t List Price: " + i.getListPrice());
+                    System.out.println("\t New? " + Constants.NEW_OR_USED_MAPPING.get(i.getIsNew()));
+                    System.out.println("\t Day Arrived: " + i.getDayArrived());
+                    System.out.println("\t Condition: " + Constants.CONDITION_MAPPING.get(i.getCondition()));
+                    System.out.println("\t Sale Price: " + i.getSalePrice());
+                    System.out.println("\t Day Sold: " + i.getDaySold());
 
-                if (i instanceof Music) {
-                    System.out.println("\t Band Name: " + ((Music) i).getBand());
-                    System.out.println("\t Album Name: " + ((Music) i).getAlbum());
-                }
+                    if (i instanceof Music) {
+                        System.out.println("\t Band Name: " + ((Music) i).getBand());
+                        System.out.println("\t Album Name: " + ((Music) i).getAlbum());
+                    } else if (i instanceof Instrument) {
 
-                else if (i instanceof Instrument) {
+                        if (i instanceof Stringed) {
+                            System.out.println("\t Is Electric: " + ((Stringed) i).getIsElectric());
+                        } else if (i instanceof Wind) {
 
-                    if (i instanceof Stringed) {
-                        System.out.println("\t Is Electric: " + ((Stringed) i).getIsElectric());
-                    }
-
-                    else if (i instanceof Wind) {
-
-                        if (i instanceof Flute) {
-                            System.out.println("\t Flute Type: " + ((Flute) i).getType());
+                            if (i instanceof Flute) {
+                                System.out.println("\t Flute Type: " + ((Flute) i).getType());
+                            } else if (i instanceof Harmonica) {
+                                System.out.println("\t Harmonica Key: " + ((Harmonica) i).getKey());
+                            }
                         }
-                        else if (i instanceof Harmonica) {
-                            System.out.println("\t Harmonica Key: " + ((Harmonica) i).getKey());
+                    } else if (i instanceof Clothing) {
+
+                        if (i instanceof Hat) {
+                            System.out.println("\t Hat Size: " + ((Hat) i).getHatSize());
+                        } else if (i instanceof Shirt) {
+                            System.out.println("\t Harmonica Key: " + ((Shirt) i).getShirtSize());
+                        }
+                    } else if (i instanceof Accessory) {
+
+                        if (i instanceof PracticeAmp) {
+                            System.out.println("\t Hat Size: " + ((PracticeAmp) i).getWattage());
+                        } else if (i instanceof Cable) {
+                            System.out.println("\t Harmonica Key: " + ((Cable) i).getLength());
+                        } else if (i instanceof Strings) {
+                            System.out.println("\t Harmonica Key: " + ((Strings) i).getType());
                         }
                     }
+                    System.out.println();
                 }
-
-                else if (i instanceof Clothing) {
-
-                    if (i instanceof Hat) {
-                        System.out.println("\t Hat Size: " + ((Hat) i).getHatSize());
-                    }
-
-                    else if (i instanceof Shirt) {
-                        System.out.println("\t Harmonica Key: " + ((Shirt) i).getShirtSize());
-                    }
-                }
-
-                else if (i instanceof Accessory) {
-
-                    if (i instanceof PracticeAmp) {
-                        System.out.println("\t Hat Size: " + ((PracticeAmp) i).getWattage());
-                    }
-
-                    else if (i instanceof Cable) {
-                        System.out.println("\t Harmonica Key: " + ((Cable) i).getLength());
-                    }
-
-                    else if (i instanceof Strings) {
-                        System.out.println("\t Harmonica Key: " + ((Strings) i).getType());
-                    }
-                }
-            System.out.println();
             }
         }
     }
-    public void run() {
+
+    public void run(int numberOfDays) {
         /*
-        Runs the Store for 30 Days.
+        Runs the Store for 'numberOfDays' Days.
          */
     }
 

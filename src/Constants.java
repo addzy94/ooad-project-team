@@ -5,11 +5,11 @@ import java.util.HashMap;
 public class Constants {
 
     // Condition Values
-    public static int POOR = 0;
-    public static int FAIR = 1;
-    public static int GOOD = 2;
-    public static int VERY_GOOD = 3;
-    public static int EXCELLENT = 4;
+    public static int POOR = 1;
+    public static int FAIR = 2;
+    public static int GOOD = 3;
+    public static int VERY_GOOD = 4;
+    public static int EXCELLENT = 5;
 
     // New Or Used
     public static boolean NEW = true;
@@ -103,6 +103,25 @@ public class Constants {
             "Brass and Bronze",
             "Nylon"
     ));
+
+    public static ArrayList<String> CLASS_NAMES = new ArrayList<>(Arrays.asList(
+            "PaperScore",
+            "CD",
+            "Vinyl",
+            "CDPlayer",
+            "RecordPlayer",
+            "MP3Player",
+            "Guitar",
+            "Bass",
+            "Mandolin",
+            "Flute",
+            "Harmonica",
+            "Hat",
+            "Shirt",
+            "Bandana",
+            "PracticeAmp",
+            "Cable",
+            "Strings"));
 
     static void generateMaps() {
 
