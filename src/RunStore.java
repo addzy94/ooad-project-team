@@ -7,6 +7,7 @@ public class RunStore {
 //        a.displayInventory();
 //    }
 
+    //to run it in Main.java
     public static void run() {
         Store a = new Store();
         a.initialize(3);
