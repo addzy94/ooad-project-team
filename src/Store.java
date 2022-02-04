@@ -51,6 +51,9 @@ public class Store {
                         addToInventory(itemType, item);
                     }
                     else {
+                        item.setDayArrived(day + Helper.random.nextInt(3) + 1);
+                        addToInventory(itemType, item);
+                    }
                         if (item.getPurchasePrice() <= getRegisterAmount()) {
                             item.setDayArrived(day + Helper.random.nextInt(3) + 1);
                             this.setRegisterAmount(this.getRegisterAmount() - item.getPurchasePrice());
@@ -59,13 +62,12 @@ public class Store {
                         else {
                             System.out.println("Couldn't purchase the " + item.getName() + " " + itemType + " as we were out of funds.");
                         }
-                    }
                 }
             }
         }
 
         catch(Exception e) {
-            System.out.println("Errors");
+            System.out.println("Error!");
             e.printStackTrace();
         }
     }
@@ -75,7 +77,6 @@ public class Store {
         Object classInstance = null;
 
         try {
-
             Class[] parameters = Constants.CLASS_PARAMETER_MAPPING.get(itemType);
             Class classObj = Class.forName(itemType);
             Constructor constructor = classObj.getConstructor(parameters);
@@ -126,7 +127,7 @@ public class Store {
         for(String itemType: inventory.keySet()) {
             System.out.println("Type of Item: " + itemType);
             for (Item i: inventory.get(itemType)) {
-                if (i.getDaySold() == -1) { // If it is not yet sold, display it.
+                if (i.getDaySold() == -1 && i.getDayArrived() <= this.day) { // If it is not yet sold, display it.
                     System.out.println("\t Name: " + i.getName());
                     System.out.println("\t Purchase Price: " + i.getPurchasePrice());
                     System.out.println("\t List Price: " + i.getListPrice());
@@ -179,8 +180,8 @@ public class Store {
         double inventoryVal = 0;
 
         for(String itemType: inventory.keySet()) {
-            for (Item i : inventory.get(itemType)) {
-                if (i.getDaySold() == -1) {
+            for (Item i: inventory.get(itemType)) {
+                if (i.getDayArrived() <= this.getDay()) {
                     inventoryVal += i.getPurchasePrice();
                 }
             }
@@ -227,16 +228,14 @@ public class Store {
     }
 
     public Clerk chooseClerk() {
-        int clerkValue = Helper.random.nextInt(2);
-        Clerk c = (Clerk) staff.get(clerkValue);
-        if (c.getDaysWorkedInARow() == 3) {
-            c.setIsActiveWorker(false);
-            c.setDaysWorkedInARow(0);
 
-            c = (Clerk) staff.get(Helper.FlipNumber(clerkValue));
+        Clerk c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
+
+        while (c.getDaysWorkedInARow() != 3) {
+            c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
         }
         c.setIsActiveWorker(true);
-        c.incrementDaysWorkedInARow();
+        c.incrementDaysWorkedInARow(this);
         return c;
     }
 
@@ -277,5 +276,13 @@ public class Store {
 
     public void setDay(int day) {
         this.day = day;
+    }
+
+    public ArrayList<Staff> getStaff() {
+        return staff;
+    }
+
+    public void setStaff(ArrayList<Staff> staff) {
+        this.staff = staff;
     }
 }

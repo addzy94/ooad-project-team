@@ -36,7 +36,11 @@ public abstract class Staff {
         this.isActiveWorker = isActiveWorker;
     }
 
-    public void incrementDaysWorkedInARow() {
-        this.daysWorkedInARow += 1;
+    public void incrementDaysWorkedInARow(Store s) {
+        int daysWorkedCurrently = this.getDaysWorkedInARow();
+        for (Staff staff: s.getStaff()) {
+            staff.setDaysWorkedInARow(0);
+        }
+        this.daysWorkedInARow = daysWorkedCurrently + 1;
     }
 }

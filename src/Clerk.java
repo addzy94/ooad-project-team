@@ -72,6 +72,7 @@ public class Clerk extends Staff {
             System.out.println("Customer " + customerName + " left the store without buying the " + itemType + " as there was no stock.");
         }
         else {
+            // Get items which are at the store.
             int found = Helper.random.nextInt(storeInv.get(itemType).size());
             Item itemChosen = storeInv.get(itemType).get(found);
             double listPrice = itemChosen.getListPrice();
@@ -219,5 +220,6 @@ public class Clerk extends Staff {
 
     public void LeaveTheStore(Store s) {
         System.out.println(this.getName() + " left the store for the day.");
+        this.setIsActiveWorker(false);
     }
 }
