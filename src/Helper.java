@@ -10,14 +10,23 @@ public class Helper {
         return (i == 0) ? 1 : 0;
     }
 
-    public static ArrayList<Object> getParams(String itemType, int day, boolean isStartDay) {
+    public static double priceEstimator(boolean isNew, int condition) {
+
+        double price = Helper.random.nextDouble(50) + 1;
+        double multiplier = 1;
+        multiplier *= Constants.CONDITION_PRICE_MAPPING.get(condition);
+        if (!isNew) {
+            multiplier *= 0.80;
+        }
+
+        price = price * multiplier;
+        return price;
+    }
+
+    public static ArrayList<Object> getParams(String itemType, int day) {
         /*
         Generates randomized but relevant parameters for each type of Item passed as 'classType'.
          */
-
-        if (!isStartDay) {
-            day = day + random.nextInt(3) + 1;
-        }
 
         ArrayList<Object> params = new ArrayList<>(Arrays.asList(
                 Helper.random.nextDouble(49) + 1, // PurchasePrice
@@ -75,5 +84,13 @@ public class Helper {
                 params.add(Constants.STRING_TYPES.get(Helper.random.nextInt(Constants.STRING_TYPES.size())));
         }
         return params;
+    }
+
+    public static ArrayList<String> customerRequirements(ArrayList<String> itemTypes, int numberOfItems) {
+        ArrayList<String> items = new ArrayList<>();
+        for (int i = 0; i < numberOfItems; i++) {
+            items.add(itemTypes.get(Helper.random.nextInt(itemTypes.size())));
+        }
+        return items;
     }
 }

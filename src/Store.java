@@ -5,10 +5,11 @@ import java.util.HashMap;
 
 public class Store {
 
+    int day;
     double registerAmount;
     double amountWithdrawnFromBank;
     HashMap<String, ArrayList<Item>> inventory;
-    HashMap<String, ArrayList<Item>> soldInventory;
+    HashMap<String, ArrayList<Item>> soldLogBook;
     ArrayList<Staff> staff;
 
     Store() {
@@ -21,9 +22,15 @@ public class Store {
         on the 0th Day.
          */
 
+        this.day = 0;
         this.registerAmount = 0;
         this.amountWithdrawnFromBank = 0;
-        generateInventory(numberofObjects, Constants.CLASS_NAMES, 0, true);
+        this.inventory = new HashMap<>();
+        this.soldLogBook = new HashMap<>();
+
+        Constants.generateMaps(); // Declares all the constants and initializes them
+
+        generateInventory(numberofObjects, Constants.CLASS_NAMES, true);
 
         Clerk shaggy = new Clerk("Shaggy", 0);
         Clerk velma = new Clerk("Velma", 0);
@@ -34,26 +41,24 @@ public class Store {
         staff.add((Staff) velma);
     }
 
-    public void generateInventory(int numberofObjects, ArrayList<String> itemTypes, int day, boolean isStartDay) {
-
-        Constants.generateMaps(); // Declares all the constants and initializes them
-        this.inventory = new HashMap<>();
+    public void generateInventory(int numberofObjects, ArrayList<String> itemTypes, boolean isStartDay) {
 
         try {
-            for (String className: itemTypes) {
-                Class[] parameters = Constants.CLASS_PARAMETER_MAPPING.get(className);
-
-                Class classObj = Class.forName(className);
-                Constructor constructor = classObj.getConstructor(parameters);
-
+            for (String itemType: itemTypes) {
                 for(int i = 0; i < numberofObjects; i++) {
-                    Object classInstance = constructor.newInstance(Helper.getParams(className, day, isStartDay).toArray());
-                    Item it = ((Item) classInstance);
-                    if (inventory.containsKey(className)) {
-                        inventory.get(className).add(it);
+                    Item item = createItem(itemType);
+                    if (isStartDay) {
+                        addToInventory(itemType, item);
                     }
                     else {
-                        inventory.put(className, new ArrayList<Item>(Arrays.asList(it)));
+                        if (item.getPurchasePrice() <= getRegisterAmount()) {
+                            item.setDayArrived(day + Helper.random.nextInt(3) + 1);
+                            this.setRegisterAmount(this.getRegisterAmount() - item.getPurchasePrice());
+                            addToInventory(itemType, item);
+                        }
+                        else {
+                            System.out.println("Couldn't purchase the " + item.getName() + " " + itemType + " as we were out of funds.");
+                        }
                     }
                 }
             }
@@ -62,6 +67,54 @@ public class Store {
         catch(Exception e) {
             System.out.println("Errors");
             e.printStackTrace();
+        }
+    }
+
+    public Item createItem(String itemType) {
+
+        Object classInstance = null;
+
+        try {
+
+            Class[] parameters = Constants.CLASS_PARAMETER_MAPPING.get(itemType);
+            Class classObj = Class.forName(itemType);
+            Constructor constructor = classObj.getConstructor(parameters);
+            classInstance = constructor.newInstance(Helper.getParams(itemType, this.day).toArray());
+        }
+        catch(Exception e) {
+            System.out.println("Errors");
+            e.printStackTrace();
+        }
+
+        return ((Item) classInstance);
+    }
+
+    public void addToInventory(String itemType, Item item) {
+        if (inventory.containsKey(itemType)) {
+            inventory.get(itemType).add(item);
+        }
+        else {
+            inventory.put(itemType, new ArrayList<Item>(Arrays.asList(item)));
+        }
+    }
+
+    public void removeFromInventory(String itemType, int itemIndex) {
+
+        if (inventory.get(itemType).size() > itemIndex) {
+            inventory.get(itemType).remove(itemIndex);
+        }
+        else {
+            System.out.println("Error! Item is not found in the inventory!");
+        }
+
+    }
+
+    public void addToSoldInventory(String itemType, Item item) {
+        if (soldLogBook.containsKey(itemType)) {
+            soldLogBook.get(itemType).add(item);
+        }
+        else {
+            soldLogBook.put(itemType, new ArrayList<Item>(Arrays.asList(item)));
         }
     }
 
@@ -164,9 +217,12 @@ public class Store {
                 c.ArriveAtStore(i);
                 c.CheckRegister(this);
                 ArrayList<String> zeroStockItems = c.DoInventory(this);
-                c.PlaceAnOrder(this, zeroStockItems, i);
+                c.PlaceAnOrder(this, zeroStockItems);
+                c.OpenTheStore(this);
+                c.CleanStore(this);
+                c.LeaveTheStore(this);
             }
-
+        this.day += 1;
         }
     }
 
@@ -209,5 +265,17 @@ public class Store {
 
     public HashMap<String, ArrayList<Item>> getInventory() {
         return inventory;
+    }
+
+    public void setInventory(HashMap<String, ArrayList<Item>> inventory) {
+        this.inventory = inventory;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
     }
 }
