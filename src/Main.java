@@ -28,6 +28,9 @@ public class Main {
         System.out.println("the condition is: " + test.getCondition());
         System.out.println("the band name is: " + test.getBand());
 
+        RunStore a=new RunStore();
+        a.run();
+
         //Process
         //1. Initialize starting inventory of merchandise items
         //three pieces per lowest subclass item

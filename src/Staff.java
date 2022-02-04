@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public abstract class Staff {
 
     String name;
@@ -37,10 +39,13 @@ public abstract class Staff {
     }
 
     public void incrementDaysWorkedInARow(Store s) {
-        int daysWorkedCurrently = this.getDaysWorkedInARow();
+        //get the current clerk's work_day value who's going to work for today
+        int tempWorkedDays = this.daysWorkedInARow;
+        //assign every clerk's work day to 0 first
         for (Staff staff: s.getStaff()) {
             staff.setDaysWorkedInARow(0);
         }
-        this.daysWorkedInARow = daysWorkedCurrently + 1;
+        //then assign the current worker's working day to temp_day + 1
+        this.daysWorkedInARow = tempWorkedDays + 1;
     }
 }

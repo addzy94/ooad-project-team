@@ -28,6 +28,7 @@ public class Constants {
     public static int SATURDAY = 6;
     public static int SUNDAY = 7;
 
+    //create hashmap/dictionary for saving and assigning those pre-defined string values as int
     public static HashMap<Integer, String> CONDITION_MAPPING = new HashMap<>();
     public static HashMap<Integer, Double> CONDITION_PRICE_MAPPING = new HashMap<>();
     public static HashMap<Boolean, String> NEW_OR_USED_MAPPING = new HashMap<>();
