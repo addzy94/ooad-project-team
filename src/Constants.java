@@ -15,8 +15,24 @@ public class Constants {
     public static boolean NEW = true;
     public static boolean USED = false;
 
+    // Clerks
+    public static int SHAGGY = 0;
+    public static int VELMA = 1;
+
+    // Days of the Week
+    public static int MONDAY = 1;
+    public static int TUESDAY = 2;
+    public static int WEDNESDAY = 3;
+    public static int THURSDAY = 4;
+    public static int FRIDAY = 5;
+    public static int SATURDAY = 6;
+    public static int SUNDAY = 7;
+
     public static HashMap<Integer, String> CONDITION_MAPPING = new HashMap<>();
+    public static HashMap<Integer, Double> CONDITION_PRICE_MAPPING = new HashMap<>();
     public static HashMap<Boolean, String> NEW_OR_USED_MAPPING = new HashMap<>();
+    public static HashMap<Integer, String> CLERK_MAPPING = new HashMap<>();
+    public static HashMap<Integer, String> DAY_MAPPING = new HashMap<>();
 
     public static HashMap<String, Class[]> CLASS_PARAMETER_MAPPING = new HashMap<>();
 
@@ -123,6 +139,18 @@ public class Constants {
             "Cable",
             "Strings"));
 
+    public static ArrayList<String> CUSTOMER_NAMES = new ArrayList<>(Arrays.asList(
+            "Tom Cruise",
+            "Clint Eastwood",
+            "Leonardo DiCaprio",
+            "Keanu Reeves",
+            "Mark Wahlberg",
+            "Jhonny Cage",
+            "Natalie Portman",
+            "Andy Samberg",
+            "Brad Pitt"
+    ));
+
     static void generateMaps() {
 
         CONDITION_MAPPING.put(POOR, "Poor");
@@ -130,6 +158,23 @@ public class Constants {
         CONDITION_MAPPING.put(GOOD, "Good");
         CONDITION_MAPPING.put(VERY_GOOD, "Very Good");
         CONDITION_MAPPING.put(EXCELLENT, "Excellent");
+
+        CONDITION_PRICE_MAPPING.put(POOR, 0.25);
+        CONDITION_PRICE_MAPPING.put(FAIR, 0.35);
+        CONDITION_PRICE_MAPPING.put(GOOD, 0.5);
+        CONDITION_PRICE_MAPPING.put(VERY_GOOD, 0.75);
+        CONDITION_PRICE_MAPPING.put(EXCELLENT, 1.0);
+
+        DAY_MAPPING.put(MONDAY, "Monday");
+        DAY_MAPPING.put(TUESDAY, "Tuesday");
+        DAY_MAPPING.put(WEDNESDAY, "Wednesday");
+        DAY_MAPPING.put(THURSDAY, "Thursday");
+        DAY_MAPPING.put(FRIDAY, "Friday");
+        DAY_MAPPING.put(SATURDAY, "Saturday");
+        DAY_MAPPING.put(SUNDAY, "Sunday");
+
+        CLERK_MAPPING.put(SHAGGY, "Shaggy");
+        CLERK_MAPPING.put(VELMA, "Velma");
 
         NEW_OR_USED_MAPPING.put(NEW, "New");
         NEW_OR_USED_MAPPING.put(USED, "Used");
