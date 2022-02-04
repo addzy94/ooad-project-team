@@ -27,6 +27,7 @@ public class Store {
         this.amountWithdrawnFromBank = 0;
         this.inventory = new HashMap<>();
         this.soldLogBook = new HashMap<>();
+        this.staff = new ArrayList<>();
 
         Constants.generateMaps(); // Declares all the constants and initializes them
 
@@ -35,40 +36,36 @@ public class Store {
         Clerk shaggy = new Clerk("Shaggy", 0);
         Clerk velma = new Clerk("Velma", 0);
 
-        this.staff = new ArrayList<>();
-
         staff.add((Staff) shaggy);
         staff.add((Staff) velma);
     }
 
     public void generateInventory(int numberofObjects, ArrayList<String> itemTypes, boolean isStartDay) {
 
-        //handle the condition when input parameter in string does not belong to the classes we already defined
+        // Handles the condition when input parameter in string does not belong to the classes we already defined
         try {
             for (String itemType: itemTypes) {
                 for(int i = 0; i < numberofObjects; i++) {
                     Item item = createItem(itemType);
+                    // Just add the item to the inventory if it's the first day.
                     if (isStartDay) {
                         addToInventory(itemType, item);
                     }
                     else {
-                        item.setDayArrived(day + Helper.random.nextInt(3) + 1);
-                        addToInventory(itemType, item);
-                    }
-                        //if we can afford the item at this moment, buy it, and put it into the inventory list directly with a dayArrive counter been set
+                        // If we can afford the item at this moment, buy it, and put it into the inventory list directly with a dayArrive counter been set
                         if (item.getPurchasePrice() <= getRegisterAmount()) {
                             item.setDayArrived(day + Helper.random.nextInt(3) + 1);
                             this.setRegisterAmount(this.getRegisterAmount() - item.getPurchasePrice());
                             addToInventory(itemType, item);
                         }
-                        //else, don't buy it since we are out of founds
+                        // Can't buy it, since we are out of funds
                         else {
                             System.out.println("Couldn't purchase the " + item.getName() + " " + itemType + " as we were out of funds.");
                         }
+                    }
                 }
             }
         }
-
         catch(Exception e) {
             System.out.println("Error!");
             e.printStackTrace();
@@ -107,15 +104,8 @@ public class Store {
         }
     }
 
-    public void removeFromInventory(String itemType, int itemIndex) {
-
-        if (inventory.get(itemType).size() > itemIndex) {
-            inventory.get(itemType).remove(itemIndex);
-        }
-        else {
-            System.out.println("Error! Item is not found in the inventory!");
-        }
-
+    public void removeFromInventory(String itemType, Item item) {
+        inventory.get(itemType).remove(item);
     }
 
     public void addToSoldInventory(String itemType, Item item) {
@@ -216,14 +206,13 @@ public class Store {
         for(int i = 1; i <= numberOfDays; i++) {
 
             int dayOfTheWeek = i % 7;
-            String day = Constants.DAY_MAPPING.get(dayOfTheWeek);
             if (dayOfTheWeek == 0) {
                 System.out.println("On Sunday, no one worked.");
                 resetDays();
             }
             else {
                 Clerk c = chooseClerk();
-                c.ArriveAtStore(i);
+                c.ArriveAtStore(this);
                 c.CheckRegister(this);
                 ArrayList<String> zeroStockItems = c.DoInventory(this);
                 c.PlaceAnOrder(this, zeroStockItems);
@@ -235,19 +224,19 @@ public class Store {
         }
     }
 
-    //handled by Sitong Lu
     public Clerk chooseClerk() {
-        //chose randomly from the current staff list
-        int clerkValue = Helper.random.nextInt(staff.size());
-        //re-choose a new clerk until he/she hasn't worked in a row for 3 days already
-        while(staff.get(clerkValue).daysWorkedInARow != 3){
-            clerkValue = Helper.random.nextInt(staff.size());
+        // Choose randomly from the current staff list
+        Clerk c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
+        // Re-choose a new clerk if he/she has already worked more than 2 days
+        if (c.getDaysWorkedInARow() > 2) {
+            // Keep choosing a clerk until you choose someone who hasn't worked 3 days
+            while (c.getDaysWorkedInARow() == 3) {
+                c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
+            }
         }
-        //get that clerk using clerk id
-        Clerk c = (Clerk) staff.get(clerkValue);
-        //set that clerk as active worker for today
+        // Set that clerk as active worker for today
         c.setIsActiveWorker(true);
-        //call incrementDayWrokedInRow method for handling the details of adding work days and assigning other clerks' work days to 0
+        // Call incrementDayWorkedInRow method for handling the details of adding work days and assigning other clerks' work days to 0
         c.incrementDaysWorkedInARow(this);
         return c;
     }

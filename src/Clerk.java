@@ -1,6 +1,8 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 public class Clerk extends Staff {
 
@@ -8,8 +10,8 @@ public class Clerk extends Staff {
         super(name, daysWorkedInARow);
     }
 
-    public void ArriveAtStore(int day) {
-        System.out.println(this.name + " arrived at the store on day " + day + ".");
+    public void ArriveAtStore(Store s) {
+        System.out.println("Clerk " + this.getName() + " decided to work on day " + s.getDay() + ".");
     }
 
     public void GoToBank(Store s, double currentAmount) {
@@ -18,13 +20,13 @@ public class Clerk extends Staff {
         s.setAmountWithdrawnFromBank(alreadyWithdrawn + 1000);
         s.setRegisterAmount(currentAmount + 1000);
 
-        System.out.println(this.getName() + " withdrew 1000$ from the bank, making new register amount as: " + s.getRegisterAmount());
+        System.out.println("Clerk " + this.getName() + " withdrew 1000$ from the bank, making new register amount as: " + s.getRegisterAmount());
     }
 
     public void CheckRegister(Store s) {
 
         double registerMoney = s.getRegisterAmount();
-        System.out.println(this.getName() + " counted " + registerMoney + " in the register.");
+        System.out.println("Clerk " + this.getName() + " counted " + registerMoney + " in the register.");
         if (registerMoney < 75.00) {
             this.GoToBank(s, registerMoney);
         }
@@ -33,7 +35,7 @@ public class Clerk extends Staff {
     public ArrayList<String> DoInventory(Store s) {
 
         double inventoryValue = s.calcInventoryValue();
-        System.out.println("The inventory value is: " + inventoryValue);
+        System.out.println("Clerk " + this.getName() + " calculated the inventory value to be: " + inventoryValue);
 
         ArrayList<String> zeroStockItems = s.itemsWithZeroStock();
 
@@ -68,13 +70,14 @@ public class Clerk extends Staff {
     public void BuyItemTransaction(Store s, String itemType, String customerName) {
 
         HashMap<String, ArrayList<Item>> storeInv = s.getInventory();
-        if (storeInv.get(itemType).size() == 0) {
+        List<Item> filteredList = storeInv.get(itemType)
+                .stream().filter(x -> x.getDayArrived() <= s.getDay()).toList();
+        if (filteredList.size() == 0) {
             System.out.println("Customer " + customerName + " left the store without buying the " + itemType + " as there was no stock.");
         }
         else {
             // Get items which are at the store.
-            int found = Helper.random.nextInt(storeInv.get(itemType).size());
-            Item itemChosen = storeInv.get(itemType).get(found);
+            Item itemChosen = filteredList.get(Helper.random.nextInt(filteredList.size()));
             double listPrice = itemChosen.getListPrice();
             boolean initialBuyDecision = (Helper.random.nextInt(2) == 0);
             if (!initialBuyDecision) {
@@ -93,7 +96,7 @@ public class Clerk extends Staff {
                             Constants.CONDITION_MAPPING.get(itemChosen.getCondition()) +
                             " condition at 10% discount for " + itemChosen.getSalePrice());
 
-                    s.removeFromInventory(itemType, found);
+                    s.removeFromInventory(itemType, itemChosen);
                     s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice());
                     s.addToSoldInventory(itemType, itemChosen);
                 }
@@ -107,7 +110,7 @@ public class Clerk extends Staff {
                         Constants.CONDITION_MAPPING.get(itemChosen.getCondition()) +
                         " condition at list price for " + itemChosen.getSalePrice());
 
-                s.removeFromInventory(itemType, found);
+                s.removeFromInventory(itemType, itemChosen);
                 s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice());
                 s.addToSoldInventory(itemType, itemChosen);
             }
@@ -169,9 +172,10 @@ public class Clerk extends Staff {
         if (this.getName().equals("Velma")) {
             return 94;
         }
-        else {
+        else if (this.getName().equals("Shaggy")) {
             return 79;
         }
+        else { return 100; }
     }
 
     public void CleanStore(Store s) {
