@@ -43,6 +43,7 @@ public class Store {
 
     public void generateInventory(int numberofObjects, ArrayList<String> itemTypes, boolean isStartDay) {
 
+        //handle the condition when input parameter in string does not belong to the classes we already defined
         try {
             for (String itemType: itemTypes) {
                 for(int i = 0; i < numberofObjects; i++) {
@@ -51,11 +52,13 @@ public class Store {
                         addToInventory(itemType, item);
                     }
                     else {
+                        //if we can afford the item at this moment, buy it, and put it into the inventory list directly with a dayArrive counter been set
                         if (item.getPurchasePrice() <= getRegisterAmount()) {
                             item.setDayArrived(day + Helper.random.nextInt(3) + 1);
                             this.setRegisterAmount(this.getRegisterAmount() - item.getPurchasePrice());
                             addToInventory(itemType, item);
                         }
+                        //else, don't buy it since we are out of founds
                         else {
                             System.out.println("Couldn't purchase the " + item.getName() + " " + itemType + " as we were out of funds.");
                         }
@@ -75,10 +78,13 @@ public class Store {
         Object classInstance = null;
 
         try {
-
+            //initialize a list of class in the following way: [String, Int, bla, bla] for later use of initializing the corresponding item type
             Class[] parameters = Constants.CLASS_PARAMETER_MAPPING.get(itemType);
+            //intialize the corresponding class object based on the given String itemType
             Class classObj = Class.forName(itemType);
+            //combine the two lines above for really generating a constructor
             Constructor constructor = classObj.getConstructor(parameters);
+            //generate an object by calling Helper class that helps you put all the necessary parameter (price, day, etc) for generating it.
             classInstance = constructor.newInstance(Helper.getParams(itemType, this.day).toArray());
         }
         catch(Exception e) {
@@ -90,6 +96,7 @@ public class Store {
     }
 
     public void addToInventory(String itemType, Item item) {
+        //check if there's a key in the hashtable for storing the corresponding item time
         if (inventory.containsKey(itemType)) {
             inventory.get(itemType).add(item);
         }
@@ -226,20 +233,24 @@ public class Store {
         }
     }
 
+    //handled by Sitong Lu
     public Clerk chooseClerk() {
-        int clerkValue = Helper.random.nextInt(2);
-        Clerk c = (Clerk) staff.get(clerkValue);
-        if (c.getDaysWorkedInARow() == 3) {
-            c.setIsActiveWorker(false);
-            c.setDaysWorkedInARow(0);
-
-            c = (Clerk) staff.get(Helper.FlipNumber(clerkValue));
+        //chose randomly from the current staff list
+        int clerkValue = Helper.random.nextInt(staff.size());
+        //re-choose a new clerk until he/she hasn't worked in a row for 3 days already
+        while(staff.get(clerkValue).daysWorkedInARow!=3){
+            clerkValue = Helper.random.nextInt(staff.size());
         }
+        //get that clerk using clerk id
+        Clerk c = (Clerk) staff.get(clerkValue);
+        //set that clerk as active worker for today
         c.setIsActiveWorker(true);
-        c.incrementDaysWorkedInARow();
+        //call incrementDayWrokedInRow method for handling the details of adding work days and assigning other clerks' work days to 0
+        c.incrementDaysWorkedInARow(this);
         return c;
     }
 
+    //only works on Sundays
     public void resetDays() {
         for(Staff s: staff) {
             s.setIsActiveWorker(false);
@@ -277,5 +288,13 @@ public class Store {
 
     public void setDay(int day) {
         this.day = day;
+    }
+
+    public ArrayList<Staff> getStaff() {
+        return staff;
+    }
+
+    public void setStaff(ArrayList<Staff> staff) {
+        this.staff = staff;
     }
 }
