@@ -208,10 +208,9 @@ public class Clerk extends Staff {
                     storeInv.get(itemType).remove(item);
                     System.out.println("The " + item.getName() + " " + itemType +
                             " degraded from " + Constants.CONDITION_MAPPING.get(item.getCondition()) +
-                            " to " + Constants.CONDITION_MAPPING.get(item.getCondition() - 1));
-                    System.out.println("The " + item.getName() + " " + itemType +
-                            " price degraded from " + Helper.round(item.getListPrice()) +
-                            "$ to " + Helper.round(item.getListPrice() * 0.8) + "$");
+                            " (" + Helper.round(item.getListPrice()) + "$)" +
+                            " to " + Constants.CONDITION_MAPPING.get(item.getCondition() - 1) +
+                            " (" + Helper.round(item.getListPrice() * 0.8) + "$)");
                     item.setCondition(item.getCondition() - 1);
                     item.setListPrice(item.getListPrice() * 0.8);
 
