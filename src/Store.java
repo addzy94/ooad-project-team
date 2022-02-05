@@ -55,7 +55,7 @@ public class Store {
                         // If we can afford the item at this moment, buy it, and put it into the inventory list directly with a dayArrive counter been set
                         if (item.getPurchasePrice() <= getRegisterAmount()) {
                             System.out.println("The store purchased the " + item.getName() +
-                                    " " + itemType + " which costs " + item.getPurchasePrice());
+                                    " " + itemType + " which costs " + Helper.round(item.getPurchasePrice()) + "$");
                             item.setDayArrived(day + Helper.random.nextInt(3) + 1);
                             this.setRegisterAmount(this.getRegisterAmount() - item.getPurchasePrice());
                             addToInventory(itemType, item);
@@ -63,8 +63,8 @@ public class Store {
                         // Can't buy it, since we are out of funds
                         else {
                             System.out.println("Couldn't purchase the " + item.getName() +
-                                    " " + itemType + " which costs " + item.getPurchasePrice() +
-                                    " as we have only " + this.getRegisterAmount());
+                                    " " + itemType + " which costs " + Helper.round(item.getPurchasePrice()) +
+                                    " as we have only " + Helper.round(this.getRegisterAmount()) + "$");
                         }
                     }
                 }
@@ -131,13 +131,11 @@ public class Store {
             for (Item i: inventory.get(itemType)) {
                 if (i.getDaySold() == -1 && i.getDayArrived() <= this.day) { // If it is not yet sold, display it.
                     System.out.println("\t Name: " + i.getName());
-                    System.out.println("\t Purchase Price: " + i.getPurchasePrice());
-                    System.out.println("\t List Price: " + i.getListPrice());
+                    System.out.println("\t Purchase Price: " + Helper.round(i.getPurchasePrice()) + "$");
+                    System.out.println("\t List Price: " + Helper.round(i.getListPrice()) + "$");
                     System.out.println("\t New? " + Constants.NEW_OR_USED_MAPPING.get(i.getIsNew()));
                     System.out.println("\t Day Arrived: " + i.getDayArrived());
                     System.out.println("\t Condition: " + Constants.CONDITION_MAPPING.get(i.getCondition()));
-                    System.out.println("\t Sale Price: " + i.getSalePrice());
-                    System.out.println("\t Day Sold: " + i.getDaySold());
 
                     if (i instanceof Music) {
                         System.out.println("\t Band Name: " + ((Music) i).getBand());

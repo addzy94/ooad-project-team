@@ -20,13 +20,13 @@ public class Clerk extends Staff {
         s.setAmountWithdrawnFromBank(alreadyWithdrawn + 1000);
         s.setRegisterAmount(currentAmount + 1000);
 
-        System.out.println("Clerk " + this.getName() + " withdrew 1000$ from the bank, making new register amount as: " + s.getRegisterAmount());
+        System.out.println("Clerk " + this.getName() + " withdrew 1000$ from the bank, making new register amount as: " + Helper.round(s.getRegisterAmount()) + "$");
     }
 
     public void CheckRegister(Store s) {
 
-        double registerMoney = s.getRegisterAmount();
-        System.out.println("Clerk " + this.getName() + " counted " + registerMoney + " in the register.");
+        double registerMoney = Helper.round(s.getRegisterAmount());
+        System.out.println("Clerk " + this.getName() + " counted " + registerMoney + "$ in the register.");
         if (registerMoney < 75.00) {
             this.GoToBank(s, registerMoney);
         }
@@ -34,8 +34,8 @@ public class Clerk extends Staff {
 
     public ArrayList<String> DoInventory(Store s) {
 
-        double inventoryValue = s.calcInventoryValue();
-        System.out.println("Clerk " + this.getName() + " calculated the inventory value to be: " + inventoryValue);
+        double inventoryValue = Helper.round(s.calcInventoryValue());
+        System.out.println("Clerk " + this.getName() + " calculated the inventory value to be: " + inventoryValue + "$");
 
         ArrayList<String> zeroStockItems = s.itemsWithZeroStock();
 
@@ -94,7 +94,7 @@ public class Clerk extends Staff {
                             Constants.NEW_OR_USED_MAPPING.get(itemChosen.getIsNew()) + " " +
                             itemChosen.getName() + " " + itemType + " in " +
                             Constants.CONDITION_MAPPING.get(itemChosen.getCondition()) +
-                            " condition at 10% discount for " + itemChosen.getSalePrice());
+                            " condition at 10% discount for " + Helper.round(itemChosen.getSalePrice()) + "$");
 
                     s.removeFromInventory(itemType, itemChosen);
                     s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice());
@@ -108,7 +108,7 @@ public class Clerk extends Staff {
                         Constants.NEW_OR_USED_MAPPING.get(itemChosen.getIsNew()) + " " +
                         itemChosen.getName() + " " + itemType + " in " +
                         Constants.CONDITION_MAPPING.get(itemChosen.getCondition()) +
-                        " condition at list price for " + itemChosen.getSalePrice());
+                        " condition at list price for " + Helper.round(itemChosen.getSalePrice()) + "$");
 
                 s.removeFromInventory(itemType, itemChosen);
                 s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice());
@@ -132,7 +132,7 @@ public class Clerk extends Staff {
             boolean initialSellDecision = (Helper.random.nextInt(2) == 0);
 
             if (!initialSellDecision && (offeredPrice * 1.1) <= regAmount) {
-                System.out.println("Customer " + customerName + " didn't want to sell the " + itemType + " at the offered price of " + offeredPrice);
+                System.out.println("Customer " + customerName + " didn't want to sell the " + itemType + " at the offered price of " + Helper.round(offeredPrice) + "$");
                 System.out.println("Clerk " + this.getName() + " offered 10% extra.");
                 boolean extraSellDecision = (Helper.random.nextInt(4) != 3);
                 if (!extraSellDecision) {
@@ -146,7 +146,7 @@ public class Clerk extends Staff {
                             Constants.NEW_OR_USED_MAPPING.get(customerBroughtItem.getIsNew()) + " " +
                             customerBroughtItem.getName() + " " + itemType + " in " +
                             Constants.CONDITION_MAPPING.get(customerBroughtItem.getCondition()) +
-                            " condition at 10% extra for " + customerBroughtItem.getPurchasePrice());
+                            " condition at 10% extra for " + Helper.round(customerBroughtItem.getPurchasePrice()));
 
                     s.setRegisterAmount(s.getRegisterAmount() - customerBroughtItem.getPurchasePrice());
                     s.addToInventory(itemType, customerBroughtItem);
@@ -160,7 +160,7 @@ public class Clerk extends Staff {
                         Constants.NEW_OR_USED_MAPPING.get(customerBroughtItem.getIsNew()) + " " +
                         customerBroughtItem.getName() + " " + itemType + " in " +
                         Constants.CONDITION_MAPPING.get(customerBroughtItem.getCondition()) +
-                        " condition at offered price for " + customerBroughtItem.getPurchasePrice());
+                        " condition at offered price for " + Helper.round(customerBroughtItem.getPurchasePrice()) + "$");
             }
         }
         else {
@@ -210,8 +210,8 @@ public class Clerk extends Staff {
                             " degraded from " + Constants.CONDITION_MAPPING.get(item.getCondition()) +
                             " to " + Constants.CONDITION_MAPPING.get(item.getCondition() - 1));
                     System.out.println("The " + item.getName() + " " + itemType +
-                            " price degraded from " + item.getListPrice() +
-                            " to " + item.getListPrice() * 0.8);
+                            " price degraded from " + Helper.round(item.getListPrice()) +
+                            "$ to " + Helper.round(item.getListPrice() * 0.8) + "$");
                     item.setCondition(item.getCondition() - 1);
                     item.setListPrice(item.getListPrice() * 0.8);
 

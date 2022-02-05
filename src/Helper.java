@@ -6,8 +6,8 @@ public class Helper {
 
     public static Random random = new Random();
 
-    public static int FlipNumber(int i) {
-        return (i == 0) ? 1 : 0;
+    public static double round(double number) {
+        return (Math.round(number * 100.0) / 100.0);
     }
 
     public static double priceEstimator(boolean isNew, int condition) {
