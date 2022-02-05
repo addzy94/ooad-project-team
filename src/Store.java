@@ -54,13 +54,17 @@ public class Store {
                     else {
                         // If we can afford the item at this moment, buy it, and put it into the inventory list directly with a dayArrive counter been set
                         if (item.getPurchasePrice() <= getRegisterAmount()) {
+                            System.out.println("The store purchased the " + item.getName() +
+                                    " " + itemType + " which costs " + item.getPurchasePrice());
                             item.setDayArrived(day + Helper.random.nextInt(3) + 1);
                             this.setRegisterAmount(this.getRegisterAmount() - item.getPurchasePrice());
                             addToInventory(itemType, item);
                         }
                         // Can't buy it, since we are out of funds
                         else {
-                            System.out.println("Couldn't purchase the " + item.getName() + " " + itemType + " as we were out of funds.");
+                            System.out.println("Couldn't purchase the " + item.getName() +
+                                    " " + itemType + " which costs " + item.getPurchasePrice() +
+                                    " as we have only " + this.getRegisterAmount());
                         }
                     }
                 }
