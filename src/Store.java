@@ -224,7 +224,9 @@ public class Store {
                 c.CleanStore(this);
                 c.LeaveTheStore(this);
             }
-        this.day += 1;
+            this.day += 1;
+            //add an extra line for separating days
+            System.out.println();
         }
     }
 
