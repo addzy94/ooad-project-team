@@ -205,6 +205,7 @@ public class Store {
          */
         for(int i = 1; i <= numberOfDays; i++) {
 
+            System.out.println("Day "+i+":");
             int dayOfTheWeek = i % 7;
             if (dayOfTheWeek == 0) {
                 System.out.println("On Sunday, no one worked.");
