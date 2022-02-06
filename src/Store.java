@@ -13,6 +13,8 @@ public class Store {
     ArrayList<Staff> staff;
 
     Store() {
+        //assign 3 objects per item (lowest subclass) by the time we initialize a store
+        this.initialize(3);
     }
 
     public void initialize(int numberofObjects) {
@@ -207,6 +209,7 @@ public class Store {
          */
         for(int i = 1; i <= numberOfDays; i++) {
 
+            System.out.println("Day "+i+":");
             int dayOfTheWeek = i % 7;
             if (dayOfTheWeek == 0) {
                 System.out.println("On Sunday, no one worked.");
