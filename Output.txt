@@ -1,0 +1,2598 @@
+C:\Users\49398\.jdks\corretto-17.0.2\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\lib\idea_rt.jar=56201:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Users\49398\Desktop\Project 2\ooad-project-team\out\production\ooad-project-team" RunStore
+Day 1:
+Clerk Shaggy decided to work on day 0.
+Clerk Shaggy counted 0.0 in the register.
+Clerk Shaggy withdrew 1000$ from the bank, making new register amount as: 1000.0
+Clerk Shaggy calculated the inventory value to be: 1202.4918976664978
+Customer Leonardo DiCaprio didn't want to buy the Mandolin at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Leonardo DiCaprio left the store without buying a Mandolin even at discounted price!
+Customer Clint Eastwood didn't want to buy the Bass at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Clint Eastwood left the store without buying a Bass even at discounted price!
+Customer Natalie Portman didn't want to buy the CDPlayer at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Natalie Portman left the store without buying a CDPlayer even at discounted price!
+Customer Natalie Portman didn't want to buy the Cable at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Natalie Portman left the store without buying a Cable even at discounted price!
+Customer Keanu Reeves sold a New Morose 400 PracticeAmp in Good condition at offered price for 10.132527445683706
+Shaggy damaged an item.
+The Gibson Les Paul Standard Guitar degraded from Excellent to Very Good
+The Gibson Les Paul Standard Guitar price degraded from 17.22522667297229 to 13.780181338377833
+Shaggy damaged an item.
+The Muddywood Guitar degraded from Excellent to Very Good
+The Muddywood Guitar price degraded from 87.94698614246988 to 70.3575889139759
+Shaggy damaged an item.
+The Don Junior Guitar degraded from Very Good to Good
+The Don Junior Guitar price degraded from 30.574914015058877 to 24.459931212047103
+Shaggy damaged an item.
+The Smooth Noodle Bass degraded from Fair to Poor
+The Smooth Noodle Bass price degraded from 46.38248779415951 to 37.10599023532761
+Shaggy damaged an item.
+The Morose 400 Cable degraded from Fair to Poor
+The Morose 400 Cable price degraded from 15.049220760194457 to 12.039376608155566
+Shaggy damaged an item.
+The Melancholy 50 Cable broke and was removed from inventory.
+Shaggy damaged an item.
+The Beautiful 100 Cable degraded from Good to Fair
+The Beautiful 100 Cable price degraded from 18.616486997948105 to 14.893189598358484
+Shaggy damaged an item.
+The Kashmir CD degraded from Good to Fair
+The Kashmir CD price degraded from 44.870322921124504 to 35.896258336899606
+Shaggy damaged an item.
+The Swalla CD broke and was removed from inventory.
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Excellent to Very Good
+The Tommy Hilfiger 200 Bandana price degraded from 41.2303920648033 to 32.98431365184264
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Bandana degraded from Excellent to Very Good
+The United Colors of Benetton Shiner Bandana price degraded from 95.01729372719596 to 76.01383498175677
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Excellent to Very Good
+The Tommy Hilfiger 200 Bandana price degraded from 11.294578279186469 to 9.035662623349175
+Shaggy damaged an item.
+The Virtual Diva Vinyl degraded from Excellent to Very Good
+The Virtual Diva Vinyl price degraded from 29.545109264991954 to 23.636087411993564
+Shaggy damaged an item.
+The Virtual Diva Vinyl degraded from Good to Fair
+The Virtual Diva Vinyl price degraded from 13.279512152183193 to 10.623609721746554
+Shaggy damaged an item.
+The Swalla PaperScore degraded from Good to Fair
+The Swalla PaperScore price degraded from 52.535293548085995 to 42.0282348384688
+Shaggy damaged an item.
+The Virtual Diva PaperScore degraded from Very Good to Good
+The Virtual Diva PaperScore price degraded from 78.71187392492735 to 62.96949913994188
+Shaggy damaged an item.
+The Get Lucky PaperScore degraded from Very Good to Good
+The Get Lucky PaperScore price degraded from 64.42881123488648 to 51.54304898790919
+Shaggy damaged an item.
+The Runner 200 MP3Player degraded from Excellent to Very Good
+The Runner 200 MP3Player price degraded from 39.448845377245334 to 31.559076301796267
+Shaggy damaged an item.
+The Rickenbacker 4001S Mandolin broke and was removed from inventory.
+Shaggy damaged an item.
+The Don Junior Flute degraded from Very Good to Good
+The Don Junior Flute price degraded from 80.58363173485901 to 64.46690538788721
+Shaggy damaged an item.
+The Don Junior Flute degraded from Very Good to Good
+The Don Junior Flute price degraded from 88.57944337346501 to 70.863554698772
+Shaggy damaged an item.
+The Don Junior Flute broke and was removed from inventory.
+Shaggy damaged an item.
+The Beautiful 100 Strings degraded from Very Good to Good
+The Beautiful 100 Strings price degraded from 29.43743103729949 to 23.549944829839593
+Shaggy damaged an item.
+The Abstraction 300 Strings degraded from Very Good to Good
+The Abstraction 300 Strings price degraded from 7.460133734495292 to 5.968106987596234
+Shaggy damaged an item.
+The Gibson Les Paul Standard Harmonica degraded from Fair to Poor
+The Gibson Les Paul Standard Harmonica price degraded from 73.71639691121553 to 58.97311752897242
+Shaggy damaged an item.
+The Rickenbacker 4001S Harmonica degraded from Excellent to Very Good
+The Rickenbacker 4001S Harmonica price degraded from 59.341215675725316 to 47.47297254058026
+Shaggy damaged an item.
+The Runner 200 CDPlayer broke and was removed from inventory.
+Shaggy damaged an item.
+The AudioTechnica M50TH CDPlayer degraded from Excellent to Very Good
+The AudioTechnica M50TH CDPlayer price degraded from 43.79938863783427 to 35.03951091026742
+Shaggy damaged an item.
+The RocketRon 5000 CDPlayer degraded from Fair to Poor
+The RocketRon 5000 CDPlayer price degraded from 17.88174423239887 to 14.305395385919097
+Shaggy damaged an item.
+The LVMH Red Dragon Hat broke and was removed from inventory.
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Hat degraded from Excellent to Very Good
+The Tommy Hilfiger 200 Hat price degraded from 90.83975724361363 to 72.67180579489091
+Shaggy damaged an item.
+The Sony MX RecordPlayer degraded from Very Good to Good
+The Sony MX RecordPlayer price degraded from 33.81848732413276 to 27.05478985930621
+Shaggy damaged an item.
+The AudioTechnica M50TH RecordPlayer degraded from Fair to Poor
+The AudioTechnica M50TH RecordPlayer price degraded from 19.060258057274893 to 15.248206445819916
+Shaggy damaged an item.
+The AudioTechnica M50TH RecordPlayer degraded from Excellent to Very Good
+The AudioTechnica M50TH RecordPlayer price degraded from 97.75987604617147 to 78.20790083693718
+Shaggy left the store for the day.
+
+Day 2:
+Clerk Velma decided to work on day 1.
+Clerk Velma counted 1000.0 in the register.
+Clerk Velma calculated the inventory value to be: 1001.508620412555
+Customer Jhonny Cage bought a Used Virtual Diva Vinyl in Very Good condition at list price for 23.636087411993564
+Customer Mark Wahlberg bought a New Abstraction 300 Strings in Good condition at list price for 5.968106987596234
+Customer Jhonny Cage didn't want to buy the RecordPlayer at the list price.
+Clerk Velma offered a 10% discount
+Customer Jhonny Cage bought a Used AudioTechnica M50TH RecordPlayer in Very Good condition at 10% discount for 70.38711075324346
+Customer Leonardo DiCaprio bought a Used Bose 100 MP3Player in Good condition at list price for 69.86102698423062
+Customer Clint Eastwood bought a Used AudioTechnica M50TH CDPlayer in Very Good condition at list price for 35.03951091026742
+Customer Tom Cruise didn't want to sell the Strings at the offered price of 9.860042057718186
+Clerk Velma offered 10% extra.
+Customer Tom Cruise left the store without selling a Strings even at extra price!
+Customer Andy Samberg sold a Used Morose 400 PracticeAmp in Fair condition at offered price for 13.684255216202663
+Customer Jhonny Cage sold a Used Get Lucky CD in Excellent condition at offered price for 16.453320821889104
+Customer Leonardo DiCaprio didn't want to sell the Cable at the offered price of 18.505264443280137
+Clerk Velma offered 10% extra.
+Customer Leonardo DiCaprio left the store without selling a Cable even at extra price!
+Velma damaged an item.
+The Gibson Les Paul Standard Guitar degraded from Very Good to Good
+The Gibson Les Paul Standard Guitar price degraded from 13.780181338377833 to 11.024145070702268
+Velma damaged an item.
+The Don Junior Guitar degraded from Good to Fair
+The Don Junior Guitar price degraded from 24.459931212047103 to 19.567944969637683
+Velma damaged an item.
+The Don Junior Bass degraded from Very Good to Good
+The Don Junior Bass price degraded from 58.964527027858885 to 47.17162162228711
+Velma damaged an item.
+The Gibson Les Paul Standard Bass degraded from Very Good to Good
+The Gibson Les Paul Standard Bass price degraded from 23.976510003486194 to 19.181208002788956
+Velma damaged an item.
+The Smooth Noodle Bass broke and was removed from inventory.
+Velma damaged an item.
+The Beautiful 100 Cable degraded from Fair to Poor
+The Beautiful 100 Cable price degraded from 14.893189598358484 to 11.914551678686788
+Velma damaged an item.
+The Virtual Diva CD broke and was removed from inventory.
+Velma damaged an item.
+The Kashmir CD degraded from Fair to Poor
+The Kashmir CD price degraded from 35.896258336899606 to 28.717006669519687
+Velma damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Very Good to Good
+The Tommy Hilfiger 200 Bandana price degraded from 32.98431365184264 to 26.387450921474112
+Velma damaged an item.
+The United Colors of Benetton Shiner Bandana degraded from Very Good to Good
+The United Colors of Benetton Shiner Bandana price degraded from 76.01383498175677 to 60.81106798540542
+Velma damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Very Good to Good
+The Tommy Hilfiger 200 Bandana price degraded from 9.035662623349175 to 7.22853009867934
+Velma damaged an item.
+The Swalla Vinyl degraded from Very Good to Good
+The Swalla Vinyl price degraded from 67.50720965402819 to 54.005767723222554
+Velma damaged an item.
+The Virtual Diva Vinyl degraded from Fair to Poor
+The Virtual Diva Vinyl price degraded from 10.623609721746554 to 8.498887777397243
+Velma damaged an item.
+The Swalla PaperScore degraded from Fair to Poor
+The Swalla PaperScore price degraded from 42.0282348384688 to 33.62258787077504
+Velma damaged an item.
+The Virtual Diva PaperScore degraded from Good to Fair
+The Virtual Diva PaperScore price degraded from 62.96949913994188 to 50.37559931195351
+Velma damaged an item.
+The Get Lucky PaperScore degraded from Good to Fair
+The Get Lucky PaperScore price degraded from 51.54304898790919 to 41.23443919032735
+Velma damaged an item.
+The AudioTechnica M50TH MP3Player degraded from Very Good to Good
+The AudioTechnica M50TH MP3Player price degraded from 47.02740167478407 to 37.62192133982726
+Velma damaged an item.
+The Runner 200 MP3Player degraded from Very Good to Good
+The Runner 200 MP3Player price degraded from 31.559076301796267 to 25.247261041437014
+Velma damaged an item.
+The Rickenbacker 4001S Mandolin degraded from Very Good to Good
+The Rickenbacker 4001S Mandolin price degraded from 7.03873914802362 to 5.630991318418896
+Velma damaged an item.
+The Fender Jazz Bass Mandolin broke and was removed from inventory.
+Velma damaged an item.
+The Don Junior Flute degraded from Good to Fair
+The Don Junior Flute price degraded from 64.46690538788721 to 51.57352431030977
+Velma damaged an item.
+The Don Junior Flute degraded from Good to Fair
+The Don Junior Flute price degraded from 70.863554698772 to 56.69084375901761
+Velma damaged an item.
+The Beautiful 100 Strings degraded from Good to Fair
+The Beautiful 100 Strings price degraded from 38.388696559900325 to 30.710957247920263
+Velma damaged an item.
+The Lucille Harmonica broke and was removed from inventory.
+Velma damaged an item.
+The Gibson Les Paul Standard Harmonica broke and was removed from inventory.
+Velma damaged an item.
+The Rickenbacker 4001S Harmonica degraded from Very Good to Good
+The Rickenbacker 4001S Harmonica price degraded from 47.47297254058026 to 37.97837803246421
+Velma damaged an item.
+The LVMH Red Dragon Shirt degraded from Fair to Poor
+The LVMH Red Dragon Shirt price degraded from 13.609710055315752 to 10.887768044252603
+Velma damaged an item.
+The United Colors of Benetton Shiner Shirt degraded from Excellent to Very Good
+The United Colors of Benetton Shiner Shirt price degraded from 12.9516860681906 to 10.361348854552482
+Velma damaged an item.
+The LVMH Red Dragon Shirt degraded from Good to Fair
+The LVMH Red Dragon Shirt price degraded from 97.35742154549587 to 77.8859372363967
+Velma damaged an item.
+The RocketRon 5000 CDPlayer broke and was removed from inventory.
+Velma damaged an item.
+The Abstraction 300 PracticeAmp degraded from Good to Fair
+The Abstraction 300 PracticeAmp price degraded from 43.15250026451899 to 34.52200021161519
+Velma damaged an item.
+The Abstraction 300 PracticeAmp degraded from Good to Fair
+The Abstraction 300 PracticeAmp price degraded from 50.68132486828916 to 40.54505989463133
+Velma damaged an item.
+The Melancholy 50 PracticeAmp broke and was removed from inventory.
+Velma damaged an item.
+The LVMH Red Dragon Hat degraded from Excellent to Very Good
+The LVMH Red Dragon Hat price degraded from 8.494130798644566 to 6.795304638915653
+Velma damaged an item.
+The Tommy Hilfiger 200 Hat degraded from Very Good to Good
+The Tommy Hilfiger 200 Hat price degraded from 72.67180579489091 to 58.137444635912736
+Velma damaged an item.
+The Sony MX RecordPlayer degraded from Good to Fair
+The Sony MX RecordPlayer price degraded from 27.05478985930621 to 21.64383188744497
+Velma left the store for the day.
+
+Day 3:
+Clerk Velma decided to work on day 2.
+Clerk Velma counted 1204.8918430473313 in the register.
+Clerk Velma calculated the inventory value to be: 740.5199199665942
+Customer Clint Eastwood didn't want to buy the Bandana at the list price.
+Clerk Velma offered a 10% discount
+Customer Clint Eastwood bought a New Tommy Hilfiger 200 Bandana in Good condition at 10% discount for 23.748705829326703
+Customer Brad Pitt didn't want to buy the Bass at the list price.
+Clerk Velma offered a 10% discount
+Customer Brad Pitt bought a New Don Junior Bass in Good condition at 10% discount for 42.4544594600584
+Customer Keanu Reeves bought a New Beautiful 100 Cable in Poor condition at list price for 11.914551678686788
+Customer Mark Wahlberg left the store without buying the CDPlayer as there was no stock.
+Customer Keanu Reeves didn't want to buy the Vinyl at the list price.
+Clerk Velma offered a 10% discount
+Customer Keanu Reeves left the store without buying a Vinyl even at discounted price!
+Customer Brad Pitt bought a New Tommy Hilfiger 200 Hat in Good condition at list price for 58.137444635912736
+Customer Keanu Reeves didn't want to buy the Strings at the list price.
+Clerk Velma offered a 10% discount
+Customer Keanu Reeves bought a New Beautiful 100 Strings in Fair condition at 10% discount for 27.639861523128236
+Customer Keanu Reeves didn't want to sell the Bandana at the offered price of 7.833465577928025
+Clerk Velma offered 10% extra.
+Customer Keanu Reeves left the store without selling a Bandana even at extra price!
+Velma damaged an item.
+The Muddywood Guitar degraded from Very Good to Good
+The Muddywood Guitar price degraded from 70.3575889139759 to 56.28607113118073
+Velma damaged an item.
+The Gibson Les Paul Standard Guitar degraded from Good to Fair
+The Gibson Les Paul Standard Guitar price degraded from 11.024145070702268 to 8.819316056561815
+Velma damaged an item.
+The Don Junior Guitar degraded from Fair to Poor
+The Don Junior Guitar price degraded from 19.567944969637683 to 15.654355975710146
+Velma damaged an item.
+The Gibson Les Paul Standard Bass degraded from Good to Fair
+The Gibson Les Paul Standard Bass price degraded from 19.181208002788956 to 15.344966402231165
+Velma damaged an item.
+The Morose 400 Cable broke and was removed from inventory.
+Velma damaged an item.
+The Kashmir CD broke and was removed from inventory.
+Velma damaged an item.
+The United Colors of Benetton Shiner Bandana degraded from Good to Fair
+The United Colors of Benetton Shiner Bandana price degraded from 60.81106798540542 to 48.64885438832434
+Velma damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Good to Fair
+The Tommy Hilfiger 200 Bandana price degraded from 7.22853009867934 to 5.782824078943473
+Velma damaged an item.
+The Swalla Vinyl degraded from Good to Fair
+The Swalla Vinyl price degraded from 54.005767723222554 to 43.20461417857805
+Velma damaged an item.
+The Virtual Diva Vinyl broke and was removed from inventory.
+Velma damaged an item.
+The Swalla PaperScore broke and was removed from inventory.
+Velma damaged an item.
+The Virtual Diva PaperScore degraded from Fair to Poor
+The Virtual Diva PaperScore price degraded from 50.37559931195351 to 40.30047944956281
+Velma damaged an item.
+The Get Lucky PaperScore degraded from Fair to Poor
+The Get Lucky PaperScore price degraded from 41.23443919032735 to 32.98755135226188
+Velma damaged an item.
+The AudioTechnica M50TH MP3Player degraded from Good to Fair
+The AudioTechnica M50TH MP3Player price degraded from 37.62192133982726 to 30.097537071861808
+Velma damaged an item.
+The Runner 200 MP3Player degraded from Good to Fair
+The Runner 200 MP3Player price degraded from 25.247261041437014 to 20.19780883314961
+Velma damaged an item.
+The Rickenbacker 4001S Mandolin degraded from Good to Fair
+The Rickenbacker 4001S Mandolin price degraded from 5.630991318418896 to 4.504793054735117
+Velma damaged an item.
+The Don Junior Flute degraded from Fair to Poor
+The Don Junior Flute price degraded from 51.57352431030977 to 41.25881944824782
+Velma damaged an item.
+The Don Junior Flute degraded from Fair to Poor
+The Don Junior Flute price degraded from 56.69084375901761 to 45.35267500721409
+Velma damaged an item.
+The Beautiful 100 Strings degraded from Good to Fair
+The Beautiful 100 Strings price degraded from 23.549944829839593 to 18.839955863871676
+Velma damaged an item.
+The Rickenbacker 4001S Harmonica degraded from Good to Fair
+The Rickenbacker 4001S Harmonica price degraded from 37.97837803246421 to 30.382702425971367
+Velma damaged an item.
+The United Colors of Benetton Shiner Shirt degraded from Very Good to Good
+The United Colors of Benetton Shiner Shirt price degraded from 10.361348854552482 to 8.289079083641985
+Velma damaged an item.
+The LVMH Red Dragon Shirt degraded from Fair to Poor
+The LVMH Red Dragon Shirt price degraded from 77.8859372363967 to 62.308749789117364
+Velma damaged an item.
+The AudioTechnica M50TH CDPlayer degraded from Fair to Poor
+The AudioTechnica M50TH CDPlayer price degraded from 41.64403717062341 to 33.31522973649873
+Velma damaged an item.
+The Sony MX CDPlayer degraded from Excellent to Very Good
+The Sony MX CDPlayer price degraded from 22.254099102919668 to 17.803279282335733
+Velma damaged an item.
+The Sony MX CDPlayer degraded from Good to Fair
+The Sony MX CDPlayer price degraded from 58.48936805111305 to 46.79149444089044
+Velma damaged an item.
+The Abstraction 300 PracticeAmp degraded from Fair to Poor
+The Abstraction 300 PracticeAmp price degraded from 34.52200021161519 to 27.617600169292157
+Velma damaged an item.
+The Abstraction 300 PracticeAmp degraded from Fair to Poor
+The Abstraction 300 PracticeAmp price degraded from 40.54505989463133 to 32.43604791570507
+Velma damaged an item.
+The LVMH Red Dragon Hat degraded from Very Good to Good
+The LVMH Red Dragon Hat price degraded from 6.795304638915653 to 5.436243711132523
+Velma damaged an item.
+The AudioTechnica M50TH RecordPlayer broke and was removed from inventory.
+Velma damaged an item.
+The Sony MX RecordPlayer degraded from Fair to Poor
+The Sony MX RecordPlayer price degraded from 21.64383188744497 to 17.31506550995598
+Velma left the store for the day.
+
+Day 4:
+Clerk Shaggy decided to work on day 3.
+Clerk Shaggy counted 1307.5931140121163 in the register.
+Clerk Shaggy calculated the inventory value to be: 555.2297358515605
+Customer Andy Samberg didn't want to buy the PaperScore at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Andy Samberg bought a New Virtual Diva PaperScore in Poor condition at 10% discount for 36.27043150460653
+Customer Andy Samberg didn't want to buy the Harmonica at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Andy Samberg bought a Used Rickenbacker 4001S Harmonica in Fair condition at 10% discount for 27.34443218337423
+Customer Natalie Portman left the store without buying the Harmonica as there was no stock.
+Customer Clint Eastwood left the store without buying the CD as there was no stock.
+Customer Keanu Reeves didn't want to buy the CDPlayer at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Keanu Reeves bought a Used Sony MX CDPlayer in Very Good condition at 10% discount for 16.02295135410216
+Customer Jhonny Cage bought a Used Abstraction 300 PracticeAmp in Poor condition at list price for 32.43604791570507
+Customer Mark Wahlberg left the store without buying the CDPlayer as there was no stock.
+Customer Clint Eastwood left the store without buying the Cable as there was no stock.
+Customer Clint Eastwood didn't want to buy the Strings at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Clint Eastwood left the store without buying a Strings even at discounted price!
+Customer Brad Pitt sold a Used Morose 400 PracticeAmp in Excellent condition at offered price for 28.73015791636237
+Customer Brad Pitt didn't want to sell the Vinyl at the offered price of 12.793119378200174
+Clerk Shaggy offered 10% extra.
+Customer Brad Pitt sold a Used One Step Forward Vinyl in Excellent condition at 10% extra for 14.072431316020193
+Customer Mark Wahlberg sold a Used AudioTechnica M50TH CDPlayer in Fair condition at offered price for 9.084267350107588
+Customer Leonardo DiCaprio didn't want to sell the Hat at the offered price of 23.268023886874353
+Clerk Shaggy offered 10% extra.
+Customer Leonardo DiCaprio sold a New Tommy Hilfiger 200 Hat in Good condition at 10% extra for 25.59482627556179
+Shaggy damaged an item.
+The Muddywood Guitar degraded from Good to Fair
+The Muddywood Guitar price degraded from 56.28607113118073 to 45.02885690494458
+Shaggy damaged an item.
+The Gibson Les Paul Standard Guitar degraded from Fair to Poor
+The Gibson Les Paul Standard Guitar price degraded from 8.819316056561815 to 7.0554528452494525
+Shaggy damaged an item.
+The Don Junior Guitar broke and was removed from inventory.
+Shaggy damaged an item.
+The Gibson Les Paul Standard Bass degraded from Fair to Poor
+The Gibson Les Paul Standard Bass price degraded from 15.344966402231165 to 12.275973121784933
+Shaggy damaged an item.
+The Abstraction 300 Cable broke and was removed from inventory.
+Shaggy damaged an item.
+The Melancholy 50 Cable degraded from Excellent to Very Good
+The Melancholy 50 Cable price degraded from 32.12665764350474 to 25.701326114803795
+Shaggy damaged an item.
+The Abstraction 300 Cable degraded from Fair to Poor
+The Abstraction 300 Cable price degraded from 56.035361351514176 to 44.828289081211345
+Shaggy damaged an item.
+The American Boy CD broke and was removed from inventory.
+Shaggy damaged an item.
+The Thunder CD degraded from Excellent to Very Good
+The Thunder CD price degraded from 56.330651520938666 to 45.06452121675093
+Shaggy damaged an item.
+The American Boy CD degraded from Fair to Poor
+The American Boy CD price degraded from 59.432017166957884 to 47.54561373356631
+Shaggy damaged an item.
+The Swalla Vinyl degraded from Fair to Poor
+The Swalla Vinyl price degraded from 43.20461417857805 to 34.56369134286244
+Shaggy damaged an item.
+The One Step Forward Vinyl degraded from Excellent to Very Good
+The One Step Forward Vinyl price degraded from 28.144862632040386 to 22.51589010563231
+Shaggy damaged an item.
+The Get Lucky PaperScore broke and was removed from inventory.
+Shaggy damaged an item.
+The AudioTechnica M50TH MP3Player degraded from Fair to Poor
+The AudioTechnica M50TH MP3Player price degraded from 30.097537071861808 to 24.07802965748945
+Shaggy damaged an item.
+The Runner 200 MP3Player degraded from Fair to Poor
+The Runner 200 MP3Player price degraded from 20.19780883314961 to 16.15824706651969
+Shaggy damaged an item.
+The Don Junior Flute broke and was removed from inventory.
+Shaggy damaged an item.
+The Don Junior Flute broke and was removed from inventory.
+Shaggy damaged an item.
+The Beautiful 100 Strings degraded from Fair to Poor
+The Beautiful 100 Strings price degraded from 18.839955863871676 to 15.071964691097342
+Shaggy damaged an item.
+The LVMH Red Dragon Shirt broke and was removed from inventory.
+Shaggy damaged an item.
+The AudioTechnica M50TH CDPlayer broke and was removed from inventory.
+Shaggy damaged an item.
+The Sony MX CDPlayer degraded from Fair to Poor
+The Sony MX CDPlayer price degraded from 46.79149444089044 to 37.433195552712355
+Shaggy damaged an item.
+The Abstraction 300 PracticeAmp broke and was removed from inventory.
+Shaggy damaged an item.
+The LVMH Red Dragon Hat degraded from Good to Fair
+The LVMH Red Dragon Hat price degraded from 5.436243711132523 to 4.348994968906019
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Hat degraded from Good to Fair
+The Tommy Hilfiger 200 Hat price degraded from 51.18965255112358 to 40.951722040898865
+Shaggy damaged an item.
+The Sony MX RecordPlayer broke and was removed from inventory.
+Shaggy left the store for the day.
+
+Day 5:
+Clerk Shaggy decided to work on day 4.
+Clerk Shaggy counted 1237.77258529865 in the register.
+Clerk Shaggy calculated the inventory value to be: 340.19431341656264
+Customer Clint Eastwood left the store without buying the RecordPlayer as there was no stock.
+Customer Tom Cruise left the store without buying the Harmonica as there was no stock.
+Customer Leonardo DiCaprio left the store without buying the CDPlayer as there was no stock.
+Customer Jhonny Cage didn't want to buy the Strings at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Jhonny Cage bought a Used Beautiful 100 Strings in Poor condition at 10% discount for 13.564768221987608
+Customer Natalie Portman bought a New Rickenbacker 4001S Mandolin in Fair condition at list price for 4.504793054735117
+Customer Brad Pitt didn't want to buy the Shirt at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Brad Pitt bought a New United Colors of Benetton Shiner Shirt in Good condition at 10% discount for 7.460171175277787
+Customer Clint Eastwood left the store without buying the RecordPlayer as there was no stock.
+Customer Keanu Reeves bought a New LVMH Red Dragon Hat in Fair condition at list price for 4.348994968906019
+Customer Mark Wahlberg left the store without buying the CDPlayer as there was no stock.
+Customer Keanu Reeves left the store without buying the PaperScore as there was no stock.
+Customer Jhonny Cage didn't want to sell the Vinyl at the offered price of 46.53217690376596
+Clerk Shaggy offered 10% extra.
+Customer Jhonny Cage sold a New Kashmir Vinyl in Excellent condition at 10% extra for 51.18539459414256
+Customer Leonardo DiCaprio sold a New One Step Forward PaperScore in Good condition at offered price for 21.288700562742697
+Customer Keanu Reeves didn't want to sell the Mandolin at the offered price of 46.75429088637717
+Clerk Shaggy offered 10% extra.
+Customer Keanu Reeves sold a New Lucille Mandolin in Excellent condition at 10% extra for 51.42971997501489
+Shaggy damaged an item.
+The Muddywood Guitar degraded from Fair to Poor
+The Muddywood Guitar price degraded from 45.02885690494458 to 36.023085523955665
+Shaggy damaged an item.
+The Gibson Les Paul Standard Guitar broke and was removed from inventory.
+Shaggy damaged an item.
+The Gibson Les Paul Standard Bass broke and was removed from inventory.
+Shaggy damaged an item.
+The Abstraction 300 Cable broke and was removed from inventory.
+Shaggy damaged an item.
+The Thunder CD degraded from Very Good to Good
+The Thunder CD price degraded from 45.06452121675093 to 36.05161697340075
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Bandana degraded from Fair to Poor
+The United Colors of Benetton Shiner Bandana price degraded from 48.64885438832434 to 38.919083510659476
+Shaggy damaged an item.
+The Swalla Vinyl broke and was removed from inventory.
+Shaggy damaged an item.
+The One Step Forward Vinyl degraded from Very Good to Good
+The One Step Forward Vinyl price degraded from 22.51589010563231 to 18.012712084505846
+Shaggy damaged an item.
+The Get Lucky PaperScore degraded from Excellent to Very Good
+The Get Lucky PaperScore price degraded from 26.982921988020763 to 21.586337590416612
+Shaggy damaged an item.
+The AudioTechnica M50TH MP3Player broke and was removed from inventory.
+Shaggy damaged an item.
+The Runner 200 MP3Player broke and was removed from inventory.
+Shaggy damaged an item.
+The Lucille Mandolin degraded from Excellent to Very Good
+The Lucille Mandolin price degraded from 102.85943995002978 to 82.28755196002383
+Shaggy damaged an item.
+The Gibson Les Paul Standard Flute degraded from Good to Fair
+The Gibson Les Paul Standard Flute price degraded from 34.91811865144606 to 27.934494921156848
+Shaggy damaged an item.
+The Lucille Harmonica degraded from Good to Fair
+The Lucille Harmonica price degraded from 74.14152369330745 to 59.31321895464596
+Shaggy damaged an item.
+The Don Junior Harmonica degraded from Very Good to Good
+The Don Junior Harmonica price degraded from 52.964282265453384 to 42.37142581236271
+Shaggy damaged an item.
+The Fender Jazz Bass Harmonica degraded from Excellent to Very Good
+The Fender Jazz Bass Harmonica price degraded from 12.109567794911479 to 9.687654235929184
+Shaggy damaged an item.
+The LVMH Red Dragon Shirt broke and was removed from inventory.
+Shaggy damaged an item.
+The Sony MX CDPlayer broke and was removed from inventory.
+Shaggy damaged an item.
+The Melancholy 50 PracticeAmp degraded from Good to Fair
+The Melancholy 50 PracticeAmp price degraded from 68.0623112492842 to 54.44984899942737
+Shaggy damaged an item.
+The Abstraction 300 PracticeAmp degraded from Good to Fair
+The Abstraction 300 PracticeAmp price degraded from 19.880128344488117 to 15.904102675590494
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Hat degraded from Fair to Poor
+The Tommy Hilfiger 200 Hat price degraded from 40.951722040898865 to 32.761377632719096
+Shaggy damaged an item.
+The Sony MX RecordPlayer degraded from Fair to Poor
+The Sony MX RecordPlayer price degraded from 71.74109008712595 to 57.392872069700765
+Shaggy damaged an item.
+The RocketRon 5000 RecordPlayer degraded from Good to Fair
+The RocketRon 5000 RecordPlayer price degraded from 75.47644699014198 to 60.38115759211359
+Shaggy left the store for the day.
+
+Day 6:
+Clerk Shaggy decided to work on day 5.
+Clerk Shaggy counted 755.7927981631575 in the register.
+Clerk Shaggy calculated the inventory value to be: 394.1778396550689
+Customer Natalie Portman left the store without buying the RecordPlayer as there was no stock.
+Customer Brad Pitt bought a Used Melancholy 50 PracticeAmp in Fair condition at list price for 54.44984899942737
+Customer Tom Cruise bought a New Kashmir Vinyl in Excellent condition at list price for 102.37078918828512
+Customer Natalie Portman bought a New Lucille Mandolin in Very Good condition at list price for 82.28755196002383
+Customer Andy Samberg sold a New Abstraction 300 PracticeAmp in Excellent condition at offered price for 10.272010151629196
+Customer Jhonny Cage didn't want to sell the PracticeAmp at the offered price of 28.779291781276676
+Clerk Shaggy offered 10% extra.
+Customer Jhonny Cage left the store without selling a PracticeAmp even at extra price!
+Shaggy damaged an item.
+The Muddywood Guitar broke and was removed from inventory.
+Shaggy damaged an item.
+The Muddywood Bass degraded from Good to Fair
+The Muddywood Bass price degraded from 78.86408554961525 to 63.09126843969221
+Shaggy damaged an item.
+The Dark Zapper Bass degraded from Fair to Poor
+The Dark Zapper Bass price degraded from 67.59319118763753 to 54.074552950110025
+Shaggy damaged an item.
+The Lucille Bass degraded from Good to Fair
+The Lucille Bass price degraded from 69.76218199762943 to 55.80974559810355
+Shaggy damaged an item.
+The Melancholy 50 Cable degraded from Very Good to Good
+The Melancholy 50 Cable price degraded from 25.701326114803795 to 20.561060891843038
+Shaggy damaged an item.
+The American Boy CD broke and was removed from inventory.
+Shaggy damaged an item.
+The Thunder CD degraded from Good to Fair
+The Thunder CD price degraded from 36.05161697340075 to 28.8412935787206
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Fair to Poor
+The Tommy Hilfiger 200 Bandana price degraded from 5.782824078943473 to 4.626259263154778
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Bandana broke and was removed from inventory.
+Shaggy damaged an item.
+The One Step Forward Vinyl degraded from Good to Fair
+The One Step Forward Vinyl price degraded from 18.012712084505846 to 14.410169667604677
+Shaggy damaged an item.
+The Bleed It Out PaperScore degraded from Good to Fair
+The Bleed It Out PaperScore price degraded from 18.575509021293765 to 14.860407217035013
+Shaggy damaged an item.
+The Get Lucky PaperScore degraded from Very Good to Good
+The Get Lucky PaperScore price degraded from 21.586337590416612 to 17.26907007233329
+Shaggy damaged an item.
+The RocketRon 5000 MP3Player degraded from Fair to Poor
+The RocketRon 5000 MP3Player price degraded from 68.33993927280362 to 54.6719514182429
+Shaggy damaged an item.
+The AudioTechnica M50TH MP3Player degraded from Fair to Poor
+The AudioTechnica M50TH MP3Player price degraded from 55.1011388120985 to 44.080911049678804
+Shaggy damaged an item.
+The Bose 100 MP3Player broke and was removed from inventory.
+Shaggy damaged an item.
+The Guild Starfire Flute broke and was removed from inventory.
+Shaggy damaged an item.
+The Lucille Flute degraded from Very Good to Good
+The Lucille Flute price degraded from 91.4093284561959 to 73.12746276495672
+Shaggy damaged an item.
+The Gibson Les Paul Standard Flute degraded from Fair to Poor
+The Gibson Les Paul Standard Flute price degraded from 27.934494921156848 to 22.34759593692548
+Shaggy damaged an item.
+The Morose 400 Strings degraded from Excellent to Very Good
+The Morose 400 Strings price degraded from 49.47678387932534 to 39.58142710346027
+Shaggy damaged an item.
+The Melancholy 50 Strings degraded from Excellent to Very Good
+The Melancholy 50 Strings price degraded from 90.13256248803519 to 72.10604999042816
+Shaggy damaged an item.
+The Abstraction 300 Strings degraded from Very Good to Good
+The Abstraction 300 Strings price degraded from 13.410829344473528 to 10.728663475578823
+Shaggy damaged an item.
+The Lucille Harmonica degraded from Fair to Poor
+The Lucille Harmonica price degraded from 59.31321895464596 to 47.45057516371677
+Shaggy damaged an item.
+The Fender Jazz Bass Harmonica degraded from Very Good to Good
+The Fender Jazz Bass Harmonica price degraded from 9.687654235929184 to 7.750123388743347
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Shirt degraded from Fair to Poor
+The United Colors of Benetton Shiner Shirt price degraded from 14.88188068070398 to 11.905504544563184
+Shaggy damaged an item.
+The LVMH Red Dragon Shirt degraded from Fair to Poor
+The LVMH Red Dragon Shirt price degraded from 11.664438792693637 to 9.331551034154911
+Shaggy damaged an item.
+The Bose 100 CDPlayer degraded from Good to Fair
+The Bose 100 CDPlayer price degraded from 34.79139741475921 to 27.83311793180737
+Shaggy damaged an item.
+The Bose 100 CDPlayer degraded from Very Good to Good
+The Bose 100 CDPlayer price degraded from 30.770369643239363 to 24.61629571459149
+Shaggy damaged an item.
+The Melancholy 50 PracticeAmp degraded from Excellent to Very Good
+The Melancholy 50 PracticeAmp price degraded from 75.18845521101441 to 60.150764168811534
+Shaggy damaged an item.
+The Abstraction 300 PracticeAmp degraded from Fair to Poor
+The Abstraction 300 PracticeAmp price degraded from 15.904102675590494 to 12.723282140472396
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Hat broke and was removed from inventory.
+Shaggy damaged an item.
+The Sony MX RecordPlayer broke and was removed from inventory.
+Shaggy damaged an item.
+The RocketRon 5000 RecordPlayer degraded from Fair to Poor
+The RocketRon 5000 RecordPlayer price degraded from 60.38115759211359 to 48.30492607369087
+Shaggy left the store for the day.
+
+Day 7:
+On Sunday, no one worked.
+
+Day 8:
+Clerk Shaggy decided to work on day 7.
+Clerk Shaggy counted 627.6112434730951 in the register.
+Clerk Shaggy calculated the inventory value to be: 537.7384017490917
+Customer Tom Cruise didn't want to buy the PaperScore at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Tom Cruise bought a Used Get Lucky PaperScore in Good condition at 10% discount for 15.54216306509996
+Customer Keanu Reeves didn't want to buy the CD at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Keanu Reeves bought a Used Thunder CD in Fair condition at 10% discount for 25.95716422084854
+Customer Keanu Reeves left the store without buying the Mandolin as there was no stock.
+Customer Natalie Portman bought a New Dark Zapper Bass in Poor condition at list price for 54.074552950110025
+Customer Brad Pitt left the store without buying the CD as there was no stock.
+Customer Tom Cruise didn't want to buy the MP3Player at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Tom Cruise bought a New AudioTechnica M50TH MP3Player in Poor condition at 10% discount for 39.67281994471092
+Customer Natalie Portman bought a Used Fender Jazz Bass Harmonica in Good condition at list price for 7.750123388743347
+Customer Keanu Reeves didn't want to buy the RecordPlayer at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Keanu Reeves bought a New RocketRon 5000 RecordPlayer in Poor condition at 10% discount for 43.474433466321784
+Customer Leonardo DiCaprio bought a Used Sony MX RecordPlayer in Poor condition at list price for 94.35190370311562
+Customer Natalie Portman didn't want to sell the Bass at the offered price of 38.38982935465123
+Clerk Shaggy offered 10% extra.
+Customer Natalie Portman sold a Used Rickenbacker 4001S Bass in Excellent condition at 10% extra for 42.22881229011636
+Customer Mark Wahlberg didn't want to sell the PracticeAmp at the offered price of 33.48198423908858
+Clerk Shaggy offered 10% extra.
+Customer Mark Wahlberg sold a New Beautiful 100 PracticeAmp in Very Good condition at 10% extra for 36.830182662997444
+Customer Jhonny Cage didn't want to sell the PracticeAmp at the offered price of 2.310604764599726
+Clerk Shaggy offered 10% extra.
+Customer Jhonny Cage sold a New Morose 400 PracticeAmp in Poor condition at 10% extra for 2.5416652410596985
+Shaggy damaged an item.
+The Smooth Noodle Guitar degraded from Fair to Poor
+The Smooth Noodle Guitar price degraded from 16.26525555034829 to 13.012204440278632
+Shaggy damaged an item.
+The Smooth Noodle Guitar degraded from Very Good to Good
+The Smooth Noodle Guitar price degraded from 58.78684625530827 to 47.029477004246615
+Shaggy damaged an item.
+The Gibson Les Paul Standard Guitar degraded from Excellent to Very Good
+The Gibson Les Paul Standard Guitar price degraded from 9.785975052538435 to 7.828780042030748
+Shaggy damaged an item.
+The Muddywood Bass degraded from Fair to Poor
+The Muddywood Bass price degraded from 63.09126843969221 to 50.473014751753766
+Shaggy damaged an item.
+The Lucille Bass degraded from Fair to Poor
+The Lucille Bass price degraded from 55.80974559810355 to 44.64779647848284
+Shaggy damaged an item.
+The Rickenbacker 4001S Bass degraded from Excellent to Very Good
+The Rickenbacker 4001S Bass price degraded from 84.45762458023272 to 67.56609966418618
+Shaggy damaged an item.
+The Melancholy 50 Cable degraded from Good to Fair
+The Melancholy 50 Cable price degraded from 20.561060891843038 to 16.44884871347443
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Bandana broke and was removed from inventory.
+Shaggy damaged an item.
+The One Step Forward Vinyl degraded from Fair to Poor
+The One Step Forward Vinyl price degraded from 14.410169667604677 to 11.528135734083742
+Shaggy damaged an item.
+The American Boy PaperScore degraded from Good to Fair
+The American Boy PaperScore price degraded from 38.55067247491724 to 30.840537979933796
+Shaggy damaged an item.
+The Bleed It Out PaperScore degraded from Fair to Poor
+The Bleed It Out PaperScore price degraded from 14.860407217035013 to 11.888325773628011
+Shaggy damaged an item.
+The Muddywood Mandolin degraded from Fair to Poor
+The Muddywood Mandolin price degraded from 41.82976679901005 to 33.463813439208046
+Shaggy damaged an item.
+The Dark Zapper Mandolin degraded from Excellent to Very Good
+The Dark Zapper Mandolin price degraded from 42.44044185936485 to 33.952353487491884
+Shaggy damaged an item.
+The Gibson Les Paul Standard Mandolin degraded from Good to Fair
+The Gibson Les Paul Standard Mandolin price degraded from 24.592375270893434 to 19.67390021671475
+Shaggy damaged an item.
+The Lucille Flute degraded from Good to Fair
+The Lucille Flute price degraded from 73.12746276495672 to 58.50197021196538
+Shaggy damaged an item.
+The Gibson Les Paul Standard Flute broke and was removed from inventory.
+Shaggy damaged an item.
+The Melancholy 50 Strings degraded from Very Good to Good
+The Melancholy 50 Strings price degraded from 72.10604999042816 to 57.68483999234253
+Shaggy damaged an item.
+The Abstraction 300 Strings degraded from Good to Fair
+The Abstraction 300 Strings price degraded from 10.728663475578823 to 8.582930780463059
+Shaggy damaged an item.
+The Don Junior Harmonica degraded from Good to Fair
+The Don Junior Harmonica price degraded from 42.37142581236271 to 33.89714064989017
+Shaggy damaged an item.
+The Lucille Harmonica broke and was removed from inventory.
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Shirt degraded from Good to Fair
+The United Colors of Benetton Shiner Shirt price degraded from 46.12946054121255 to 36.90356843297004
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Shirt broke and was removed from inventory.
+Shaggy damaged an item.
+The LVMH Red Dragon Shirt broke and was removed from inventory.
+Shaggy damaged an item.
+The Bose 100 CDPlayer degraded from Fair to Poor
+The Bose 100 CDPlayer price degraded from 27.83311793180737 to 22.266494345445896
+Shaggy damaged an item.
+The Bose 100 CDPlayer degraded from Good to Fair
+The Bose 100 CDPlayer price degraded from 24.61629571459149 to 19.693036571673193
+Shaggy damaged an item.
+The Abstraction 300 PracticeAmp broke and was removed from inventory.
+Shaggy damaged an item.
+The Beautiful 100 PracticeAmp degraded from Very Good to Good
+The Beautiful 100 PracticeAmp price degraded from 73.66036532599489 to 58.928292260795914
+Shaggy damaged an item.
+The Morose 400 PracticeAmp broke and was removed from inventory.
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Hat degraded from Good to Fair
+The United Colors of Benetton Shiner Hat price degraded from 78.77491661103235 to 63.01993328882588
+Shaggy damaged an item.
+The LVMH Red Dragon Hat degraded from Very Good to Good
+The LVMH Red Dragon Hat price degraded from 20.406328096272258 to 16.325062477017806
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Hat degraded from Excellent to Very Good
+The United Colors of Benetton Shiner Hat price degraded from 99.39478610210232 to 79.51582888168186
+Shaggy left the store for the day.
+
+Day 9:
+Clerk Shaggy decided to work on day 8.
+Clerk Shaggy counted 630.6953982194366 in the register.
+Clerk Shaggy calculated the inventory value to be: 554.4469115896653
+Customer Clint Eastwood didn't want to buy the Vinyl at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Clint Eastwood left the store without buying a Vinyl even at discounted price!
+Customer Andy Samberg didn't want to buy the CDPlayer at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Andy Samberg bought a New RocketRon 5000 CDPlayer in Excellent condition at 10% discount for 11.255317204784117
+Customer Jhonny Cage bought a Used Melancholy 50 PracticeAmp in Very Good condition at list price for 60.150764168811534
+Customer Natalie Portman didn't want to buy the Guitar at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Natalie Portman left the store without buying a Guitar even at discounted price!
+Customer Brad Pitt bought a New Lucille Flute in Fair condition at list price for 58.50197021196538
+Customer Andy Samberg left the store without buying the Bandana as there was no stock.
+Customer Keanu Reeves didn't want to buy the Mandolin at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Keanu Reeves bought a Used Gibson Les Paul Standard Mandolin in Fair condition at 10% discount for 17.706510195043276
+Customer Andy Samberg bought a New Beautiful 100 PracticeAmp in Good condition at list price for 58.928292260795914
+Customer Natalie Portman didn't want to sell the Mandolin at the offered price of 3.1123232692796132
+Clerk Shaggy offered 10% extra.
+Customer Natalie Portman sold a Used Smooth Noodle Mandolin in Good condition at 10% extra for 3.4235555962075748
+Customer Brad Pitt sold a Used LVMH Red Dragon Bandana in Poor condition at offered price for 8.019500445735147
+Customer Jhonny Cage didn't want to sell the Flute at the offered price of 27.716575700710436
+Clerk Shaggy offered 10% extra.
+Customer Jhonny Cage sold a New Rickenbacker 4001S Flute in Very Good condition at 10% extra for 30.488233270781482
+Customer Jhonny Cage sold a Used Beautiful 100 Strings in Poor condition at offered price for 1.7272157158250068
+Shaggy damaged an item.
+The Gibson Les Paul Standard Guitar degraded from Very Good to Good
+The Gibson Les Paul Standard Guitar price degraded from 7.828780042030748 to 6.263024033624599
+Shaggy damaged an item.
+The Muddywood Bass broke and was removed from inventory.
+Shaggy damaged an item.
+The Lucille Bass broke and was removed from inventory.
+Shaggy damaged an item.
+The Rickenbacker 4001S Bass degraded from Very Good to Good
+The Rickenbacker 4001S Bass price degraded from 67.56609966418618 to 54.05287973134895
+Shaggy damaged an item.
+The Melancholy 50 Cable degraded from Fair to Poor
+The Melancholy 50 Cable price degraded from 16.44884871347443 to 13.159078970779545
+Shaggy damaged an item.
+The Bleed It Out CD broke and was removed from inventory.
+Shaggy damaged an item.
+The American Boy CD degraded from Excellent to Very Good
+The American Boy CD price degraded from 32.634907089119785 to 26.10792567129583
+Shaggy damaged an item.
+The Virtual Diva CD degraded from Fair to Poor
+The Virtual Diva CD price degraded from 32.73101932672047 to 26.184815461376377
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Bandana broke and was removed from inventory.
+Shaggy damaged an item.
+The LVMH Red Dragon Bandana degraded from Excellent to Very Good
+The LVMH Red Dragon Bandana price degraded from 4.088512227624173 to 3.270809782099339
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Good to Fair
+The Tommy Hilfiger 200 Bandana price degraded from 23.638431618923583 to 18.910745295138867
+Shaggy damaged an item.
+The One Step Forward Vinyl broke and was removed from inventory.
+Shaggy damaged an item.
+The American Boy PaperScore degraded from Fair to Poor
+The American Boy PaperScore price degraded from 30.840537979933796 to 24.672430383947038
+Shaggy damaged an item.
+The Bleed It Out PaperScore broke and was removed from inventory.
+Shaggy damaged an item.
+The RocketRon 5000 MP3Player broke and was removed from inventory.
+Shaggy damaged an item.
+The Muddywood Mandolin broke and was removed from inventory.
+Shaggy damaged an item.
+The Rickenbacker 4001S Flute degraded from Very Good to Good
+The Rickenbacker 4001S Flute price degraded from 60.976466541562964 to 48.78117323325037
+Shaggy damaged an item.
+The Morose 400 Strings degraded from Very Good to Good
+The Morose 400 Strings price degraded from 39.58142710346027 to 31.66514168276822
+Shaggy damaged an item.
+The Melancholy 50 Strings degraded from Good to Fair
+The Melancholy 50 Strings price degraded from 57.68483999234253 to 46.14787199387403
+Shaggy damaged an item.
+The Abstraction 300 Strings degraded from Fair to Poor
+The Abstraction 300 Strings price degraded from 8.582930780463059 to 6.866344624370448
+Shaggy damaged an item.
+The Don Junior Harmonica degraded from Fair to Poor
+The Don Junior Harmonica price degraded from 33.89714064989017 to 27.117712519912136
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Shirt degraded from Fair to Poor
+The United Colors of Benetton Shiner Shirt price degraded from 36.90356843297004 to 29.522854746376034
+Shaggy damaged an item.
+The Bose 100 CDPlayer broke and was removed from inventory.
+Shaggy damaged an item.
+The Bose 100 CDPlayer degraded from Fair to Poor
+The Bose 100 CDPlayer price degraded from 19.693036571673193 to 15.754429257338556
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Hat degraded from Fair to Poor
+The United Colors of Benetton Shiner Hat price degraded from 63.01993328882588 to 50.415946631060706
+Shaggy damaged an item.
+The LVMH Red Dragon Hat degraded from Good to Fair
+The LVMH Red Dragon Hat price degraded from 16.325062477017806 to 13.060049981614245
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Hat degraded from Very Good to Good
+The United Colors of Benetton Shiner Hat price degraded from 79.51582888168186 to 63.61266310534549
+Shaggy damaged an item.
+The RocketRon 5000 RecordPlayer degraded from Fair to Poor
+The RocketRon 5000 RecordPlayer price degraded from 99.7925873715381 to 79.83406989723049
+Shaggy damaged an item.
+The Runner 200 RecordPlayer degraded from Good to Fair
+The Runner 200 RecordPlayer price degraded from 47.95221217783226 to 38.36176974226581
+Shaggy damaged an item.
+The Runner 200 RecordPlayer degraded from Good to Fair
+The Runner 200 RecordPlayer price degraded from 33.78831009816058 to 27.030648078528465
+Shaggy left the store for the day.
+
+Day 10:
+Clerk Shaggy decided to work on day 9.
+Clerk Shaggy counted 627.3291540007343 in the register.
+Clerk Shaggy calculated the inventory value to be: 456.03457805630256
+Customer Keanu Reeves bought a New American Boy PaperScore in Poor condition at list price for 24.672430383947038
+Customer Jhonny Cage left the store without buying the Vinyl as there was no stock.
+Customer Keanu Reeves didn't want to buy the Bandana at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Keanu Reeves left the store without buying a Bandana even at discounted price!
+Customer Natalie Portman left the store without buying the MP3Player as there was no stock.
+Customer Jhonny Cage bought a New Don Junior Harmonica in Poor condition at list price for 27.117712519912136
+Customer Keanu Reeves left the store without buying the PaperScore as there was no stock.
+Customer Mark Wahlberg left the store without buying the PracticeAmp as there was no stock.
+Customer Clint Eastwood left the store without buying the Harmonica as there was no stock.
+Customer Jhonny Cage didn't want to sell the Vinyl at the offered price of 8.499495593082665
+Clerk Shaggy offered 10% extra.
+Customer Jhonny Cage left the store without selling a Vinyl even at extra price!
+Customer Tom Cruise sold a Used United Colors of Benetton Shiner Shirt in Excellent condition at offered price for 34.5103391406493
+Shaggy damaged an item.
+The Smooth Noodle Guitar degraded from Good to Fair
+The Smooth Noodle Guitar price degraded from 47.029477004246615 to 37.62358160339729
+Shaggy damaged an item.
+The Gibson Les Paul Standard Guitar degraded from Good to Fair
+The Gibson Les Paul Standard Guitar price degraded from 6.263024033624599 to 5.010419226899679
+Shaggy damaged an item.
+The Rickenbacker 4001S Bass degraded from Good to Fair
+The Rickenbacker 4001S Bass price degraded from 54.05287973134895 to 43.242303785079166
+Shaggy damaged an item.
+The American Boy CD degraded from Very Good to Good
+The American Boy CD price degraded from 26.10792567129583 to 20.886340537036666
+Shaggy damaged an item.
+The Virtual Diva CD broke and was removed from inventory.
+Shaggy damaged an item.
+The LVMH Red Dragon Bandana degraded from Very Good to Good
+The LVMH Red Dragon Bandana price degraded from 3.270809782099339 to 2.6166478256794714
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Fair to Poor
+The Tommy Hilfiger 200 Bandana price degraded from 18.910745295138867 to 15.128596236111093
+Shaggy damaged an item.
+The Thunder Vinyl degraded from Fair to Poor
+The Thunder Vinyl price degraded from 85.61345031521878 to 68.49076025217504
+Shaggy damaged an item.
+The Bleed It Out Vinyl degraded from Very Good to Good
+The Bleed It Out Vinyl price degraded from 24.69498410126697 to 19.755987281013578
+Shaggy damaged an item.
+The Get Lucky Vinyl degraded from Fair to Poor
+The Get Lucky Vinyl price degraded from 98.81295507492545 to 79.05036405994036
+Shaggy damaged an item.
+The AudioTechnica M50TH MP3Player degraded from Excellent to Very Good
+The AudioTechnica M50TH MP3Player price degraded from 66.2801816956188 to 53.02414535649504
+Shaggy damaged an item.
+The Bose 100 MP3Player degraded from Very Good to Good
+The Bose 100 MP3Player price degraded from 54.66645512796264 to 43.73316410237012
+Shaggy damaged an item.
+The Morose 400 PracticeAmp degraded from Fair to Poor
+The Morose 400 PracticeAmp price degraded from 78.84881697522695 to 63.079053580181565
+Shaggy damaged an item.
+The Melancholy 50 PracticeAmp degraded from Good to Fair
+The Melancholy 50 PracticeAmp price degraded from 62.207401188852934 to 49.76592095108235
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Hat broke and was removed from inventory.
+Shaggy damaged an item.
+The LVMH Red Dragon Hat degraded from Fair to Poor
+The LVMH Red Dragon Hat price degraded from 13.060049981614245 to 10.448039985291397
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Hat degraded from Good to Fair
+The United Colors of Benetton Shiner Hat price degraded from 63.61266310534549 to 50.8901304842764
+Shaggy damaged an item.
+The Dark Zapper Mandolin degraded from Very Good to Good
+The Dark Zapper Mandolin price degraded from 33.952353487491884 to 27.16188278999351
+Shaggy damaged an item.
+The Smooth Noodle Mandolin degraded from Good to Fair
+The Smooth Noodle Mandolin price degraded from 6.8471111924151495 to 5.47768895393212
+Shaggy damaged an item.
+The Rickenbacker 4001S Flute degraded from Good to Fair
+The Rickenbacker 4001S Flute price degraded from 48.78117323325037 to 39.0249385866003
+Shaggy damaged an item.
+The Morose 400 Strings degraded from Good to Fair
+The Morose 400 Strings price degraded from 31.66514168276822 to 25.332113346214577
+Shaggy damaged an item.
+The Melancholy 50 Strings degraded from Fair to Poor
+The Melancholy 50 Strings price degraded from 46.14787199387403 to 36.918297595099226
+Shaggy damaged an item.
+The Abstraction 300 Strings broke and was removed from inventory.
+Shaggy damaged an item.
+The Runner 200 RecordPlayer degraded from Fair to Poor
+The Runner 200 RecordPlayer price degraded from 38.36176974226581 to 30.689415793812646
+Shaggy damaged an item.
+The Runner 200 RecordPlayer degraded from Fair to Poor
+The Runner 200 RecordPlayer price degraded from 27.030648078528465 to 21.624518462822774
+Shaggy left the store for the day.
+
+Day 11:
+Clerk Velma decided to work on day 10.
+Clerk Velma counted 391.90052610796465 in the register.
+Clerk Velma calculated the inventory value to be: 530.0582339392372
+Customer Keanu Reeves left the store without buying the PracticeAmp as there was no stock.
+Customer Mark Wahlberg didn't want to buy the Vinyl at the list price.
+Clerk Velma offered a 10% discount
+Customer Mark Wahlberg left the store without buying a Vinyl even at discounted price!
+Customer Mark Wahlberg didn't want to buy the Vinyl at the list price.
+Clerk Velma offered a 10% discount
+Customer Mark Wahlberg bought a New Get Lucky Vinyl in Poor condition at 10% discount for 71.14532765394632
+Customer Tom Cruise didn't want to buy the CDPlayer at the list price.
+Clerk Velma offered a 10% discount
+Customer Tom Cruise bought a Used Bose 100 CDPlayer in Poor condition at 10% discount for 14.178986331604701
+Customer Leonardo DiCaprio left the store without buying the Harmonica as there was no stock.
+Customer Natalie Portman left the store without buying the Harmonica as there was no stock.
+Customer Keanu Reeves left the store without buying the CDPlayer as there was no stock.
+Customer Brad Pitt didn't want to buy the Cable at the list price.
+Clerk Velma offered a 10% discount
+Customer Brad Pitt bought a New Melancholy 50 Cable in Poor condition at 10% discount for 11.84317107370159
+Customer Leonardo DiCaprio left the store without buying the CDPlayer as there was no stock.
+Customer Jhonny Cage sold a Used Fender Jazz Bass Bass in Fair condition at offered price for 1.2831086012810888
+Customer Leonardo DiCaprio didn't want to sell the PaperScore at the offered price of 10.431314487673571
+Clerk Velma offered 10% extra.
+Customer Leonardo DiCaprio sold a New One Step Forward PaperScore in Fair condition at 10% extra for 11.47444593644093
+Customer Andy Samberg didn't want to sell the Bass at the offered price of 11.268866046601712
+Clerk Velma offered 10% extra.
+Customer Andy Samberg sold a New Rickenbacker 4001S Bass in Fair condition at 10% extra for 12.395752651261883
+Customer Clint Eastwood didn't want to sell the Vinyl at the offered price of 4.295936240660953
+Clerk Velma offered 10% extra.
+Customer Clint Eastwood sold a Used Swalla Vinyl in Good condition at 10% extra for 4.725529864727048
+Velma damaged an item.
+The Smooth Noodle Guitar broke and was removed from inventory.
+Velma damaged an item.
+The Smooth Noodle Guitar degraded from Fair to Poor
+The Smooth Noodle Guitar price degraded from 37.62358160339729 to 30.098865282717835
+Velma damaged an item.
+The Gibson Les Paul Standard Guitar degraded from Fair to Poor
+The Gibson Les Paul Standard Guitar price degraded from 5.010419226899679 to 4.008335381519744
+Velma damaged an item.
+The Rickenbacker 4001S Bass degraded from Fair to Poor
+The Rickenbacker 4001S Bass price degraded from 43.242303785079166 to 34.59384302806333
+Velma damaged an item.
+The Rickenbacker 4001S Bass degraded from Fair to Poor
+The Rickenbacker 4001S Bass price degraded from 24.791505302523767 to 19.833204242019015
+Velma damaged an item.
+The American Boy CD degraded from Good to Fair
+The American Boy CD price degraded from 20.886340537036666 to 16.709072429629334
+Velma damaged an item.
+The LVMH Red Dragon Bandana degraded from Good to Fair
+The LVMH Red Dragon Bandana price degraded from 2.6166478256794714 to 2.0933182605435774
+Velma damaged an item.
+The Tommy Hilfiger 200 Bandana broke and was removed from inventory.
+Velma damaged an item.
+The Thunder Vinyl broke and was removed from inventory.
+Velma damaged an item.
+The Bleed It Out Vinyl degraded from Good to Fair
+The Bleed It Out Vinyl price degraded from 19.755987281013578 to 15.804789824810863
+Velma damaged an item.
+The Swalla Vinyl degraded from Good to Fair
+The Swalla Vinyl price degraded from 9.451059729454096 to 7.560847783563277
+Velma damaged an item.
+The Get Lucky PaperScore degraded from Very Good to Good
+The Get Lucky PaperScore price degraded from 74.59065110214117 to 59.672520881712934
+Velma damaged an item.
+The American Boy PaperScore degraded from Excellent to Very Good
+The American Boy PaperScore price degraded from 33.257125609734175 to 26.60570048778734
+Velma damaged an item.
+The Virtual Diva PaperScore degraded from Excellent to Very Good
+The Virtual Diva PaperScore price degraded from 9.419679139327297 to 7.535743311461838
+Velma damaged an item.
+The One Step Forward PaperScore degraded from Fair to Poor
+The One Step Forward PaperScore price degraded from 22.94889187288186 to 18.359113498305486
+Velma damaged an item.
+The RocketRon 5000 MP3Player degraded from Excellent to Very Good
+The RocketRon 5000 MP3Player price degraded from 71.41188279488797 to 57.129506235910384
+Velma damaged an item.
+The AudioTechnica M50TH MP3Player degraded from Very Good to Good
+The AudioTechnica M50TH MP3Player price degraded from 53.02414535649504 to 42.41931628519603
+Velma damaged an item.
+The Bose 100 MP3Player degraded from Good to Fair
+The Bose 100 MP3Player price degraded from 43.73316410237012 to 34.9865312818961
+Velma damaged an item.
+The Dark Zapper Mandolin degraded from Good to Fair
+The Dark Zapper Mandolin price degraded from 27.16188278999351 to 21.729506231994808
+Velma damaged an item.
+The Smooth Noodle Mandolin degraded from Fair to Poor
+The Smooth Noodle Mandolin price degraded from 5.47768895393212 to 4.3821511631456955
+Velma damaged an item.
+The Rickenbacker 4001S Flute degraded from Fair to Poor
+The Rickenbacker 4001S Flute price degraded from 39.0249385866003 to 31.21995086928024
+Velma damaged an item.
+The Morose 400 Strings degraded from Fair to Poor
+The Morose 400 Strings price degraded from 25.332113346214577 to 20.265690676971662
+Velma damaged an item.
+The Melancholy 50 Strings broke and was removed from inventory.
+Velma damaged an item.
+The Guild Starfire Harmonica broke and was removed from inventory.
+Velma damaged an item.
+The Muddywood Harmonica degraded from Very Good to Good
+The Muddywood Harmonica price degraded from 8.760401739924065 to 7.008321391939252
+Velma damaged an item.
+The Smooth Noodle Harmonica degraded from Good to Fair
+The Smooth Noodle Harmonica price degraded from 98.35534713107418 to 78.68427770485935
+Velma damaged an item.
+The United Colors of Benetton Shiner Shirt broke and was removed from inventory.
+Velma damaged an item.
+The Morose 400 PracticeAmp degraded from Very Good to Good
+The Morose 400 PracticeAmp price degraded from 31.901414319296865 to 25.521131455437494
+Velma damaged an item.
+The Morose 400 PracticeAmp broke and was removed from inventory.
+Velma damaged an item.
+The Melancholy 50 PracticeAmp degraded from Fair to Poor
+The Melancholy 50 PracticeAmp price degraded from 49.76592095108235 to 39.81273676086588
+Velma damaged an item.
+The LVMH Red Dragon Hat broke and was removed from inventory.
+Velma damaged an item.
+The United Colors of Benetton Shiner Hat degraded from Fair to Poor
+The United Colors of Benetton Shiner Hat price degraded from 50.8901304842764 to 40.71210438742112
+Velma damaged an item.
+The RocketRon 5000 RecordPlayer broke and was removed from inventory.
+Velma damaged an item.
+The Runner 200 RecordPlayer broke and was removed from inventory.
+Velma damaged an item.
+The Runner 200 RecordPlayer broke and was removed from inventory.
+Velma left the store for the day.
+
+Day 12:
+Clerk Shaggy decided to work on day 11.
+Clerk Shaggy counted 309.6995445357776 in the register.
+Clerk Shaggy calculated the inventory value to be: 385.2494206932049
+Couldn't purchase the JBL 700BT RecordPlayer as we were out of funds.
+Couldn't purchase the Sony MX RecordPlayer as we were out of funds.
+Customer Andy Samberg bought a Used Rickenbacker 4001S Bass in Poor condition at list price for 34.59384302806333
+Customer Leonardo DiCaprio left the store without buying the RecordPlayer as there was no stock.
+Customer Keanu Reeves bought a Used American Boy CD in Fair condition at list price for 16.709072429629334
+Customer Leonardo DiCaprio didn't want to buy the PracticeAmp at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Leonardo DiCaprio bought a Used Melancholy 50 PracticeAmp in Poor condition at 10% discount for 35.831463084779294
+Customer Tom Cruise didn't want to buy the Mandolin at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Tom Cruise bought a Used Smooth Noodle Mandolin in Poor condition at 10% discount for 3.943936046831126
+Customer Natalie Portman bought a New Morose 400 Strings in Poor condition at list price for 20.265690676971662
+Customer Keanu Reeves bought a New Rickenbacker 4001S Flute in Poor condition at list price for 31.21995086928024
+Customer Jhonny Cage didn't want to sell the CDPlayer at the offered price of 50.34188189242199
+Clerk Shaggy offered 10% extra.
+Customer Jhonny Cage left the store without selling a CDPlayer even at extra price!
+Shaggy damaged an item.
+The Smooth Noodle Guitar broke and was removed from inventory.
+Shaggy damaged an item.
+The Gibson Les Paul Standard Guitar broke and was removed from inventory.
+Shaggy damaged an item.
+The Melancholy 50 Cable degraded from Fair to Poor
+The Melancholy 50 Cable price degraded from 78.54362630477661 to 62.83490104382129
+Shaggy damaged an item.
+The Morose 400 Cable degraded from Good to Fair
+The Morose 400 Cable price degraded from 74.71499522422657 to 59.77199617938126
+Shaggy damaged an item.
+The Beautiful 100 Cable degraded from Excellent to Very Good
+The Beautiful 100 Cable price degraded from 69.0710834714595 to 55.2568667771676
+Shaggy damaged an item.
+The LVMH Red Dragon Bandana degraded from Fair to Poor
+The LVMH Red Dragon Bandana price degraded from 2.0933182605435774 to 1.674654608434862
+Shaggy damaged an item.
+The Bleed It Out Vinyl degraded from Fair to Poor
+The Bleed It Out Vinyl price degraded from 15.804789824810863 to 12.64383185984869
+Shaggy damaged an item.
+The Swalla Vinyl degraded from Fair to Poor
+The Swalla Vinyl price degraded from 7.560847783563277 to 6.0486782268506225
+Shaggy damaged an item.
+The Get Lucky PaperScore degraded from Good to Fair
+The Get Lucky PaperScore price degraded from 59.672520881712934 to 47.73801670537035
+Shaggy damaged an item.
+The American Boy PaperScore degraded from Very Good to Good
+The American Boy PaperScore price degraded from 26.60570048778734 to 21.284560390229874
+Shaggy damaged an item.
+The Virtual Diva PaperScore degraded from Very Good to Good
+The Virtual Diva PaperScore price degraded from 7.535743311461838 to 6.02859464916947
+Shaggy damaged an item.
+The One Step Forward PaperScore broke and was removed from inventory.
+Shaggy damaged an item.
+The RocketRon 5000 MP3Player degraded from Very Good to Good
+The RocketRon 5000 MP3Player price degraded from 57.129506235910384 to 45.70360498872831
+Shaggy damaged an item.
+The AudioTechnica M50TH MP3Player degraded from Good to Fair
+The AudioTechnica M50TH MP3Player price degraded from 42.41931628519603 to 33.93545302815683
+Shaggy damaged an item.
+The Dark Zapper Mandolin degraded from Fair to Poor
+The Dark Zapper Mandolin price degraded from 21.729506231994808 to 17.38360498559585
+Shaggy damaged an item.
+The Muddywood Harmonica degraded from Good to Fair
+The Muddywood Harmonica price degraded from 7.008321391939252 to 5.606657113551402
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Shirt broke and was removed from inventory.
+Shaggy damaged an item.
+The LVMH Red Dragon Shirt degraded from Fair to Poor
+The LVMH Red Dragon Shirt price degraded from 67.5780479074504 to 54.06243832596032
+Shaggy damaged an item.
+The AudioTechnica M50TH CDPlayer degraded from Good to Fair
+The AudioTechnica M50TH CDPlayer price degraded from 14.344343243827563 to 11.475474595062051
+Shaggy damaged an item.
+The AudioTechnica M50TH CDPlayer degraded from Excellent to Very Good
+The AudioTechnica M50TH CDPlayer price degraded from 52.249444082388116 to 41.7995552659105
+Shaggy damaged an item.
+The Sony MX CDPlayer degraded from Fair to Poor
+The Sony MX CDPlayer price degraded from 33.11013879094004 to 26.488111032752034
+Shaggy damaged an item.
+The Morose 400 PracticeAmp degraded from Good to Fair
+The Morose 400 PracticeAmp price degraded from 25.521131455437494 to 20.41690516435
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Hat broke and was removed from inventory.
+Shaggy damaged an item.
+The Runner 200 RecordPlayer broke and was removed from inventory.
+Shaggy left the store for the day.
+
+Day 13:
+Clerk Shaggy decided to work on day 12.
+Clerk Shaggy counted 177.97631265861244 in the register.
+Clerk Shaggy calculated the inventory value to be: 315.2562327003987
+Couldn't purchase the Thunder CD as we were out of funds.
+Couldn't purchase the Dark Zapper Flute as we were out of funds.
+Couldn't purchase the Smooth Noodle Flute as we were out of funds.
+Couldn't purchase the Abstraction 300 Strings as we were out of funds.
+Couldn't purchase the United Colors of Benetton Shiner Hat as we were out of funds.
+Couldn't purchase the Tommy Hilfiger 200 Hat as we were out of funds.
+Couldn't purchase the Tommy Hilfiger 200 Hat as we were out of funds.
+Couldn't purchase the AudioTechnica M50TH RecordPlayer as we were out of funds.
+Couldn't purchase the RocketRon 5000 RecordPlayer as we were out of funds.
+Couldn't purchase the AudioTechnica M50TH RecordPlayer as we were out of funds.
+Customer Clint Eastwood didn't want to buy the Bass at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Clint Eastwood left the store without buying a Bass even at discounted price!
+Customer Keanu Reeves didn't want to buy the Harmonica at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Keanu Reeves left the store without buying a Harmonica even at discounted price!
+Customer Brad Pitt didn't want to buy the Shirt at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Brad Pitt bought a New LVMH Red Dragon Shirt in Poor condition at 10% discount for 48.65619449336429
+Customer Andy Samberg left the store without buying the Shirt as there was no stock.
+Customer Mark Wahlberg left the store without buying the Hat as there was no stock.
+Customer Jhonny Cage left the store without buying the Shirt as there was no stock.
+Customer Jhonny Cage didn't want to buy the PaperScore at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Jhonny Cage bought a New Virtual Diva PaperScore in Good condition at 10% discount for 5.425735184252523
+Customer Clint Eastwood left the store without buying the Strings as there was no stock.
+Customer Tom Cruise sold a New Tommy Hilfiger 200 Bandana in Poor condition at offered price for 5.773051876466921
+Customer Keanu Reeves sold a New Guild Starfire Guitar in Fair condition at offered price for 6.253401126667451
+Customer Tom Cruise sold a New Morose 400 PracticeAmp in Poor condition at offered price for 2.883656104441151
+Customer Clint Eastwood sold a New Dark Zapper Harmonica in Excellent condition at offered price for 40.141939480833074
+Shaggy damaged an item.
+The Muddywood Guitar broke and was removed from inventory.
+Shaggy damaged an item.
+The Dark Zapper Guitar degraded from Fair to Poor
+The Dark Zapper Guitar price degraded from 65.74057258830004 to 52.592458070640035
+Shaggy damaged an item.
+The Muddywood Guitar degraded from Very Good to Good
+The Muddywood Guitar price degraded from 19.9630706180687 to 15.97045649445496
+Shaggy damaged an item.
+The Rickenbacker 4001S Bass broke and was removed from inventory.
+Shaggy damaged an item.
+The Melancholy 50 Cable broke and was removed from inventory.
+Shaggy damaged an item.
+The Morose 400 Cable degraded from Fair to Poor
+The Morose 400 Cable price degraded from 59.77199617938126 to 47.81759694350501
+Shaggy damaged an item.
+The Beautiful 100 Cable degraded from Very Good to Good
+The Beautiful 100 Cable price degraded from 55.2568667771676 to 44.20549342173408
+Shaggy damaged an item.
+The One Step Forward CD degraded from Very Good to Good
+The One Step Forward CD price degraded from 76.68964045151534 to 61.35171236121228
+Shaggy damaged an item.
+The Kashmir CD degraded from Excellent to Very Good
+The Kashmir CD price degraded from 69.3903912165344 to 55.51231297322752
+Shaggy damaged an item.
+The LVMH Red Dragon Bandana broke and was removed from inventory.
+Shaggy damaged an item.
+The Bleed It Out Vinyl broke and was removed from inventory.
+Shaggy damaged an item.
+The Get Lucky PaperScore degraded from Fair to Poor
+The Get Lucky PaperScore price degraded from 47.73801670537035 to 38.19041336429628
+Shaggy damaged an item.
+The American Boy PaperScore degraded from Good to Fair
+The American Boy PaperScore price degraded from 21.284560390229874 to 17.0276483121839
+Shaggy damaged an item.
+The RocketRon 5000 MP3Player degraded from Good to Fair
+The RocketRon 5000 MP3Player price degraded from 45.70360498872831 to 36.56288399098265
+Shaggy damaged an item.
+The AudioTechnica M50TH MP3Player degraded from Fair to Poor
+The AudioTechnica M50TH MP3Player price degraded from 33.93545302815683 to 27.148362422525466
+Shaggy damaged an item.
+The Dark Zapper Mandolin broke and was removed from inventory.
+Shaggy damaged an item.
+The Smooth Noodle Flute degraded from Excellent to Very Good
+The Smooth Noodle Flute price degraded from 50.18985461595658 to 40.15188369276527
+Shaggy damaged an item.
+The Beautiful 100 Strings degraded from Good to Fair
+The Beautiful 100 Strings price degraded from 2.0155212281595194 to 1.6124169825276156
+Shaggy damaged an item.
+The Melancholy 50 Strings degraded from Fair to Poor
+The Melancholy 50 Strings price degraded from 3.5492968544813306 to 2.8394374835850646
+Shaggy damaged an item.
+The Smooth Noodle Harmonica degraded from Fair to Poor
+The Smooth Noodle Harmonica price degraded from 78.68427770485935 to 62.94742216388749
+Shaggy damaged an item.
+The Muddywood Harmonica degraded from Fair to Poor
+The Muddywood Harmonica price degraded from 5.606657113551402 to 4.485325690841122
+Shaggy damaged an item.
+The AudioTechnica M50TH CDPlayer degraded from Fair to Poor
+The AudioTechnica M50TH CDPlayer price degraded from 11.475474595062051 to 9.180379676049641
+Shaggy damaged an item.
+The AudioTechnica M50TH CDPlayer degraded from Very Good to Good
+The AudioTechnica M50TH CDPlayer price degraded from 41.7995552659105 to 33.4396442127284
+Shaggy damaged an item.
+The Sony MX CDPlayer broke and was removed from inventory.
+Shaggy left the store for the day.
+
+Day 14:
+On Sunday, no one worked.
+
+Day 15:
+Clerk Shaggy decided to work on day 14.
+Clerk Shaggy counted 60.03938674152609 in the register.
+Clerk Shaggy withdrew 1000$ from the bank, making new register amount as: 1060.0393867415262
+Clerk Shaggy calculated the inventory value to be: 410.5156116421911
+Customer Jhonny Cage bought a Used United Colors of Benetton Shiner Shirt in Poor condition at list price for 74.2576735778583
+Customer Natalie Portman didn't want to buy the CDPlayer at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Natalie Portman bought a New AudioTechnica M50TH CDPlayer in Poor condition at 10% discount for 8.262341708444678
+Customer Brad Pitt didn't want to buy the Cable at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Brad Pitt left the store without buying a Cable even at discounted price!
+Customer Tom Cruise left the store without buying the Bass as there was no stock.
+Customer Leonardo DiCaprio didn't want to sell the Bass at the offered price of 21.467342198411462
+Clerk Shaggy offered 10% extra.
+Customer Leonardo DiCaprio sold a Used Fender Jazz Bass Bass in Excellent condition at 10% extra for 23.61407641825261
+Customer Tom Cruise sold a New LVMH Red Dragon Shirt in Very Good condition at offered price for 30.013320185532013
+Shaggy damaged an item.
+The Dark Zapper Guitar broke and was removed from inventory.
+Shaggy damaged an item.
+The Muddywood Guitar degraded from Good to Fair
+The Muddywood Guitar price degraded from 15.97045649445496 to 12.776365195563969
+Shaggy damaged an item.
+The Rickenbacker 4001S Bass degraded from Good to Fair
+The Rickenbacker 4001S Bass price degraded from 90.81323675767544 to 72.65058940614036
+Shaggy damaged an item.
+The Gibson Les Paul Standard Bass degraded from Fair to Poor
+The Gibson Les Paul Standard Bass price degraded from 12.23333226059106 to 9.786665808472849
+Shaggy damaged an item.
+The Fender Jazz Bass Bass degraded from Excellent to Very Good
+The Fender Jazz Bass Bass price degraded from 47.22815283650522 to 37.78252226920417
+Shaggy damaged an item.
+The Morose 400 Cable broke and was removed from inventory.
+Shaggy damaged an item.
+The Beautiful 100 Cable degraded from Good to Fair
+The Beautiful 100 Cable price degraded from 44.20549342173408 to 35.364394737387265
+Shaggy damaged an item.
+The One Step Forward CD degraded from Good to Fair
+The One Step Forward CD price degraded from 61.35171236121228 to 49.081369888969824
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Very Good to Good
+The Tommy Hilfiger 200 Bandana price degraded from 54.83924446151606 to 43.87139556921285
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Very Good to Good
+The Tommy Hilfiger 200 Bandana price degraded from 79.07592228629993 to 63.26073782903995
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Bandana degraded from Very Good to Good
+The United Colors of Benetton Shiner Bandana price degraded from 66.95673602103199 to 53.56538881682559
+Shaggy damaged an item.
+The Swalla Vinyl broke and was removed from inventory.
+Shaggy damaged an item.
+The American Boy PaperScore degraded from Fair to Poor
+The American Boy PaperScore price degraded from 17.0276483121839 to 13.62211864974712
+Shaggy damaged an item.
+The RocketRon 5000 MP3Player degraded from Fair to Poor
+The RocketRon 5000 MP3Player price degraded from 36.56288399098265 to 29.25030719278612
+Shaggy damaged an item.
+The Fender Jazz Bass Mandolin degraded from Good to Fair
+The Fender Jazz Bass Mandolin price degraded from 62.28189984801914 to 49.825519878415314
+Shaggy damaged an item.
+The Fender Jazz Bass Mandolin degraded from Good to Fair
+The Fender Jazz Bass Mandolin price degraded from 50.86634639212328 to 40.69307711369863
+Shaggy damaged an item.
+The Gibson Les Paul Standard Mandolin degraded from Good to Fair
+The Gibson Les Paul Standard Mandolin price degraded from 87.04170061796269 to 69.63336049437015
+Shaggy damaged an item.
+The Smooth Noodle Flute degraded from Very Good to Good
+The Smooth Noodle Flute price degraded from 40.15188369276527 to 32.121506954212215
+Shaggy damaged an item.
+The Beautiful 100 Strings degraded from Fair to Poor
+The Beautiful 100 Strings price degraded from 1.6124169825276156 to 1.2899335860220926
+Shaggy damaged an item.
+The Melancholy 50 Strings broke and was removed from inventory.
+Shaggy damaged an item.
+The Smooth Noodle Harmonica broke and was removed from inventory.
+Shaggy damaged an item.
+The Muddywood Harmonica broke and was removed from inventory.
+Shaggy damaged an item.
+The AudioTechnica M50TH CDPlayer degraded from Good to Fair
+The AudioTechnica M50TH CDPlayer price degraded from 33.4396442127284 to 26.751715370182723
+Shaggy damaged an item.
+The Morose 400 PracticeAmp degraded from Fair to Poor
+The Morose 400 PracticeAmp price degraded from 20.41690516435 to 16.33352413148
+Shaggy damaged an item.
+The LVMH Red Dragon Hat degraded from Good to Fair
+The LVMH Red Dragon Hat price degraded from 39.374727451165306 to 31.499781960932246
+Shaggy damaged an item.
+The LVMH Red Dragon Hat degraded from Excellent to Very Good
+The LVMH Red Dragon Hat price degraded from 6.796042134839784 to 5.436833707871827
+Shaggy damaged an item.
+The JBL 700BT RecordPlayer degraded from Fair to Poor
+The JBL 700BT RecordPlayer price degraded from 73.51870237087482 to 58.814961896699856
+Shaggy damaged an item.
+The Runner 200 RecordPlayer broke and was removed from inventory.
+Shaggy damaged an item.
+The Sony MX RecordPlayer degraded from Excellent to Very Good
+The Sony MX RecordPlayer price degraded from 15.478885190006597 to 12.383108152005278
+Shaggy left the store for the day.
+
+Day 16:
+Clerk Velma decided to work on day 15.
+Clerk Velma counted 742.1504443594761 in the register.
+Clerk Velma calculated the inventory value to be: 488.45264205656963
+Customer Mark Wahlberg bought a Used American Boy PaperScore in Poor condition at list price for 13.62211864974712
+Customer Keanu Reeves left the store without buying the Hat as there was no stock.
+Customer Jhonny Cage left the store without buying the Harmonica as there was no stock.
+Customer Jhonny Cage didn't want to buy the Flute at the list price.
+Clerk Velma offered a 10% discount
+Customer Jhonny Cage left the store without buying a Flute even at discounted price!
+Customer Natalie Portman left the store without buying the Vinyl as there was no stock.
+Customer Jhonny Cage bought a Used Fender Jazz Bass Mandolin in Fair condition at list price for 49.825519878415314
+Customer Leonardo DiCaprio sold a New United Colors of Benetton Shiner Shirt in Good condition at offered price for 1.5198537418645208
+Customer Andy Samberg sold a New Lucille Mandolin in Poor condition at offered price for 3.101732942692095
+Customer Jhonny Cage sold a Used Melancholy 50 Strings in Very Good condition at offered price for 14.968068236136482
+Customer Natalie Portman sold a Used Fender Jazz Bass Flute in Poor condition at offered price for 8.135284866735352
+Velma damaged an item.
+The Muddywood Guitar degraded from Fair to Poor
+The Muddywood Guitar price degraded from 12.776365195563969 to 10.221092156451176
+Velma damaged an item.
+The Gibson Les Paul Standard Bass broke and was removed from inventory.
+Velma damaged an item.
+The Rickenbacker 4001S Bass degraded from Fair to Poor
+The Rickenbacker 4001S Bass price degraded from 72.65058940614036 to 58.12047152491229
+Velma damaged an item.
+The Gibson Les Paul Standard Bass broke and was removed from inventory.
+Velma damaged an item.
+The Fender Jazz Bass Bass degraded from Very Good to Good
+The Fender Jazz Bass Bass price degraded from 37.78252226920417 to 30.22601781536334
+Velma damaged an item.
+The Kashmir CD degraded from Very Good to Good
+The Kashmir CD price degraded from 55.51231297322752 to 44.40985037858202
+Velma damaged an item.
+The One Step Forward CD degraded from Fair to Poor
+The One Step Forward CD price degraded from 49.081369888969824 to 39.26509591117586
+Velma damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Good to Fair
+The Tommy Hilfiger 200 Bandana price degraded from 43.87139556921285 to 35.09711645537028
+Velma damaged an item.
+The United Colors of Benetton Shiner Bandana degraded from Good to Fair
+The United Colors of Benetton Shiner Bandana price degraded from 53.56538881682559 to 42.852311053460475
+Velma damaged an item.
+The American Boy Vinyl degraded from Good to Fair
+The American Boy Vinyl price degraded from 69.65472086051047 to 55.72377668840838
+Velma damaged an item.
+The Bleed It Out Vinyl degraded from Good to Fair
+The Bleed It Out Vinyl price degraded from 2.139996751071031 to 1.711997400856825
+Velma damaged an item.
+The Virtual Diva Vinyl broke and was removed from inventory.
+Velma damaged an item.
+The Get Lucky PaperScore broke and was removed from inventory.
+Velma damaged an item.
+The Bose 100 MP3Player degraded from Fair to Poor
+The Bose 100 MP3Player price degraded from 34.9865312818961 to 27.98922502551688
+Velma damaged an item.
+The AudioTechnica M50TH MP3Player broke and was removed from inventory.
+Velma damaged an item.
+The Gibson Les Paul Standard Mandolin degraded from Fair to Poor
+The Gibson Les Paul Standard Mandolin price degraded from 69.63336049437015 to 55.70668839549612
+Velma damaged an item.
+The Smooth Noodle Flute degraded from Good to Fair
+The Smooth Noodle Flute price degraded from 32.121506954212215 to 25.697205563369774
+Velma damaged an item.
+The Beautiful 100 Strings broke and was removed from inventory.
+Velma damaged an item.
+The Lucille Harmonica degraded from Good to Fair
+The Lucille Harmonica price degraded from 26.80671751014717 to 21.44537400811774
+Velma damaged an item.
+The Lucille Harmonica broke and was removed from inventory.
+Velma damaged an item.
+The Smooth Noodle Harmonica degraded from Very Good to Good
+The Smooth Noodle Harmonica price degraded from 73.51623616698846 to 58.81298893359077
+Velma damaged an item.
+The Tommy Hilfiger 200 Shirt degraded from Very Good to Good
+The Tommy Hilfiger 200 Shirt price degraded from 48.21430437692779 to 38.571443501542234
+Velma damaged an item.
+The United Colors of Benetton Shiner Shirt degraded from Fair to Poor
+The United Colors of Benetton Shiner Shirt price degraded from 65.39716853144162 to 52.3177348251533
+Velma damaged an item.
+The United Colors of Benetton Shiner Shirt degraded from Fair to Poor
+The United Colors of Benetton Shiner Shirt price degraded from 90.56079557030704 to 72.44863645624564
+Velma damaged an item.
+The AudioTechnica M50TH CDPlayer degraded from Fair to Poor
+The AudioTechnica M50TH CDPlayer price degraded from 26.751715370182723 to 21.401372296146178
+Velma damaged an item.
+The Morose 400 PracticeAmp broke and was removed from inventory.
+Velma damaged an item.
+The United Colors of Benetton Shiner Hat degraded from Fair to Poor
+The United Colors of Benetton Shiner Hat price degraded from 80.22461886143394 to 64.17969508914716
+Velma damaged an item.
+The LVMH Red Dragon Hat degraded from Fair to Poor
+The LVMH Red Dragon Hat price degraded from 31.499781960932246 to 25.199825568745798
+Velma damaged an item.
+The LVMH Red Dragon Hat degraded from Very Good to Good
+The LVMH Red Dragon Hat price degraded from 5.436833707871827 to 4.349466966297462
+Velma damaged an item.
+The JBL 700BT RecordPlayer broke and was removed from inventory.
+Velma damaged an item.
+The Sony MX RecordPlayer degraded from Very Good to Good
+The Sony MX RecordPlayer price degraded from 12.383108152005278 to 9.906486521604222
+Velma left the store for the day.
+
+Day 17:
+Clerk Shaggy decided to work on day 16.
+Clerk Shaggy counted 559.7850679910578 in the register.
+Clerk Shaggy calculated the inventory value to be: 554.1983933725754
+Customer Leonardo DiCaprio bought a New Smooth Noodle Flute in Fair condition at list price for 25.697205563369774
+Customer Clint Eastwood bought a New One Step Forward CD in Poor condition at list price for 39.26509591117586
+Customer Mark Wahlberg bought a New United Colors of Benetton Shiner Hat in Poor condition at list price for 64.17969508914716
+Customer Tom Cruise left the store without buying the PaperScore as there was no stock.
+Customer Jhonny Cage didn't want to sell the Bass at the offered price of 2.7751730922112072
+Clerk Shaggy offered 10% extra.
+Customer Jhonny Cage left the store without selling a Bass even at extra price!
+Customer Mark Wahlberg didn't want to sell the Strings at the offered price of 9.883344307142643
+Clerk Shaggy offered 10% extra.
+Customer Mark Wahlberg sold a Used Beautiful 100 Strings in Poor condition at 10% extra for 10.871678737856907
+Customer Brad Pitt didn't want to sell the PracticeAmp at the offered price of 36.32065375471029
+Clerk Shaggy offered 10% extra.
+Customer Brad Pitt sold a New Morose 400 PracticeAmp in Very Good condition at 10% extra for 39.95271913018132
+Shaggy damaged an item.
+The Muddywood Guitar broke and was removed from inventory.
+Shaggy damaged an item.
+The Rickenbacker 4001S Bass broke and was removed from inventory.
+Shaggy damaged an item.
+The Fender Jazz Bass Bass degraded from Good to Fair
+The Fender Jazz Bass Bass price degraded from 30.22601781536334 to 24.180814252290673
+Shaggy damaged an item.
+The Beautiful 100 Cable degraded from Fair to Poor
+The Beautiful 100 Cable price degraded from 35.364394737387265 to 28.291515789909813
+Shaggy damaged an item.
+The Kashmir CD degraded from Good to Fair
+The Kashmir CD price degraded from 44.40985037858202 to 35.52788030286562
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Good to Fair
+The Tommy Hilfiger 200 Bandana price degraded from 63.26073782903995 to 50.60859026323196
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Fair to Poor
+The Tommy Hilfiger 200 Bandana price degraded from 35.09711645537028 to 28.077693164296228
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Bandana degraded from Fair to Poor
+The United Colors of Benetton Shiner Bandana price degraded from 42.852311053460475 to 34.28184884276838
+Shaggy damaged an item.
+The American Boy Vinyl degraded from Fair to Poor
+The American Boy Vinyl price degraded from 55.72377668840838 to 44.579021350726705
+Shaggy damaged an item.
+The Virtual Diva PaperScore broke and was removed from inventory.
+Shaggy damaged an item.
+The One Step Forward PaperScore degraded from Excellent to Very Good
+The One Step Forward PaperScore price degraded from 84.45959365099169 to 67.56767492079335
+Shaggy damaged an item.
+The RocketRon 5000 MP3Player broke and was removed from inventory.
+Shaggy damaged an item.
+The Bose 100 MP3Player broke and was removed from inventory.
+Shaggy damaged an item.
+The Fender Jazz Bass Mandolin degraded from Fair to Poor
+The Fender Jazz Bass Mandolin price degraded from 40.69307711369863 to 32.5544616909589
+Shaggy damaged an item.
+The Gibson Les Paul Standard Mandolin broke and was removed from inventory.
+Shaggy damaged an item.
+The Melancholy 50 Strings degraded from Very Good to Good
+The Melancholy 50 Strings price degraded from 81.48945818216238 to 65.19156654572991
+Shaggy damaged an item.
+The Beautiful 100 Strings broke and was removed from inventory.
+Shaggy damaged an item.
+The Lucille Harmonica degraded from Fair to Poor
+The Lucille Harmonica price degraded from 21.44537400811774 to 17.156299206494193
+Shaggy damaged an item.
+The Smooth Noodle Harmonica degraded from Good to Fair
+The Smooth Noodle Harmonica price degraded from 58.81298893359077 to 47.05039114687262
+Shaggy damaged an item.
+The AudioTechnica M50TH CDPlayer broke and was removed from inventory.
+Shaggy damaged an item.
+The Morose 400 PracticeAmp degraded from Fair to Poor
+The Morose 400 PracticeAmp price degraded from 34.12665933798637 to 27.301327470389097
+Shaggy damaged an item.
+The Abstraction 300 PracticeAmp degraded from Good to Fair
+The Abstraction 300 PracticeAmp price degraded from 92.46842186755777 to 73.97473749404621
+Shaggy damaged an item.
+The Morose 400 PracticeAmp degraded from Very Good to Good
+The Morose 400 PracticeAmp price degraded from 79.90543826036264 to 63.92435060829012
+Shaggy damaged an item.
+The LVMH Red Dragon Hat broke and was removed from inventory.
+Shaggy damaged an item.
+The LVMH Red Dragon Hat degraded from Good to Fair
+The LVMH Red Dragon Hat price degraded from 4.349466966297462 to 3.4795735730379698
+Shaggy left the store for the day.
+
+Day 18:
+Clerk Shaggy decided to work on day 17.
+Clerk Shaggy counted 377.91764598258396 in the register.
+Clerk Shaggy calculated the inventory value to be: 542.8413471488054
+Customer Natalie Portman didn't want to buy the RecordPlayer at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Natalie Portman left the store without buying a RecordPlayer even at discounted price!
+Customer Andy Samberg bought a Used Tommy Hilfiger 200 Bandana in Fair condition at list price for 50.60859026323196
+Customer Clint Eastwood bought a Used Beautiful 100 Cable in Poor condition at list price for 28.291515789909813
+Customer Brad Pitt didn't want to buy the PracticeAmp at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Brad Pitt bought a Used Morose 400 PracticeAmp in Very Good condition at 10% discount for 32.61423091993824
+Customer Clint Eastwood bought a Used Lucille Harmonica in Poor condition at list price for 17.156299206494193
+Customer Tom Cruise left the store without buying the Guitar as there was no stock.
+Customer Clint Eastwood left the store without buying the Guitar as there was no stock.
+Customer Mark Wahlberg didn't want to sell the Vinyl at the offered price of 2.838311377733648
+Clerk Shaggy offered 10% extra.
+Customer Mark Wahlberg sold a Used Thunder Vinyl in Poor condition at 10% extra for 3.122142515507013
+Customer Andy Samberg didn't want to sell the Flute at the offered price of 1.286728795407287
+Clerk Shaggy offered 10% extra.
+Customer Andy Samberg sold a Used Smooth Noodle Flute in Fair condition at 10% extra for 1.4154016749480158
+Customer Leonardo DiCaprio sold a New Swalla CD in Good condition at offered price for 15.319145476336509
+Shaggy damaged an item.
+The Lucille Guitar degraded from Very Good to Good
+The Lucille Guitar price degraded from 87.60381432466171 to 70.08305145972938
+Shaggy damaged an item.
+The Lucille Guitar degraded from Very Good to Good
+The Lucille Guitar price degraded from 62.41636850462151 to 49.93309480369721
+Shaggy damaged an item.
+The Don Junior Guitar degraded from Good to Fair
+The Don Junior Guitar price degraded from 53.81743787608919 to 43.05395030087135
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Bandana broke and was removed from inventory.
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Bandana broke and was removed from inventory.
+Shaggy damaged an item.
+The Bleed It Out Vinyl degraded from Fair to Poor
+The Bleed It Out Vinyl price degraded from 1.711997400856825 to 1.36959792068546
+Shaggy damaged an item.
+The Thunder Vinyl broke and was removed from inventory.
+Shaggy damaged an item.
+The Thunder PaperScore degraded from Very Good to Good
+The Thunder PaperScore price degraded from 2.299914177431754 to 1.8399313419454033
+Shaggy damaged an item.
+The One Step Forward PaperScore degraded from Very Good to Good
+The One Step Forward PaperScore price degraded from 67.56767492079335 to 54.054139936634684
+Shaggy damaged an item.
+The Sony MX MP3Player degraded from Very Good to Good
+The Sony MX MP3Player price degraded from 41.81149257592166 to 33.449194060737334
+Shaggy damaged an item.
+The Bose 100 MP3Player degraded from Good to Fair
+The Bose 100 MP3Player price degraded from 23.602275560491954 to 18.881820448393565
+Shaggy damaged an item.
+The AudioTechnica M50TH MP3Player degraded from Excellent to Very Good
+The AudioTechnica M50TH MP3Player price degraded from 58.24178332461833 to 46.59342665969467
+Shaggy damaged an item.
+The Lucille Flute broke and was removed from inventory.
+Shaggy damaged an item.
+The Guild Starfire Flute degraded from Very Good to Good
+The Guild Starfire Flute price degraded from 12.566249221768073 to 10.052999377414459
+Shaggy damaged an item.
+The Smooth Noodle Flute degraded from Fair to Poor
+The Smooth Noodle Flute price degraded from 2.8308033498960317 to 2.2646426799168253
+Shaggy damaged an item.
+The Morose 400 Strings degraded from Very Good to Good
+The Morose 400 Strings price degraded from 51.226881004130256 to 40.981504803304205
+Shaggy damaged an item.
+The Melancholy 50 Strings degraded from Good to Fair
+The Melancholy 50 Strings price degraded from 65.19156654572991 to 52.153253236583936
+Shaggy damaged an item.
+The Smooth Noodle Harmonica degraded from Fair to Poor
+The Smooth Noodle Harmonica price degraded from 47.05039114687262 to 37.6403129174981
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Shirt degraded from Good to Fair
+The Tommy Hilfiger 200 Shirt price degraded from 38.571443501542234 to 30.85715480123379
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Shirt broke and was removed from inventory.
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Shirt broke and was removed from inventory.
+Shaggy damaged an item.
+The JBL 700BT CDPlayer degraded from Fair to Poor
+The JBL 700BT CDPlayer price degraded from 52.84513646304672 to 42.27610917043738
+Shaggy damaged an item.
+The JBL 700BT CDPlayer broke and was removed from inventory.
+Shaggy damaged an item.
+The Runner 200 CDPlayer broke and was removed from inventory.
+Shaggy damaged an item.
+The Morose 400 PracticeAmp broke and was removed from inventory.
+Shaggy damaged an item.
+The Abstraction 300 PracticeAmp degraded from Fair to Poor
+The Abstraction 300 PracticeAmp price degraded from 73.97473749404621 to 59.17978999523697
+Shaggy damaged an item.
+The Morose 400 PracticeAmp degraded from Good to Fair
+The Morose 400 PracticeAmp price degraded from 63.92435060829012 to 51.139480486632095
+Shaggy damaged an item.
+The LVMH Red Dragon Hat degraded from Fair to Poor
+The LVMH Red Dragon Hat price degraded from 3.4795735730379698 to 2.783658858430376
+Shaggy damaged an item.
+The Sony MX RecordPlayer degraded from Good to Fair
+The Sony MX RecordPlayer price degraded from 9.906486521604222 to 7.925189217283378
+Shaggy left the store for the day.
+
+Day 19:
+Clerk Velma decided to work on day 18.
+Clerk Velma counted 218.60584474486555 in the register.
+Clerk Velma calculated the inventory value to be: 444.4306961951246
+Customer Clint Eastwood didn't want to buy the RecordPlayer at the list price.
+Clerk Velma offered a 10% discount
+Customer Clint Eastwood left the store without buying a RecordPlayer even at discounted price!
+Customer Jhonny Cage bought a Used Sony MX RecordPlayer in Fair condition at list price for 7.925189217283378
+Customer Natalie Portman didn't want to buy the Vinyl at the list price.
+Clerk Velma offered a 10% discount
+Customer Natalie Portman bought a New Bleed It Out Vinyl in Poor condition at 10% discount for 1.2326381286169141
+Customer Andy Samberg bought a Used Melancholy 50 Strings in Very Good condition at list price for 63.52814589856479
+Customer Tom Cruise bought a New One Step Forward PaperScore in Good condition at list price for 54.054139936634684
+Customer Brad Pitt didn't want to buy the Bass at the list price.
+Clerk Velma offered a 10% discount
+Customer Brad Pitt bought a Used Fender Jazz Bass Bass in Fair condition at 10% discount for 21.76273282706161
+Customer Brad Pitt didn't want to buy the Hat at the list price.
+Clerk Velma offered a 10% discount
+Customer Brad Pitt bought a Used LVMH Red Dragon Hat in Poor condition at 10% discount for 2.5052929725873385
+Customer Keanu Reeves bought a New American Boy Vinyl in Poor condition at list price for 44.579021350726705
+Customer Clint Eastwood didn't want to buy the PaperScore at the list price.
+Clerk Velma offered a 10% discount
+Customer Clint Eastwood bought a New Thunder PaperScore in Good condition at 10% discount for 1.655938207750863
+Customer Mark Wahlberg didn't want to sell the Harmonica at the offered price of 12.535450470788634
+Clerk Velma offered 10% extra.
+Customer Mark Wahlberg left the store without selling a Harmonica even at extra price!
+Customer Leonardo DiCaprio didn't want to sell the Guitar at the offered price of 17.71871211631516
+Clerk Velma offered 10% extra.
+Customer Leonardo DiCaprio sold a New Guild Starfire Guitar in Very Good condition at 10% extra for 19.490583327946677
+Velma damaged an item.
+The Lucille Guitar degraded from Good to Fair
+The Lucille Guitar price degraded from 70.08305145972938 to 56.0664411677835
+Velma damaged an item.
+The Lucille Guitar degraded from Good to Fair
+The Lucille Guitar price degraded from 49.93309480369721 to 39.94647584295777
+Velma damaged an item.
+The Don Junior Guitar degraded from Fair to Poor
+The Don Junior Guitar price degraded from 43.05395030087135 to 34.44316024069708
+Velma damaged an item.
+The Guild Starfire Guitar degraded from Very Good to Good
+The Guild Starfire Guitar price degraded from 38.981166655893354 to 31.184933324714684
+Velma damaged an item.
+The Beautiful 100 Cable degraded from Very Good to Good
+The Beautiful 100 Cable price degraded from 24.067595735930198 to 19.25407658874416
+Velma damaged an item.
+The Morose 400 Cable broke and was removed from inventory.
+Velma damaged an item.
+The Morose 400 Cable broke and was removed from inventory.
+Velma damaged an item.
+The Kashmir CD degraded from Fair to Poor
+The Kashmir CD price degraded from 35.52788030286562 to 28.422304242292498
+Velma damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Excellent to Very Good
+The Tommy Hilfiger 200 Bandana price degraded from 58.99685400961034 to 47.19748320768827
+Velma damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Excellent to Very Good
+The Tommy Hilfiger 200 Bandana price degraded from 60.06813616971568 to 48.054508935772546
+Velma damaged an item.
+The United Colors of Benetton Shiner Bandana broke and was removed from inventory.
+Velma damaged an item.
+The Smooth Noodle Harmonica broke and was removed from inventory.
+Velma damaged an item.
+The Tommy Hilfiger 200 Shirt degraded from Fair to Poor
+The Tommy Hilfiger 200 Shirt price degraded from 30.85715480123379 to 24.685723840987034
+Velma damaged an item.
+The Sony MX MP3Player degraded from Good to Fair
+The Sony MX MP3Player price degraded from 33.449194060737334 to 26.75935524858987
+Velma damaged an item.
+The Bose 100 MP3Player degraded from Fair to Poor
+The Bose 100 MP3Player price degraded from 18.881820448393565 to 15.105456358714854
+Velma damaged an item.
+The AudioTechnica M50TH MP3Player degraded from Very Good to Good
+The AudioTechnica M50TH MP3Player price degraded from 46.59342665969467 to 37.27474132775574
+Velma damaged an item.
+The JBL 700BT CDPlayer broke and was removed from inventory.
+Velma damaged an item.
+The Abstraction 300 PracticeAmp broke and was removed from inventory.
+Velma damaged an item.
+The Morose 400 PracticeAmp degraded from Fair to Poor
+The Morose 400 PracticeAmp price degraded from 51.139480486632095 to 40.91158438930568
+Velma damaged an item.
+The Lucille Flute degraded from Very Good to Good
+The Lucille Flute price degraded from 3.775735343834921 to 3.020588275067937
+Velma damaged an item.
+The Guild Starfire Flute degraded from Good to Fair
+The Guild Starfire Flute price degraded from 10.052999377414459 to 8.042399501931568
+Velma damaged an item.
+The Smooth Noodle Flute broke and was removed from inventory.
+Velma damaged an item.
+The Morose 400 Strings degraded from Good to Fair
+The Morose 400 Strings price degraded from 40.981504803304205 to 32.78520384264336
+Velma damaged an item.
+The Melancholy 50 Strings degraded from Fair to Poor
+The Melancholy 50 Strings price degraded from 52.153253236583936 to 41.722602589267154
+Velma left the store for the day.
+
+Day 20:
+Clerk Velma decided to work on day 19.
+Clerk Velma counted 223.62009401784607 in the register.
+Clerk Velma calculated the inventory value to be: 348.29859444378747
+Couldn't purchase the One Step Forward PaperScore as we were out of funds.
+Couldn't purchase the Bleed It Out PaperScore as we were out of funds.
+Couldn't purchase the Dark Zapper Harmonica as we were out of funds.
+Couldn't purchase the Gibson Les Paul Standard Harmonica as we were out of funds.
+Couldn't purchase the RocketRon 5000 CDPlayer as we were out of funds.
+Couldn't purchase the Sony MX CDPlayer as we were out of funds.
+Couldn't purchase the LVMH Red Dragon Hat as we were out of funds.
+Couldn't purchase the Tommy Hilfiger 200 Hat as we were out of funds.
+Couldn't purchase the AudioTechnica M50TH RecordPlayer as we were out of funds.
+Couldn't purchase the RocketRon 5000 RecordPlayer as we were out of funds.
+Couldn't purchase the JBL 700BT RecordPlayer as we were out of funds.
+Customer Keanu Reeves left the store without buying the Hat as there was no stock.
+Customer Mark Wahlberg left the store without buying the Bass as there was no stock.
+Customer Leonardo DiCaprio didn't want to buy the Flute at the list price.
+Clerk Velma offered a 10% discount
+Customer Leonardo DiCaprio bought a Used Guild Starfire Flute in Fair condition at 10% discount for 7.238159551738411
+Customer Clint Eastwood left the store without buying the Hat as there was no stock.
+Not enough money in the register to pay for the item.
+Not enough money in the register to pay for the item.
+Not enough money in the register to pay for the item.
+Velma damaged an item.
+The Lucille Guitar degraded from Fair to Poor
+The Lucille Guitar price degraded from 56.0664411677835 to 44.853152934226806
+Velma damaged an item.
+The Don Junior Guitar broke and was removed from inventory.
+Velma damaged an item.
+The Guild Starfire Guitar degraded from Good to Fair
+The Guild Starfire Guitar price degraded from 31.184933324714684 to 24.94794665977175
+Velma damaged an item.
+The Don Junior Bass degraded from Excellent to Very Good
+The Don Junior Bass price degraded from 17.423834957504855 to 13.939067966003885
+Velma damaged an item.
+The Dark Zapper Bass degraded from Fair to Poor
+The Dark Zapper Bass price degraded from 80.31347043359773 to 64.25077634687818
+Velma damaged an item.
+The Dark Zapper Bass degraded from Good to Fair
+The Dark Zapper Bass price degraded from 71.42509195235014 to 57.140073561880115
+Velma damaged an item.
+The Beautiful 100 Cable degraded from Good to Fair
+The Beautiful 100 Cable price degraded from 19.25407658874416 to 15.403261270995328
+Velma damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Very Good to Good
+The Tommy Hilfiger 200 Bandana price degraded from 47.19748320768827 to 37.75798656615062
+Velma damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Very Good to Good
+The Tommy Hilfiger 200 Bandana price degraded from 48.054508935772546 to 38.44360714861804
+Velma damaged an item.
+The Thunder Vinyl broke and was removed from inventory.
+Velma damaged an item.
+The Swalla Vinyl degraded from Excellent to Very Good
+The Swalla Vinyl price degraded from 77.15524205758452 to 61.72419364606762
+Velma damaged an item.
+The Swalla PaperScore broke and was removed from inventory.
+Velma damaged an item.
+The Sony MX MP3Player degraded from Fair to Poor
+The Sony MX MP3Player price degraded from 26.75935524858987 to 21.4074841988719
+Velma damaged an item.
+The Bose 100 MP3Player broke and was removed from inventory.
+Velma damaged an item.
+The AudioTechnica M50TH MP3Player degraded from Good to Fair
+The AudioTechnica M50TH MP3Player price degraded from 37.27474132775574 to 29.819793062204596
+Velma damaged an item.
+The Fender Jazz Bass Mandolin broke and was removed from inventory.
+Velma damaged an item.
+The Lucille Flute degraded from Good to Fair
+The Lucille Flute price degraded from 3.020588275067937 to 2.4164706200543495
+Velma damaged an item.
+The Morose 400 Strings degraded from Fair to Poor
+The Morose 400 Strings price degraded from 32.78520384264336 to 26.22816307411469
+Velma damaged an item.
+The Melancholy 50 Strings broke and was removed from inventory.
+Velma damaged an item.
+The Rickenbacker 4001S Harmonica degraded from Good to Fair
+The Rickenbacker 4001S Harmonica price degraded from 23.818061065791163 to 19.05444885263293
+Velma damaged an item.
+The Tommy Hilfiger 200 Shirt broke and was removed from inventory.
+Velma damaged an item.
+The JBL 700BT CDPlayer degraded from Fair to Poor
+The JBL 700BT CDPlayer price degraded from 11.113767227151945 to 8.891013781721556
+Velma damaged an item.
+The Morose 400 PracticeAmp broke and was removed from inventory.
+Velma damaged an item.
+The Tommy Hilfiger 200 Hat degraded from Excellent to Very Good
+The Tommy Hilfiger 200 Hat price degraded from 6.980307182840759 to 5.584245746272607
+Velma left the store for the day.
+
+Day 21:
+On Sunday, no one worked.
+
+Day 22:
+Clerk Shaggy decided to work on day 21.
+Clerk Shaggy counted 7.641846366780207 in the register.
+Clerk Shaggy withdrew 1000$ from the bank, making new register amount as: 1007.6418463667802
+Clerk Shaggy calculated the inventory value to be: 392.3266379998574
+Customer Andy Samberg left the store without buying the RecordPlayer as there was no stock.
+Customer Leonardo DiCaprio left the store without buying the RecordPlayer as there was no stock.
+Customer Tom Cruise didn't want to buy the Hat at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Tom Cruise bought a Used Tommy Hilfiger 200 Hat in Very Good condition at 10% discount for 5.0258211716453465
+Customer Tom Cruise bought a New Morose 400 Strings in Poor condition at list price for 26.22816307411469
+Customer Leonardo DiCaprio bought a New Lucille Guitar in Fair condition at list price for 39.94647584295777
+Customer Natalie Portman bought a New Virtual Diva Vinyl in Fair condition at list price for 45.536126499662494
+Customer Natalie Portman bought a New AudioTechnica M50TH MP3Player in Fair condition at list price for 29.819793062204596
+Customer Leonardo DiCaprio didn't want to sell the PaperScore at the offered price of 1.6145662891114505
+Clerk Shaggy offered 10% extra.
+Customer Leonardo DiCaprio left the store without selling a PaperScore even at extra price!
+Customer Brad Pitt sold a New Melancholy 50 Cable in Poor condition at offered price for 12.566875936397226
+Customer Jhonny Cage sold a Used Tommy Hilfiger 200 Bandana in Excellent condition at offered price for 38.08201773860997
+Shaggy damaged an item.
+The Lucille Guitar broke and was removed from inventory.
+Shaggy damaged an item.
+The Guild Starfire Guitar degraded from Fair to Poor
+The Guild Starfire Guitar price degraded from 24.94794665977175 to 19.9583573278174
+Shaggy damaged an item.
+The Don Junior Bass degraded from Very Good to Good
+The Don Junior Bass price degraded from 13.939067966003885 to 11.151254372803109
+Shaggy damaged an item.
+The Dark Zapper Bass degraded from Fair to Poor
+The Dark Zapper Bass price degraded from 57.140073561880115 to 45.712058849504096
+Shaggy damaged an item.
+The Kashmir CD broke and was removed from inventory.
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Good to Fair
+The Tommy Hilfiger 200 Bandana price degraded from 37.75798656615062 to 30.2063892529205
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Good to Fair
+The Tommy Hilfiger 200 Bandana price degraded from 38.44360714861804 to 30.754885718894435
+Shaggy damaged an item.
+The Swalla Vinyl degraded from Very Good to Good
+The Swalla Vinyl price degraded from 61.72419364606762 to 49.3793549168541
+Shaggy damaged an item.
+The Kashmir PaperScore degraded from Good to Fair
+The Kashmir PaperScore price degraded from 78.68933975401868 to 62.95147180321494
+Shaggy damaged an item.
+The Kashmir PaperScore broke and was removed from inventory.
+Shaggy damaged an item.
+The Get Lucky PaperScore degraded from Very Good to Good
+The Get Lucky PaperScore price degraded from 77.43071169230703 to 61.94456935384562
+Shaggy damaged an item.
+The Smooth Noodle Mandolin degraded from Excellent to Very Good
+The Smooth Noodle Mandolin price degraded from 99.41675490966318 to 79.53340392773055
+Shaggy damaged an item.
+The Fender Jazz Bass Mandolin broke and was removed from inventory.
+Shaggy damaged an item.
+The Lucille Mandolin degraded from Very Good to Good
+The Lucille Mandolin price degraded from 13.077102089229527 to 10.461681671383623
+Shaggy damaged an item.
+The Lucille Flute degraded from Fair to Poor
+The Lucille Flute price degraded from 2.4164706200543495 to 1.9331764960434796
+Shaggy damaged an item.
+The Rickenbacker 4001S Harmonica degraded from Fair to Poor
+The Rickenbacker 4001S Harmonica price degraded from 19.05444885263293 to 15.243559082106344
+Shaggy damaged an item.
+The LVMH Red Dragon Shirt degraded from Excellent to Very Good
+The LVMH Red Dragon Shirt price degraded from 73.18550475048008 to 58.548403800384065
+Shaggy damaged an item.
+The LVMH Red Dragon Shirt degraded from Very Good to Good
+The LVMH Red Dragon Shirt price degraded from 98.31672689546403 to 78.65338151637123
+Shaggy damaged an item.
+The LVMH Red Dragon Shirt degraded from Fair to Poor
+The LVMH Red Dragon Shirt price degraded from 54.60038536585414 to 43.680308292683314
+Shaggy damaged an item.
+The JBL 700BT CDPlayer broke and was removed from inventory.
+Shaggy damaged an item.
+The Abstraction 300 PracticeAmp degraded from Fair to Poor
+The Abstraction 300 PracticeAmp price degraded from 20.9351723837991 to 16.74813790703928
+Shaggy damaged an item.
+The Beautiful 100 PracticeAmp degraded from Excellent to Very Good
+The Beautiful 100 PracticeAmp price degraded from 50.315350960363446 to 40.25228076829076
+Shaggy damaged an item.
+The Abstraction 300 PracticeAmp degraded from Excellent to Very Good
+The Abstraction 300 PracticeAmp price degraded from 69.9057877992279 to 55.92463023938232
+Shaggy damaged an item.
+The Sony MX RecordPlayer degraded from Very Good to Good
+The Sony MX RecordPlayer price degraded from 38.05940826566267 to 30.447526612530137
+Shaggy damaged an item.
+The Runner 200 RecordPlayer degraded from Very Good to Good
+The Runner 200 RecordPlayer price degraded from 14.765057534653815 to 11.812046027723053
+Shaggy left the store for the day.
+
+Day 23:
+Clerk Shaggy decided to work on day 22.
+Clerk Shaggy counted 763.5258718583045 in the register.
+Clerk Shaggy calculated the inventory value to be: 352.0593019590446
+Customer Leonardo DiCaprio didn't want to buy the PracticeAmp at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Leonardo DiCaprio left the store without buying a PracticeAmp even at discounted price!
+Customer Andy Samberg didn't want to buy the PracticeAmp at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Andy Samberg bought a New Abstraction 300 PracticeAmp in Very Good condition at 10% discount for 50.33216721544409
+Customer Tom Cruise didn't want to buy the RecordPlayer at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Tom Cruise bought a New Sony MX RecordPlayer in Good condition at 10% discount for 27.402773951277123
+Customer Keanu Reeves didn't want to buy the Bandana at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Keanu Reeves bought a New Tommy Hilfiger 200 Bandana in Fair condition at 10% discount for 27.185750327628448
+Customer Tom Cruise left the store without buying the CD as there was no stock.
+Customer Keanu Reeves didn't want to buy the Vinyl at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Keanu Reeves bought a New Swalla Vinyl in Good condition at 10% discount for 44.44141942516869
+Customer Mark Wahlberg left the store without buying the Hat as there was no stock.
+Customer Brad Pitt didn't want to sell the Flute at the offered price of 10.952479174650938
+Clerk Shaggy offered 10% extra.
+Customer Brad Pitt sold a Used Smooth Noodle Flute in Very Good condition at 10% extra for 12.047727092116032
+Customer Natalie Portman didn't want to sell the Shirt at the offered price of 29.847185860086686
+Clerk Shaggy offered 10% extra.
+Customer Natalie Portman sold a New United Colors of Benetton Shiner Shirt in Very Good condition at 10% extra for 32.83190444609536
+Customer Jhonny Cage sold a Used United Colors of Benetton Shiner Shirt in Good condition at offered price for 7.263701521081322
+Customer Jhonny Cage sold a New Bleed It Out Vinyl in Poor condition at offered price for 1.3265303615184156
+Shaggy damaged an item.
+The Guild Starfire Guitar broke and was removed from inventory.
+Shaggy damaged an item.
+The Dark Zapper Bass broke and was removed from inventory.
+Shaggy damaged an item.
+The Dark Zapper Bass broke and was removed from inventory.
+Shaggy damaged an item.
+The Bleed It Out CD degraded from Good to Fair
+The Bleed It Out CD price degraded from 35.351310879517285 to 28.28104870361383
+Shaggy damaged an item.
+The Bleed It Out CD degraded from Fair to Poor
+The Bleed It Out CD price degraded from 62.19549008698462 to 49.7563920695877
+Shaggy damaged an item.
+The Kashmir CD broke and was removed from inventory.
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Fair to Poor
+The Tommy Hilfiger 200 Bandana price degraded from 30.754885718894435 to 24.60390857511555
+Shaggy damaged an item.
+The Rickenbacker 4001S Harmonica broke and was removed from inventory.
+Shaggy damaged an item.
+The Sony MX MP3Player broke and was removed from inventory.
+Shaggy damaged an item.
+The AudioTechnica M50TH CDPlayer degraded from Very Good to Good
+The AudioTechnica M50TH CDPlayer price degraded from 12.946466254178306 to 10.357173003342645
+Shaggy damaged an item.
+The RocketRon 5000 CDPlayer degraded from Fair to Poor
+The RocketRon 5000 CDPlayer price degraded from 66.26458535846993 to 53.011668286775944
+Shaggy damaged an item.
+The Runner 200 CDPlayer degraded from Very Good to Good
+The Runner 200 CDPlayer price degraded from 99.0774404513415 to 79.26195236107321
+Shaggy damaged an item.
+The LVMH Red Dragon Hat broke and was removed from inventory.
+Shaggy damaged an item.
+The Smooth Noodle Mandolin degraded from Very Good to Good
+The Smooth Noodle Mandolin price degraded from 79.53340392773055 to 63.62672314218444
+Shaggy damaged an item.
+The Lucille Flute broke and was removed from inventory.
+Shaggy damaged an item.
+The Beautiful 100 Strings degraded from Excellent to Very Good
+The Beautiful 100 Strings price degraded from 24.909458278491204 to 19.927566622792966
+Shaggy damaged an item.
+The Morose 400 Strings degraded from Fair to Poor
+The Morose 400 Strings price degraded from 37.24519410866511 to 29.79615528693209
+Shaggy damaged an item.
+The Sony MX RecordPlayer degraded from Good to Fair
+The Sony MX RecordPlayer price degraded from 19.10981419052204 to 15.287851352417633
+Shaggy damaged an item.
+The Runner 200 RecordPlayer degraded from Good to Fair
+The Runner 200 RecordPlayer price degraded from 11.812046027723053 to 9.449636822178443
+Shaggy left the store for the day.
+
+Day 24:
+Clerk Shaggy decided to work on day 23.
+Clerk Shaggy counted 603.9427657587013 in the register.
+Clerk Shaggy calculated the inventory value to be: 177.95007109675373
+Customer Keanu Reeves didn't want to buy the Shirt at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Keanu Reeves bought a New United Colors of Benetton Shiner Shirt in Very Good condition at 10% discount for 59.09742800297165
+Customer Natalie Portman left the store without buying the Vinyl as there was no stock.
+Customer Leonardo DiCaprio bought a Used Smooth Noodle Flute in Very Good condition at list price for 24.095454184232064
+Customer Tom Cruise left the store without buying the PracticeAmp as there was no stock.
+Customer Tom Cruise bought a Used Beautiful 100 Cable in Fair condition at list price for 15.403261270995328
+Customer Leonardo DiCaprio left the store without buying the Strings as there was no stock.
+Customer Andy Samberg didn't want to buy the CDPlayer at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Andy Samberg left the store without buying a CDPlayer even at discounted price!
+Customer Tom Cruise didn't want to sell the CDPlayer at the offered price of 11.568245947867645
+Clerk Shaggy offered 10% extra.
+Customer Tom Cruise sold a Used AudioTechnica M50TH CDPlayer in Excellent condition at 10% extra for 12.72507054265441
+Customer Mark Wahlberg sold a New LVMH Red Dragon Shirt in Very Good condition at offered price for 22.86779057516134
+Shaggy damaged an item.
+The Lucille Guitar degraded from Fair to Poor
+The Lucille Guitar price degraded from 25.333488506455208 to 20.266790805164167
+Shaggy damaged an item.
+The Dark Zapper Guitar broke and was removed from inventory.
+Shaggy damaged an item.
+The Gibson Les Paul Standard Guitar degraded from Very Good to Good
+The Gibson Les Paul Standard Guitar price degraded from 72.04894446979644 to 57.63915557583715
+Shaggy damaged an item.
+The Don Junior Bass degraded from Good to Fair
+The Don Junior Bass price degraded from 11.151254372803109 to 8.921003498242488
+Shaggy damaged an item.
+The Bleed It Out CD degraded from Fair to Poor
+The Bleed It Out CD price degraded from 28.28104870361383 to 22.624838962891065
+Shaggy damaged an item.
+The Bleed It Out CD broke and was removed from inventory.
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Bandana broke and was removed from inventory.
+Shaggy damaged an item.
+The Bleed It Out Vinyl degraded from Excellent to Very Good
+The Bleed It Out Vinyl price degraded from 6.0775600121467726 to 4.862048009717419
+Shaggy damaged an item.
+The American Boy Vinyl broke and was removed from inventory.
+Shaggy damaged an item.
+The Bleed It Out Vinyl broke and was removed from inventory.
+Shaggy damaged an item.
+The Kashmir PaperScore degraded from Fair to Poor
+The Kashmir PaperScore price degraded from 62.95147180321494 to 50.36117744257196
+Shaggy damaged an item.
+The Runner 200 MP3Player degraded from Good to Fair
+The Runner 200 MP3Player price degraded from 41.12655634107144 to 32.90124507285716
+Shaggy damaged an item.
+The Sony MX MP3Player degraded from Good to Fair
+The Sony MX MP3Player price degraded from 46.4670937206265 to 37.173674976501204
+Shaggy damaged an item.
+The JBL 700BT MP3Player degraded from Excellent to Very Good
+The JBL 700BT MP3Player price degraded from 96.62624842244283 to 77.30099873795427
+Shaggy damaged an item.
+The Lucille Mandolin degraded from Good to Fair
+The Lucille Mandolin price degraded from 10.461681671383623 to 8.369345337106898
+Shaggy damaged an item.
+The Smooth Noodle Mandolin degraded from Good to Fair
+The Smooth Noodle Mandolin price degraded from 63.62672314218444 to 50.90137851374755
+Shaggy damaged an item.
+The Abstraction 300 Strings degraded from Excellent to Very Good
+The Abstraction 300 Strings price degraded from 40.449623646616196 to 32.35969891729296
+Shaggy damaged an item.
+The Beautiful 100 Strings degraded from Very Good to Good
+The Beautiful 100 Strings price degraded from 19.927566622792966 to 15.942053298234374
+Shaggy damaged an item.
+The Morose 400 Strings broke and was removed from inventory.
+Shaggy damaged an item.
+The Muddywood Harmonica degraded from Fair to Poor
+The Muddywood Harmonica price degraded from 43.644413588629774 to 34.91553087090382
+Shaggy damaged an item.
+The Gibson Les Paul Standard Harmonica degraded from Excellent to Very Good
+The Gibson Les Paul Standard Harmonica price degraded from 52.31339062837079 to 41.85071250269664
+Shaggy damaged an item.
+The Don Junior Harmonica broke and was removed from inventory.
+Shaggy damaged an item.
+The LVMH Red Dragon Shirt degraded from Very Good to Good
+The LVMH Red Dragon Shirt price degraded from 58.548403800384065 to 46.83872304030726
+Shaggy damaged an item.
+The LVMH Red Dragon Shirt broke and was removed from inventory.
+Shaggy damaged an item.
+The AudioTechnica M50TH CDPlayer degraded from Good to Fair
+The AudioTechnica M50TH CDPlayer price degraded from 10.357173003342645 to 8.285738402674117
+Shaggy damaged an item.
+The RocketRon 5000 CDPlayer broke and was removed from inventory.
+Shaggy damaged an item.
+The AudioTechnica M50TH CDPlayer degraded from Excellent to Very Good
+The AudioTechnica M50TH CDPlayer price degraded from 25.45014108530882 to 20.360112868247057
+Shaggy damaged an item.
+The Abstraction 300 PracticeAmp broke and was removed from inventory.
+Shaggy damaged an item.
+The Beautiful 100 PracticeAmp degraded from Very Good to Good
+The Beautiful 100 PracticeAmp price degraded from 40.25228076829076 to 32.201824614632606
+Shaggy damaged an item.
+The Sony MX RecordPlayer degraded from Fair to Poor
+The Sony MX RecordPlayer price degraded from 15.287851352417633 to 12.230281081934107
+Shaggy damaged an item.
+The Runner 200 RecordPlayer degraded from Fair to Poor
+The Runner 200 RecordPlayer price degraded from 9.449636822178443 to 7.559709457742755
+Shaggy left the store for the day.
+
+Day 25:
+Clerk Velma decided to work on day 24.
+Clerk Velma counted 404.2849027984937 in the register.
+Clerk Velma calculated the inventory value to be: 366.441521233521
+Customer Tom Cruise bought a New Kashmir PaperScore in Poor condition at list price for 50.36117744257196
+Customer Keanu Reeves left the store without buying the MP3Player as there was no stock.
+Customer Mark Wahlberg didn't want to buy the Mandolin at the list price.
+Clerk Velma offered a 10% discount
+Customer Mark Wahlberg bought a Used Lucille Mandolin in Fair condition at 10% discount for 7.532410803396209
+Customer Brad Pitt left the store without buying the Flute as there was no stock.
+Customer Keanu Reeves bought a Used Tommy Hilfiger 200 Hat in Poor condition at list price for 8.05950151326639
+Customer Natalie Portman left the store without buying the Harmonica as there was no stock.
+Customer Mark Wahlberg didn't want to sell the Bandana at the offered price of 7.1742381645626
+Clerk Velma offered 10% extra.
+Customer Mark Wahlberg sold a Used United Colors of Benetton Shiner Bandana in Excellent condition at 10% extra for 7.891661981018861
+Customer Clint Eastwood didn't want to sell the RecordPlayer at the offered price of 37.4938150183271
+Clerk Velma offered 10% extra.
+Customer Clint Eastwood sold a Used JBL 700BT RecordPlayer in Excellent condition at 10% extra for 41.24319652015981
+Customer Natalie Portman sold a Used LVMH Red Dragon Hat in Very Good condition at offered price for 2.673634448295502
+Customer Brad Pitt sold a Used Tommy Hilfiger 200 Shirt in Fair condition at offered price for 1.953694311077457
+Velma damaged an item.
+The Lucille Guitar broke and was removed from inventory.
+Velma damaged an item.
+The Gibson Les Paul Standard Guitar degraded from Good to Fair
+The Gibson Les Paul Standard Guitar price degraded from 57.63915557583715 to 46.11132446066972
+Velma damaged an item.
+The Don Junior Bass degraded from Fair to Poor
+The Don Junior Bass price degraded from 8.921003498242488 to 7.13680279859399
+Velma damaged an item.
+The Morose 400 Cable degraded from Very Good to Good
+The Morose 400 Cable price degraded from 78.43359919776826 to 62.74687935821461
+Velma damaged an item.
+The Morose 400 Cable degraded from Very Good to Good
+The Morose 400 Cable price degraded from 41.392012822580554 to 33.11361025806445
+Velma damaged an item.
+The Melancholy 50 Cable broke and was removed from inventory.
+Velma damaged an item.
+The Bleed It Out CD broke and was removed from inventory.
+Velma damaged an item.
+The LVMH Red Dragon Bandana broke and was removed from inventory.
+Velma damaged an item.
+The United Colors of Benetton Shiner Bandana degraded from Fair to Poor
+The United Colors of Benetton Shiner Bandana price degraded from 23.23705825115719 to 18.589646600925754
+Velma damaged an item.
+The United Colors of Benetton Shiner Bandana degraded from Excellent to Very Good
+The United Colors of Benetton Shiner Bandana price degraded from 15.783323962037722 to 12.626659169630178
+Velma damaged an item.
+The Bleed It Out Vinyl degraded from Very Good to Good
+The Bleed It Out Vinyl price degraded from 4.862048009717419 to 3.889638407773935
+Velma damaged an item.
+The Runner 200 MP3Player degraded from Fair to Poor
+The Runner 200 MP3Player price degraded from 32.90124507285716 to 26.32099605828573
+Velma damaged an item.
+The Sony MX MP3Player degraded from Fair to Poor
+The Sony MX MP3Player price degraded from 37.173674976501204 to 29.738939981200964
+Velma damaged an item.
+The JBL 700BT MP3Player degraded from Very Good to Good
+The JBL 700BT MP3Player price degraded from 77.30099873795427 to 61.840798990363425
+Velma damaged an item.
+The Smooth Noodle Mandolin degraded from Fair to Poor
+The Smooth Noodle Mandolin price degraded from 50.90137851374755 to 40.72110281099805
+Velma damaged an item.
+The Rickenbacker 4001S Flute degraded from Very Good to Good
+The Rickenbacker 4001S Flute price degraded from 83.20835758229919 to 66.56668606583935
+Velma damaged an item.
+The Smooth Noodle Flute degraded from Excellent to Very Good
+The Smooth Noodle Flute price degraded from 25.27206459791183 to 20.217651678329464
+Velma damaged an item.
+The Dark Zapper Flute degraded from Very Good to Good
+The Dark Zapper Flute price degraded from 51.27794813038228 to 41.02235850430583
+Velma damaged an item.
+The Abstraction 300 Strings degraded from Very Good to Good
+The Abstraction 300 Strings price degraded from 32.35969891729296 to 25.88775913383437
+Velma damaged an item.
+The Beautiful 100 Strings degraded from Good to Fair
+The Beautiful 100 Strings price degraded from 15.942053298234374 to 12.7536426385875
+Velma damaged an item.
+The Muddywood Harmonica broke and was removed from inventory.
+Velma damaged an item.
+The Gibson Les Paul Standard Harmonica degraded from Very Good to Good
+The Gibson Les Paul Standard Harmonica price degraded from 41.85071250269664 to 33.480570002157314
+Velma damaged an item.
+The LVMH Red Dragon Shirt degraded from Good to Fair
+The LVMH Red Dragon Shirt price degraded from 78.65338151637123 to 62.92270521309698
+Velma damaged an item.
+The Runner 200 CDPlayer degraded from Good to Fair
+The Runner 200 CDPlayer price degraded from 79.26195236107321 to 63.409561888858576
+Velma damaged an item.
+The AudioTechnica M50TH CDPlayer degraded from Fair to Poor
+The AudioTechnica M50TH CDPlayer price degraded from 8.285738402674117 to 6.628590722139293
+Velma damaged an item.
+The AudioTechnica M50TH CDPlayer degraded from Very Good to Good
+The AudioTechnica M50TH CDPlayer price degraded from 20.360112868247057 to 16.288090294597648
+Velma damaged an item.
+The Beautiful 100 PracticeAmp degraded from Good to Fair
+The Beautiful 100 PracticeAmp price degraded from 32.201824614632606 to 25.761459691706087
+Velma damaged an item.
+The United Colors of Benetton Shiner Hat degraded from Very Good to Good
+The United Colors of Benetton Shiner Hat price degraded from 65.99789380316747 to 52.79831504253398
+Velma damaged an item.
+The Sony MX RecordPlayer broke and was removed from inventory.
+Velma damaged an item.
+The Runner 200 RecordPlayer broke and was removed from inventory.
+Velma damaged an item.
+The JBL 700BT RecordPlayer degraded from Excellent to Very Good
+The JBL 700BT RecordPlayer price degraded from 82.48639304031963 to 65.9891144322557
+Velma left the store for the day.
+
+Day 26:
+Clerk Shaggy decided to work on day 25.
+Clerk Shaggy counted 193.1443258571528 in the register.
+Clerk Shaggy calculated the inventory value to be: 574.5636832060402
+Customer Tom Cruise didn't want to buy the RecordPlayer at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Tom Cruise bought a Used JBL 700BT RecordPlayer in Very Good condition at 10% discount for 59.390202989030136
+Customer Keanu Reeves didn't want to buy the Bandana at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Keanu Reeves bought a Used United Colors of Benetton Shiner Bandana in Very Good condition at 10% discount for 11.36399325266716
+Customer Clint Eastwood bought a New Get Lucky PaperScore in Good condition at list price for 61.94456935384562
+Customer Brad Pitt left the store without buying the RecordPlayer as there was no stock.
+Customer Natalie Portman didn't want to buy the Mandolin at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Natalie Portman bought a Used Smooth Noodle Mandolin in Poor condition at 10% discount for 36.648992529898244
+Customer Brad Pitt left the store without buying the Mandolin as there was no stock.
+Customer Clint Eastwood didn't want to sell the CD at the offered price of 1.9972716557698686
+Clerk Shaggy offered 10% extra.
+Customer Clint Eastwood left the store without selling a CD even at extra price!
+Customer Mark Wahlberg didn't want to sell the MP3Player at the offered price of 12.36355118874405
+Clerk Shaggy offered 10% extra.
+Customer Mark Wahlberg sold a Used Sony MX MP3Player in Good condition at 10% extra for 13.599906307618458
+Shaggy damaged an item.
+The Gibson Les Paul Standard Guitar degraded from Fair to Poor
+The Gibson Les Paul Standard Guitar price degraded from 46.11132446066972 to 36.88905956853578
+Shaggy damaged an item.
+The Don Junior Bass broke and was removed from inventory.
+Shaggy damaged an item.
+The Morose 400 Cable degraded from Good to Fair
+The Morose 400 Cable price degraded from 62.74687935821461 to 50.19750348657169
+Shaggy damaged an item.
+The Morose 400 Cable degraded from Good to Fair
+The Morose 400 Cable price degraded from 33.11361025806445 to 26.490888206451558
+Shaggy damaged an item.
+The Thunder CD broke and was removed from inventory.
+Shaggy damaged an item.
+The Virtual Diva CD degraded from Very Good to Good
+The Virtual Diva CD price degraded from 76.65815857884344 to 61.326526863074754
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Bandana degraded from Fair to Poor
+The United Colors of Benetton Shiner Bandana price degraded from 13.498522252996212 to 10.79881780239697
+Shaggy damaged an item.
+The United Colors of Benetton Shiner Bandana broke and was removed from inventory.
+Shaggy damaged an item.
+The Bleed It Out Vinyl degraded from Good to Fair
+The Bleed It Out Vinyl price degraded from 3.889638407773935 to 3.1117107262191483
+Shaggy damaged an item.
+The Gibson Les Paul Standard Harmonica degraded from Good to Fair
+The Gibson Les Paul Standard Harmonica price degraded from 33.480570002157314 to 26.784456001725854
+Shaggy damaged an item.
+The LVMH Red Dragon Shirt degraded from Good to Fair
+The LVMH Red Dragon Shirt price degraded from 46.83872304030726 to 37.47097843224581
+Shaggy damaged an item.
+The LVMH Red Dragon Shirt degraded from Fair to Poor
+The LVMH Red Dragon Shirt price degraded from 62.92270521309698 to 50.33816417047759
+Shaggy damaged an item.
+The Runner 200 MP3Player broke and was removed from inventory.
+Shaggy damaged an item.
+The Sony MX MP3Player broke and was removed from inventory.
+Shaggy damaged an item.
+The Sony MX MP3Player degraded from Good to Fair
+The Sony MX MP3Player price degraded from 27.199812615236915 to 21.759850092189534
+Shaggy damaged an item.
+The Runner 200 CDPlayer degraded from Fair to Poor
+The Runner 200 CDPlayer price degraded from 63.409561888858576 to 50.72764951108687
+Shaggy damaged an item.
+The AudioTechnica M50TH CDPlayer broke and was removed from inventory.
+Shaggy damaged an item.
+The AudioTechnica M50TH CDPlayer degraded from Good to Fair
+The AudioTechnica M50TH CDPlayer price degraded from 16.288090294597648 to 13.030472235678118
+Shaggy damaged an item.
+The Rickenbacker 4001S Flute degraded from Good to Fair
+The Rickenbacker 4001S Flute price degraded from 66.56668606583935 to 53.25334885267148
+Shaggy damaged an item.
+The Smooth Noodle Flute degraded from Very Good to Good
+The Smooth Noodle Flute price degraded from 20.217651678329464 to 16.17412134266357
+Shaggy damaged an item.
+The Dark Zapper Flute degraded from Good to Fair
+The Dark Zapper Flute price degraded from 41.02235850430583 to 32.817886803444665
+Shaggy damaged an item.
+The Abstraction 300 Strings degraded from Good to Fair
+The Abstraction 300 Strings price degraded from 25.88775913383437 to 20.710207307067495
+Shaggy damaged an item.
+The Beautiful 100 Strings degraded from Fair to Poor
+The Beautiful 100 Strings price degraded from 12.7536426385875 to 10.202914110870001
+Shaggy left the store for the day.
+
+Day 27:
+Clerk Velma decided to work on day 26.
+Clerk Velma counted 263.5489665243452 in the register.
+Clerk Velma calculated the inventory value to be: 443.4758539726445
+Couldn't purchase the Bose 100 RecordPlayer as we were out of funds.
+Couldn't purchase the Sony MX RecordPlayer as we were out of funds.
+Customer Brad Pitt bought a New Beautiful 100 PracticeAmp in Fair condition at list price for 25.761459691706087
+Customer Leonardo DiCaprio didn't want to buy the Cable at the list price.
+Clerk Velma offered a 10% discount
+Customer Leonardo DiCaprio bought a New Morose 400 Cable in Fair condition at 10% discount for 45.17775313791452
+Customer Natalie Portman didn't want to buy the Shirt at the list price.
+Clerk Velma offered a 10% discount
+Customer Natalie Portman bought a Used LVMH Red Dragon Shirt in Fair condition at 10% discount for 33.72388058902123
+Customer Natalie Portman bought a Used AudioTechnica M50TH CDPlayer in Fair condition at list price for 13.030472235678118
+Customer Keanu Reeves bought a New Gibson Les Paul Standard Harmonica in Fair condition at list price for 26.784456001725854
+Customer Brad Pitt didn't want to sell the PracticeAmp at the offered price of 12.186631620350415
+Clerk Velma offered 10% extra.
+Customer Brad Pitt left the store without selling a PracticeAmp even at extra price!
+Customer Clint Eastwood sold a Used Abstraction 300 Strings in Good condition at offered price for 7.869310869907935
+Velma damaged an item.
+The Gibson Les Paul Standard Guitar broke and was removed from inventory.
+Velma damaged an item.
+The Gibson Les Paul Standard Bass degraded from Very Good to Good
+The Gibson Les Paul Standard Bass price degraded from 16.31672555085975 to 13.053380440687802
+Velma damaged an item.
+The Muddywood Bass degraded from Fair to Poor
+The Muddywood Bass price degraded from 54.76715494610477 to 43.81372395688382
+Velma damaged an item.
+The Lucille Bass degraded from Excellent to Very Good
+The Lucille Bass price degraded from 8.96643052009276 to 7.173144416074209
+Velma damaged an item.
+The Morose 400 Cable degraded from Fair to Poor
+The Morose 400 Cable price degraded from 26.490888206451558 to 21.19271056516125
+Velma damaged an item.
+The One Step Forward CD degraded from Excellent to Very Good
+The One Step Forward CD price degraded from 52.213611446783844 to 41.77088915742708
+Velma damaged an item.
+The Virtual Diva CD degraded from Good to Fair
+The Virtual Diva CD price degraded from 61.326526863074754 to 49.06122149045981
+Velma damaged an item.
+The United Colors of Benetton Shiner Bandana broke and was removed from inventory.
+Velma damaged an item.
+The Bleed It Out Vinyl degraded from Fair to Poor
+The Bleed It Out Vinyl price degraded from 3.1117107262191483 to 2.4893685809753188
+Velma damaged an item.
+The American Boy PaperScore degraded from Good to Fair
+The American Boy PaperScore price degraded from 90.98135560660205 to 72.78508448528164
+Velma damaged an item.
+The Bleed It Out PaperScore degraded from Excellent to Very Good
+The Bleed It Out PaperScore price degraded from 24.37701811570737 to 19.501614492565896
+Velma damaged an item.
+The Swalla PaperScore degraded from Very Good to Good
+The Swalla PaperScore price degraded from 65.32143656727729 to 52.25714925382184
+Velma damaged an item.
+The Sony MX MP3Player degraded from Fair to Poor
+The Sony MX MP3Player price degraded from 21.759850092189534 to 17.407880073751627
+Velma damaged an item.
+The Muddywood Mandolin degraded from Fair to Poor
+The Muddywood Mandolin price degraded from 36.69181048230213 to 29.353448385841705
+Velma damaged an item.
+The Guild Starfire Mandolin degraded from Very Good to Good
+The Guild Starfire Mandolin price degraded from 84.51617072170237 to 67.61293657736189
+Velma damaged an item.
+The Rickenbacker 4001S Flute degraded from Fair to Poor
+The Rickenbacker 4001S Flute price degraded from 53.25334885267148 to 42.602679082137186
+Velma damaged an item.
+The Smooth Noodle Flute degraded from Good to Fair
+The Smooth Noodle Flute price degraded from 16.17412134266357 to 12.939297074130858
+Velma damaged an item.
+The Dark Zapper Flute degraded from Fair to Poor
+The Dark Zapper Flute price degraded from 32.817886803444665 to 26.254309442755734
+Velma damaged an item.
+The Abstraction 300 Strings degraded from Fair to Poor
+The Abstraction 300 Strings price degraded from 20.710207307067495 to 16.568165845653997
+Velma damaged an item.
+The Beautiful 100 Strings broke and was removed from inventory.
+Velma damaged an item.
+The LVMH Red Dragon Shirt broke and was removed from inventory.
+Velma damaged an item.
+The Runner 200 CDPlayer broke and was removed from inventory.
+Velma damaged an item.
+The United Colors of Benetton Shiner Hat degraded from Good to Fair
+The United Colors of Benetton Shiner Hat price degraded from 52.79831504253398 to 42.23865203402718
+Velma damaged an item.
+The Runner 200 RecordPlayer degraded from Fair to Poor
+The Runner 200 RecordPlayer price degraded from 76.1478448171737 to 60.91827585373897
+Velma left the store for the day.
+
+Day 28:
+On Sunday, no one worked.
+
+Day 29:
+Clerk Velma decided to work on day 28.
+Clerk Velma counted 170.56008248154086 in the register.
+Clerk Velma calculated the inventory value to be: 462.5212956892784
+Couldn't purchase the Tommy Hilfiger 200 Bandana as we were out of funds.
+Couldn't purchase the LVMH Red Dragon Bandana as we were out of funds.
+Couldn't purchase the Rickenbacker 4001S Harmonica as we were out of funds.
+Couldn't purchase the Muddywood Harmonica as we were out of funds.
+Couldn't purchase the Guild Starfire Harmonica as we were out of funds.
+Couldn't purchase the United Colors of Benetton Shiner Shirt as we were out of funds.
+Couldn't purchase the United Colors of Benetton Shiner Shirt as we were out of funds.
+Couldn't purchase the Bose 100 CDPlayer as we were out of funds.
+Couldn't purchase the Sony MX CDPlayer as we were out of funds.
+Couldn't purchase the Runner 200 CDPlayer as we were out of funds.
+Couldn't purchase the Melancholy 50 PracticeAmp as we were out of funds.
+Couldn't purchase the Beautiful 100 PracticeAmp as we were out of funds.
+Couldn't purchase the Morose 400 PracticeAmp as we were out of funds.
+Customer Clint Eastwood left the store without buying the Harmonica as there was no stock.
+Customer Andy Samberg didn't want to buy the Mandolin at the list price.
+Clerk Velma offered a 10% discount
+Customer Andy Samberg bought a New Guild Starfire Mandolin in Good condition at 10% discount for 60.851642919625704
+Customer Clint Eastwood left the store without buying the Harmonica as there was no stock.
+Customer Natalie Portman left the store without buying the Guitar as there was no stock.
+Customer Mark Wahlberg didn't want to sell the Bandana at the offered price of 12.855604866501746
+Clerk Velma offered 10% extra.
+Customer Mark Wahlberg sold a New Tommy Hilfiger 200 Bandana in Very Good condition at 10% extra for 14.141165353151923
+Velma damaged an item.
+The Gibson Les Paul Standard Guitar degraded from Excellent to Very Good
+The Gibson Les Paul Standard Guitar price degraded from 80.28297609953344 to 64.22638087962676
+Velma damaged an item.
+The Lucille Guitar degraded from Very Good to Good
+The Lucille Guitar price degraded from 55.311964769027746 to 44.2495718152222
+Velma damaged an item.
+The Gibson Les Paul Standard Bass degraded from Good to Fair
+The Gibson Les Paul Standard Bass price degraded from 13.053380440687802 to 10.442704352550242
+Velma damaged an item.
+The Muddywood Bass broke and was removed from inventory.
+Velma damaged an item.
+The Lucille Bass degraded from Very Good to Good
+The Lucille Bass price degraded from 7.173144416074209 to 5.738515532859367
+Velma damaged an item.
+The Morose 400 Cable broke and was removed from inventory.
+Velma damaged an item.
+The One Step Forward CD degraded from Very Good to Good
+The One Step Forward CD price degraded from 41.77088915742708 to 33.41671132594166
+Velma damaged an item.
+The Virtual Diva CD degraded from Fair to Poor
+The Virtual Diva CD price degraded from 49.06122149045981 to 39.248977192367846
+Velma damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Fair to Poor
+The Tommy Hilfiger 200 Bandana price degraded from 98.97302528320473 to 79.17842022656379
+Velma damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Very Good to Good
+The Tommy Hilfiger 200 Bandana price degraded from 28.282330706303846 to 22.625864565043077
+Velma damaged an item.
+The Bleed It Out Vinyl broke and was removed from inventory.
+Velma damaged an item.
+The American Boy PaperScore degraded from Fair to Poor
+The American Boy PaperScore price degraded from 72.78508448528164 to 58.228067588225315
+Velma damaged an item.
+The Bleed It Out PaperScore degraded from Very Good to Good
+The Bleed It Out PaperScore price degraded from 19.501614492565896 to 15.601291594052718
+Velma damaged an item.
+The Swalla PaperScore degraded from Good to Fair
+The Swalla PaperScore price degraded from 52.25714925382184 to 41.80571940305747
+Velma damaged an item.
+The JBL 700BT MP3Player degraded from Good to Fair
+The JBL 700BT MP3Player price degraded from 61.840798990363425 to 49.47263919229074
+Velma damaged an item.
+The Sony MX MP3Player broke and was removed from inventory.
+Velma damaged an item.
+The Muddywood Mandolin broke and was removed from inventory.
+Velma damaged an item.
+The Rickenbacker 4001S Flute broke and was removed from inventory.
+Velma damaged an item.
+The Smooth Noodle Flute degraded from Fair to Poor
+The Smooth Noodle Flute price degraded from 12.939297074130858 to 10.351437659304686
+Velma damaged an item.
+The Dark Zapper Flute broke and was removed from inventory.
+Velma damaged an item.
+The Abstraction 300 Strings broke and was removed from inventory.
+Velma damaged an item.
+The Tommy Hilfiger 200 Shirt degraded from Very Good to Good
+The Tommy Hilfiger 200 Shirt price degraded from 23.503033085171083 to 18.80242646813687
+Velma damaged an item.
+The United Colors of Benetton Shiner Hat degraded from Fair to Poor
+The United Colors of Benetton Shiner Hat price degraded from 42.23865203402718 to 33.79092162722175
+Velma damaged an item.
+The Runner 200 RecordPlayer broke and was removed from inventory.
+Velma left the store for the day.
+
+Day 30:
+Clerk Shaggy decided to work on day 29.
+Clerk Shaggy counted 46.72167208421095 in the register.
+Clerk Shaggy withdrew 1000$ from the bank, making new register amount as: 1046.721672084211
+Clerk Shaggy calculated the inventory value to be: 374.9304699798728
+Customer Andy Samberg didn't want to buy the Flute at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Andy Samberg bought a New Smooth Noodle Flute in Poor condition at 10% discount for 9.316293893374217
+Customer Leonardo DiCaprio left the store without buying the RecordPlayer as there was no stock.
+Customer Leonardo DiCaprio left the store without buying the RecordPlayer as there was no stock.
+Customer Tom Cruise bought a New United Colors of Benetton Shiner Hat in Poor condition at list price for 33.79092162722175
+Customer Brad Pitt left the store without buying the Shirt as there was no stock.
+Customer Natalie Portman didn't want to buy the Mandolin at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Natalie Portman bought a Used Lucille Mandolin in Excellent condition at 10% discount for 15.16307766289021
+Customer Clint Eastwood sold a New Bleed It Out CD in Fair condition at offered price for 2.1705488723204116
+Customer Andy Samberg sold a New American Boy Vinyl in Excellent condition at offered price for 47.69093983797289
+Customer Brad Pitt didn't want to sell the Guitar at the offered price of 19.76198234347236
+Clerk Shaggy offered 10% extra.
+Customer Brad Pitt left the store without selling a Guitar even at extra price!
+Shaggy damaged an item.
+The Dark Zapper Guitar degraded from Very Good to Good
+The Dark Zapper Guitar price degraded from 83.02677669067036 to 66.42142135253629
+Shaggy damaged an item.
+The Gibson Les Paul Standard Guitar degraded from Very Good to Good
+The Gibson Les Paul Standard Guitar price degraded from 64.22638087962676 to 51.38110470370141
+Shaggy damaged an item.
+The Lucille Guitar degraded from Good to Fair
+The Lucille Guitar price degraded from 44.2495718152222 to 35.399657452177756
+Shaggy damaged an item.
+The Gibson Les Paul Standard Bass degraded from Fair to Poor
+The Gibson Les Paul Standard Bass price degraded from 10.442704352550242 to 8.354163482040194
+Shaggy damaged an item.
+The Morose 400 Cable broke and was removed from inventory.
+Shaggy damaged an item.
+The One Step Forward CD degraded from Good to Fair
+The One Step Forward CD price degraded from 33.41671132594166 to 26.733369060753333
+Shaggy damaged an item.
+The Virtual Diva CD broke and was removed from inventory.
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Bandana broke and was removed from inventory.
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Bandana degraded from Good to Fair
+The Tommy Hilfiger 200 Bandana price degraded from 22.625864565043077 to 18.100691652034463
+Shaggy damaged an item.
+The Swalla Vinyl degraded from Good to Fair
+The Swalla Vinyl price degraded from 93.5428796606571 to 74.83430372852568
+Shaggy damaged an item.
+The American Boy PaperScore broke and was removed from inventory.
+Shaggy damaged an item.
+The Swalla PaperScore degraded from Fair to Poor
+The Swalla PaperScore price degraded from 41.80571940305747 to 33.44457552244598
+Shaggy damaged an item.
+The JBL 700BT MP3Player degraded from Fair to Poor
+The JBL 700BT MP3Player price degraded from 49.47263919229074 to 39.5781113538326
+Shaggy damaged an item.
+The Abstraction 300 Strings degraded from Good to Fair
+The Abstraction 300 Strings price degraded from 94.76450565572131 to 75.81160452457705
+Shaggy damaged an item.
+The Melancholy 50 Strings degraded from Excellent to Very Good
+The Melancholy 50 Strings price degraded from 66.61371248780114 to 53.29096999024091
+Shaggy damaged an item.
+The Smooth Noodle Harmonica broke and was removed from inventory.
+Shaggy damaged an item.
+The Muddywood Harmonica degraded from Very Good to Good
+The Muddywood Harmonica price degraded from 36.47744467934179 to 29.18195574347343
+Shaggy damaged an item.
+The Tommy Hilfiger 200 Shirt degraded from Good to Fair
+The Tommy Hilfiger 200 Shirt price degraded from 18.80242646813687 to 15.041941174509496
+Shaggy damaged an item.
+The Bose 100 CDPlayer degraded from Excellent to Very Good
+The Bose 100 CDPlayer price degraded from 57.67950585717069 to 46.143604685736555
+Shaggy damaged an item.
+The Bose 100 CDPlayer degraded from Very Good to Good
+The Bose 100 CDPlayer price degraded from 24.22220042836623 to 19.377760342692984
+Shaggy damaged an item.
+The Sony MX CDPlayer degraded from Excellent to Very Good
+The Sony MX CDPlayer price degraded from 5.273247431284798 to 4.218597945027838
+Shaggy damaged an item.
+The Morose 400 PracticeAmp degraded from Fair to Poor
+The Morose 400 PracticeAmp price degraded from 33.917120590535674 to 27.13369647242854
+Shaggy damaged an item.
+The Abstraction 300 PracticeAmp degraded from Excellent to Very Good
+The Abstraction 300 PracticeAmp price degraded from 62.415323582008746 to 49.932258865607
+Shaggy damaged an item.
+The Sony MX RecordPlayer degraded from Very Good to Good
+The Sony MX RecordPlayer price degraded from 73.15282327622025 to 58.5222586209762
+Shaggy left the store for the day.
+
+
+Process finished with exit code 0
