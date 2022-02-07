@@ -13,6 +13,8 @@ public class Store {
     ArrayList<Staff> staff;
 
     Store() {
+        //assign 3 objects per item (lowest subclass) by the time we initialize a store
+        this.initialize(3);
     }
 
     public void initialize(int numberofObjects) {
@@ -207,6 +209,7 @@ public class Store {
          */
         for(int i = 1; i <= numberOfDays; i++) {
 
+            System.out.println("Day "+i+":");
             int dayOfTheWeek = i % 7;
             if (dayOfTheWeek == 0) {
                 System.out.println("On Sunday, no one worked.");
@@ -226,6 +229,8 @@ public class Store {
             //add an extra line for separating days
             System.out.println();
         }
+        
+        printSummary(numberOfDays);
     }
 
     public Clerk chooseClerk() {
@@ -251,6 +256,14 @@ public class Store {
             s.setIsActiveWorker(false);
             s.setDaysWorkedInARow(0);
         }
+    }
+    
+    public void printSummary(int days) {
+        System.out.println("The amount of money in the register at the end of " + days + " days was $" + this.registerAmount);
+        System.out.println("The amount of money added to the register from going to the bank during this time was $" + this.amountWithdrawnFromBank);
+        System.out.println("The items remaining in inventory were as follows:");
+        //IMPLEMENT
+        System.out.println("The total value of all these items is $" + calcInventoryValue());
     }
 
     public double getRegisterAmount() {
