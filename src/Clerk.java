@@ -185,7 +185,7 @@ public class Clerk extends Staff {
 
         for(String itemType: storeInv.keySet()) {
             for (Item item : storeInv.get(itemType)) {
-                if (!(Helper.random.nextInt(100) > getItemDamageChance())) {
+                if ((Helper.random.nextInt(100) > getItemDamageChance())) {
 
                     if (damagedItems.containsKey(itemType)) {
                         damagedItems.get(itemType).add(item);

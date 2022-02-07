@@ -36,8 +36,8 @@ public class Store {
         Clerk shaggy = new Clerk("Shaggy", 0);
         Clerk velma = new Clerk("Velma", 0);
 
-        staff.add((Staff) shaggy);
-        staff.add((Staff) velma);
+        staff.add(shaggy);
+        staff.add(velma);
     }
 
     public void generateInventory(int numberofObjects, ArrayList<String> itemTypes, boolean isStartDay) {
