@@ -5,16 +5,16 @@ import java.util.HashMap;
 
 public class Store {
 
-    int day;
-    double registerAmount;
-    double amountWithdrawnFromBank;
-    HashMap<String, ArrayList<Item>> inventory;
-    HashMap<String, ArrayList<Item>> soldLogBook;
-    ArrayList<Staff> staff;
+    private int day;
+    private double registerAmount;
+    private double amountWithdrawnFromBank;
+    private HashMap<String, ArrayList<Item>> inventory;
+    private HashMap<String, ArrayList<Item>> soldLogBook;
+    private ArrayList<Staff> staff;
 
-    Store() {
-        //assign 3 objects per item (lowest subclass) by the time we initialize a store
-        this.initialize(3);
+    Store(int n) {
+        // Assign 3 objects per item (lowest subclass) by the time we initialize a store
+        this.initialize(n);
     }
 
     public void initialize(int numberofObjects) {
@@ -34,6 +34,13 @@ public class Store {
         Constants.generateMaps(); // Declares all the constants and initializes them
 
         generateInventory(numberofObjects, Constants.CLASS_NAMES, true);
+
+        /*
+        --- IDENTITY ---
+        Following 2 lines display Identity Concept; the creation of objects that
+        have their own identity.
+        --- IDENTITY ---
+         */
 
         Clerk shaggy = new Clerk("Shaggy", 0);
         Clerk velma = new Clerk("Velma", 0);
@@ -83,13 +90,13 @@ public class Store {
         Object classInstance = null;
 
         try {
-            //initialize a list of class in the following way: [String, Int, bla, bla] for later use of initializing the corresponding item type
+            // Initialize a list of class in the following way: [String, Int, bla, bla] for later use of initializing the corresponding item type
             Class[] parameters = Constants.CLASS_PARAMETER_MAPPING.get(itemType);
-            //intialize the corresponding class object based on the given String itemType
+            // Intialize the corresponding class object based on the given String itemType
             Class classObj = Class.forName(itemType);
-            //combine the two lines above for really generating a constructor
+            // Combine the two lines above for really generating a constructor
             Constructor constructor = classObj.getConstructor(parameters);
-            //generate an object by calling Helper class that helps you put all the necessary parameter (price, day, etc) for generating it.
+            // Generate an object by calling Helper class that helps you put all the necessary parameter (price, day, etc) for generating it.
             classInstance = constructor.newInstance(Helper.getParams(itemType, this.day).toArray());
         }
         catch(Exception e) {
@@ -101,7 +108,15 @@ public class Store {
     }
 
     public void addToInventory(String itemType, Item item) {
-        //check if there's a key in the hashtable for storing the corresponding item time
+
+        /*
+        --- POLYMORPHISM ---
+            All of the items generated are of its own kind and exhibit polymorphic behavior.
+            But as they are all from the type 'Item', so they can be added to the 'inventory' HashMap.
+        --- POLYMORPHISM ---
+         */
+
+        // Check if there's a key in the hashtable for storing the corresponding item time
         if (inventory.containsKey(itemType)) {
             inventory.get(itemType).add(item);
         }
@@ -271,14 +286,15 @@ public class Store {
     }
     
     public void printSummary(int days) {
-        System.out.println("The amount of money in the register at the end of " + days + " days was $" + this.registerAmount);
-        System.out.println("The amount of money added to the register from going to the bank during this time was $" + this.amountWithdrawnFromBank);
+        System.out.println("--- FINAL SUMMARY ---");
+        System.out.println("The amount of money in the register at the end of " + days + " days was $" + this.registerAmount + "\n");
+        System.out.println("The amount of money added to the register from going to the bank during this time was $" + this.amountWithdrawnFromBank + "\n");
         System.out.println("The items remaining in inventory were as follows:");
         printInventory();
-        System.out.println("The total value of all these items is $" + Helper.round(calcInventoryValue()));
-        System.out.println("The sold items during this period were as follows:");
+        System.out.println("\nThe total value of all these items is $" + Helper.round(calcInventoryValue()));
+        System.out.println("\nThe sold items during this period were as follows:");
         printSoldItems();
-        System.out.println("The total value of all the sold items was $" + Helper.round(calcSoldValue()));
+        System.out.println("\nThe total value of all the sold items was $" + Helper.round(calcSoldValue()));
     }
 
     public void printInventory() {

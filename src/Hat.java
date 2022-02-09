@@ -1,6 +1,6 @@
 public class Hat extends Clothing {
 
-    double hatSize;
+    private double hatSize;
 
     public Hat (String name, double purchasePrice, int dayArrived, int condition, boolean isNew, double hatSize) {
         super(name, purchasePrice, dayArrived, condition, isNew);

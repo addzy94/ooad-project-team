@@ -1,13 +1,29 @@
 public abstract class Item {
 
-    String name;
-    double purchasePrice;
-    double listPrice;
-    boolean isNew;
-    int dayArrived;
-    int condition;
-    double salePrice;
-    int daySold;
+    /*
+    --- ENCAPSULATION ---
+        In this file, we represent encapsulation, where we bind the items
+        with its private attributes and their setter and getter methods into
+        the Item class.
+    --- ENCAPSULATION ---
+     */
+
+    private String name;
+    private double purchasePrice;
+    private double listPrice;
+    private boolean isNew;
+    private int dayArrived;
+    private int condition;
+    private double salePrice;
+    private int daySold;
+
+    /*
+    --- ABSTRACTION ---
+        For all the items, we abstract out its features and reduce it to just the bare components
+        that are necessary. For example we have name, price, condition, etc.
+        However, we have nothing about the weight or dimensions of objects.
+    --- ABSTRACTION ---
+     */
 
     Item() {}
 

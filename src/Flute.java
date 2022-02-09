@@ -1,6 +1,6 @@
 public class Flute extends Wind {
 
-    String type;
+    private String type;
 
     public Flute (String name, double purchasePrice, int dayArrived, int condition, boolean isNew, String type) {
         super(name, purchasePrice, dayArrived, condition, isNew);

@@ -1,6 +1,6 @@
 public abstract class Stringed extends Instrument {
 
-    boolean isElectric;
+    private boolean isElectric;
 
     Stringed (String name, double purchasePrice, int dayArrived, int condition, boolean isNew, boolean isElectric) {
         super(name, purchasePrice, dayArrived, condition, isNew);
@@ -8,7 +8,7 @@ public abstract class Stringed extends Instrument {
     }
 
     boolean getIsElectric() {
-        return isNew;
+        return isElectric;
     }
 
     void setIsElectric(boolean isElectric) {

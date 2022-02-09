@@ -1,7 +1,7 @@
 public abstract class Music extends Item {
 
-    String band;
-    String album;
+    private String band;
+    private String album;
 
     Music (String name, double purchasePrice, int dayArrived, int condition, boolean isNew, String band, String album) {
         super(name, purchasePrice, dayArrived, condition, isNew);

@@ -1,8 +1,14 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+
+/*
+--- INHERITANCE ---
+    Clerk worker type inherits from Staff and gets attributes like name and days worked which
+    is an example of inheritance.
+--- INHERITANCE ---
+*/
 
 public class Clerk extends Staff {
 
@@ -14,6 +20,12 @@ public class Clerk extends Staff {
         System.out.println("Clerk " + this.getName() + " decided to work on day " + s.getDay() + ".");
     }
 
+    /*
+    --- COHESION ---
+    The clerk class takes care of the going to bank action and is unrelated to the Store class.
+    This is an example of Cohesion at play.
+    --- COHESION ---
+     */
     public void GoToBank(Store s, double currentAmount) {
 
         double alreadyWithdrawn = s.getAmountWithdrawnFromBank();
@@ -87,7 +99,7 @@ public class Clerk extends Staff {
                     System.out.println("Customer " + customerName + " left the store without buying a " + itemType + " even at discounted price!");
                 }
                 else {
-                    itemChosen.setDaySold(s.day);
+                    itemChosen.setDaySold(s.getDay());
                     itemChosen.setSalePrice(.9 * listPrice);
                     System.out.println("Customer " + customerName + " bought a " +
                             Constants.NEW_OR_USED_MAPPING.get(itemChosen.getIsNew()) + " " +
@@ -101,7 +113,7 @@ public class Clerk extends Staff {
                 }
             }
             else {
-                itemChosen.setDaySold(s.day);
+                itemChosen.setDaySold(s.getDay());
                 itemChosen.setSalePrice(listPrice);
                 System.out.println("Customer " + customerName + " bought a " +
                         Constants.NEW_OR_USED_MAPPING.get(itemChosen.getIsNew()) + " " +
@@ -138,7 +150,7 @@ public class Clerk extends Staff {
                     System.out.println("Customer " + customerName + " left the store without selling a " + itemType + " even at extra price!");
                 }
                 else {
-                    customerBroughtItem.setDayArrived(s.day);
+                    customerBroughtItem.setDayArrived(s.getDay());
                     customerBroughtItem.setPurchasePrice(offeredPrice * 1.1);
                     customerBroughtItem.setListPrice(offeredPrice * 1.1 * 2);
                     System.out.println("Customer " + customerName + " sold a " +
@@ -152,7 +164,7 @@ public class Clerk extends Staff {
                 }
             }
             else {
-                customerBroughtItem.setDayArrived(s.day);
+                customerBroughtItem.setDayArrived(s.getDay());
                 customerBroughtItem.setPurchasePrice(offeredPrice);
                 customerBroughtItem.setListPrice(offeredPrice * 2);
                 System.out.println("Customer " + customerName + " sold a " +

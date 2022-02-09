@@ -1,6 +1,6 @@
 public class Cable extends Accessory {
 
-    double length;
+    private double length;
 
     public Cable (String name, double purchasePrice, int dayArrived, int condition, boolean isNew, double length) {
         super(name, purchasePrice, dayArrived, condition, isNew);
