@@ -4,6 +4,6 @@ What has been changed between the version we used in Part 1 and in Part 2:
 1) extra methods added into Store and Clerk class as we get in touch with the coding part.
 2) set all the subclasses except the lowest ones (no more subclasses inheritated from them) as abstract classes.
 3) add two helper classes: Constants and Helper classes. 
-   Constants class preprocessed all the important object type (Condition from "poor" to "excellent"; Weekdays; Item class types) into their coresponding hashmaps 
+   - Constants class preprocessed all the important object type (Condition from "poor" to "excellent"; Weekdays; Item class types) into their coresponding hashmaps 
    so that we can easy call those objects using their names directly instead of referencing them by transfering them into other general type (int, double, string, etc.) first.
-   Helper class stores all the useful methods that are going to be used by other classes but not logically belong (so there's no need to create those methods inside of those classes) to them.
+   - Helper class stores all the useful methods that are going to be used by other classes but not logically belong (so there's no need to create those methods inside of those classes) to them.
