@@ -45,10 +45,10 @@ https://github.com/addzy94/ooad-project-team/blob/master/Updated_UML_Diagram.txt
 
 **References**:
 
-Reflections - https://www.baeldung.com/java-reflection
-ArrayList - https://www.w3schools.com/java/java_arraylist.asp
-HashMap - https://www.geeksforgeeks.org/java-util-hashmap-in-java-with-examples/
-Super - https://www.geeksforgeeks.org/super-keyword/
-Static - https://www.geeksforgeeks.org/static-class-in-java/
+Reflections - https://www.baeldung.com/java-reflection<br>
+ArrayList - https://www.w3schools.com/java/java_arraylist.asp<br>
+HashMap - https://www.geeksforgeeks.org/java-util-hashmap-in-java-with-examples/<br>
+Super - https://www.geeksforgeeks.org/super-keyword/<br>
+Static - https://www.geeksforgeeks.org/static-class-in-java/<br>
 
  
