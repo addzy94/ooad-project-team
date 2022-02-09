@@ -20,7 +20,7 @@ public abstract class Item {
     /*
     --- ABSTRACTION ---
         For all the items, we abstract out its features and reduce it to just the bare components
-        that are necessary. For example we have name, price, condition, etc.
+        that are necessary. For example, we have name, price, condition, etc.
         However, we have nothing about the weight or dimensions of objects.
     --- ABSTRACTION ---
      */
