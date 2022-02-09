@@ -23,4 +23,5 @@ Project 2 Notes and Comments:
 Between Part 1 of this project and Part 2, we had to update our UML class diagram
 to reflect changes we made to the class structure once we had a better
 idea of how to implement all the required Objects and their corresponding behaviors.
+We have another file for showing you all the details about it: https://github.com/addzy94/ooad-project-team/blob/master/Updated_UML_Diagram.txt
  
