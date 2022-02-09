@@ -70,8 +70,7 @@ public class Clerk extends Staff {
     public void BuyItemTransaction(Store s, String itemType, String customerName) {
 
         HashMap<String, ArrayList<Item>> storeInv = s.getInventory();
-        List<Item> filteredList = storeInv.get(itemType)
-                .stream().filter(x -> x.getDayArrived() <= s.getDay()).toList();
+        List<Item> filteredList = storeInv.get(itemType).stream().filter(x -> x.getDayArrived() <= s.getDay()).toList();
         if (filteredList.size() == 0) {
             System.out.println("Customer " + customerName + " left the store without buying the " + itemType + " as there was no stock.");
         }

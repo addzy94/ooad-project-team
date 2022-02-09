@@ -191,6 +191,18 @@ public class Store {
         return inventoryVal;
     }
 
+    public double calcSoldValue() {
+
+        double soldVal = 0;
+
+        for(String itemType: soldLogBook.keySet()) {
+            for (Item i: soldLogBook.get(itemType)) {
+                soldVal += i.getSalePrice();
+            }
+        }
+        return soldVal;
+    }
+
     public ArrayList<String> itemsWithZeroStock() {
 
         ArrayList<String> zeroStockItems = new ArrayList<>();
@@ -262,8 +274,31 @@ public class Store {
         System.out.println("The amount of money in the register at the end of " + days + " days was $" + this.registerAmount);
         System.out.println("The amount of money added to the register from going to the bank during this time was $" + this.amountWithdrawnFromBank);
         System.out.println("The items remaining in inventory were as follows:");
-        //IMPLEMENT
-        System.out.println("The total value of all these items is $" + calcInventoryValue());
+        printInventory();
+        System.out.println("The total value of all these items is $" + Helper.round(calcInventoryValue()));
+        System.out.println("The sold items during this period were as follows:");
+        printSoldItems();
+        System.out.println("The total value of all the sold items was $" + Helper.round(calcSoldValue()));
+    }
+
+    public void printInventory() {
+        for(String itemType: inventory.keySet()) {
+            for (Item i: inventory.get(itemType)) {
+                System.out.println(i.getName() + ": $" + Helper.round(i.getPurchasePrice()));
+            }
+        }
+    }
+
+    public void printSoldItems() {
+        for (int j = 0; j <= this.getDay(); j++) {
+            for(String itemType: soldLogBook.keySet()) {
+                for (Item i: soldLogBook.get(itemType)) {
+                    if (i.getDaySold() == j) {
+                        System.out.println("On day " + i.getDaySold() + ", a " + i.getName() + " sold for $" + Helper.round(i.getSalePrice()));
+                    }
+                }
+            }
+        }
     }
 
     public double getRegisterAmount() {
