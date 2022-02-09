@@ -27,7 +27,7 @@ Both of which are static classes.
 **Output**:
 
 Please refer to the following file for output:<br>
-https://github.com/addzy94/ooad-project-team/blob/master/Updated_UML_Diagram.txt
+https://github.com/addzy94/ooad-project-team/blob/master/Output.txt
 
 ---
 
