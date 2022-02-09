@@ -12,11 +12,19 @@ We simulate 30 days of the Store's running.
 We have the **Item** class which is the abstract class that every item in our inventory
 inherits its attributes from.
 
-The clerk actions are present in the **Clerk** class happenings at the store, which are related to the
+The clerk actions are present in the **Clerk** class. The happenings at the store, which are related to the
 items and days and the rotation of the clerks are handled in the **Store** class.
 
 For getting common global functionality we make use of **Constants.java** and **Helper.java**.
 Both of which are static classes.
+
+Object-Oriented Approach :
+    INHERITANCE - Clerk.java - Line 7
+    ENCAPSULATION - Item.java - Line 4
+    ABSTRACTION - Item.java - Line 21
+    COHESION - Clerk.java - Line 24
+    IDENTITY - Store.java - Line 40
+    POLYMORPHISM - Store.java - Line 113
 
 Project 2 Notes and Comments:
 
