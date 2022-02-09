@@ -22,12 +22,12 @@ Both of which are static classes.
 
 ---
 
-**Object-Oriented Approach**:
-    INHERITANCE - Clerk.java - Line 7
-    ENCAPSULATION - Item.java - Line 4
-    ABSTRACTION - Item.java - Line 21
-    COHESION - Clerk.java - Line 24
-    IDENTITY - Store.java - Line 40
+**Object-Oriented Approach**: <br>
+    INHERITANCE - Clerk.java - Line 7 <br>
+    ENCAPSULATION - Item.java - Line 4 <br>
+    ABSTRACTION - Item.java - Line 21 <br>
+    COHESION - Clerk.java - Line 24 <br>
+    IDENTITY - Store.java - Line 40 <br>
     POLYMORPHISM - Store.java - Line 113
 
 ---
