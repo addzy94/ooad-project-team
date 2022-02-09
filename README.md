@@ -22,6 +22,15 @@ Both of which are static classes.
 
 ---
 
+---
+
+**Output**:
+
+Please refer to the following file for output:<br>
+https://github.com/addzy94/ooad-project-team/blob/master/Updated_UML_Diagram.txt
+
+---
+
 **Object-Oriented Approach**: <br>
     INHERITANCE - Clerk.java - Line 7 <br>
     ENCAPSULATION - Item.java - Line 4 <br>
