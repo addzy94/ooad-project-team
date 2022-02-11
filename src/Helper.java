@@ -93,6 +93,9 @@ public class Helper {
             case "Strings":
                 params.add(0, Constants.ACCESSORY_NAMES.get(Helper.random.nextInt(Constants.ACCESSORY_NAMES.size())));
                 params.add(Constants.STRING_TYPES.get(Helper.random.nextInt(Constants.STRING_TYPES.size())));
+                break;
+            case "GigBag":
+                params.add(0, Constants.ACCESSORY_NAMES.get(Helper.random.nextInt(Constants.ACCESSORY_NAMES.size())));
         }
         return params;
     }
