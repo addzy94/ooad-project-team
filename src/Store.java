@@ -264,25 +264,16 @@ public class Store {
     }
 
     public Clerk chooseClerk() {
-        Clerk c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));;
-        boolean validClerkSelected = false;
-        while (!validClerkSelected) {
-            // Choose randomly from the current staff list
-            c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
-            // Re-choose a new clerk if he/she has already worked more than 2 days
         
-            if (c.getDaysWorkedInARow() > 2) {
-            // Keep choosing a clerk until you choose someone who hasn't worked 3 days
-                while (c.getDaysWorkedInARow() == 3) {
-                    c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
-                }
-            }
-
-            if (c.getSick()) {
-                System.out.println(c.getName() + "was chosen to work, but they were sick and could not work that day.");
-            }
-            else {
-                validClerkSelected = true;
+    
+        // Choose randomly from the current staff list
+        Clerk c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
+        // Re-choose a new clerk if he/she has already worked more than 2 days
+        
+        if (c.getDaysWorkedInARow() > 2 || c.getSick()) {
+        // Keep choosing a clerk until you choose someone who hasn't worked 3 days or is not sick
+            while (c.getDaysWorkedInARow() == 3 || c.getSick()) {
+                c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
             }
         }
         
@@ -343,6 +334,7 @@ public class Store {
         if (chanceOfSick <= 0.1) {
             Clerk c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
             c.setSick(true);
+            System.out.println(c.getName() + "was sick on day " + this.getDay());
         }
         
     }
