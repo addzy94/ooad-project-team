@@ -37,6 +37,7 @@ public class Helper {
             case "PaperScore":
             case "CD":
             case "Vinyl":
+            case "Cassette":
                 params.add(0, Constants.MUSIC_NAMES.get(Helper.random.nextInt(Constants.MUSIC_NAMES.size())));
                 params.add(Constants.BAND_NAMES.get(Helper.random.nextInt(Constants.BAND_NAMES.size())));
                 params.add(Constants.ALBUM_NAMES.get(Helper.random.nextInt(Constants.ALBUM_NAMES.size())));
@@ -44,21 +45,31 @@ public class Helper {
             case "CDPlayer":
             case "RecordPlayer":
             case "MP3Player":
+            case "CassettePlayer":
                 params.add(0, Constants.PLAYER_NAMES.get(Helper.random.nextInt(Constants.PLAYER_NAMES.size())));
+                params.add(false); // Set property equalized as false by default?
                 break;
             case "Guitar":
             case "Bass":
             case "Mandolin":
                 params.add(0, Constants.INSTRUMENT_NAMES.get(Helper.random.nextInt(Constants.INSTRUMENT_NAMES.size())));
                 params.add(Helper.random.nextBoolean());
+                params.add(false); // Set property tuned as false by default?
                 break;
             case "Flute":
                 params.add(0, Constants.INSTRUMENT_NAMES.get(Helper.random.nextInt(Constants.INSTRUMENT_NAMES.size())));
                 params.add(Constants.FLUTE_TYPES.get(Helper.random.nextInt(Constants.FLUTE_TYPES.size())));
+                params.add(false); // Set property adjusted as false by default?
                 break;
             case "Harmonica":
                 params.add(0, Constants.INSTRUMENT_NAMES.get(Helper.random.nextInt(Constants.INSTRUMENT_NAMES.size())));
                 params.add(Constants.HARMONICA_KEYS.get(Helper.random.nextInt(Constants.HARMONICA_KEYS.size())));
+                params.add(false); // Set property adjusted as false by default?
+                break;
+            case "Saxophone":
+                params.add(0, Constants.INSTRUMENT_NAMES.get(Helper.random.nextInt(Constants.INSTRUMENT_NAMES.size())));
+                params.add(Constants.SAXOPHONE_TYPES.get(Helper.random.nextInt(Constants.HARMONICA_KEYS.size())));
+                params.add(false); // Set property adjusted as false by default?
                 break;
             case "Hat":
                 params.add(0, Constants.CLOTHING_NAMES.get(Helper.random.nextInt(Constants.CLOTHING_NAMES.size())));

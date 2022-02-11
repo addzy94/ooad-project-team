@@ -102,6 +102,13 @@ public class Constants {
             "G"
     ));
 
+    public static ArrayList<String> SAXOPHONE_TYPES = new ArrayList<>(Arrays.asList(
+            "Soprano",
+            "Alto",
+            "Tenor",
+            "Baritone"
+    ));
+
     public static ArrayList<String> CLOTHING_NAMES = new ArrayList<>(Arrays.asList(
             "LVMH Red Dragon",
             "Tommy Hilfiger 200",
