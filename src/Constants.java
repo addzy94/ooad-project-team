@@ -182,16 +182,17 @@ public class Constants {
 
         Class[] MUSIC_PARAMETER_TYPE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, String.class, String.class};
         Class[] DEFAULT_PARAMETER_TYPE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE};
-        Class[] BOOLEAN_PARAMETER_TYPE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Boolean.TYPE};
+        Class[] PLAYER_PARAMETER_TYPE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Boolean.TYPE};
+        Class[] BOOLEAN_PARAMETER_TYPE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Boolean.TYPE, Boolean.TYPE};
         Class[] DOUBLE_PARAMETER_TYPE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Double.TYPE};
-        Class[] STRING_PARAMETER_TYPE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, String.class};
+        Class[] STRING_PARAMETER_TYPE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, String.class, Boolean.TYPE};
 
         CLASS_PARAMETER_MAPPING.put("PaperScore", MUSIC_PARAMETER_TYPE);
         CLASS_PARAMETER_MAPPING.put("CD", MUSIC_PARAMETER_TYPE);
         CLASS_PARAMETER_MAPPING.put("Vinyl", MUSIC_PARAMETER_TYPE);
-        CLASS_PARAMETER_MAPPING.put("CDPlayer", DEFAULT_PARAMETER_TYPE);
-        CLASS_PARAMETER_MAPPING.put("RecordPlayer", DEFAULT_PARAMETER_TYPE);
-        CLASS_PARAMETER_MAPPING.put("MP3Player", DEFAULT_PARAMETER_TYPE);
+        CLASS_PARAMETER_MAPPING.put("CDPlayer", PLAYER_PARAMETER_TYPE);
+        CLASS_PARAMETER_MAPPING.put("RecordPlayer", PLAYER_PARAMETER_TYPE);
+        CLASS_PARAMETER_MAPPING.put("MP3Player", PLAYER_PARAMETER_TYPE);
         CLASS_PARAMETER_MAPPING.put("Guitar", BOOLEAN_PARAMETER_TYPE);
         CLASS_PARAMETER_MAPPING.put("Bass", BOOLEAN_PARAMETER_TYPE);
         CLASS_PARAMETER_MAPPING.put("Mandolin", BOOLEAN_PARAMETER_TYPE);
@@ -203,5 +204,11 @@ public class Constants {
         CLASS_PARAMETER_MAPPING.put("PracticeAmp", DOUBLE_PARAMETER_TYPE);
         CLASS_PARAMETER_MAPPING.put("Cable", DOUBLE_PARAMETER_TYPE);
         CLASS_PARAMETER_MAPPING.put("Strings", STRING_PARAMETER_TYPE);
+
+        // New added item type for Project 3
+        CLASS_PARAMETER_MAPPING.put("Saxophone", STRING_PARAMETER_TYPE);
+        CLASS_PARAMETER_MAPPING.put("Cassette", MUSIC_PARAMETER_TYPE);
+        CLASS_PARAMETER_MAPPING.put("CassettePlayer", PLAYER_PARAMETER_TYPE);
+        CLASS_PARAMETER_MAPPING.put("GigBag", DEFAULT_PARAMETER_TYPE);
     }
 }
