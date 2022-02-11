@@ -3,7 +3,7 @@
 ## Java Version: Java 17
 A Git Repository for housing OOAD Assignments
 
-To check the word we did for Project 2, please visit Project2 branch!
+## To check the word we did for Project 2, please visit Project2 branch!
 
 ---
 
