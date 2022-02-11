@@ -3,6 +3,7 @@ public abstract class Staff {
     String name;
     int daysWorkedInARow;
     boolean isActiveWorker;
+    boolean isSick;
 
     Staff() {}
 
@@ -34,6 +35,14 @@ public abstract class Staff {
 
     public void setIsActiveWorker(boolean isActiveWorker) {
         this.isActiveWorker = isActiveWorker;
+    }
+
+    public void setSick(boolean isSick) {
+        this.isSick = isSick;
+    }
+
+    public boolean getSick() {
+        return isSick;
     }
 
     public void incrementDaysWorkedInARow(Store s) {
