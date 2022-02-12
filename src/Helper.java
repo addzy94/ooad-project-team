@@ -58,18 +58,18 @@ public class Helper {
                 break;
             case "Flute":
                 params.add(0, Constants.INSTRUMENT_NAMES.get(Helper.random.nextInt(Constants.INSTRUMENT_NAMES.size())));
-                params.add(Constants.FLUTE_TYPES.get(Helper.random.nextInt(Constants.FLUTE_TYPES.size())));
                 params.add(false); // Set property adjusted as false by default?
+                params.add(Constants.FLUTE_TYPES.get(Helper.random.nextInt(Constants.FLUTE_TYPES.size())));
                 break;
             case "Harmonica":
                 params.add(0, Constants.INSTRUMENT_NAMES.get(Helper.random.nextInt(Constants.INSTRUMENT_NAMES.size())));
-                params.add(Constants.HARMONICA_KEYS.get(Helper.random.nextInt(Constants.HARMONICA_KEYS.size())));
                 params.add(false); // Set property adjusted as false by default?
+                params.add(Constants.HARMONICA_KEYS.get(Helper.random.nextInt(Constants.HARMONICA_KEYS.size())));
                 break;
             case "Saxophone":
                 params.add(0, Constants.INSTRUMENT_NAMES.get(Helper.random.nextInt(Constants.INSTRUMENT_NAMES.size())));
-                params.add(Constants.SAXOPHONE_TYPES.get(Helper.random.nextInt(Constants.SAXOPHONE_TYPES.size())));
                 params.add(false); // Set property adjusted as false by default?
+                params.add(Constants.SAXOPHONE_TYPES.get(Helper.random.nextInt(Constants.SAXOPHONE_TYPES.size())));
                 break;
             case "Hat":
                 params.add(0, Constants.CLOTHING_NAMES.get(Helper.random.nextInt(Constants.CLOTHING_NAMES.size())));
