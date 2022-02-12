@@ -243,7 +243,7 @@ public class Constants {
         CLASS_PARAMETER_MAPPING.put("Flute", FLUTE);
         CLASS_PARAMETER_MAPPING.put("Harmonica", HARMONICA);
         CLASS_PARAMETER_MAPPING.put("Saxophone", SAXOPHONE);
-        // Cloth
+        // Clothing
         CLASS_PARAMETER_MAPPING.put("Hat", HAT);
         CLASS_PARAMETER_MAPPING.put("Shirt", SHIRT);
         CLASS_PARAMETER_MAPPING.put("Bandana", BANDANA);
