@@ -1,15 +1,15 @@
 public abstract class Stringed extends Instrument {
 
-    Stringed(){} // Default constructor set for creating decorator pattern
+    //Stringed(){} // Default constructor set for creating decorator pattern
 
     private boolean isElectric;
 
-    private boolean tuned;
+    private boolean isTuned;
 
-    Stringed (String name, double purchasePrice, int dayArrived, int condition, boolean isNew, boolean isElectric, boolean tuned) {
+    Stringed (String name, double purchasePrice, int dayArrived, int condition, boolean isNew, boolean isElectric, boolean isTuned) {
         super(name, purchasePrice, dayArrived, condition, isNew);
         this.isElectric = isElectric;
-        this.tuned = tuned;
+        this.isTuned = isTuned;
     }
 
     boolean getIsElectric() {
@@ -20,11 +20,11 @@ public abstract class Stringed extends Instrument {
         this.isElectric = isElectric;
     }
 
-    boolean getTuned() {
-        return tuned;
+    boolean getIsTuned() {
+        return isTuned;
     }
 
-    void setTuned(boolean tuned) {
-        this.tuned = tuned;
+    void setIsTuned(boolean isTuned) {
+        this.isTuned = isTuned;
     }
 }

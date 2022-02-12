@@ -92,7 +92,7 @@ public class Store {
         try {
             // Initialize a list of class in the following way: [String, Int, bla, bla] for later use of initializing the corresponding item type
             Class[] parameters = Constants.CLASS_PARAMETER_MAPPING.get(itemType);
-            // Intialize the corresponding class object based on the given String itemType
+            // Initialize the corresponding class object based on the given String itemType
             Class classObj = Class.forName(itemType);
             // Combine the two lines above for really generating a constructor
             Constructor constructor = classObj.getConstructor(parameters);
