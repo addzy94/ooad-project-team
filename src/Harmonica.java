@@ -2,8 +2,8 @@ public class Harmonica extends Wind {
 
     private String key;
 
-    public Harmonica (String name, double purchasePrice, int dayArrived, int condition, boolean isNew, String key) {
-        super(name, purchasePrice, dayArrived, condition, isNew);
+    public Harmonica (String name, double purchasePrice, int dayArrived, int condition, boolean isNew, String key, boolean adjusted) {
+        super(name, purchasePrice, dayArrived, condition, isNew, adjusted);
         this.key = key;
     }
 
