@@ -145,7 +145,12 @@ public class Constants {
             "Bandana",
             "PracticeAmp",
             "Cable",
-            "Strings"));
+            "Strings",
+            "Saxophone",
+            "Cassette",
+            "CassettePlayer",
+            "GigBag"
+            ));
 
     public static ArrayList<String> CUSTOMER_NAMES = new ArrayList<>(Arrays.asList(
             "Tom Cruise",
@@ -187,41 +192,65 @@ public class Constants {
         NEW_OR_USED_MAPPING.put(NEW, "New");
         NEW_OR_USED_MAPPING.put(USED, "Used");
 
-        Class[] MUSIC_PARAMETER_TYPE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, String.class, String.class};
-        Class[] DEFAULT_PARAMETER_TYPE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE};
-        Class[] PLAYER_PARAMETER_TYPE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Boolean.TYPE};
-        Class[] BOOLEAN_PARAMETER_TYPE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Boolean.TYPE, Boolean.TYPE};
-        Class[] DOUBLE_PARAMETER_TYPE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Double.TYPE};
-        Class[] WIND_PARAMETER_TYPE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, String.class, Boolean.TYPE};
-        Class[] STRING_PARAMETER_TYPE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, String.class};
+        // Music
+        Class[] PAPER_SCORE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, String.class, String.class};
+        Class[] CD = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, String.class, String.class};
+        Class[] VINYL = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, String.class, String.class};
+        Class[] CASSETTE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, String.class, String.class};
+
+        // Player
+        Class[] CD_PLAYER = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Boolean.TYPE};
+        Class[] MP3_PLAYER = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Boolean.TYPE};
+        Class[] RECORD_PLAYER = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Boolean.TYPE};
+        Class[] CASSETTE_PLAYER = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Boolean.TYPE};
+
+        // Instrument - Stringed
+        Class[] GUITAR = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Boolean.TYPE, Boolean.TYPE};
+        Class[] BASS = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Boolean.TYPE, Boolean.TYPE};
+        Class[] MANDOLIN = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Boolean.TYPE, Boolean.TYPE};
+
+        // Instrument - Wind
+        Class[] FLUTE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Boolean.TYPE, String.class};
+        Class[] HARMONICA = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Boolean.TYPE, String.class};
+        Class[] SAXOPHONE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Boolean.TYPE, String.class};
+
+        // Clothing
+        Class[] HAT = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Double.TYPE};
+        Class[] SHIRT = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Double.TYPE};
+        Class[] BANDANA = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE};
+
+        // Accessory
+        Class[] PRACTICE_AMP = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Double.TYPE};
+        Class[] CABLE = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, Double.TYPE};
+        Class[] STRINGS = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE, String.class};
+        Class[] GIG_BAG = {String.class, Double.TYPE, Integer.TYPE, Integer.TYPE, Boolean.TYPE};
 
         // Music
-        CLASS_PARAMETER_MAPPING.put("PaperScore", MUSIC_PARAMETER_TYPE);
-        CLASS_PARAMETER_MAPPING.put("CD", MUSIC_PARAMETER_TYPE);
-        CLASS_PARAMETER_MAPPING.put("Vinyl", MUSIC_PARAMETER_TYPE);
-        CLASS_PARAMETER_MAPPING.put("Cassette", MUSIC_PARAMETER_TYPE);
+        CLASS_PARAMETER_MAPPING.put("PaperScore", PAPER_SCORE);
+        CLASS_PARAMETER_MAPPING.put("CD", CD);
+        CLASS_PARAMETER_MAPPING.put("Vinyl", VINYL);
+        CLASS_PARAMETER_MAPPING.put("Cassette", CASSETTE);
         // Player
-        CLASS_PARAMETER_MAPPING.put("CDPlayer", PLAYER_PARAMETER_TYPE);
-        CLASS_PARAMETER_MAPPING.put("RecordPlayer", PLAYER_PARAMETER_TYPE);
-        CLASS_PARAMETER_MAPPING.put("MP3Player", PLAYER_PARAMETER_TYPE);
-        CLASS_PARAMETER_MAPPING.put("CassettePlayer", PLAYER_PARAMETER_TYPE);
-        // Stringed
-        CLASS_PARAMETER_MAPPING.put("Guitar", BOOLEAN_PARAMETER_TYPE);
-        CLASS_PARAMETER_MAPPING.put("Bass", BOOLEAN_PARAMETER_TYPE);
-        CLASS_PARAMETER_MAPPING.put("Mandolin", BOOLEAN_PARAMETER_TYPE);
-        // Wind
-        CLASS_PARAMETER_MAPPING.put("Flute", WIND_PARAMETER_TYPE);
-        CLASS_PARAMETER_MAPPING.put("Harmonica", WIND_PARAMETER_TYPE);
-        CLASS_PARAMETER_MAPPING.put("Saxophone", WIND_PARAMETER_TYPE);
+        CLASS_PARAMETER_MAPPING.put("CDPlayer", CD_PLAYER);
+        CLASS_PARAMETER_MAPPING.put("RecordPlayer", RECORD_PLAYER);
+        CLASS_PARAMETER_MAPPING.put("MP3Player", MP3_PLAYER);
+        CLASS_PARAMETER_MAPPING.put("CassettePlayer", CASSETTE_PLAYER);
+        // Instrument - Stringed
+        CLASS_PARAMETER_MAPPING.put("Guitar", GUITAR);
+        CLASS_PARAMETER_MAPPING.put("Bass", BASS);
+        CLASS_PARAMETER_MAPPING.put("Mandolin", MANDOLIN);
+        // Instrument - Wind
+        CLASS_PARAMETER_MAPPING.put("Flute", FLUTE);
+        CLASS_PARAMETER_MAPPING.put("Harmonica", HARMONICA);
+        CLASS_PARAMETER_MAPPING.put("Saxophone", SAXOPHONE);
         // Cloth
-        CLASS_PARAMETER_MAPPING.put("Hat", DOUBLE_PARAMETER_TYPE);
-        CLASS_PARAMETER_MAPPING.put("Shirt", DOUBLE_PARAMETER_TYPE);
-        CLASS_PARAMETER_MAPPING.put("Bandana", DEFAULT_PARAMETER_TYPE);
+        CLASS_PARAMETER_MAPPING.put("Hat", HAT);
+        CLASS_PARAMETER_MAPPING.put("Shirt", SHIRT);
+        CLASS_PARAMETER_MAPPING.put("Bandana", BANDANA);
         // Accessory
-        CLASS_PARAMETER_MAPPING.put("PracticeAmp", DOUBLE_PARAMETER_TYPE);
-        CLASS_PARAMETER_MAPPING.put("Cable", DOUBLE_PARAMETER_TYPE);
-        CLASS_PARAMETER_MAPPING.put("Strings", STRING_PARAMETER_TYPE);
-        CLASS_PARAMETER_MAPPING.put("GigBag", DEFAULT_PARAMETER_TYPE);
-
+        CLASS_PARAMETER_MAPPING.put("PracticeAmp", PRACTICE_AMP);
+        CLASS_PARAMETER_MAPPING.put("Cable", CABLE);
+        CLASS_PARAMETER_MAPPING.put("Strings", STRINGS);
+        CLASS_PARAMETER_MAPPING.put("GigBag", GIG_BAG);
     }
 }
