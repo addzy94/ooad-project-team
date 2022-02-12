@@ -1,17 +1,17 @@
 public abstract class Wind extends Instrument {
 
-    private boolean adjusted;
+    private boolean isAdjusted;
 
-    Wind(String name, double purchasePrice, int dayArrived, int condition, boolean isNew, boolean adjusted) {
+    Wind(String name, double purchasePrice, int dayArrived, int condition, boolean isNew, boolean isAdjusted) {
         super(name, purchasePrice, dayArrived, condition, isNew);
-        this.adjusted = adjusted;
+        this.isAdjusted = isAdjusted;
     }
 
-    public boolean getAdjusted() {
-        return adjusted;
+    public boolean getIsAdjusted() {
+        return isAdjusted;
     }
 
-    public void setAdjusted(boolean adjusted) {
-        this.adjusted = adjusted;
+    public void setIsAdjusted(boolean isAdjusted) {
+        this.isAdjusted = isAdjusted;
     }
 }

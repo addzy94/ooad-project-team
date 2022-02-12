@@ -1,17 +1,17 @@
 public class Player extends Item {
 
-    private boolean equalized;
+    private boolean isEqualized;
 
-    Player (String name, double purchasePrice, int dayArrived, int condition, boolean isNew, boolean equalized) {
+    Player (String name, double purchasePrice, int dayArrived, int condition, boolean isNew, boolean isEqualized) {
         super(name, purchasePrice, dayArrived, condition, isNew);
-        this.equalized = equalized;
+        this.isEqualized = isEqualized;
     }
 
-    public boolean getEqualized() {
-        return equalized;
+    public boolean getIsEqualized() {
+        return isEqualized;
     }
 
-    public void setEqualized(boolean equalized) {
-        this.equalized = equalized;
+    public void setIsEqualized(boolean isEqualized) {
+        this.isEqualized = isEqualized;
     }
 }

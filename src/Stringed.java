@@ -1,5 +1,7 @@
 public abstract class Stringed extends Instrument {
 
+    Stringed(){} // Default constructor set for creating decorator pattern
+
     private boolean isElectric;
 
     private boolean tuned;
@@ -16,5 +18,13 @@ public abstract class Stringed extends Instrument {
 
     void setIsElectric(boolean isElectric) {
         this.isElectric = isElectric;
+    }
+
+    boolean getTuned() {
+        return tuned;
+    }
+
+    void setTuned(boolean tuned) {
+        this.tuned = tuned;
     }
 }
