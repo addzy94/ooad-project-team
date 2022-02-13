@@ -4,16 +4,16 @@ import java.util.List;
 
 public class SellAccessory extends SellDecorator {
     Item item;
-    protected double ExtraSalePrice;
+    protected double extraSalePrice;
 
     public SellAccessory(Item item, Store s, String itemType, String customerName) {
         this.item = item;
 
-        // find a GigBag item from the current inventory list
+        // find a item from the current inventory list
         HashMap<String, ArrayList<Item>> storeInv = s.getInventory();
         List<Item> filteredList = storeInv.get(itemType).stream().filter(x -> x.getDayArrived() <= s.getDay()).toList();
         if (filteredList.size() == 0) { // No stock for GigBag item
-            ExtraSalePrice = 0;
+            extraSalePrice = 0;
             System.out.println("Customer " + customerName + " also wanted to buy a " + itemType + " but there was no stock.");
         }
         else {
@@ -31,10 +31,21 @@ public class SellAccessory extends SellDecorator {
 
             s.removeFromInventory(itemType, itemChosen);
             s.addToSoldInventory(itemType, itemChosen);
-            ExtraSalePrice = itemChosen.getSalePrice();
+            extraSalePrice = itemChosen.getSalePrice();
         }
     }
     protected double getSalePrice() {
-        return item.getSalePrice() + ExtraSalePrice;
+        //item.setSalePrice(item.getSalePrice() + extraSalePrice);
+        //return item.getSalePrice();
+
+        /*
+        // If we call this decorator class two times then it will RECURSIVELY re-define this method
+        Hence like getSalePrice (newest) = getSalePrice (last one) + extraSalePrice
+                                         = [getSalePrice(original one) + extraSalePrice (last one) ] + extraSalePrice (this one)
+         */
+        return item.getSalePrice() + extraSalePrice;
+
+
+
     }
 }

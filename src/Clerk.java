@@ -92,11 +92,14 @@ public class Clerk extends Staff {
             // Get items which are at the store.
             Item itemChosen = filteredList.get(Helper.random.nextInt(filteredList.size()));
             double listPrice = itemChosen.getListPrice();
-            boolean initialBuyDecision = (Helper.random.nextInt(2) == 0);
+            boolean initialBuyDecision = (Helper.random.nextInt(2) == 0); // Currently 50% of chance of buying an item
+            /*
+            Try to reinitialize the initialBuyDecision and discountBuyDecision in a different method so we can vary the value
+             */
             if (!initialBuyDecision) {
                 System.out.println("Customer " + customerName + " didn't want to buy the " + itemType + " at the list price.");
                 System.out.println("Clerk " + this.getName() + " offered a 10% discount");
-                boolean discountBuyDecision = (Helper.random.nextInt(4) != 3);
+                boolean discountBuyDecision = (Helper.random.nextInt(4) != 3); // Now we have 50 + 25 = 75% of chance of buying an item
                 if (!discountBuyDecision) {
                     System.out.println("Customer " + customerName + " left the store without buying a " + itemType + " even at discounted price!");
                 }
@@ -154,6 +157,7 @@ public class Clerk extends Staff {
                         int numberOfTimes = Helper.random.nextInt(1); // generate a value that is either 0 or 1
                         for (int i = numberOfTimes; i < 2; i++){
                             itemChosen = new SellAccessory(itemChosen, s, "Cable", customerName);
+                            //System.out.println("Now price is: "+ itemChosen.getSalePrice());
                         }
                     }
                     possible_result = Helper.random.nextInt(100); // re-generate another result
@@ -161,6 +165,7 @@ public class Clerk extends Staff {
                         int numberOfTimes = Helper.random.nextInt(2); // generate a value that is either 0, 1, or 2
                         for (int i = numberOfTimes; i < 3; i++){
                             itemChosen = new SellAccessory(itemChosen, s, "Strings", customerName);
+                            //System.out.println("Now price is: "+ itemChosen.getSalePrice());
                         }
                     }
                 }
