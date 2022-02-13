@@ -44,9 +44,11 @@ public class Store {
 
         Clerk shaggy = new Clerk("Shaggy", 0);
         Clerk velma = new Clerk("Velma", 0);
+        Clerk daphne = new Clerk("daphne", 0);
 
         staff.add(shaggy);
         staff.add(velma);
+        staff.add(daphne);
     }
 
     public void generateInventory(int numberofObjects, ArrayList<String> itemTypes, boolean isStartDay) {
@@ -243,6 +245,7 @@ public class Store {
                 resetDays();
             }
             else {
+                sicknessCheck();
                 Clerk c = chooseClerk();
                 c.ArriveAtStore(this);
                 c.CheckRegister(this);
@@ -261,15 +264,19 @@ public class Store {
     }
 
     public Clerk chooseClerk() {
+        
+    
         // Choose randomly from the current staff list
         Clerk c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
         // Re-choose a new clerk if he/she has already worked more than 2 days
-        if (c.getDaysWorkedInARow() > 2) {
-            // Keep choosing a clerk until you choose someone who hasn't worked 3 days
-            while (c.getDaysWorkedInARow() == 3) {
+        
+        if (c.getDaysWorkedInARow() > 2 || c.getSick()) {
+        // Keep choosing a clerk until you choose someone who hasn't worked 3 days or is not sick
+            while (c.getDaysWorkedInARow() == 3 || c.getSick()) {
                 c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
             }
         }
+        
         // Set that clerk as active worker for today
         c.setIsActiveWorker(true);
         // Call incrementDayWorkedInRow method for handling the details of adding work days and assigning other clerks' work days to 0
@@ -315,6 +322,21 @@ public class Store {
                 }
             }
         }
+    }
+
+    public void sicknessCheck() {
+        
+        for (Staff s: staff) {
+            s.setSick(false);
+        }
+
+        double chanceOfSick = Helper.random.nextDouble();
+        if (chanceOfSick <= 0.1) {
+            Clerk c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
+            c.setSick(true);
+            System.out.println(c.getName() + "was sick on day " + this.getDay());
+        }
+        
     }
 
     public double getRegisterAmount() {

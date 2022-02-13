@@ -12,6 +12,7 @@ import java.util.List;
 
 public class Clerk extends Staff {
 
+
     public Clerk(String name, int daysWorkedInARow) {
         super(name, daysWorkedInARow);
     }
@@ -186,6 +187,9 @@ public class Clerk extends Staff {
         else if (this.getName().equals("Shaggy")) {
             return 79;
         }
+        else if (this.getName().equals("Daphne")) {
+            return 36;
+        }
         else { return 100; }
     }
 
@@ -236,4 +240,6 @@ public class Clerk extends Staff {
         System.out.println(this.getName() + " left the store for the day.");
         this.setIsActiveWorker(false);
     }
+
+    
 }
