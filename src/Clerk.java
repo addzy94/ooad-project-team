@@ -12,8 +12,6 @@ import java.util.List;
 
 public class Clerk extends Staff {
 
-    //Clerk(){} // Default constructor set for creating decorator pattern
-
     public Clerk(String name, int daysWorkedInARow) {
         super(name, daysWorkedInARow);
     }
