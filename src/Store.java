@@ -317,7 +317,8 @@ public class Store {
             for(String itemType: soldLogBook.keySet()) {
                 for (Item i: soldLogBook.get(itemType)) {
                     if (i.getDaySold() == j) {
-                        System.out.println("On day " + i.getDaySold() + ", a " + i.getName() + " sold for $" + Helper.round(i.getSalePrice()));
+                        // Change day from [0,29] to [1,30]
+                        System.out.println("On day " + (i.getDaySold() + 1) + ", a " + i.getName() + " sold for $" + Helper.round(i.getSalePrice()));
                     }
                 }
             }
