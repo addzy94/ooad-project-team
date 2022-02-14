@@ -92,14 +92,18 @@ public class Clerk extends Staff {
             // Get items which are at the store.
             Item itemChosen = filteredList.get(Helper.random.nextInt(filteredList.size()));
             double listPrice = itemChosen.getListPrice();
-            boolean initialBuyDecision = (Helper.random.nextInt(2) == 0); // Currently 50% of chance of buying an item
             /*
-            Try to reinitialize the initialBuyDecision and discountBuyDecision in a different method so we can vary the value
+            Initialize the initialBuyDecision and discountBuyDecision in a different method
+            so we can vary the value due to different conditions
              */
+            boolean[] buyDecisionArray = GenerateBuyDecision(itemChosen);
+            boolean initialBuyDecision = buyDecisionArray[0];
+
             if (!initialBuyDecision) {
                 System.out.println("Customer " + customerName + " didn't want to buy the " + itemType + " at the list price.");
                 System.out.println("Clerk " + this.getName() + " offered a 10% discount");
-                boolean discountBuyDecision = (Helper.random.nextInt(4) != 3); // Now we have 50 + 25 = 75% of chance of buying an item
+                //boolean discountBuyDecision = (Helper.random.nextInt(4) != 3); // Now we have 50 + 25 = 75% of chance of buying an item
+                boolean discountBuyDecision = buyDecisionArray[1];
                 if (!discountBuyDecision) {
                     System.out.println("Customer " + customerName + " left the store without buying a " + itemType + " even at discounted price!");
                 }
@@ -154,16 +158,16 @@ public class Clerk extends Staff {
                     }
                     possible_result = Helper.random.nextInt(100); // re-generate another result
                     if (possible_result < 30){ // a 30% chance of selling 1 or 2 Cables
-                        int numberOfTimes = Helper.random.nextInt(1); // generate a value that is either 0 or 1
-                        for (int i = numberOfTimes; i < 2; i++){
+                        int numberOfTimes = Helper.random.nextInt(2); // generate a value that is either 0 or 1
+                        for (int i = numberOfTimes; i < 2; i++){ // Run the loop for 1 or 2 times
                             itemChosen = new SellAccessory(itemChosen, s, "Cable", customerName);
                             //System.out.println("Now price is: "+ itemChosen.getSalePrice());
                         }
                     }
                     possible_result = Helper.random.nextInt(100); // re-generate another result
                     if (possible_result < 40){ // a 40% chance of selling 1 to 3 Strings.
-                        int numberOfTimes = Helper.random.nextInt(2); // generate a value that is either 0, 1, or 2
-                        for (int i = numberOfTimes; i < 3; i++){
+                        int numberOfTimes = Helper.random.nextInt(3); // generate a value that is either 0, 1, or 2
+                        for (int i = numberOfTimes; i < 3; i++){ // Run the loop for 1 or 2 or 3 times
                             itemChosen = new SellAccessory(itemChosen, s, "Strings", customerName);
                             //System.out.println("Now price is: "+ itemChosen.getSalePrice());
                         }
@@ -194,6 +198,33 @@ public class Clerk extends Staff {
             }
         }
         return itemChosen;
+    }
+
+    public boolean[] GenerateBuyDecision(Item itemChosen){
+        boolean initialBuyDecision = (Helper.random.nextInt(2) == 0); // 50% of chance of buying an item by default
+        boolean discountBuyDecision = (Helper.random.nextInt(4) < 3); // 50% + 25% = 75%, 3/4 of chance of buying the item with discount by default
+        if (itemChosen instanceof Player){
+            if (((Player) itemChosen).getIsEqualized()){ // If a player has been equalized, increase the chance by 10%
+                initialBuyDecision = (Helper.random.nextInt(5) < 3); // 60%, or 3/5
+                discountBuyDecision = (Helper.random.nextInt(20) < 17); // 60% + 25% = 85%, or 17/20
+            }
+        }
+        else if (itemChosen instanceof Stringed){
+            if (((Stringed) itemChosen).getIsTuned()){ // If a Stringed instrument has been tuned, increase the chance by 15%
+                initialBuyDecision = (Helper.random.nextInt(20) < 13); // 65%, or 13/20
+                discountBuyDecision = (Helper.random.nextInt(10) < 9); // 65% + 25% = 90%, or 9/10
+            }
+        }
+        else if (itemChosen instanceof Wind){
+            if (((Wind) itemChosen).getIsAdjusted()){ // If a Wind instrument has been adjusted, increase the chance by 20%
+                initialBuyDecision = (Helper.random.nextInt(10) < 7); // 70%, or 7/10
+                discountBuyDecision = (Helper.random.nextInt(20) < 19); // 70% + 25% = 95%, or 19/20
+            }
+        }
+        boolean[] decisionList = new boolean[2];
+        decisionList[0] = initialBuyDecision;
+        decisionList[1] = discountBuyDecision;
+        return decisionList;
     }
 
     public void SellItemTransaction(Store s, String itemType, String customerName) {
