@@ -14,7 +14,7 @@ public abstract class Item {
     private boolean isNew;
     private int dayArrived;
     private int condition;
-    private double salePrice;
+    protected double salePrice;
     private int daySold;
 
     /*
