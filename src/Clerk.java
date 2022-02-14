@@ -101,7 +101,6 @@ public class Clerk extends Staff {
             if (!initialBuyDecision) {
                 System.out.println("Customer " + customerName + " didn't want to buy the " + itemType + " at the list price.");
                 System.out.println("Clerk " + this.getName() + " offered a 10% discount");
-                //boolean discountBuyDecision = (Helper.random.nextInt(4) != 3); // Now we have 50 + 25 = 75% of chance of buying an item
                 boolean discountBuyDecision = buyDecisionArray[1];
                 if (!discountBuyDecision) {
                     System.out.println("Customer " + customerName + " left the store without buying a " + itemType + " even at discounted price!");
@@ -115,6 +114,10 @@ public class Clerk extends Staff {
                             Constants.CONDITION_MAPPING.get(itemChosen.getCondition()) +
                             " condition at 10% discount for $" + Helper.round(itemChosen.getSalePrice()));
 
+                    /*
+                    Call OptionalSell method, which contains applying decorator pattern to itemChosen for modifying its sale price
+                    if the customer is going to buy more than one item at once
+                     */
                     itemChosen = OptionalSell(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
                     s.removeFromInventory(itemType, itemChosen);
                     s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice());
@@ -130,6 +133,10 @@ public class Clerk extends Staff {
                         Constants.CONDITION_MAPPING.get(itemChosen.getCondition()) +
                         " condition at list price for $" + Helper.round(itemChosen.getSalePrice()));
 
+                /*
+                Call OptionalSell method, which contains applying decorator pattern to itemChosen for modifying its sale price
+                if the customer is going to buy more than one item at once
+                */
                 itemChosen = OptionalSell(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
                 s.removeFromInventory(itemType, itemChosen);
                 s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice());
@@ -140,6 +147,10 @@ public class Clerk extends Staff {
     }
 
     public Item OptionalSell(Store s, Item itemChosen, String customerName){
+        /*
+        Applies decorator pattern to itemChosen for modifying its sale price
+        if the customer is going to buy more than one item at once
+        */
         // Extra condition built for Project 3:
         if (itemChosen.getDaySold() != -1){ // If item chosen already been sold
             if (itemChosen instanceof Stringed){ // If a stringed instrument is sold, there is a chance of selling accessories as well.
