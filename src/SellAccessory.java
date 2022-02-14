@@ -1,7 +1,11 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
+/*
+Decorator Pattern that tracks an item and modifies its getSalPrice method,
+which returns not only the item's sale price
+but also the sale price of all the add-on items.
+ */
 public class SellAccessory extends SellDecorator {
     Item item;
     protected double extraSalePrice;
@@ -35,11 +39,8 @@ public class SellAccessory extends SellDecorator {
         }
     }
     protected double getSalePrice() {
-        //item.setSalePrice(item.getSalePrice() + extraSalePrice);
-        //return item.getSalePrice();
-
         /*
-        // If we call this decorator class two times then it will RECURSIVELY re-define this method
+        If we call this decorator class two times then it will RECURSIVELY re-define this method
         Hence like getSalePrice (newest) = getSalePrice (last one) + extraSalePrice
                                          = [getSalePrice(original one) + extraSalePrice (last one) ] + extraSalePrice (this one)
          */
