@@ -321,6 +321,9 @@ public class Clerk extends Staff {
         HashMap<String, ArrayList<Item>> storeInv = s.getInventory();
         HashMap<String, ArrayList<Item>> damagedItems = new HashMap<>();
 
+        // Announcement
+        System.out.println(this.getName() + " started cleaning the store.");
+
         for(String itemType: storeInv.keySet()) {
             for (Item item : storeInv.get(itemType)) {
                 if ((Helper.random.nextInt(100) > getItemDamageChance())) {
