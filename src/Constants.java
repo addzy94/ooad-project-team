@@ -152,6 +152,8 @@ public class Constants {
             "GigBag"
             ));
 
+    public static ArrayList<String> CLOTHING_ITEM_TYPES = new ArrayList<>(Arrays.asList("Hat", "Shirt", "Bandana"));
+
     public static ArrayList<String> CUSTOMER_NAMES = new ArrayList<>(Arrays.asList(
             "Tom Cruise",
             "Clint Eastwood",

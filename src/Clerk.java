@@ -52,6 +52,9 @@ public class Clerk extends Staff {
 
         ArrayList<String> zeroStockItems = s.itemsWithZeroStock();
 
+        // Not stocking clothing items anymore
+        zeroStockItems.removeAll(Constants.CLOTHING_ITEM_TYPES);
+
         return zeroStockItems;
     }
 
@@ -237,10 +240,35 @@ public class Clerk extends Staff {
         return decisionList;
     }
 
+    public boolean HaveClothingStock(Store s, ArrayList<String> clothingItems) {
+
+        boolean clothingStock = false;
+
+        HashMap<String, ArrayList<Item>> storeInv = s.getInventory();
+
+        for (String itemType: clothingItems) {
+            if (storeInv.get(itemType).size() > 0) {
+                clothingStock = true;
+                break;
+            }
+        }
+        return clothingStock;
+    }
+
     public void SellItemTransaction(Store s, String itemType, String customerName) {
 
         HashMap<String, ArrayList<Item>> storeInv = s.getInventory();
         Item customerBroughtItem = s.createItem(itemType);
+
+        // If the customer is selling a clothing item type
+        if (Constants.CLOTHING_ITEM_TYPES.contains(itemType)) {
+            // If we no longer hold stock of any clothing item
+            if (HaveClothingStock(s, Constants.CLOTHING_ITEM_TYPES) == false) {
+                System.out.println("Customer was turned away because we are no longer accepting clothing items.");
+                return;
+            }
+        }
+
         int condition = customerBroughtItem.getCondition();
         boolean isNew = customerBroughtItem.getIsNew();
         double offeredPrice = Helper.priceEstimator(isNew, condition);
