@@ -40,7 +40,7 @@ public class SellAccessory extends SellDecorator {
     }
     protected double getSalePrice() {
         /*
-        If we call this decorator class two times then it will RECURSIVELY re-define this method
+        If we call this decorator class two times then it will re-define this method (which acts as Reference Chain)
         Hence like getSalePrice (newest) = getSalePrice (last one) + extraSalePrice
                                          = [getSalePrice(original one) + extraSalePrice (last one) ] + extraSalePrice (this one)
          */
