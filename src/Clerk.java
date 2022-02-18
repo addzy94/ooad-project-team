@@ -12,9 +12,11 @@ import java.util.List;
 
 public class Clerk extends Staff {
 
+    private int damageChance;
 
-    public Clerk(String name, int daysWorkedInARow) {
+    public Clerk(String name, int daysWorkedInARow, int damage_chance) {
         super(name, daysWorkedInARow);
+        damageChance = damage_chance;
     }
 
     public void ArriveAtStore(Store s) {
@@ -304,16 +306,7 @@ public class Clerk extends Staff {
     }
 
     public int getItemDamageChance() {
-        if (this.getName().equals("Velma")) {
-            return 94;
-        }
-        else if (this.getName().equals("Shaggy")) {
-            return 79;
-        }
-        else if (this.getName().equals("Daphne")) {
-            return 36;
-        }
-        else { return 100; }
+        return damageChance;
     }
 
     public void CleanStore(Store s) {

@@ -42,9 +42,9 @@ public class Store {
         --- IDENTITY ---
          */
 
-        Clerk shaggy = new Clerk("Shaggy", 0);
-        Clerk velma = new Clerk("Velma", 0);
-        Clerk daphne = new Clerk("daphne", 0);
+        Clerk shaggy = new Clerk("Shaggy", 0, 79);
+        Clerk velma = new Clerk("Velma", 0, 94);
+        Clerk daphne = new Clerk("Daphne", 0, 36);
 
         staff.add(shaggy);
         staff.add(velma);
