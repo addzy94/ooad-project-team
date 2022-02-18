@@ -63,7 +63,15 @@ public class Clerk extends Staff {
 
     public void OpenTheStore(Store s) {
 
-        int buyingCustomersCount = Helper.random.nextInt(7) + 4;
+        int poissonResult = -1;
+        int mean = 3;
+        double sum = 0.0;
+        while (sum < 1.0) { //https://hpaulkeeler.com/simulating-poisson-random-variables-direct-method/
+            sum = sum + ((-1.0/mean)*Math.log(Helper.random.nextDouble()));
+            poissonResult++;
+        }
+
+        int buyingCustomersCount = poissonResult + 2;
         int sellingCustomerCount = Helper.random.nextInt(4) + 1;
 
         ArrayList<String> buyingCustomerRequirements = Helper.customerRequirements(Constants.CLASS_NAMES, buyingCustomersCount);
