@@ -27,20 +27,19 @@ public class StoreTest {
 
     @Test
     public void resetWorkDays_test() {
-        test_store.run(1);
-        assertEquals(test_store.getDay(), 1);
-        assertFalse(false);
+        test_store.run(1); // Run the store for one day
+        assertEquals(test_store.getDay(), 1); // Check if the day counter is now 1
 
-        Clerk test_clerk = (Clerk) test_staff.get(0);
+        Clerk test_clerk = (Clerk) test_staff.get(0); // Find the clerk who has worked for a day
         for(int i=0; i<3; i++){
             if(test_staff.get(i).getDaysWorkedInARow() == 1){
                 System.out.println("Picked Clerk is: " + test_clerk.getName());
                 test_clerk = (Clerk) test_staff.get(i);
             }
         }
-        assertEquals(test_clerk.getDaysWorkedInARow(), 1);
+        assertEquals(test_clerk.getDaysWorkedInARow(), 1); // Double-check the clerk's dayWorkedInARow counter
 
-        test_store.resetDays();
-        assertEquals(test_clerk.getDaysWorkedInARow(), 0);
+        test_store.resetDays(); // Reset work days
+        assertEquals(test_clerk.getDaysWorkedInARow(), 0); // Check if resetDays method is working correctly so that it can be used when we reach Sundays
     }
 }

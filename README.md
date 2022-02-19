@@ -5,6 +5,8 @@ A Git Repository for housing OOAD Assignments
 
 ## To check the work we did for Project 2, please visit Project2 branch!
 
+## To check the work we did for Project 3, please visit Project3 branch!
+
 ---
 
 **Explanation of Working**:
