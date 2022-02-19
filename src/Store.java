@@ -42,9 +42,9 @@ public class Store {
         --- IDENTITY ---
          */
 
-        Clerk shaggy = new Clerk("Shaggy", 0, 79);
-        Clerk velma = new Clerk("Velma", 0, 94);
-        Clerk daphne = new Clerk("Daphne", 0, 36);
+        Clerk shaggy = new Clerk("Shaggy", 0, 79, new HaphazardTuningStrategy());
+        Clerk velma = new Clerk("Velma", 0, 94, new ManualTuningStrategy());
+        Clerk daphne = new Clerk("Daphne", 0, 36, new ElectronicTuningStrategy());
 
         staff.add(shaggy);
         staff.add(velma);
@@ -249,8 +249,10 @@ public class Store {
                 Clerk c = chooseClerk();
                 c.ArriveAtStore(this);
                 c.CheckRegister(this);
+
                 ArrayList<String> zeroStockItems = c.DoInventory(this);
                 c.PlaceAnOrder(this, zeroStockItems);
+
                 c.OpenTheStore(this);
                 c.CleanStore(this);
                 c.LeaveTheStore(this);
