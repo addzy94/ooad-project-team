@@ -3,7 +3,9 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.junit.Assert.*;
-
+/*
+JUnit version: JUnit 4
+ */
 public class StoreTest {
 
     @Test
@@ -12,9 +14,9 @@ public class StoreTest {
 
         ArrayList<Staff> test_staff = test_store.getStaff();
 
-        assertEquals(test_staff.size(), 3); // Test if there are really 3 members in the Staff list at this moment
+        assertEquals(test_staff.size(), 3); // Check if there are really 3 members in the Staff list at this moment
         /*
-        Test if the stuff members in the stuff list are all Clerks
+        Check if the stuff members in the stuff list are all Clerks
          */
         assertTrue(test_staff.get(0) instanceof Clerk);
         assertTrue(test_staff.get(1) instanceof Clerk);
