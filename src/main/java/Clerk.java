@@ -13,10 +13,12 @@ import java.util.List;
 public class Clerk extends Staff {
 
     private int damageChance;
+    private TuningStrategy tuningStrategy;
 
-    public Clerk(String name, int daysWorkedInARow, int damage_chance) {
+    public Clerk(String name, int daysWorkedInARow, int damage_chance, TuningStrategy tuningStrategy) {
         super(name, daysWorkedInARow);
-        damageChance = damage_chance;
+        this.damageChance = damage_chance;
+        this.tuningStrategy = tuningStrategy;
     }
 
     public void ArriveAtStore(Store s) {
@@ -57,6 +59,70 @@ public class Clerk extends Staff {
         // Not stocking clothing items anymore
         zeroStockItems.removeAll(Constants.CLOTHING_ITEM_TYPES);
 
+        // Clerks start to tune the Player, Wind, and Stringed Items
+        HashMap<String, ArrayList<Item>> storeInv = s.getInventory();
+        HashMap<String, ArrayList<Item>> tunedItems = new HashMap<>();
+
+        boolean priorTune;
+        boolean postTune;
+
+        for(String itemType: storeInv.keySet()) {
+            for (Item item : storeInv.get(itemType)) {
+
+                if (item instanceof Wind || item instanceof Player || item instanceof Stringed) {
+
+                    if (tunedItems.containsKey(itemType)) {
+                        tunedItems.get(itemType).add(item);
+                    } else {
+                        tunedItems.put(itemType, new ArrayList<Item>(Arrays.asList(item)));
+                    }
+                }
+            }
+        }
+
+        for(String itemType: tunedItems.keySet()) {
+            for (Item item : tunedItems.get(itemType)) {
+
+                s.removeFromInventory(itemType, item);
+                Item tunedItem;
+
+                if (item instanceof Wind) {
+                    priorTune = ((Wind) item).getIsAdjusted();
+                    tunedItem = tuningStrategy.tune(item);
+                    postTune = ((Wind) item).getIsAdjusted();
+                }
+
+                else if (item instanceof Player) {
+                    priorTune = ((Player) item).getIsEqualized();
+                    tunedItem = tuningStrategy.tune(item);
+                    postTune = ((Player) item).getIsEqualized();
+                }
+
+                else {
+                    priorTune = ((Stringed) item).getIsTuned();
+                    tunedItem = tuningStrategy.tune(item);
+                    postTune = ((Stringed) item).getIsTuned();
+                }
+
+                // Remove the item when it breaks
+
+                if (priorTune == true && postTune == false && Helper.random.nextInt(10) == 0) {
+                    System.out.println(item.getName() + " " + itemType + " broke during tuning!!");
+                    s.removeFromInventory(itemType, item);
+                }
+
+                else if (priorTune != postTune) {
+                    System.out.println(item.getName() + " " + itemType +
+                            " changed it's property from " + priorTune + " to " + postTune + ".");
+                    s.addToInventory(itemType, tunedItem);
+                }
+
+                else {
+                    System.out.println("Attempted to tune " + item.getName() + " " + itemType +
+                            " but couldn't change it's property which was " + priorTune + ".");
+                }
+            }
+        }
         return zeroStockItems;
     }
 
@@ -366,29 +432,46 @@ public class Clerk extends Staff {
             }
         }
 
+        // From the list of damaged items
         for(String itemType: damagedItems.keySet()) {
             for (Item item : damagedItems.get(itemType)) {
                 System.out.println(this.getName() + " damaged an item.");
+
+                // If the item was in poor condition, remove it from inventory
                 if (item.getCondition() == 1) {
                     System.out.println("The " + item.getName() + " " + itemType +
                             " broke and was removed from inventory.");
-                    storeInv.get(itemType).remove(item);
+                    s.removeFromInventory(itemType, item);
                 }
-                else {
-                    storeInv.get(itemType).remove(item);
-                    System.out.println("The " + item.getName() + " " + itemType +
-                            " degraded from " + Constants.CONDITION_MAPPING.get(item.getCondition()) +
-                            " ($" + Helper.round(item.getListPrice()) + ")" +
-                            " to " + Constants.CONDITION_MAPPING.get(item.getCondition() - 1) +
-                            " ($" + Helper.round(item.getListPrice() * 0.8) + ")");
-                    item.setCondition(item.getCondition() - 1);
-                    item.setListPrice(item.getListPrice() * 0.8);
 
-                    storeInv.get(itemType).add(item);
+                else {
+
+                    // Take the item from inventory
+                    s.removeFromInventory(itemType, item);
+
+                    // Calculate the changes
+                    int originalCondition = item.getCondition();
+                    int newCondition = originalCondition - 1;
+
+                    double originalListPrice = item.getListPrice();
+                    double newListPrice = originalListPrice * 0.8;
+
+                    // Announce what changed
+                    System.out.println("The " + item.getName() + " " + itemType +
+                            " degraded from " + Constants.CONDITION_MAPPING.get(originalCondition) +
+                            " ($" + Helper.round(item.getListPrice()) + ")" +
+                            " to " + Constants.CONDITION_MAPPING.get(newCondition) +
+                            " ($" + Helper.round(newListPrice) + ")");
+
+                    // Set the changes
+                    item.setCondition(newCondition);
+                    item.setListPrice(newListPrice);
+
+                    // Add item back to inventory with the changes
+                    s.addToInventory(itemType, item);
                 }
             }
         }
-        s.setInventory(storeInv);
     }
 
     public void LeaveTheStore(Store s) {
@@ -396,5 +479,7 @@ public class Clerk extends Staff {
         this.setIsActiveWorker(false);
     }
 
-    
+    public void setTuningStrategy(TuningStrategy tuningStrategy) {
+        this.tuningStrategy = tuningStrategy;
+    }
 }
