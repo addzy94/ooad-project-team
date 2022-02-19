@@ -74,7 +74,7 @@ public class Clerk extends Staff {
             poissonResult++;
         }
 
-        int buyingCustomersCount = poissonResult + 2;
+        int buyingCustomersCount = poissonResult + 2; // Arriving buying customers dictated by a Poisson distribution
         int sellingCustomerCount = Helper.random.nextInt(4) + 1;
 
         ArrayList<String> buyingCustomerRequirements = Helper.customerRequirements(Constants.CLASS_NAMES, buyingCustomersCount);
