@@ -5,11 +5,15 @@ A Git Repository for housing OOAD Assignments
 
 ## To check the work we did for Project 2, please visit Project2 branch!
 
+## To check the work we did for Project 3, please visit Project3 branch!
+
 ---
 
 **Explanation of Working**:
 
-To simulate the store, please run **src/RunStore.java**
+To simulate the store, please right-click **pom.xml**, 
+choose **"Add as Maven Project"** first,
+and then run **src/main/java/RunStore.java**
 
 We simulate 30 days of the Store's running.
 
