@@ -197,7 +197,7 @@ public class Clerk extends Staff {
                     Call OptionalSell method, which contains applying decorator pattern to itemChosen for modifying its sale price
                     if the customer is going to buy more than one item at once
                      */
-                    itemChosen = OptionalSell(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
+                    itemChosen = OptionalBuy(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
                     s.removeFromInventory(itemType, itemChosen);
                     s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice());
                     s.addToSoldInventory(itemType, itemChosen);
@@ -216,7 +216,7 @@ public class Clerk extends Staff {
                 Call OptionalSell method, which contains applying decorator pattern to itemChosen for modifying its sale price
                 if the customer is going to buy more than one item at once
                 */
-                itemChosen = OptionalSell(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
+                itemChosen = OptionalBuy(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
                 s.removeFromInventory(itemType, itemChosen);
                 s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice());
                 s.addToSoldInventory(itemType, itemChosen);
@@ -225,7 +225,7 @@ public class Clerk extends Staff {
         }
     }
 
-    public Item OptionalSell(Store s, Item itemChosen, String customerName){
+    public Item OptionalBuy(Store s, Item itemChosen, String customerName){
         /*
         Applies decorator pattern to itemChosen for modifying its sale price
         if the customer is going to buy more than one item at once
@@ -353,7 +353,7 @@ public class Clerk extends Staff {
          New condition for Project 3:
          if the item is from customer
          randomly set condition for equalized/tuned/adjusted as true/false
-         */
+        */
         if (customerBroughtItem instanceof Player){
             ((Player) customerBroughtItem).setIsEqualized(Helper.random.nextBoolean());
         }
