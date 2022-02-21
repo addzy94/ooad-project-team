@@ -443,8 +443,10 @@ public class Clerk extends Staff implements Subject{
                         customerBroughtItem.getName() + " " + itemType + " in " +
                         Constants.CONDITION_MAPPING.get(customerBroughtItem.getCondition()) +
                         " condition at offered price for $" + Helper.round(customerBroughtItem.getPurchasePrice()));
-                        //TO DO: numberItemsBought = numberItemsBought + 1;
-                        //addToInventory?
+                        
+                s.setRegisterAmount(s.getRegisterAmount() - customerBroughtItem.getPurchasePrice());
+                s.addToRegistry(inventory, itemType, customerBroughtItem);
+                numberItemsBought = numberItemsBought + 1;
             }
         }
         else {
