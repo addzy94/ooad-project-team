@@ -26,30 +26,22 @@ public class Tracker implements Observer{
 
     public void update(Clerk c) {
         if (c.getMessage().contains("sold")) {
-            for (int i = 0; i < information.size(); i++) {
-                if (c.getName().equals(information.get(i).get(0))) {
-                    ArrayList<Object> staff_member = information.get(i);
-                    staff_member.set(1, (int)staff_member.get(1) + Integer.parseInt(c.getMessage().split(" ")[0]));
-                    information.set(i, staff_member);
-                }
-            }
+            updateStat(c, 1);
         }
         if (c.getMessage().contains("bought")) {
-            for (int i = 0; i < information.size(); i++) {
-                if (c.getName().equals(information.get(i).get(0))) {
-                    ArrayList<Object> staff_member = information.get(i);
-                    staff_member.set(2, (int)staff_member.get(2) + Integer.parseInt(c.getMessage().split(" ")[0]));
-                    information.set(i, staff_member);
-                }
-            }
+            updateStat(c, 2);
         }
         if (c.getMessage().contains("damaged")) {
-            for (int i = 0; i < information.size(); i++) {
-                if (c.getName().equals(information.get(i).get(0))) {
-                    ArrayList<Object> staff_member = information.get(i);
-                    staff_member.set(3, (int)staff_member.get(3) + Integer.parseInt(c.getMessage().split(" ")[0]));
-                    information.set(i, staff_member);
-                }
+            updateStat(c, 3);
+        }
+    }
+
+    public void updateStat(Clerk c, int stat) {
+        for (int i = 0; i < information.size(); i++) {
+            if (c.getName().equals(information.get(i).get(0))) {
+                ArrayList<Object> staff_member = information.get(i);
+                staff_member.set(stat, (int)staff_member.get(stat) + Integer.parseInt(c.getMessage().split(" ")[0]));
+                information.set(i, staff_member);
             }
         }
     }

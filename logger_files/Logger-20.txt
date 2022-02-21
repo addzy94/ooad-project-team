@@ -1,22 +1,20 @@
 
-Clerk Shaggy arrived at the store on day 19.
+Clerk Velma arrived at the store on day 19.
 
-Clerk Shaggy counted $62.37 in the register.
-
-Clerk Shaggy withdrew $1000 from the bank, making new register amount as: 1062.37$
+Clerk Velma counted $734.64 in the register.
 
 There were 21 items in inventory.
 
-The inventory value was $533.49
+The inventory value was $278.84
 
 0 items were damaged during tuning.
 
 3 new items were ordered on day 19
 
-0 items were bought by the store.
+1 items were bought by the store.
 
 2 items were sold by the store.
 
-8 items were damaged during cleaning.
+3 items were damaged during cleaning.
 
-Shaggy left the store for the day.
+Velma left the store for the day.
