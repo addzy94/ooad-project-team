@@ -1,22 +1,22 @@
 
-Clerk Velma arrived at the store on day 23.
+Clerk Daphne arrived at the store on day 23.
 
-Clerk Velma counted $57.86 in the register.
+Clerk Daphne counted $72.68 in the register.
 
-Clerk Velma withdrew $1000 from the bank, making new register amount as: 1057.86$
+Clerk Daphne withdrew $1000 from the bank, making new register amount as: 1072.68$
 
 There were 21 items in inventory.
 
-The inventory value was $587.17
+The inventory value was $367.3
 
 0 items were damaged during tuning.
 
 3 new items were ordered on day 23
 
-1 items were bought by the store.
+2 items were bought by the store.
 
-4 items were sold by the store.
+3 items were sold by the store.
 
-1 items were damaged during cleaning.
+20 items were damaged during cleaning.
 
-Velma left the store for the day.
+Daphne left the store for the day.

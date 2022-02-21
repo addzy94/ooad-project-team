@@ -45,8 +45,8 @@ public class Clerk extends Staff implements Subject{
         s.setAmountWithdrawnFromBank(alreadyWithdrawn + 1000);
         s.setRegisterAmount(currentAmount + 1000);
 
-        System.out.println("Clerk " + this.getName() + " withdrew $1000 from the bank, making new register amount as: " + Helper.round(s.getRegisterAmount()) + "$");
-        setMessage("Clerk " + this.getName() + " withdrew $1000 from the bank, making new register amount as: " + Helper.round(s.getRegisterAmount()) + "$");
+        System.out.println("Clerk " + this.getName() + " withdrew $1000 from the bank, making new register amount as: $" + Helper.round(s.getRegisterAmount()));
+        setMessage("Clerk " + this.getName() + " withdrew $1000 from the bank, making new register amount as: $" + Helper.round(s.getRegisterAmount()));
     }
 
     public void CheckRegister(Store s) {

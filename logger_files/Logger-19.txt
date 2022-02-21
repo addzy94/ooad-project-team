@@ -1,21 +1,19 @@
 
 Clerk Daphne arrived at the store on day 18.
 
-Clerk Daphne counted $15.01 in the register.
-
-Clerk Daphne withdrew $1000 from the bank, making new register amount as: 1015.01$
+Clerk Daphne counted $334.17 in the register.
 
 There were 21 items in inventory.
 
-The inventory value was $298.3
+The inventory value was $638.46
 
 0 items were damaged during tuning.
 
 3 new items were ordered on day 18
 
-1 items were bought by the store.
+2 items were bought by the store.
 
-3 items were sold by the store.
+6 items were sold by the store.
 
 16 items were damaged during cleaning.
 
