@@ -44,8 +44,8 @@ public class Store {
         --- IDENTITY ---
          */
 
-        Clerk shaggy = new Clerk("Shaggy", 0, 79, new HaphazardTuningStrategy());
-        Clerk velma = new Clerk("Velma", 0, 94, new ManualTuningStrategy());
+        Clerk shaggy = new Clerk("Shaggy", 0, 20, new HaphazardTuningStrategy());
+        Clerk velma = new Clerk("Velma", 0, 5, new ManualTuningStrategy());
         Clerk daphne = new Clerk("Daphne", 0, 36, new ElectronicTuningStrategy());
 
         staff.add(shaggy);

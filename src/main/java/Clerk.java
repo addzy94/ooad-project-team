@@ -446,7 +446,7 @@ public class Clerk extends Staff implements Subject{
 
         for(String itemType: storeInv.keySet()) {
             for (Item item : storeInv.get(itemType)) {
-                if ((Helper.random.nextInt(100) > getItemDamageChance())) { //change to <?
+                if ((Helper.random.nextInt(100) < getItemDamageChance())) { //change to <?
                     damaged_count = damaged_count + 1;
                     if (damagedItems.containsKey(itemType)) {
                         damagedItems.get(itemType).add(item);
