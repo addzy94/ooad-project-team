@@ -4,13 +4,15 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class Store {
-
+    
     private int day;
     private double registerAmount;
     private double amountWithdrawnFromBank;
     private HashMap<String, ArrayList<Item>> inventory;
     private HashMap<String, ArrayList<Item>> soldLogBook;
     private ArrayList<Staff> staff;
+    private Tracker store_tracker;
+    private Logger day_logger;
 
     Store(int n) {
         // Assign 3 objects per item (lowest subclass) by the time we initialize a store
@@ -49,6 +51,19 @@ public class Store {
         staff.add(shaggy);
         staff.add(velma);
         staff.add(daphne);
+
+        //Store Tracker and Day Logger both implement an Observer pattern, of which Clerk is the Subject
+
+        store_tracker = new Tracker();
+        store_tracker.addStaff(shaggy);
+        store_tracker.addStaff(velma);
+        store_tracker.addStaff(daphne);
+
+        shaggy.registerObserver(store_tracker);
+        velma.registerObserver(store_tracker);
+        daphne.registerObserver(store_tracker);
+
+        day_logger = new Logger();
     }
 
     public void generateInventory(int numberofObjects, ArrayList<String> itemTypes, boolean isStartDay) {
@@ -237,7 +252,7 @@ public class Store {
         Runs the Store for 'numberOfDays' Days.
          */
         for(int i = 1; i <= numberOfDays; i++) {
-
+            day_logger.instantiate(i);
             System.out.println("Day "+i+":");
             int dayOfTheWeek = i % 7;
             if (dayOfTheWeek == 0) {
@@ -247,6 +262,7 @@ public class Store {
             else {
                 sicknessCheck();
                 Clerk c = chooseClerk();
+                c.registerObserver(day_logger);
                 c.ArriveAtStore(this);
                 c.CheckRegister(this);
 
@@ -256,9 +272,13 @@ public class Store {
                 c.OpenTheStore(this);
                 c.CleanStore(this);
                 c.LeaveTheStore(this);
+                c.removeObserver(day_logger);
             }
             this.day += 1;
             //add an extra line for separating days
+            day_logger.close();
+            System.out.println();
+            store_tracker.printInfo(this);
             System.out.println();
         }
         
@@ -296,7 +316,7 @@ public class Store {
     
     public void printSummary(int days) {
         System.out.println("--- FINAL SUMMARY ---");
-        System.out.println("The amount of money in the register at the end of " + days + " days was $" + this.registerAmount + "\n");
+        System.out.println("The amount of money in the register at the end of " + days + " days was $" + Helper.round(this.registerAmount) + "\n");
         System.out.println("The amount of money added to the register from going to the bank during this time was $" + this.amountWithdrawnFromBank + "\n");
         System.out.println("The items remaining in inventory were as follows:");
         printInventory();
