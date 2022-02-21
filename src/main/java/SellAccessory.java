@@ -15,14 +15,13 @@ public class SellAccessory extends SellDecorator {
 
         // find a item from the current inventory list
         HashMap<String, ArrayList<Item>> storeInv = s.getInventory();
-        List<Item> filteredList = storeInv.get(itemType).stream().filter(x -> x.getDayArrived() <= s.getDay()).toList();
-        if (filteredList.size() == 0) { // No stock for GigBag item
+        if (storeInv.get(itemType).size() == 0) { // No stock for GigBag item
             extraSalePrice = 0;
             System.out.println("Customer " + customerName + " also wanted to buy a " + itemType + " but there was no stock.");
         }
         else {
             // Get a random GigBag which is at the store.
-            Item itemChosen = filteredList.get(Helper.random.nextInt(filteredList.size()));
+            Item itemChosen = storeInv.get(itemType).get(Helper.random.nextInt(storeInv.get(itemType).size()));
             double listPrice = itemChosen.getListPrice();
             itemChosen.setDaySold(s.getDay());
             // Sell it at list price directly.
