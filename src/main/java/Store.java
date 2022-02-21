@@ -8,8 +8,11 @@ public class Store {
     private int day;
     private double registerAmount;
     private double amountWithdrawnFromBank;
+
     private HashMap<String, ArrayList<Item>> inventory;
     private HashMap<String, ArrayList<Item>> soldLogBook;
+    private HashMap<String, ArrayList<Item>> orderedItems;
+
     private ArrayList<Staff> staff;
     private Tracker store_tracker;
     private Logger day_logger;
@@ -29,8 +32,10 @@ public class Store {
         this.day = 0;
         this.registerAmount = 0;
         this.amountWithdrawnFromBank = 0;
+
         this.inventory = new HashMap<>();
         this.soldLogBook = new HashMap<>();
+        this.orderedItems = new HashMap<>();
         this.staff = new ArrayList<>();
 
         Constants.generateMaps(); // Declares all the constants and initializes them
@@ -46,7 +51,7 @@ public class Store {
 
         Clerk shaggy = new Clerk("Shaggy", 0, 20, new HaphazardTuningStrategy());
         Clerk velma = new Clerk("Velma", 0, 5, new ManualTuningStrategy());
-        Clerk daphne = new Clerk("Daphne", 0, 36, new ElectronicTuningStrategy());
+        Clerk daphne = new Clerk("Daphne", 0, 10, new ElectronicTuningStrategy());
 
         staff.add(shaggy);
         staff.add(velma);
@@ -66,25 +71,29 @@ public class Store {
         day_logger = new Logger();
     }
 
-    public void generateInventory(int numberofObjects, ArrayList<String> itemTypes, boolean isStartDay) {
+    public void generateInventory(int numberOfObjects, ArrayList<String> itemTypes, boolean isStartDay) {
 
         // Handles the condition when input parameter in string does not belong to the classes we already defined
         try {
             for (String itemType: itemTypes) {
-                for(int i = 0; i < numberofObjects; i++) {
+                for(int i = 0; i < numberOfObjects; i++) {
                     Item item = createItem(itemType);
                     // Just add the item to the inventory if it's the first day.
                     if (isStartDay) {
-                        addToInventory(itemType, item);
+                        addToRegistry(inventory, itemType, item);
                     }
                     else {
-                        // If we can afford the item at this moment, buy it, and put it into the inventory list directly with a dayArrive counter been set
+                        // If we can afford the item at this moment, buy it
                         if (item.getPurchasePrice() <= getRegisterAmount()) {
                             System.out.println("The store purchased the " + item.getName() +
                                     " " + itemType + " which costs " + Helper.round(item.getPurchasePrice()) + "$");
                             item.setDayArrived(day + Helper.random.nextInt(3) + 1);
+
+                            // Pay for the item using the register
                             this.setRegisterAmount(this.getRegisterAmount() - item.getPurchasePrice());
-                            addToInventory(itemType, item);
+
+                            // Add the item to orderedItems
+                            addToRegistry(orderedItems, itemType, item);
                         }
                         // Can't buy it, since we are out of funds
                         else {
@@ -124,7 +133,7 @@ public class Store {
         return ((Item) classInstance);
     }
 
-    public void addToInventory(String itemType, Item item) {
+    public void addToRegistry(HashMap<String, ArrayList<Item>> registry, String itemType, Item item) {
 
         /*
         --- POLYMORPHISM ---
@@ -134,25 +143,16 @@ public class Store {
          */
 
         // Check if there's a key in the hashtable for storing the corresponding item time
-        if (inventory.containsKey(itemType)) {
-            inventory.get(itemType).add(item);
+        if (registry.containsKey(itemType)) {
+            registry.get(itemType).add(item);
         }
         else {
-            inventory.put(itemType, new ArrayList<Item>(Arrays.asList(item)));
+            registry.put(itemType, new ArrayList<Item>(Arrays.asList(item)));
         }
     }
 
-    public void removeFromInventory(String itemType, Item item) {
-        inventory.get(itemType).remove(item);
-    }
-
-    public void addToSoldInventory(String itemType, Item item) {
-        if (soldLogBook.containsKey(itemType)) {
-            soldLogBook.get(itemType).add(item);
-        }
-        else {
-            soldLogBook.put(itemType, new ArrayList<Item>(Arrays.asList(item)));
-        }
+    public void removeFromRegistry(HashMap<String, ArrayList<Item>> registry, String itemType, Item item) {
+        registry.get(itemType).remove(item);
     }
 
     public void displayInventory() {
@@ -339,7 +339,6 @@ public class Store {
             for(String itemType: soldLogBook.keySet()) {
                 for (Item i: soldLogBook.get(itemType)) {
                     if (i.getDaySold() == j) {
-                        // Change day from [0,29] to [1,30]
                         System.out.println("On day " + (i.getDaySold() + 1) + ", a " + i.getName() + " sold for $" + Helper.round(i.getSalePrice()));
                     }
                 }
@@ -382,16 +381,16 @@ public class Store {
         return inventory;
     }
 
-    public void setInventory(HashMap<String, ArrayList<Item>> inventory) {
-        this.inventory = inventory;
+    public HashMap<String, ArrayList<Item>> getOrderedItems() {
+        return orderedItems;
+    }
+
+    public HashMap<String, ArrayList<Item>> getSoldLogBook() {
+        return soldLogBook;
     }
 
     public int getDay() {
         return day;
-    }
-
-    public void setDay(int day) {
-        this.day = day;
     }
 
     public ArrayList<Staff> getStaff() {

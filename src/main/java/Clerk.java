@@ -27,10 +27,25 @@ public class Clerk extends Staff implements Subject{
     }
 
     public void ArriveAtStore(Store s) {
-        setMessage("Clerk " + this.getName() + " arrived at the store on day " + s.getDay() + ".");
-        System.out.println("Clerk " + this.getName() + " arrived at the store on day " + s.getDay() + ".");
 
-        //TO DO: Clerk needs to "find" items that they placed orders for and publish it
+        int day = s.getDay();
+
+        setMessage("Clerk " + this.getName() + " arrived at the store on day " + day + ".");
+        System.out.println("Clerk " + this.getName() + " arrived at the store on day " + day + ".");
+
+        // Clerk needs to check orderedItems list
+        HashMap<String, ArrayList<Item>> orderedList = new HashMap<>();
+
+        for (String itemType: orderedList.keySet()) {
+            for (Item item: orderedList.get(itemType)) {
+
+                // If an item arrives today, add it to inventory and remove it from orderedItems
+                if (item.getDayArrived() == s.getDay()) {
+                    s.addToRegistry(s.getInventory(), itemType, item);
+                    s.removeFromRegistry(s.getOrderedItems(), itemType, item);
+                }
+            }
+        }
     }
 
     /*
@@ -60,8 +75,9 @@ public class Clerk extends Staff implements Subject{
     }
 
     public ArrayList<String> DoInventory(Store s) {
+
         int damagedByTuning = 0;
-        int totalInventory = s.getInventory().size(); //FIX?
+        int totalInventory = s.getInventory().size();
         setMessage("There were " + totalInventory + " items in inventory.");
         double inventoryValue = Helper.round(s.calcInventoryValue());
         System.out.println("Clerk " + this.getName() + " calculated the inventory value to be: $" + inventoryValue);
@@ -95,7 +111,7 @@ public class Clerk extends Staff implements Subject{
         for(String itemType: tunedItems.keySet()) {
             for (Item item : tunedItems.get(itemType)) {
 
-                s.removeFromInventory(itemType, item);
+                s.removeFromRegistry(storeInv, itemType, item);
                 Item tunedItem;
 
                 if (item instanceof Wind) {
@@ -119,21 +135,20 @@ public class Clerk extends Staff implements Subject{
                 // Remove the item when it breaks
 
                 if (priorTune == true && postTune == false && Helper.random.nextInt(10) == 0) {
-                    System.out.println(item.getName() + " " + itemType + " broke during tuning!!");
-                    //FIX: Dependent on previous condition, gets damaged like CleanTheStore method
+                    degradeItem(s, itemType, item, "tuning");
                     damagedByTuning = damagedByTuning + 1;
                 }
 
                 else if (priorTune != postTune) {
                     System.out.println(item.getName() + " " + itemType +
                             " changed it's property from " + priorTune + " to " + postTune + ".");
-                    s.addToInventory(itemType, tunedItem);
+                    s.addToRegistry(storeInv, itemType, tunedItem);
                 }
 
                 else {
                     System.out.println("Attempted to tune " + item.getName() + " " + itemType +
                             " but couldn't change it's property which was " + priorTune + ".");
-                    s.addToInventory(itemType, tunedItem);
+                    s.addToRegistry(storeInv, itemType, tunedItem);
                 }
             }
         }
@@ -143,7 +158,7 @@ public class Clerk extends Staff implements Subject{
 
     public void PlaceAnOrder(Store s, ArrayList<String> zeroStockItems) {
         s.generateInventory(3, zeroStockItems, false);
-        setMessage("3 new items were ordered on day " + s.getDay()); //FIX?
+        setMessage("3 new items were ordered on day " + s.getDay());
     }
 
     public void OpenTheStore(Store s) {
@@ -154,7 +169,7 @@ public class Clerk extends Staff implements Subject{
         int mean = 3;
         double sum = 0.0;
         while (sum < 1.0) { //https://hpaulkeeler.com/simulating-poisson-random-variables-direct-method/
-            sum = sum + ((-1.0/mean)*Math.log(Helper.random.nextDouble()));
+            sum = sum + ((-1.0 / mean) * Math.log(Helper.random.nextDouble()));
             poissonResult++;
         }
 
@@ -181,15 +196,21 @@ public class Clerk extends Staff implements Subject{
 
     public void BuyItemTransaction(Store s, String itemType, String customerName) {
 
-        HashMap<String, ArrayList<Item>> storeInv = s.getInventory();
-        List<Item> filteredList = storeInv.get(itemType).stream().filter(x -> x.getDayArrived() <= s.getDay()).toList();
-        if (filteredList.size() == 0) {
+        HashMap<String, ArrayList<Item>> inventory = s.getInventory();
+        HashMap<String, ArrayList<Item>> soldLogBook = s.getSoldLogBook();
+
+        ArrayList<Item> itemsOfRequiredType = inventory.get(itemType);
+        int sizeOfRequiredItems = itemsOfRequiredType.size();
+
+        if (sizeOfRequiredItems == 0) {
             System.out.println("Customer " + customerName + " left the store without buying the " + itemType + " as there was no stock.");
         }
         else {
-            // Get items which are at the store.
-            Item itemChosen = filteredList.get(Helper.random.nextInt(filteredList.size()));
+
+            // Get a random item, and it's list price from the store
+            Item itemChosen = itemsOfRequiredType.get(Helper.random.nextInt(sizeOfRequiredItems));
             double listPrice = itemChosen.getListPrice();
+
             /*
             Initialize the initialBuyDecision and discountBuyDecision in a different method
             so we can vary the value due to different conditions
@@ -218,9 +239,9 @@ public class Clerk extends Staff implements Subject{
                     if the customer is going to buy more than one item at once
                      */
                     itemChosen = OptionalBuy(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
-                    s.removeFromInventory(itemType, itemChosen);
+                    s.removeFromRegistry(inventory, itemType, itemChosen);
                     s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice());
-                    s.addToSoldInventory(itemType, itemChosen);
+                    s.addToRegistry(soldLogBook, itemType, itemChosen);
                     numberItemsSold = numberItemsSold + 1;
                 }
             }
@@ -238,9 +259,9 @@ public class Clerk extends Staff implements Subject{
                 if the customer is going to buy more than one item at once
                 */
                 itemChosen = OptionalBuy(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
-                s.removeFromInventory(itemType, itemChosen);
+                s.removeFromRegistry(inventory, itemType, itemChosen);
                 s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice());
-                s.addToSoldInventory(itemType, itemChosen);
+                s.addToRegistry(soldLogBook, itemType, itemChosen);
                 numberItemsSold = numberItemsSold + 1;
             }
 
@@ -305,7 +326,6 @@ public class Clerk extends Staff implements Subject{
                         itemChosen = new SellAccessory(itemChosen, s, "Strings", customerName);
                     }
                 }
-
             }
         }
         return itemChosen;
@@ -355,7 +375,7 @@ public class Clerk extends Staff implements Subject{
 
     public void SellItemTransaction(Store s, String itemType, String customerName) {
 
-        HashMap<String, ArrayList<Item>> storeInv = s.getInventory();
+        HashMap<String, ArrayList<Item>> inventory = s.getInventory();
         Item customerBroughtItem = s.createItem(itemType);
 
         // If the customer is selling a clothing item type
@@ -410,7 +430,7 @@ public class Clerk extends Staff implements Subject{
                             " condition at 10% extra for " + Helper.round(customerBroughtItem.getPurchasePrice()));
 
                     s.setRegisterAmount(s.getRegisterAmount() - customerBroughtItem.getPurchasePrice());
-                    s.addToInventory(itemType, customerBroughtItem);
+                    s.addToRegistry(inventory, itemType, customerBroughtItem);
                     numberItemsBought = numberItemsBought + 1;
                 }
             }
@@ -425,7 +445,7 @@ public class Clerk extends Staff implements Subject{
                         " condition at offered price for $" + Helper.round(customerBroughtItem.getPurchasePrice()));
                         
                 s.setRegisterAmount(s.getRegisterAmount() - customerBroughtItem.getPurchasePrice());
-                s.addToInventory(itemType, customerBroughtItem);
+                s.addToRegistry(inventory, itemType, customerBroughtItem);
                 numberItemsBought = numberItemsBought + 1;
             }
         }
@@ -440,15 +460,16 @@ public class Clerk extends Staff implements Subject{
 
     public void CleanStore(Store s) {
 
-        HashMap<String, ArrayList<Item>> storeInv = s.getInventory();
+        HashMap<String, ArrayList<Item>> inventory = s.getInventory();
         HashMap<String, ArrayList<Item>> damagedItems = new HashMap<>();
         int damaged_count = 0;
-        // Announcement
+
+        // Announcement of Cleaning beginning
         System.out.println(this.getName() + " started cleaning the store.");
 
-        for(String itemType: storeInv.keySet()) {
-            for (Item item : storeInv.get(itemType)) {
-                if ((Helper.random.nextInt(100) < getItemDamageChance())) { //change to <?
+        for(String itemType: inventory.keySet()) {
+            for (Item item : inventory.get(itemType)) {
+                if ((Helper.random.nextInt(100) < this.getItemDamageChance())) {
                     damaged_count = damaged_count + 1;
                     if (damagedItems.containsKey(itemType)) {
                         damagedItems.get(itemType).add(item);
@@ -462,54 +483,54 @@ public class Clerk extends Staff implements Subject{
         // From the list of damaged items
         for(String itemType: damagedItems.keySet()) {
             for (Item item : damagedItems.get(itemType)) {
-                System.out.println(this.getName() + " damaged an item.");
-
-                // If the item was in poor condition, remove it from inventory
-                if (item.getCondition() == 1) {
-                    System.out.println("The " + item.getName() + " " + itemType +
-                            " broke and was removed from inventory.");
-                    s.removeFromInventory(itemType, item);
-                }
-
-                else {
-
-                    // Take the item from inventory
-                    s.removeFromInventory(itemType, item);
-
-                    // Calculate the changes
-                    int originalCondition = item.getCondition();
-                    int newCondition = originalCondition - 1;
-
-                    double originalListPrice = item.getListPrice();
-                    double newListPrice = originalListPrice * 0.8;
-
-                    // Announce what changed
-                    System.out.println("The " + item.getName() + " " + itemType +
-                            " degraded from " + Constants.CONDITION_MAPPING.get(originalCondition) +
-                            " ($" + Helper.round(item.getListPrice()) + ")" +
-                            " to " + Constants.CONDITION_MAPPING.get(newCondition) +
-                            " ($" + Helper.round(newListPrice) + ")");
-
-                    // Set the changes
-                    item.setCondition(newCondition);
-                    item.setListPrice(newListPrice);
-
-                    // Add item back to inventory with the changes
-                    s.addToInventory(itemType, item);
-                }
+                degradeItem(s, itemType, item, "cleaning");
             }
         }
         setMessage(damaged_count + " items were damaged during cleaning.");
+    }
+
+    public void degradeItem(Store s, String itemType, Item item, String activity) {
+
+        HashMap<String, ArrayList<Item>> inventory = s.getInventory();
+
+        System.out.println(this.getName() + " damaged an item during " + activity + ".");
+
+        if (item.getCondition() == 1) {
+            System.out.println("The " + item.getName() + " " + itemType + " broke and was removed from inventory.");
+            s.removeFromRegistry(inventory, itemType, item);
+        }
+
+        else {
+            // Take the item from inventory
+            s.removeFromRegistry(inventory, itemType, item);
+
+            // Calculate the changes
+            int originalCondition = item.getCondition();
+            int newCondition = originalCondition - 1;
+
+            double originalListPrice = item.getListPrice();
+            double newListPrice = originalListPrice * 0.8;
+
+            // Announce what changed
+            System.out.println("The " + item.getName() + " " + itemType +
+                    " degraded from " + Constants.CONDITION_MAPPING.get(originalCondition) +
+                    " ($" + Helper.round(item.getListPrice()) + ")" +
+                    " to " + Constants.CONDITION_MAPPING.get(newCondition) +
+                    " ($" + Helper.round(newListPrice) + ")");
+
+            // Set the changes
+            item.setCondition(newCondition);
+            item.setListPrice(newListPrice);
+
+            // Add item back to inventory with the changes
+            s.addToRegistry(inventory, itemType, item);
+        }
     }
 
     public void LeaveTheStore(Store s) {
         System.out.println(this.getName() + " left the store for the day.");
         setMessage(this.getName() + " left the store for the day.");
         this.setIsActiveWorker(false);
-    }
-
-    public void setTuningStrategy(TuningStrategy tuningStrategy) {
-        this.tuningStrategy = tuningStrategy;
     }
 
     public void registerObserver(Observer o) {
