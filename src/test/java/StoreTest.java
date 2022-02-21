@@ -57,7 +57,7 @@ public class StoreTest {
         test_item.setDayArrived(test_store.getDay());
         test_item.setPurchasePrice(offeredPrice);
         test_item.setListPrice(offeredPrice);
-        test_store.addToInventory(itemType, test_item);
+        test_store.addToRegistry(test_store.getInventory(), itemType, test_item);
 
         // Check the size of the current inventory list
         HashMap<String, ArrayList<Item>> test_inventory = test_store.getInventory();

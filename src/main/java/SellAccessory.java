@@ -13,18 +13,25 @@ public class SellAccessory extends SellDecorator {
     public SellAccessory(Item item, Store s, String itemType, String customerName) {
         this.item = item;
 
-        // find a item from the current inventory list
-        HashMap<String, ArrayList<Item>> storeInv = s.getInventory();
-        List<Item> filteredList = storeInv.get(itemType).stream().filter(x -> x.getDayArrived() <= s.getDay()).toList();
-        if (filteredList.size() == 0) { // No stock for GigBag item
+        // Find an item from the current inventory list
+        HashMap<String, ArrayList<Item>> inventory = s.getInventory();
+        HashMap<String, ArrayList<Item>> soldLogBook = s.getSoldLogBook();
+
+        // Get list and size of required items
+        ArrayList<Item> itemsOfRequiredType = inventory.get(itemType);
+        int sizeOfRequiredItems = itemsOfRequiredType.size();
+
+        if (sizeOfRequiredItems == 0) { // Store has run out of stock of the required accessory
             extraSalePrice = 0;
             System.out.println("Customer " + customerName + " also wanted to buy a " + itemType + " but there was no stock.");
         }
         else {
-            // Get a random GigBag which is at the store.
-            Item itemChosen = filteredList.get(Helper.random.nextInt(filteredList.size()));
+
+            // Get a random accessory of type 'itemType' from the store.
+            Item itemChosen = inventory.get(itemType).get(Helper.random.nextInt(sizeOfRequiredItems));
             double listPrice = itemChosen.getListPrice();
             itemChosen.setDaySold(s.getDay());
+
             // Sell it at list price directly.
             itemChosen.setSalePrice(listPrice);
             System.out.println("Customer " + customerName + " also bought a " +
@@ -33,8 +40,8 @@ public class SellAccessory extends SellDecorator {
                     Constants.CONDITION_MAPPING.get(itemChosen.getCondition()) +
                     " condition at list price for $" + Helper.round(itemChosen.getSalePrice()));
 
-            s.removeFromInventory(itemType, itemChosen);
-            s.addToSoldInventory(itemType, itemChosen);
+            s.removeFromRegistry(inventory, itemType, itemChosen);
+            s.addToRegistry(soldLogBook, itemType, itemChosen);
             extraSalePrice = itemChosen.getSalePrice();
         }
     }
