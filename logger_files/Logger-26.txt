@@ -1,13 +1,11 @@
 
-Clerk Shaggy arrived at the store on day 25.
+Clerk Daphne arrived at the store on day 25.
 
-Clerk Shaggy counted $32.75 in the register.
-
-Clerk Shaggy withdrew $1000 from the bank, making new register amount as: 1032.75$
+Clerk Daphne counted $821.16 in the register.
 
 There were 21 items in inventory.
 
-The inventory value was $509.49
+The inventory value was $695.05
 
 0 items were damaged during tuning.
 
@@ -15,8 +13,8 @@ The inventory value was $509.49
 
 0 items were bought by the store.
 
-0 items were sold by the store.
+2 items were sold by the store.
 
-5 items were damaged during cleaning.
+20 items were damaged during cleaning.
 
-Shaggy left the store for the day.
+Daphne left the store for the day.
