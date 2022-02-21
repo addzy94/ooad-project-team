@@ -1,0 +1,20 @@
+
+Clerk Velma arrived at the store on day 2.
+
+Clerk Velma counted $1622.02 in the register.
+
+There were 21 items in inventory.
+
+The inventory value was $892.49
+
+0 items were damaged during tuning.
+
+3 new items were ordered on day 2
+
+2 items were bought by the store.
+
+3 items were sold by the store.
+
+0 items were damaged during cleaning.
+
+Velma left the store for the day.

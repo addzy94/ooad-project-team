@@ -10,19 +10,27 @@ import java.util.List;
 --- INHERITANCE ---
 */
 
-public class Clerk extends Staff {
+public class Clerk extends Staff implements Subject{
 
     private int damageChance;
     private TuningStrategy tuningStrategy;
+    private ArrayList<Observer> observers;
+    private String message;
+    private int numberItemsBought;
+    private int numberItemsSold;
 
     public Clerk(String name, int daysWorkedInARow, int damage_chance, TuningStrategy tuningStrategy) {
         super(name, daysWorkedInARow);
         this.damageChance = damage_chance;
         this.tuningStrategy = tuningStrategy;
+        this.observers = new ArrayList<>();
     }
 
     public void ArriveAtStore(Store s) {
-        System.out.println("Clerk " + this.getName() + " decided to work on day " + s.getDay() + ".");
+        setMessage("Clerk " + this.getName() + " arrived at the store on day " + s.getDay() + ".");
+        System.out.println("Clerk " + this.getName() + " arrived at the store on day " + s.getDay() + ".");
+
+        //TO DO: Clerk needs to "find" items that they placed orders for and publish it
     }
 
     /*
@@ -38,22 +46,26 @@ public class Clerk extends Staff {
         s.setRegisterAmount(currentAmount + 1000);
 
         System.out.println("Clerk " + this.getName() + " withdrew $1000 from the bank, making new register amount as: " + Helper.round(s.getRegisterAmount()) + "$");
+        setMessage("Clerk " + this.getName() + " withdrew $1000 from the bank, making new register amount as: " + Helper.round(s.getRegisterAmount()) + "$");
     }
 
     public void CheckRegister(Store s) {
 
         double registerMoney = Helper.round(s.getRegisterAmount());
         System.out.println("Clerk " + this.getName() + " counted $" + registerMoney + " in the register.");
+        setMessage("Clerk " + this.getName() + " counted $" + registerMoney + " in the register.");
         if (registerMoney < 75.00) {
             this.GoToBank(s, registerMoney);
         }
     }
 
     public ArrayList<String> DoInventory(Store s) {
-
+        int damagedByTuning = 0;
+        int totalInventory = s.getInventory().size(); //FIX?
+        setMessage("There were " + totalInventory + " items in inventory.");
         double inventoryValue = Helper.round(s.calcInventoryValue());
         System.out.println("Clerk " + this.getName() + " calculated the inventory value to be: $" + inventoryValue);
-
+        setMessage("The inventory value was $" + inventoryValue);
         ArrayList<String> zeroStockItems = s.itemsWithZeroStock();
 
         // Not stocking clothing items anymore
@@ -108,7 +120,9 @@ public class Clerk extends Staff {
 
                 if (priorTune == true && postTune == false && Helper.random.nextInt(10) == 0) {
                     System.out.println(item.getName() + " " + itemType + " broke during tuning!!");
-                    s.removeFromInventory(itemType, item);
+                    s.removeFromInventory(itemType, item); //Delete this line?
+                    //FIX: Dependent on previous condition, gets damaged like CleanTheStore method
+                    damagedByTuning = damagedByTuning + 1;
                 }
 
                 else if (priorTune != postTune) {
@@ -123,14 +137,18 @@ public class Clerk extends Staff {
                 }
             }
         }
+        setMessage(damagedByTuning + " items were damaged during tuning.");
         return zeroStockItems;
     }
 
     public void PlaceAnOrder(Store s, ArrayList<String> zeroStockItems) {
         s.generateInventory(3, zeroStockItems, false);
+        setMessage("3 new items were ordered on day " + s.getDay()); //FIX?
     }
 
     public void OpenTheStore(Store s) {
+        numberItemsBought = 0;
+        numberItemsSold = 0;
 
         int poissonResult = -1;
         int mean = 3;
@@ -157,6 +175,8 @@ public class Clerk extends Staff {
             String customerBroughtItem = sellingCustomerRequirements.get(i);
             SellItemTransaction(s, customerBroughtItem, customerName);
         }
+        setMessage(numberItemsBought + " items were bought by the store.");
+        setMessage(numberItemsSold + " items were sold by the store.");
     }
 
     public void BuyItemTransaction(Store s, String itemType, String customerName) {
@@ -201,6 +221,7 @@ public class Clerk extends Staff {
                     s.removeFromInventory(itemType, itemChosen);
                     s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice());
                     s.addToSoldInventory(itemType, itemChosen);
+                    numberItemsSold = numberItemsSold + 1;
                 }
             }
             else {
@@ -220,6 +241,7 @@ public class Clerk extends Staff {
                 s.removeFromInventory(itemType, itemChosen);
                 s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice());
                 s.addToSoldInventory(itemType, itemChosen);
+                numberItemsSold = numberItemsSold + 1;
             }
 
         }
@@ -389,6 +411,7 @@ public class Clerk extends Staff {
 
                     s.setRegisterAmount(s.getRegisterAmount() - customerBroughtItem.getPurchasePrice());
                     s.addToInventory(itemType, customerBroughtItem);
+                    numberItemsBought = numberItemsBought + 1;
                 }
             }
             else {
@@ -400,6 +423,8 @@ public class Clerk extends Staff {
                         customerBroughtItem.getName() + " " + itemType + " in " +
                         Constants.CONDITION_MAPPING.get(customerBroughtItem.getCondition()) +
                         " condition at offered price for $" + Helper.round(customerBroughtItem.getPurchasePrice()));
+                        //TO DO: numberItemsBought = numberItemsBought + 1;
+                        //addToInventory?
             }
         }
         else {
@@ -415,14 +440,14 @@ public class Clerk extends Staff {
 
         HashMap<String, ArrayList<Item>> storeInv = s.getInventory();
         HashMap<String, ArrayList<Item>> damagedItems = new HashMap<>();
-
+        int damaged_count = 0;
         // Announcement
         System.out.println(this.getName() + " started cleaning the store.");
 
         for(String itemType: storeInv.keySet()) {
             for (Item item : storeInv.get(itemType)) {
-                if ((Helper.random.nextInt(100) > getItemDamageChance())) {
-
+                if ((Helper.random.nextInt(100) > getItemDamageChance())) { //change to <?
+                    damaged_count = damaged_count + 1;
                     if (damagedItems.containsKey(itemType)) {
                         damagedItems.get(itemType).add(item);
                     } else {
@@ -472,14 +497,39 @@ public class Clerk extends Staff {
                 }
             }
         }
+        setMessage(damaged_count + " items were damaged during cleaning.");
     }
 
     public void LeaveTheStore(Store s) {
         System.out.println(this.getName() + " left the store for the day.");
+        setMessage(this.getName() + " left the store for the day.");
         this.setIsActiveWorker(false);
     }
 
     public void setTuningStrategy(TuningStrategy tuningStrategy) {
         this.tuningStrategy = tuningStrategy;
+    }
+
+    public void registerObserver(Observer o) {
+        this.observers.add(o);
+    }
+
+    public void removeObserver(Observer o) {
+        this.observers.remove(o);
+    }
+
+    public void notifyObservers() {
+        for (Observer o: observers) {
+            o.update(this);
+        }
+    }
+
+    public void setMessage(String msg) {
+        message = msg;
+        notifyObservers();
+    }
+
+    public String getMessage() {
+        return message;
     }
 }
