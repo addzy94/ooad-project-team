@@ -120,7 +120,6 @@ public class Clerk extends Staff implements Subject{
 
                 if (priorTune == true && postTune == false && Helper.random.nextInt(10) == 0) {
                     System.out.println(item.getName() + " " + itemType + " broke during tuning!!");
-                    s.removeFromInventory(itemType, item); //Delete this line?
                     //FIX: Dependent on previous condition, gets damaged like CleanTheStore method
                     damagedByTuning = damagedByTuning + 1;
                 }
@@ -134,6 +133,7 @@ public class Clerk extends Staff implements Subject{
                 else {
                     System.out.println("Attempted to tune " + item.getName() + " " + itemType +
                             " but couldn't change it's property which was " + priorTune + ".");
+                    s.addToInventory(itemType, tunedItem);
                 }
             }
         }
@@ -423,8 +423,10 @@ public class Clerk extends Staff implements Subject{
                         customerBroughtItem.getName() + " " + itemType + " in " +
                         Constants.CONDITION_MAPPING.get(customerBroughtItem.getCondition()) +
                         " condition at offered price for $" + Helper.round(customerBroughtItem.getPurchasePrice()));
-                        //TO DO: numberItemsBought = numberItemsBought + 1;
-                        //addToInventory?
+                        
+                s.setRegisterAmount(s.getRegisterAmount() - customerBroughtItem.getPurchasePrice());
+                s.addToInventory(itemType, customerBroughtItem);
+                numberItemsBought = numberItemsBought + 1;
             }
         }
         else {
