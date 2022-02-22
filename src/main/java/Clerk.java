@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 
 /*
 --- INHERITANCE ---
@@ -17,7 +16,7 @@ public class Clerk extends Staff implements Subject{
     private ArrayList<Observer> observers;
     private String message;
     private int numberItemsBought;
-    private int numberItemsSold;
+    private int numberOfItemsSold;
 
     public Clerk(String name, int daysWorkedInARow, int damage_chance, TuningStrategy tuningStrategy) {
         super(name, daysWorkedInARow);
@@ -163,7 +162,7 @@ public class Clerk extends Staff implements Subject{
 
     public void OpenTheStore(Store s) {
         numberItemsBought = 0;
-        numberItemsSold = 0;
+        numberOfItemsSold = 0;
 
         int poissonResult = -1;
         int mean = 3;
@@ -191,7 +190,7 @@ public class Clerk extends Staff implements Subject{
             SellItemTransaction(s, customerBroughtItem, customerName);
         }
         setMessage(numberItemsBought + " items were bought by the store.");
-        setMessage(numberItemsSold + " items were sold by the store.");
+        setMessage(numberOfItemsSold + " items were sold by the store.");
     }
 
     public void BuyItemTransaction(Store s, String itemType, String customerName) {
@@ -234,15 +233,19 @@ public class Clerk extends Staff implements Subject{
                             Constants.CONDITION_MAPPING.get(itemChosen.getCondition()) +
                             " condition at 10% discount for $" + Helper.round(itemChosen.getSalePrice()));
 
+
+                    s.removeFromRegistry(inventory, itemType, itemChosen);
+                    s.addToRegistry(soldLogBook, itemType, itemChosen);
+
                     /*
                     Call OptionalSell method, which contains applying decorator pattern to itemChosen for modifying its sale price
                     if the customer is going to buy more than one item at once
                      */
                     itemChosen = OptionalBuy(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
-                    s.removeFromRegistry(inventory, itemType, itemChosen);
+
+                    // Sets the register amount to the sum of the prices of all the items in the transaction
                     s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice());
-                    s.addToRegistry(soldLogBook, itemType, itemChosen);
-                    numberItemsSold = numberItemsSold + 1;
+                    numberOfItemsSold = numberOfItemsSold + 1;
                 }
             }
             else {
@@ -258,11 +261,13 @@ public class Clerk extends Staff implements Subject{
                 Call OptionalSell method, which contains applying decorator pattern to itemChosen for modifying its sale price
                 if the customer is going to buy more than one item at once
                 */
+                System.out.println(itemChosen.getListPrice());
                 itemChosen = OptionalBuy(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
+                System.out.println(itemChosen.getListPrice());
                 s.removeFromRegistry(inventory, itemType, itemChosen);
                 s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice());
                 s.addToRegistry(soldLogBook, itemType, itemChosen);
-                numberItemsSold = numberItemsSold + 1;
+                numberOfItemsSold = numberOfItemsSold + 1;
             }
 
         }
@@ -273,6 +278,7 @@ public class Clerk extends Staff implements Subject{
         Applies decorator pattern to itemChosen for modifying its sale price
         if the customer is going to buy more than one item at once
         */
+
         // Extra condition built for Project 3:
         if (itemChosen.getDaySold() != -1){ // If item chosen already been sold
             if (itemChosen instanceof Stringed){ // If a stringed instrument is sold, there is a chance of selling accessories as well.
@@ -282,25 +288,24 @@ public class Clerk extends Staff implements Subject{
                     System.out.println("The stringed instrument Customer " + customerName + " bought is electric.");
                     int possible_result = Helper.random.nextInt(100);
                     if (possible_result < 20){ // a 20% chance of selling a single GigBag
-                        itemChosen = new SellAccessory(itemChosen, s, "GigBag", customerName);
+                        itemChosen = new SellAccessory(itemChosen, s, "GigBag", customerName, this);
                     }
                     possible_result = Helper.random.nextInt(100); // re-generate another result
                     if (possible_result < 25){ // a 25% chance of selling a single PracticeAmp
-                        itemChosen = new SellAccessory(itemChosen, s, "PracticeAmp", customerName);
+                        itemChosen = new SellAccessory(itemChosen, s, "PracticeAmp", customerName, this);
                     }
                     possible_result = Helper.random.nextInt(100); // re-generate another result
                     if (possible_result < 30){ // a 30% chance of selling 1 or 2 Cables
                         int numberOfTimes = Helper.random.nextInt(2); // generate a value that is either 0 or 1
                         for (int i = numberOfTimes; i < 2; i++){ // Run the loop for 1 or 2 times
-                            itemChosen = new SellAccessory(itemChosen, s, "Cable", customerName);
-                            //System.out.println("Now price is: "+ itemChosen.getSalePrice());
+                            itemChosen = new SellAccessory(itemChosen, s, "Cable", customerName, this);
                         }
                     }
                     possible_result = Helper.random.nextInt(100); // re-generate another result
                     if (possible_result < 40){ // a 40% chance of selling 1 to 3 Strings.
                         int numberOfTimes = Helper.random.nextInt(3); // generate a value that is either 0, 1, or 2
                         for (int i = numberOfTimes; i < 3; i++){ // Run the loop for 1 or 2 or 3 times
-                            itemChosen = new SellAccessory(itemChosen, s, "Strings", customerName);
+                            itemChosen = new SellAccessory(itemChosen, s, "Strings", customerName, this);
                             //System.out.println("Now price is: "+ itemChosen.getSalePrice());
                         }
                     }
@@ -311,19 +316,19 @@ public class Clerk extends Staff implements Subject{
                     // Each of these chances of an additional sale is reduced by 10%.
                     int possible_result = Helper.random.nextInt(100);
                     if (possible_result < 10){ // a 10% chance of selling a single GigBag
-                        itemChosen = new SellAccessory(itemChosen, s, "GigBag", customerName);
+                        itemChosen = new SellAccessory(itemChosen, s, "GigBag", customerName, this);
                     }
                     possible_result = Helper.random.nextInt(100); // re-generate another result
                     if (possible_result < 15){ // a 15% chance of selling a single PracticeAmp
-                        itemChosen = new SellAccessory(itemChosen, s, "PracticeAmp", customerName);
+                        itemChosen = new SellAccessory(itemChosen, s, "PracticeAmp", customerName, this);
                     }
                     possible_result = Helper.random.nextInt(100); // re-generate another result
                     if (possible_result < 20){ // a 20% chance of selling 1 or 2 Cables
-                        itemChosen = new SellAccessory(itemChosen, s, "Cable", customerName);
+                        itemChosen = new SellAccessory(itemChosen, s, "Cable", customerName, this);
                     }
                     possible_result = Helper.random.nextInt(100); // re-generate another result
                     if (possible_result < 30){ // a 30% chance of selling 1 to 3 Strings.
-                        itemChosen = new SellAccessory(itemChosen, s, "Strings", customerName);
+                        itemChosen = new SellAccessory(itemChosen, s, "Strings", customerName, this);
                     }
                 }
             }
@@ -454,10 +459,6 @@ public class Clerk extends Staff implements Subject{
         }
     }
 
-    public int getItemDamageChance() {
-        return damageChance;
-    }
-
     public void CleanStore(Store s) {
 
         HashMap<String, ArrayList<Item>> inventory = s.getInventory();
@@ -533,6 +534,22 @@ public class Clerk extends Staff implements Subject{
         this.setIsActiveWorker(false);
     }
 
+    // Clerk - Setters and Getters
+
+    public int getItemDamageChance() {
+        return damageChance;
+    }
+
+    public int getNumberOfItemsSold() {
+        return numberOfItemsSold;
+    }
+
+    public void setNumberOfItemsSold(int numberOfItemsSold) {
+        this.numberOfItemsSold = numberOfItemsSold;
+    }
+
+    // Observer Methods
+
     public void registerObserver(Observer o) {
         this.observers.add(o);
     }
@@ -546,6 +563,8 @@ public class Clerk extends Staff implements Subject{
             o.update(this);
         }
     }
+
+    // Observer - Setters and Getters
 
     public void setMessage(String msg) {
         message = msg;
