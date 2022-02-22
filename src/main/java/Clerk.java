@@ -30,8 +30,8 @@ public class Clerk extends Staff implements Subject{
         int day = s.getDay();
 
         // Change day from [0,29] to [1,30]
-        setMessage("Clerk " + this.getName() + " arrived at the store on day " + day + 1 + ".");
-        System.out.println("Clerk " + this.getName() + " arrived at the store on day " + day + 1 + ".");
+        setMessage("Clerk " + this.getName() + " arrived at the store on day " + (day + 1) + ".");
+        System.out.println("Clerk " + this.getName() + " arrived at the store on day " + (day + 1) + ".");
 
         // Clerk needs to check orderedItems list
         HashMap<String, ArrayList<Item>> orderedList = new HashMap<>();
