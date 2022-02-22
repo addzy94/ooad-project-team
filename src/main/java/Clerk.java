@@ -27,6 +27,8 @@ public class Clerk extends Staff implements Subject{
 
     public void ArriveAtStore(Store s) {
 
+        System.out.println("--------------------ARRIVAL--------------------");
+
         int day = s.getDay();
 
         // Change day from [0,29] to [1,30]
@@ -66,6 +68,8 @@ public class Clerk extends Staff implements Subject{
 
     public void CheckRegister(Store s) {
 
+        System.out.println("--------------------REGISTER CHECK--------------------");
+
         double registerMoney = Helper.round(s.getRegisterAmount());
         System.out.println("Clerk " + this.getName() + " counted $" + registerMoney + " in the register.");
         setMessage("Clerk " + this.getName() + " counted $" + registerMoney + " in the register.");
@@ -75,6 +79,8 @@ public class Clerk extends Staff implements Subject{
     }
 
     public ArrayList<String> DoInventory(Store s) {
+
+        System.out.println("--------------------INVENTORY STOCK VALUE CHECK--------------------");
 
         int damagedByTuning = 0;
         int totalInventory = s.getInventory().size();
@@ -86,6 +92,8 @@ public class Clerk extends Staff implements Subject{
 
         // Not stocking clothing items anymore
         zeroStockItems.removeAll(Constants.CLOTHING_ITEM_TYPES);
+
+        System.out.println("--------------------MUSIC INVENTORY TUNING--------------------");
 
         // Clerks start to tune the Player, Wind, and Stringed Items
         HashMap<String, ArrayList<Item>> storeInv = s.getInventory();
@@ -157,11 +165,17 @@ public class Clerk extends Staff implements Subject{
     }
 
     public void PlaceAnOrder(Store s, ArrayList<String> zeroStockItems) {
+
+        System.out.println("--------------------PLACING ORDERS--------------------");
+
         s.generateInventory(3, zeroStockItems, false);
         setMessage("3 new items were ordered on day " + s.getDay());
     }
 
     public void OpenTheStore(Store s) {
+
+        System.out.println("--------------------STORE BUSINESS--------------------");
+
         numberItemsBought = 0;
         numberOfItemsSold = 0;
 
@@ -182,12 +196,14 @@ public class Clerk extends Staff implements Subject{
         for (int i = 0; i < buyingCustomersCount; i++) {
             String customerName = Constants.CUSTOMER_NAMES.get(Helper.random.nextInt(Constants.CUSTOMER_NAMES.size()));
             String customerRequiredItem = buyingCustomerRequirements.get(i);
+            System.out.println("-----");
             BuyItemTransaction(s, customerRequiredItem, customerName);
         }
 
         for (int i = 0; i < sellingCustomerCount; i++) {
             String customerName = Constants.CUSTOMER_NAMES.get(Helper.random.nextInt(Constants.CUSTOMER_NAMES.size()));
             String customerBroughtItem = sellingCustomerRequirements.get(i);
+            System.out.println("-----");
             SellItemTransaction(s, customerBroughtItem, customerName);
         }
         setMessage(numberItemsBought + " items were bought by the store.");
@@ -243,8 +259,16 @@ public class Clerk extends Staff implements Subject{
                     Call OptionalSell method, which contains applying decorator pattern to itemChosen for modifying its sale price
                     if the customer is going to buy more than one item at once
                     */
+
+                    // Get initial item price
+                    double initialItemPrice = itemChosen.getSalePrice();
+
                     itemChosen = OptionalBuy(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
-                    System.out.println("With add-ons, the total price was $" + itemChosen.getSalePrice());
+
+                    if (itemChosen.getSalePrice() > initialItemPrice) {
+                        System.out.println("With add-ons, the total price was $" + Helper.round(itemChosen.getSalePrice()));
+                    }
+                    else { System.out.println("No add-ons were bought."); }
                     s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice()); // Sets the register amount to the sum of the prices of all the items in the transaction
 
                 }
@@ -267,8 +291,14 @@ public class Clerk extends Staff implements Subject{
                 Call OptionalSell method, which contains applying decorator pattern to itemChosen for modifying its sale price
                 if the customer is going to buy more than one item at once
                 */
+                double initialItemPrice = itemChosen.getSalePrice();
+
                 itemChosen = OptionalBuy(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
-                System.out.println("With add-ons, the total price was $" + itemChosen.getSalePrice());
+
+                if (itemChosen.getSalePrice() > initialItemPrice) {
+                    System.out.println("With add-ons, the total price was $" + Helper.round(itemChosen.getSalePrice()));
+                }
+                else { System.out.println("No add-ons were bought."); }
                 s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice()); // Sets the register amount to the sum of the prices of all the items in the transaction
 
             }
@@ -390,7 +420,7 @@ public class Clerk extends Staff implements Subject{
         if (Constants.CLOTHING_ITEM_TYPES.contains(itemType)) {
             // If we no longer hold stock of any clothing item
             if (HaveClothingStock(s, Constants.CLOTHING_ITEM_TYPES) == false) {
-                System.out.println("Customer was turned away because we are no longer accepting clothing items.");
+                System.out.println("Customer " + customerName + " was turned away because we are no longer accepting clothing items.");
                 return;
             }
         }
@@ -435,7 +465,7 @@ public class Clerk extends Staff implements Subject{
                             Constants.NEW_OR_USED_MAPPING.get(customerBroughtItem.getIsNew()) + " " +
                             customerBroughtItem.getName() + " " + itemType + " in " +
                             Constants.CONDITION_MAPPING.get(customerBroughtItem.getCondition()) +
-                            " condition at 10% extra for " + Helper.round(customerBroughtItem.getPurchasePrice()));
+                            " condition at 10% extra for $" + Helper.round(customerBroughtItem.getPurchasePrice()));
 
                     s.setRegisterAmount(s.getRegisterAmount() - customerBroughtItem.getPurchasePrice());
                     s.addToRegistry(inventory, itemType, customerBroughtItem);
@@ -463,6 +493,8 @@ public class Clerk extends Staff implements Subject{
     }
 
     public void CleanStore(Store s) {
+
+        System.out.println("--------------------CLEANING STORE ITEMS--------------------");
 
         HashMap<String, ArrayList<Item>> inventory = s.getInventory();
         HashMap<String, ArrayList<Item>> damagedItems = new HashMap<>();
@@ -532,6 +564,9 @@ public class Clerk extends Staff implements Subject{
     }
 
     public void LeaveTheStore(Store s) {
+
+        System.out.println("--------------------CLOSING THE STORE FOR THE DAY--------------------");
+
         System.out.println(this.getName() + " left the store for the day.");
         setMessage(this.getName() + " left the store for the day.");
         this.setIsActiveWorker(false);

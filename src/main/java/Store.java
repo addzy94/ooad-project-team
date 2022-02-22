@@ -355,7 +355,7 @@ public class Store {
         if (chanceOfSick <= 0.1) {
             Clerk c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
             c.setSick(true);
-            System.out.println(c.getName() + "was sick on day " + this.getDay());
+            System.out.println(c.getName() + " was sick on day " + this.getDay());
         }
         
     }

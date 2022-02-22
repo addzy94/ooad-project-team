@@ -24,7 +24,7 @@ public class Tracker implements Observer{
         System.out.println("Tracker: Day " + s.getDay());
         System.out.println("Clerk\tItems Sold\tItems Purchased\t\tItems Damaged");
         for (ArrayList<Object> staff_member: information) {
-            System.out.println(staff_member.get(name) + "\t\t" + staff_member.get(items_sold) + "\t\t" + staff_member.get(items_purchased) + "\t\t\t" + staff_member.get(items_damaged));
+            System.out.println(staff_member.get(name) + "\t\t" + staff_member.get(items_sold) + "\t\t\t\t" + staff_member.get(items_purchased) + "\t\t\t\t" + staff_member.get(items_damaged));
         }
     }
 
