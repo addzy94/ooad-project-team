@@ -234,16 +234,18 @@ public class Clerk extends Staff implements Subject{
                             Constants.CONDITION_MAPPING.get(itemChosen.getCondition()) +
                             " condition at 10% discount for $" + Helper.round(itemChosen.getSalePrice()));
 
+                    // Add that item to the soldLogBook
+                    s.removeFromRegistry(inventory, itemType, itemChosen);
+                    s.addToRegistry(soldLogBook, itemType, itemChosen);
+                    numberOfItemsSold = numberOfItemsSold + 1;
+
                     /*
                     Call OptionalSell method, which contains applying decorator pattern to itemChosen for modifying its sale price
                     if the customer is going to buy more than one item at once
                     */
                     itemChosen = OptionalBuy(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
-
-                    s.removeFromRegistry(inventory, itemType, itemChosen);
                     s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice()); // Sets the register amount to the sum of the prices of all the items in the transaction
-                    s.addToRegistry(soldLogBook, itemType, itemChosen);
-                    numberOfItemsSold = numberOfItemsSold + 1;
+
                 }
             }
             else {
@@ -254,17 +256,19 @@ public class Clerk extends Staff implements Subject{
                         itemChosen.getName() + " " + itemType + " in " +
                         Constants.CONDITION_MAPPING.get(itemChosen.getCondition()) +
                         " condition at list price for $" + Helper.round(itemChosen.getSalePrice()));
+                
+                // Add that item to the soldLogBook
+                s.removeFromRegistry(inventory, itemType, itemChosen);
+                s.addToRegistry(soldLogBook, itemType, itemChosen);
+                numberOfItemsSold = numberOfItemsSold + 1;
 
                 /*
                 Call OptionalSell method, which contains applying decorator pattern to itemChosen for modifying its sale price
                 if the customer is going to buy more than one item at once
                 */
                 itemChosen = OptionalBuy(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
-
-                s.removeFromRegistry(inventory, itemType, itemChosen);
                 s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice()); // Sets the register amount to the sum of the prices of all the items in the transaction
-                s.addToRegistry(soldLogBook, itemType, itemChosen);
-                numberOfItemsSold = numberOfItemsSold + 1;
+
             }
 
         }
