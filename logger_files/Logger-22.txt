@@ -1,19 +1,19 @@
 
 Clerk Velma arrived at the store on day 21.
 
-Clerk Velma counted $89.36 in the register.
+Clerk Velma counted $619.62 in the register.
 
 There were 21 items in inventory.
 
-The inventory value was $326.5
+The inventory value was $292.28
 
 0 items were damaged during tuning.
 
 3 new items were ordered on day 21
 
-0 items were bought by the store.
+3 items were bought by the store.
 
-1 items were sold by the store.
+3 items were sold by the store.
 
 1 items were damaged during cleaning.
 

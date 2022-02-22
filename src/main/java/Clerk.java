@@ -29,8 +29,9 @@ public class Clerk extends Staff implements Subject{
 
         int day = s.getDay();
 
-        setMessage("Clerk " + this.getName() + " arrived at the store on day " + day + ".");
-        System.out.println("Clerk " + this.getName() + " arrived at the store on day " + day + ".");
+        // Change day from [0,29] to [1,30]
+        setMessage("Clerk " + this.getName() + " arrived at the store on day " + day + 1 + ".");
+        System.out.println("Clerk " + this.getName() + " arrived at the store on day " + day + 1 + ".");
 
         // Clerk needs to check orderedItems list
         HashMap<String, ArrayList<Item>> orderedList = new HashMap<>();
@@ -233,18 +234,15 @@ public class Clerk extends Staff implements Subject{
                             Constants.CONDITION_MAPPING.get(itemChosen.getCondition()) +
                             " condition at 10% discount for $" + Helper.round(itemChosen.getSalePrice()));
 
-
-                    s.removeFromRegistry(inventory, itemType, itemChosen);
-                    s.addToRegistry(soldLogBook, itemType, itemChosen);
-
                     /*
                     Call OptionalSell method, which contains applying decorator pattern to itemChosen for modifying its sale price
                     if the customer is going to buy more than one item at once
-                     */
+                    */
                     itemChosen = OptionalBuy(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
 
-                    // Sets the register amount to the sum of the prices of all the items in the transaction
-                    s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice());
+                    s.removeFromRegistry(inventory, itemType, itemChosen);
+                    s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice()); // Sets the register amount to the sum of the prices of all the items in the transaction
+                    s.addToRegistry(soldLogBook, itemType, itemChosen);
                     numberOfItemsSold = numberOfItemsSold + 1;
                 }
             }
@@ -261,11 +259,10 @@ public class Clerk extends Staff implements Subject{
                 Call OptionalSell method, which contains applying decorator pattern to itemChosen for modifying its sale price
                 if the customer is going to buy more than one item at once
                 */
-                System.out.println(itemChosen.getListPrice());
                 itemChosen = OptionalBuy(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
-                System.out.println(itemChosen.getListPrice());
+
                 s.removeFromRegistry(inventory, itemType, itemChosen);
-                s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice());
+                s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice()); // Sets the register amount to the sum of the prices of all the items in the transaction
                 s.addToRegistry(soldLogBook, itemType, itemChosen);
                 numberOfItemsSold = numberOfItemsSold + 1;
             }
