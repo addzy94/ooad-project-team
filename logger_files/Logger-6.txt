@@ -1,11 +1,11 @@
 
 Clerk Daphne arrived at the store on day 6.
 
-Clerk Daphne counted $2058.92 in the register.
+Clerk Daphne counted $1908.04 in the register.
 
 There were 21 items in inventory.
 
-The inventory value was $1035.16
+The inventory value was $1140.18
 
 0 items were damaged during tuning.
 

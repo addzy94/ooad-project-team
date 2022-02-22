@@ -244,6 +244,7 @@ public class Clerk extends Staff implements Subject{
                     if the customer is going to buy more than one item at once
                     */
                     itemChosen = OptionalBuy(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
+                    System.out.println("With add-ons, the total price was $" + itemChosen.getSalePrice());
                     s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice()); // Sets the register amount to the sum of the prices of all the items in the transaction
 
                 }
@@ -256,7 +257,7 @@ public class Clerk extends Staff implements Subject{
                         itemChosen.getName() + " " + itemType + " in " +
                         Constants.CONDITION_MAPPING.get(itemChosen.getCondition()) +
                         " condition at list price for $" + Helper.round(itemChosen.getSalePrice()));
-                
+
                 // Add that item to the soldLogBook
                 s.removeFromRegistry(inventory, itemType, itemChosen);
                 s.addToRegistry(soldLogBook, itemType, itemChosen);
@@ -267,6 +268,7 @@ public class Clerk extends Staff implements Subject{
                 if the customer is going to buy more than one item at once
                 */
                 itemChosen = OptionalBuy(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
+                System.out.println("With add-ons, the total price was $" + itemChosen.getSalePrice());
                 s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice()); // Sets the register amount to the sum of the prices of all the items in the transaction
 
             }

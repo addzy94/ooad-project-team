@@ -27,6 +27,9 @@ For getting common global functionality we make use of **Constants.java** and **
 Both of which are static classes.
 
 ---
+**JUnit tests**:
+
+To run the JUnit tests, please run **src/test/java/StoreTest.java**
 
 ---
 
