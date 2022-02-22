@@ -2,6 +2,10 @@ import java.util.ArrayList;
 
 public class Tracker implements Observer{
     ArrayList<ArrayList<Object>> information;
+    private static final int name = 0; //ENUMERATIONS FOR READABILITY
+    private static final int items_sold = 1;
+    private static final int items_purchased = 2;
+    private static final int items_damaged = 3;
 
     public Tracker() {
         information = new ArrayList<>();
@@ -20,19 +24,19 @@ public class Tracker implements Observer{
         System.out.println("Tracker: Day " + s.getDay());
         System.out.println("Clerk\tItems Sold\tItems Purchased\t\tItems Damaged");
         for (ArrayList<Object> staff_member: information) {
-            System.out.println(staff_member.get(0) + "\t\t" + staff_member.get(1) + "\t\t" + staff_member.get(2) + "\t\t\t" + staff_member.get(3));
+            System.out.println(staff_member.get(name) + "\t\t" + staff_member.get(items_sold) + "\t\t" + staff_member.get(items_purchased) + "\t\t\t" + staff_member.get(items_damaged));
         }
     }
 
     public void update(Clerk c) {
         if (c.getMessage().contains("sold")) {
-            updateStat(c, 1);
+            updateStat(c, items_sold);
         }
         if (c.getMessage().contains("bought")) {
-            updateStat(c, 2);
+            updateStat(c, items_purchased);
         }
         if (c.getMessage().contains("damaged")) {
-            updateStat(c, 3);
+            updateStat(c, items_damaged);
         }
     }
 
