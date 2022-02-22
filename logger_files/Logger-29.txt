@@ -1,22 +1,22 @@
 
 Clerk Shaggy arrived at the store on day 28.
 
-Clerk Shaggy counted $5.92 in the register.
+Clerk Shaggy counted $10.92 in the register.
 
-Clerk Shaggy withdrew $1000 from the bank, making new register amount as: $1005.92
+Clerk Shaggy withdrew $1000 from the bank, making new register amount as: $1010.92
 
 There were 21 items in inventory.
 
-The inventory value was $326.44
+The inventory value was $192.98
 
 0 items were damaged during tuning.
 
 3 new items were ordered on day 28
 
-3 items were bought by the store.
+2 items were bought by the store.
 
 2 items were sold by the store.
 
-6 items were damaged during cleaning.
+5 items were damaged during cleaning.
 
 Shaggy left the store for the day.

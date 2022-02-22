@@ -1,20 +1,20 @@
 
 Clerk Velma arrived at the store on day 3.
 
-Clerk Velma counted $1552.53 in the register.
+Clerk Velma counted $1505.91 in the register.
 
 There were 21 items in inventory.
 
-The inventory value was $1389.47
+The inventory value was $968.42
 
-1 items were damaged during tuning.
+0 items were damaged during tuning.
 
 3 new items were ordered on day 3
 
 1 items were bought by the store.
 
-5 items were sold by the store.
+4 items were sold by the store.
 
-3 items were damaged during cleaning.
+0 items were damaged during cleaning.
 
 Velma left the store for the day.

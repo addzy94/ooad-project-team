@@ -53,6 +53,11 @@ public class SellAccessory extends SellDecorator {
     }
 
     @Override
+    int getDaySold() {
+        return item.getDaySold();
+    }
+
+    @Override
     double getSalePrice() {
         /*
         If we call this decorator class two times then it will re-define this method (which acts as Reference Chain)
@@ -60,5 +65,30 @@ public class SellAccessory extends SellDecorator {
                                          = [getSalePrice(original one) + extraSalePrice (last one) ] + extraSalePrice (this one)
          */
         return item.getSalePrice() + extraSalePrice;
+    }
+
+    @Override
+    double getPurchasePrice() {
+        return item.getPurchasePrice();
+    }
+
+    @Override
+    double getListPrice() {
+        return item.getListPrice();
+    }
+
+    @Override
+    boolean getIsNew() {
+        return item.getIsNew();
+    }
+
+    @Override
+    int getDayArrived() {
+        return item.getDayArrived();
+    }
+
+    @Override
+    int getCondition() {
+        return item.getCondition();
     }
 }
