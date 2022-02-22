@@ -48,8 +48,8 @@ public class SellAccessory extends SellDecorator {
     }
 
     @Override
-    String getName() {
-        return item.getName();
+    String getName() { // Do need to override all the methods even if you are not modifying anything in it
+        return item.getName(); //this.name = this.item.getName(), otherwise this.name = null, and will return null to the original item
     }
 
     @Override
