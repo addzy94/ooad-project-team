@@ -1,20 +1,20 @@
 
-Clerk Daphne arrived at the store on day 18.
+Clerk Shaggy arrived at the store on day 19.
 
-Clerk Daphne counted $347.39 in the register.
+Clerk Shaggy counted $576.68 in the register.
 
 There were 21 items in inventory.
 
-The inventory value was $403.5
+The inventory value was $368.21
 
-0 items were damaged during tuning.
+3 items were damaged during tuning.
 
 3 new items were ordered on day 18
 
-3 items were bought by the store.
+1 items were bought by the store.
 
-2 items were sold by the store.
+1 items were sold by the store.
 
-3 items were damaged during cleaning.
+7 items were damaged during cleaning.
 
-Daphne left the store for the day.
+Shaggy left the store for the day.
