@@ -1,16 +1,18 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+
 /*
 Decorator Pattern that tracks an item and modifies its getSalPrice method,
 which returns not only the item's sale price
 but also the sale price of all the add-on items.
  */
 public class SellAccessory extends SellDecorator {
+
     Item item;
     protected double extraSalePrice;
 
-    public SellAccessory(Item item, Store s, String itemType, String customerName) {
+    public SellAccessory(Item item, Store s, String itemType, String customerName, Clerk c) {
+
         this.item = item;
 
         // Find an item from the current inventory list
@@ -28,21 +30,23 @@ public class SellAccessory extends SellDecorator {
         else {
 
             // Get a random accessory of type 'itemType' from the store.
-            Item itemChosen = inventory.get(itemType).get(Helper.random.nextInt(sizeOfRequiredItems));
-            double listPrice = itemChosen.getListPrice();
-            itemChosen.setDaySold(s.getDay());
+            Item accessoryItemChosen = inventory.get(itemType).get(Helper.random.nextInt(sizeOfRequiredItems));
+            double listPrice = accessoryItemChosen.getListPrice();
+            accessoryItemChosen.setDaySold(s.getDay());
 
             // Sell it at list price directly.
-            itemChosen.setSalePrice(listPrice);
+            accessoryItemChosen.setSalePrice(listPrice);
             System.out.println("Customer " + customerName + " also bought a " +
-                    Constants.NEW_OR_USED_MAPPING.get(itemChosen.getIsNew()) + " " +
-                    itemChosen.getName() + " " + itemType + " in " +
-                    Constants.CONDITION_MAPPING.get(itemChosen.getCondition()) +
-                    " condition at list price for $" + Helper.round(itemChosen.getSalePrice()));
+                    Constants.NEW_OR_USED_MAPPING.get(accessoryItemChosen.getIsNew()) + " " +
+                    accessoryItemChosen.getName() + " " + itemType + " in " +
+                    Constants.CONDITION_MAPPING.get(accessoryItemChosen.getCondition()) +
+                    " condition at list price for $" + Helper.round(accessoryItemChosen.getSalePrice()));
 
-            s.removeFromRegistry(inventory, itemType, itemChosen);
-            s.addToRegistry(soldLogBook, itemType, itemChosen);
-            extraSalePrice = itemChosen.getSalePrice();
+            s.removeFromRegistry(inventory, itemType, accessoryItemChosen);
+            s.addToRegistry(soldLogBook, itemType, accessoryItemChosen);
+            extraSalePrice = accessoryItemChosen.getSalePrice();
+
+            c.setNumberOfItemsSold(c.getNumberOfItemsSold() + 1);
         }
     }
     protected double getSalePrice() {
@@ -52,8 +56,5 @@ public class SellAccessory extends SellDecorator {
                                          = [getSalePrice(original one) + extraSalePrice (last one) ] + extraSalePrice (this one)
          */
         return item.getSalePrice() + extraSalePrice;
-
-
-
     }
 }
