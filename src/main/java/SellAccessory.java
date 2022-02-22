@@ -7,12 +7,9 @@ which returns not only the item's sale price
 but also the sale price of all the add-on items.
  */
 public class SellAccessory extends SellDecorator {
-
-    Item item;
     protected double extraSalePrice;
 
     public SellAccessory(Item item, Store s, String itemType, String customerName, Clerk c) {
-
         this.item = item;
 
         // Find an item from the current inventory list
@@ -49,7 +46,14 @@ public class SellAccessory extends SellDecorator {
             c.setNumberOfItemsSold(c.getNumberOfItemsSold() + 1);
         }
     }
-    protected double getSalePrice() {
+
+    @Override
+    String getName() {
+        return item.getName();
+    }
+
+    @Override
+    double getSalePrice() {
         /*
         If we call this decorator class two times then it will re-define this method (which acts as Reference Chain)
         Hence like getSalePrice (newest) = getSalePrice (last one) + extraSalePrice
