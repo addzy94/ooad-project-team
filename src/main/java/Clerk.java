@@ -36,16 +36,29 @@ public class Clerk extends Staff implements Subject{
         System.out.println("Clerk " + this.getName() + " arrived at the store on day " + (day + 1) + ".");
 
         // Clerk needs to check orderedItems list
-        HashMap<String, ArrayList<Item>> orderedList = new HashMap<>();
+        HashMap<String, ArrayList<Item>> orderedList = s.getOrderedItems();
+        HashMap<String, ArrayList<Item>> arrivesToday = new HashMap<>();
 
         for (String itemType: orderedList.keySet()) {
             for (Item item: orderedList.get(itemType)) {
 
-                // If an item arrives today, add it to inventory and remove it from orderedItems
+                // If an item arrives today, add it to the temperate arrivesToday hashmap
                 if (item.getDayArrived() == s.getDay()) {
-                    s.addToRegistry(s.getInventory(), itemType, item);
-                    s.removeFromRegistry(s.getOrderedItems(), itemType, item);
+                    System.out.println("New item: " + item.getName() + " has arrived! Clerk " + this.getName() + "added it to the stock.");
+                    if (arrivesToday.containsKey(itemType)) {
+                        arrivesToday.get(itemType).add(item);
+                    } else {
+                        arrivesToday.put(itemType, new ArrayList<Item>(Arrays.asList(item)));
+                    }
                 }
+            }
+        }
+
+        // From the list of ordered items that arrive today, add them to inventory list, and remove them from ordered item list.
+        for(String itemType: arrivesToday.keySet()) {
+            for (Item item : arrivesToday.get(itemType)) {
+                s.addToRegistry(s.getInventory(), itemType, item);
+                s.removeFromRegistry(s.getOrderedItems(), itemType, item);
             }
         }
     }
