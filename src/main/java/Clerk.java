@@ -44,7 +44,7 @@ public class Clerk extends Staff implements Subject{
 
                 // If an item arrives today, add it to the temperate arrivesToday hashmap
                 if (item.getDayArrived() == s.getDay()) {
-                    System.out.println("New item: " + item.getName() + " has arrived! Clerk " + this.getName() + "added it to the stock.");
+                    System.out.println("New item: " + item.getName() + " has arrived! Clerk " + this.getName() + " added it to the stock.");
                     if (arrivesToday.containsKey(itemType)) {
                         arrivesToday.get(itemType).add(item);
                     } else {
