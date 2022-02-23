@@ -1,20 +1,20 @@
 
-Clerk Velma arrived at the store on day 19.
+Clerk Daphne arrived at the store on day 19.
 
-Clerk Velma counted $369.46 in the register.
+Clerk Daphne counted $429.4 in the register.
 
 There were 21 items in inventory.
 
-The inventory value was $370.46
+The inventory value was $255.51
 
 0 items were damaged during tuning.
 
 3 new items were ordered on day 18
 
-2 items were bought by the store.
+1 items were bought by the store.
 
 3 items were sold by the store.
 
-4 items were damaged during cleaning.
+5 items were damaged during cleaning.
 
-Velma left the store for the day.
+Daphne left the store for the day.
