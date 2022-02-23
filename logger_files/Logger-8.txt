@@ -1,20 +1,20 @@
 
-Clerk Shaggy arrived at the store on day 8.
+Clerk Velma arrived at the store on day 8.
 
-Clerk Shaggy counted $1577.88 in the register.
+Clerk Velma counted $1370.83 in the register.
 
 There were 21 items in inventory.
 
-The inventory value was $1026.63
+The inventory value was $1256.03
 
-2 items were damaged during tuning.
+0 items were damaged during tuning.
 
 3 new items were ordered on day 7
 
-3 items were bought by the store.
+2 items were bought by the store.
 
-6 items were sold by the store.
+5 items were sold by the store.
 
-10 items were damaged during cleaning.
+4 items were damaged during cleaning.
 
-Shaggy left the store for the day.
+Velma left the store for the day.
