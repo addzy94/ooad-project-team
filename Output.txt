@@ -1,0 +1,2377 @@
+Day 1:
+--------------------ARRIVAL--------------------
+Clerk Velma arrived at the store on day 1.
+--------------------REGISTER CHECK--------------------
+Clerk Velma counted $0.0 in the register.
+Clerk Velma withdrew $1000 from the bank, making new register amount as: $1000.0
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Velma calculated the inventory value to be: $1615.44
+--------------------MUSIC INVENTORY TUNING--------------------
+Gibson Les Paul Standard Guitar changed it's property from false to true.
+Attempted to tune Rickenbacker 4001S Guitar but couldn't change it's property which was false.
+Rickenbacker 4001S Guitar changed it's property from false to true.
+Muddywood Bass changed it's property from false to true.
+Attempted to tune Smooth Noodle Bass but couldn't change it's property which was false.
+Rickenbacker 4001S Bass changed it's property from false to true.
+Rickenbacker 4001S Harmonica changed it's property from false to true.
+Attempted to tune Lucille Harmonica but couldn't change it's property which was false.
+Fender Jazz Bass Harmonica changed it's property from false to true.
+JBL 700BT MP3Player changed it's property from false to true.
+Runner 200 MP3Player changed it's property from false to true.
+Sony MX MP3Player changed it's property from false to true.
+Attempted to tune Sony MX CassettePlayer but couldn't change it's property which was false.
+Runner 200 CassettePlayer changed it's property from false to true.
+Sony MX CassettePlayer changed it's property from false to true.
+JBL 700BT CDPlayer changed it's property from false to true.
+Runner 200 CDPlayer changed it's property from false to true.
+JBL 700BT CDPlayer changed it's property from false to true.
+Fender Jazz Bass Saxophone changed it's property from false to true.
+Smooth Noodle Saxophone changed it's property from false to true.
+Fender Jazz Bass Saxophone changed it's property from false to true.
+Gibson Les Paul Standard Mandolin changed it's property from false to true.
+Smooth Noodle Mandolin changed it's property from false to true.
+Don Junior Mandolin changed it's property from false to true.
+Guild Starfire Flute changed it's property from false to true.
+Smooth Noodle Flute changed it's property from false to true.
+Rickenbacker 4001S Flute changed it's property from false to true.
+Runner 200 RecordPlayer changed it's property from false to true.
+Runner 200 RecordPlayer changed it's property from false to true.
+AudioTechnica M50TH RecordPlayer changed it's property from false to true.
+--------------------PLACING ORDERS--------------------
+--------------------STORE BUSINESS--------------------
+-----
+Customer Brad Pitt didn't want to buy the Bandana at the list price.
+Clerk Velma offered a 10% discount
+Customer Brad Pitt bought a New Tommy Hilfiger 200 Bandana in Poor condition at 10% discount for $2.22
+No add-ons were bought.
+-----
+Customer Mark Wahlberg bought a Used Abstraction 300 PracticeAmp in Very Good condition at list price for $62.65
+No add-ons were bought.
+-----
+Customer Brad Pitt bought a New Runner 200 MP3Player in Good condition at list price for $89.91
+No add-ons were bought.
+-----
+Customer Keanu Reeves bought a New Thunder CD in Poor condition at list price for $32.84
+No add-ons were bought.
+-----
+Customer Mark Wahlberg didn't want to buy the Strings at the list price.
+Clerk Velma offered a 10% discount
+Customer Mark Wahlberg bought a Used Morose 400 Strings in Poor condition at 10% discount for $34.3
+No add-ons were bought.
+-----
+Customer Mark Wahlberg bought a New One Step Forward PaperScore in Good condition at list price for $82.79
+No add-ons were bought.
+-----
+Customer Natalie Portman bought a Used Melancholy 50 Cable in Excellent condition at list price for $14.11
+No add-ons were bought.
+-----
+Customer Brad Pitt didn't want to buy the CDPlayer at the list price.
+Clerk Velma offered a 10% discount
+Customer Brad Pitt bought a New JBL 700BT CDPlayer in Fair condition at 10% discount for $8.97
+No add-ons were bought.
+-----
+Customer Andy Samberg didn't want to sell the Harmonica at the offered price of $10.79
+Clerk Velma offered 10% extra.
+Customer Andy Samberg sold a New Gibson Les Paul Standard Harmonica in Poor condition at 10% extra for $11.87
+--------------------CLEANING STORE ITEMS--------------------
+Velma started cleaning the store.
+Velma damaged an item during cleaning.
+The Rickenbacker 4001S Guitar degraded from Very Good ($22.31) to Good ($17.85)
+Velma damaged an item during cleaning.
+The United Colors of Benetton Shiner Bandana degraded from Fair ($21.12) to Poor ($16.9)
+Velma damaged an item during cleaning.
+The Tommy Hilfiger 200 Hat degraded from Good ($32.25) to Fair ($25.8)
+Velma damaged an item during cleaning.
+The Abstraction 300 GigBag degraded from Fair ($75.82) to Poor ($60.65)
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Velma left the store for the day.
+
+Tracker: Day 1
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		0				0				0
+Velma		8				1				4
+Daphne		0				0				0
+
+Day 2:
+--------------------ARRIVAL--------------------
+Clerk Daphne arrived at the store on day 2.
+--------------------REGISTER CHECK--------------------
+Clerk Daphne counted $1315.93 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Daphne calculated the inventory value to be: $1460.88
+--------------------MUSIC INVENTORY TUNING--------------------
+Attempted to tune Gibson Les Paul Standard Guitar but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Guitar but couldn't change it's property which was true.
+Rickenbacker 4001S Guitar changed it's property from false to true.
+Attempted to tune Muddywood Bass but couldn't change it's property which was true.
+Smooth Noodle Bass changed it's property from false to true.
+Attempted to tune Rickenbacker 4001S Bass but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Harmonica but couldn't change it's property which was true.
+Lucille Harmonica changed it's property from false to true.
+Attempted to tune Fender Jazz Bass Harmonica but couldn't change it's property which was true.
+Gibson Les Paul Standard Harmonica changed it's property from false to true.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was true.
+Attempted to tune Sony MX MP3Player but couldn't change it's property which was true.
+Sony MX CassettePlayer changed it's property from false to true.
+Attempted to tune Runner 200 CassettePlayer but couldn't change it's property which was true.
+Attempted to tune Sony MX CassettePlayer but couldn't change it's property which was true.
+Attempted to tune JBL 700BT CDPlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Saxophone but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Saxophone but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Saxophone but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Don Junior Mandolin but couldn't change it's property which was true.
+Attempted to tune Guild Starfire Flute but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Flute but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Flute but couldn't change it's property which was true.
+Attempted to tune Runner 200 RecordPlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 RecordPlayer but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH RecordPlayer but couldn't change it's property which was true.
+--------------------PLACING ORDERS--------------------
+--------------------STORE BUSINESS--------------------
+-----
+Customer Mark Wahlberg bought a Used Runner 200 RecordPlayer in Very Good condition at list price for $84.17
+No add-ons were bought.
+-----
+Customer Clint Eastwood bought a Used AudioTechnica M50TH RecordPlayer in Fair condition at list price for $91.2
+No add-ons were bought.
+-----
+Customer Clint Eastwood bought a Used Smooth Noodle Flute in Excellent condition at list price for $19.67
+No add-ons were bought.
+-----
+Customer Keanu Reeves bought a Used Runner 200 RecordPlayer in Excellent condition at list price for $47.06
+No add-ons were bought.
+-----
+Customer Brad Pitt bought a New United Colors of Benetton Shiner Hat in Very Good condition at list price for $66.41
+No add-ons were bought.
+-----
+Customer Tom Cruise didn't want to sell the Mandolin at the offered price of $11.58
+Clerk Daphne offered 10% extra.
+Customer Tom Cruise sold a New Smooth Noodle Mandolin in Good condition at 10% extra for $12.74
+-----
+Customer Leonardo DiCaprio sold a Used JBL 700BT MP3Player in Very Good condition at offered price for $24.48
+-----
+Customer Leonardo DiCaprio didn't want to sell the Mandolin at the offered price of $7.76
+Clerk Daphne offered 10% extra.
+Customer Leonardo DiCaprio sold a New Lucille Mandolin in Very Good condition at 10% extra for $8.53
+-----
+Customer Clint Eastwood sold a Used Kashmir CD in Fair condition at offered price for $3.67
+--------------------CLEANING STORE ITEMS--------------------
+Daphne started cleaning the store.
+Daphne damaged an item during cleaning.
+The Abstraction 300 Cable degraded from Fair ($99.44) to Poor ($79.55)
+Daphne damaged an item during cleaning.
+The Virtual Diva Vinyl degraded from Fair ($91.58) to Poor ($73.27)
+Daphne damaged an item during cleaning.
+The Tommy Hilfiger 200 Shirt degraded from Excellent ($16.9) to Very Good ($13.52)
+Daphne damaged an item during cleaning.
+The LVMH Red Dragon Shirt degraded from Excellent ($92.57) to Very Good ($74.06)
+Daphne damaged an item during cleaning.
+The Sony MX CassettePlayer broke and was removed from inventory.
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Daphne left the store for the day.
+
+Tracker: Day 2
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		0				0				0
+Velma		8				1				4
+Daphne		5				4				5
+
+Day 3:
+--------------------ARRIVAL--------------------
+Clerk Daphne arrived at the store on day 3.
+--------------------REGISTER CHECK--------------------
+Clerk Daphne counted $1575.04 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Daphne calculated the inventory value to be: $1309.16
+--------------------MUSIC INVENTORY TUNING--------------------
+Attempted to tune Gibson Les Paul Standard Guitar but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Guitar but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Guitar but couldn't change it's property which was true.
+Attempted to tune Muddywood Bass but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Bass but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Bass but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Harmonica but couldn't change it's property which was true.
+Attempted to tune Lucille Harmonica but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Harmonica but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Harmonica but couldn't change it's property which was true.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was true.
+Attempted to tune Sony MX MP3Player but couldn't change it's property which was true.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was true.
+Attempted to tune Sony MX CassettePlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 CassettePlayer but couldn't change it's property which was true.
+Attempted to tune JBL 700BT CDPlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Saxophone but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Saxophone but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Saxophone but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Don Junior Mandolin but couldn't change it's property which was true.
+Smooth Noodle Mandolin changed it's property from false to true.
+Lucille Mandolin changed it's property from false to true.
+Attempted to tune Guild Starfire Flute but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Flute but couldn't change it's property which was true.
+--------------------PLACING ORDERS--------------------
+The store purchased the RocketRon 5000 RecordPlayer which costs 7.84$
+The store purchased the RocketRon 5000 RecordPlayer which costs 10.77$
+The store purchased the Bose 100 RecordPlayer which costs 32.11$
+--------------------STORE BUSINESS--------------------
+-----
+Customer Brad Pitt bought a Used Lucille Harmonica in Fair condition at list price for $89.48
+No add-ons were bought.
+-----
+Customer Clint Eastwood bought a New Gibson Les Paul Standard Harmonica in Poor condition at list price for $23.74
+No add-ons were bought.
+-----
+Customer Clint Eastwood didn't want to buy the Shirt at the list price.
+Clerk Daphne offered a 10% discount
+Customer Clint Eastwood bought a Used Tommy Hilfiger 200 Shirt in Very Good condition at 10% discount for $12.17
+No add-ons were bought.
+-----
+Customer Leonardo DiCaprio didn't want to buy the Hat at the list price.
+Clerk Daphne offered a 10% discount
+Customer Leonardo DiCaprio bought a New Tommy Hilfiger 200 Hat in Fair condition at 10% discount for $23.22
+No add-ons were bought.
+-----
+Customer Jhonny Cage bought a Used Abstraction 300 Cable in Poor condition at list price for $79.55
+No add-ons were bought.
+-----
+Customer Andy Samberg bought a New Fender Jazz Bass Saxophone in Excellent condition at list price for $93.56
+No add-ons were bought.
+-----
+Customer Andy Samberg bought a Used Rickenbacker 4001S Guitar in Fair condition at list price for $20.42
+The stringed instrument Customer Andy Samberg bought is not electric.
+Customer Andy Samberg also bought a Used Melancholy 50 PracticeAmp in Excellent condition at list price for $16.38
+With add-ons, the total price was $36.8
+-----
+Customer Tom Cruise didn't want to buy the Bandana at the list price.
+Clerk Daphne offered a 10% discount
+Customer Tom Cruise bought a Used Tommy Hilfiger 200 Bandana in Excellent condition at 10% discount for $11.6
+No add-ons were bought.
+-----
+Customer Leonardo DiCaprio bought a New Thunder PaperScore in Fair condition at list price for $31.0
+No add-ons were bought.
+-----
+Customer Natalie Portman sold a Used Morose 400 PracticeAmp in Very Good condition at offered price for $22.97
+--------------------CLEANING STORE ITEMS--------------------
+Daphne started cleaning the store.
+Daphne damaged an item during cleaning.
+The Rickenbacker 4001S Bass degraded from Fair ($30.36) to Poor ($24.28)
+Daphne damaged an item during cleaning.
+The Swalla Cassette degraded from Very Good ($71.13) to Good ($56.91)
+Daphne damaged an item during cleaning.
+The Fender Jazz Bass Harmonica broke and was removed from inventory.
+Daphne damaged an item during cleaning.
+The Rickenbacker 4001S Flute degraded from Fair ($53.82) to Poor ($43.06)
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Daphne left the store for the day.
+
+Tracker: Day 3
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		0				0				0
+Velma		8				1				4
+Daphne		15				5				9
+
+Day 4:
+--------------------ARRIVAL--------------------
+Clerk Shaggy arrived at the store on day 4.
+New item: RocketRon 5000 has arrived! Clerk Shaggyadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Shaggy counted $1902.47 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Shaggy calculated the inventory value to be: $1077.43
+--------------------MUSIC INVENTORY TUNING--------------------
+Attempted to tune Gibson Les Paul Standard Guitar but couldn't change it's property which was true.
+Rickenbacker 4001S Guitar changed it's property from true to false.
+Attempted to tune Muddywood Bass but couldn't change it's property which was true.
+Smooth Noodle Bass changed it's property from true to false.
+Rickenbacker 4001S Bass changed it's property from true to false.
+Attempted to tune Rickenbacker 4001S Harmonica but couldn't change it's property which was true.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was true.
+Attempted to tune Sony MX MP3Player but couldn't change it's property which was true.
+JBL 700BT MP3Player changed it's property from true to false.
+Attempted to tune Sony MX CassettePlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 CassettePlayer but couldn't change it's property which was true.
+Attempted to tune JBL 700BT CDPlayer but couldn't change it's property which was true.
+Runner 200 CDPlayer changed it's property from true to false.
+Attempted to tune Smooth Noodle Saxophone but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Saxophone but couldn't change it's property which was true.
+Gibson Les Paul Standard Mandolin changed it's property from true to false.
+Smooth Noodle Mandolin changed it's property from true to false.
+Attempted to tune Don Junior Mandolin but couldn't change it's property which was true.
+Smooth Noodle Mandolin changed it's property from true to false.
+Attempted to tune Lucille Mandolin but couldn't change it's property which was true.
+Attempted to tune Guild Starfire Flute but couldn't change it's property which was true.
+Rickenbacker 4001S Flute changed it's property from true to false.
+Attempted to tune RocketRon 5000 RecordPlayer but couldn't change it's property which was false.
+--------------------PLACING ORDERS--------------------
+--------------------STORE BUSINESS--------------------
+-----
+Customer Tom Cruise bought a Used Gibson Les Paul Standard Guitar in Poor condition at list price for $47.44
+The stringed instrument Customer Tom Cruise bought is not electric.
+No add-ons were bought.
+-----
+Customer Clint Eastwood bought a New RocketRon 5000 RecordPlayer in Excellent condition at list price for $15.68
+No add-ons were bought.
+-----
+Customer Tom Cruise left the store without buying the RecordPlayer as there was no stock.
+-----
+Customer Tom Cruise didn't want to buy the Bandana at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Tom Cruise bought a New United Colors of Benetton Shiner Bandana in Poor condition at 10% discount for $15.21
+No add-ons were bought.
+-----
+Customer Tom Cruise didn't want to sell the Bass at the offered price of $6.08
+Clerk Shaggy offered 10% extra.
+Customer Tom Cruise sold a New Fender Jazz Bass Bass in Poor condition at 10% extra for $6.68
+-----
+Customer Keanu Reeves sold a Used Beautiful 100 Strings in Excellent condition at offered price for $35.75
+--------------------CLEANING STORE ITEMS--------------------
+Shaggy started cleaning the store.
+Shaggy damaged an item during cleaning.
+The Rickenbacker 4001S Bass broke and was removed from inventory.
+Shaggy damaged an item during cleaning.
+The Kashmir CD degraded from Fair ($7.33) to Poor ($5.87)
+Shaggy damaged an item during cleaning.
+The Morose 400 PracticeAmp broke and was removed from inventory.
+Shaggy damaged an item during cleaning.
+The Smooth Noodle Saxophone degraded from Excellent ($23.14) to Very Good ($18.51)
+Shaggy damaged an item during cleaning.
+The Morose 400 GigBag degraded from Excellent ($2.86) to Very Good ($2.29)
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Shaggy left the store for the day.
+
+Tracker: Day 4
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		3				2				5
+Velma		8				1				4
+Daphne		15				5				9
+
+Day 5:
+--------------------ARRIVAL--------------------
+Clerk Daphne arrived at the store on day 5.
+New item: RocketRon 5000 has arrived! Clerk Daphneadded it to the stock.
+New item: Bose 100 has arrived! Clerk Daphneadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Daphne counted $1938.36 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Daphne calculated the inventory value to be: $1076.79
+--------------------MUSIC INVENTORY TUNING--------------------
+Rickenbacker 4001S Guitar changed it's property from false to true.
+Attempted to tune Muddywood Bass but couldn't change it's property which was true.
+Smooth Noodle Bass changed it's property from false to true.
+Fender Jazz Bass Bass changed it's property from false to true.
+Attempted to tune Rickenbacker 4001S Harmonica but couldn't change it's property which was true.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was true.
+Attempted to tune Sony MX MP3Player but couldn't change it's property which was true.
+JBL 700BT MP3Player changed it's property from false to true.
+Attempted to tune Sony MX CassettePlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 CassettePlayer but couldn't change it's property which was true.
+Attempted to tune JBL 700BT CDPlayer but couldn't change it's property which was true.
+Runner 200 CDPlayer changed it's property from false to true.
+Attempted to tune Fender Jazz Bass Saxophone but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Saxophone but couldn't change it's property which was true.
+Gibson Les Paul Standard Mandolin changed it's property from false to true.
+Smooth Noodle Mandolin changed it's property from false to true.
+Attempted to tune Don Junior Mandolin but couldn't change it's property which was true.
+Smooth Noodle Mandolin changed it's property from false to true.
+Attempted to tune Lucille Mandolin but couldn't change it's property which was true.
+Attempted to tune Guild Starfire Flute but couldn't change it's property which was true.
+Rickenbacker 4001S Flute changed it's property from false to true.
+RocketRon 5000 RecordPlayer changed it's property from false to true.
+Bose 100 RecordPlayer changed it's property from false to true.
+--------------------PLACING ORDERS--------------------
+--------------------STORE BUSINESS--------------------
+-----
+Customer Keanu Reeves didn't want to buy the Hat at the list price.
+Clerk Daphne offered a 10% discount
+Customer Keanu Reeves bought a Used LVMH Red Dragon Hat in Fair condition at 10% discount for $82.17
+No add-ons were bought.
+-----
+Customer Brad Pitt bought a New Muddywood Bass in Very Good condition at list price for $44.98
+The stringed instrument Customer Brad Pitt bought is electric.
+Customer Brad Pitt also bought a Used Abstraction 300 Cable in Good condition at list price for $9.97
+Customer Brad Pitt also bought a Used Abstraction 300 Strings in Excellent condition at list price for $86.59
+With add-ons, the total price was $141.54
+-----
+Customer Leonardo DiCaprio bought a New Virtual Diva Cassette in Fair condition at list price for $51.31
+No add-ons were bought.
+-----
+Customer Jhonny Cage bought a Used Rickenbacker 4001S Guitar in Good condition at list price for $17.85
+The stringed instrument Customer Jhonny Cage bought is not electric.
+No add-ons were bought.
+-----
+Customer Clint Eastwood bought a New Sony MX CassettePlayer in Good condition at list price for $35.23
+No add-ons were bought.
+-----
+Customer Tom Cruise bought a Used Morose 400 Strings in Very Good condition at list price for $57.83
+No add-ons were bought.
+-----
+Customer Leonardo DiCaprio didn't want to buy the PaperScore at the list price.
+Clerk Daphne offered a 10% discount
+Customer Leonardo DiCaprio bought a Used Thunder PaperScore in Good condition at 10% discount for $67.57
+No add-ons were bought.
+-----
+Customer Natalie Portman didn't want to buy the Flute at the list price.
+Clerk Daphne offered a 10% discount
+Customer Natalie Portman bought a New Guild Starfire Flute in Fair condition at 10% discount for $57.9
+No add-ons were bought.
+-----
+Customer Jhonny Cage sold a Used Fender Jazz Bass Mandolin in Very Good condition at offered price for $9.95
+-----
+Customer Tom Cruise didn't want to sell the Mandolin at the offered price of $4.17
+Clerk Daphne offered 10% extra.
+Customer Tom Cruise sold a Used Smooth Noodle Mandolin in Good condition at 10% extra for $4.58
+-----
+Customer Tom Cruise didn't want to sell the PaperScore at the offered price of $27.25
+Clerk Daphne offered 10% extra.
+Customer Tom Cruise sold a Used Swalla PaperScore in Very Good condition at 10% extra for $29.98
+-----
+Customer Mark Wahlberg sold a New Dark Zapper Bass in Very Good condition at offered price for $32.65
+--------------------CLEANING STORE ITEMS--------------------
+Daphne started cleaning the store.
+Daphne damaged an item during cleaning.
+The Fender Jazz Bass Bass broke and was removed from inventory.
+Daphne damaged an item during cleaning.
+The LVMH Red Dragon Shirt degraded from Very Good ($74.06) to Good ($59.25)
+Daphne damaged an item during cleaning.
+The Swalla PaperScore degraded from Very Good ($59.96) to Good ($47.97)
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Daphne left the store for the day.
+
+Tracker: Day 5
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		3				2				5
+Velma		8				1				4
+Daphne		25				9				12
+
+Day 6:
+--------------------ARRIVAL--------------------
+Clerk Daphne arrived at the store on day 6.
+--------------------REGISTER CHECK--------------------
+Clerk Daphne counted $2372.6 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Daphne calculated the inventory value to be: $877.8
+--------------------MUSIC INVENTORY TUNING--------------------
+Attempted to tune Smooth Noodle Bass but couldn't change it's property which was true.
+Attempted to tune Dark Zapper Bass but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Harmonica but couldn't change it's property which was true.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was true.
+Attempted to tune Sony MX MP3Player but couldn't change it's property which was true.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was true.
+Attempted to tune Runner 200 CassettePlayer but couldn't change it's property which was true.
+Attempted to tune JBL 700BT CDPlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Saxophone but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Saxophone but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Don Junior Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Lucille Mandolin but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Mandolin but couldn't change it's property which was true.
+Smooth Noodle Mandolin changed it's property from false to true.
+Attempted to tune Rickenbacker 4001S Flute but couldn't change it's property which was true.
+Attempted to tune RocketRon 5000 RecordPlayer but couldn't change it's property which was true.
+Attempted to tune Bose 100 RecordPlayer but couldn't change it's property which was true.
+--------------------PLACING ORDERS--------------------
+The store purchased the Fender Jazz Bass Guitar which costs 32.84$
+The store purchased the Guild Starfire Guitar which costs 12.1$
+The store purchased the Don Junior Guitar which costs 23.22$
+The store purchased the Morose 400 Cable which costs 38.51$
+The store purchased the Morose 400 Cable which costs 22.55$
+The store purchased the Beautiful 100 Cable which costs 36.69$
+--------------------STORE BUSINESS--------------------
+-----
+Customer Natalie Portman left the store without buying the Guitar as there was no stock.
+-----
+Customer Andy Samberg bought a Used Don Junior Mandolin in Fair condition at list price for $47.06
+The stringed instrument Customer Andy Samberg bought is not electric.
+Customer Andy Samberg also bought a Used Beautiful 100 Strings in Excellent condition at list price for $71.5
+With add-ons, the total price was $118.57
+-----
+Customer Brad Pitt didn't want to buy the Saxophone at the list price.
+Clerk Daphne offered a 10% discount
+Customer Brad Pitt bought a New Smooth Noodle Saxophone in Very Good condition at 10% discount for $16.66
+No add-ons were bought.
+-----
+Customer Tom Cruise didn't want to buy the PaperScore at the list price.
+Clerk Daphne offered a 10% discount
+Customer Tom Cruise bought a Used Swalla PaperScore in Good condition at 10% discount for $43.17
+No add-ons were bought.
+-----
+Customer Jhonny Cage left the store without buying the Bandana as there was no stock.
+-----
+Customer Natalie Portman didn't want to buy the CD at the list price.
+Clerk Daphne offered a 10% discount
+Customer Natalie Portman bought a Used Thunder CD in Poor condition at 10% discount for $19.8
+No add-ons were bought.
+-----
+Customer Andy Samberg didn't want to sell the Bandana at the offered price of $11.35
+Clerk Daphne offered 10% extra.
+Customer Andy Samberg sold a Used United Colors of Benetton Shiner Bandana in Fair condition at 10% extra for $12.49
+-----
+Customer Leonardo DiCaprio sold a Used Bose 100 CDPlayer in Good condition at offered price for $10.72
+--------------------CLEANING STORE ITEMS--------------------
+Daphne started cleaning the store.
+Daphne damaged an item during cleaning.
+The Dark Zapper Bass degraded from Very Good ($65.3) to Good ($52.24)
+Daphne damaged an item during cleaning.
+The Tommy Hilfiger 200 Shirt broke and was removed from inventory.
+Daphne damaged an item during cleaning.
+The Runner 200 CassettePlayer broke and was removed from inventory.
+Daphne damaged an item during cleaning.
+The Bose 100 CDPlayer degraded from Good ($21.44) to Fair ($17.15)
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Daphne left the store for the day.
+
+Tracker: Day 6
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		3				2				5
+Velma		8				1				4
+Daphne		30				11				16
+
+Day 7:
+On Sunday, no one worked.
+
+Tracker: Day 7
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		3				2				5
+Velma		8				1				4
+Daphne		30				11				16
+
+Day 8:
+--------------------ARRIVAL--------------------
+Clerk Velma arrived at the store on day 8.
+New item: Morose 400 has arrived! Clerk Velmaadded it to the stock.
+New item: Beautiful 100 has arrived! Clerk Velmaadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Velma counted $2381.68 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Velma calculated the inventory value to be: $818.23
+--------------------MUSIC INVENTORY TUNING--------------------
+Smooth Noodle Bass changed it's property from true to false.
+Attempted to tune Dark Zapper Bass but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Harmonica but couldn't change it's property which was true.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was true.
+Attempted to tune Sony MX MP3Player but couldn't change it's property which was true.
+Velma damaged an item during tuning.
+The JBL 700BT MP3Player degraded from Very Good ($48.95) to Good ($39.16)
+Attempted to tune JBL 700BT CDPlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Bose 100 CDPlayer changed it's property from false to true.
+Attempted to tune Fender Jazz Bass Saxophone but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Lucille Mandolin but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Flute but couldn't change it's property which was true.
+Attempted to tune RocketRon 5000 RecordPlayer but couldn't change it's property which was true.
+Attempted to tune Bose 100 RecordPlayer but couldn't change it's property which was true.
+--------------------PLACING ORDERS--------------------
+The store purchased the Don Junior Guitar which costs 43.87$
+The store purchased the Dark Zapper Guitar which costs 30.56$
+The store purchased the Don Junior Guitar which costs 40.16$
+The store purchased the Virtual Diva PaperScore which costs 46.87$
+The store purchased the Bleed It Out PaperScore which costs 14.02$
+The store purchased the Swalla PaperScore which costs 29.44$
+The store purchased the Runner 200 CassettePlayer which costs 26.98$
+The store purchased the AudioTechnica M50TH CassettePlayer which costs 28.27$
+The store purchased the AudioTechnica M50TH CassettePlayer which costs 26.62$
+The store purchased the Beautiful 100 Strings which costs 32.29$
+The store purchased the Abstraction 300 Strings which costs 40.67$
+The store purchased the Abstraction 300 Strings which costs 11.8$
+--------------------STORE BUSINESS--------------------
+-----
+Customer Mark Wahlberg bought a Used United Colors of Benetton Shiner Bandana in Fair condition at list price for $24.97
+No add-ons were bought.
+-----
+Customer Mark Wahlberg didn't want to buy the MP3Player at the list price.
+Clerk Velma offered a 10% discount
+Customer Mark Wahlberg bought a Used JBL 700BT MP3Player in Good condition at 10% discount for $35.25
+No add-ons were bought.
+-----
+Customer Andy Samberg didn't want to buy the Shirt at the list price.
+Clerk Velma offered a 10% discount
+Customer Andy Samberg bought a New LVMH Red Dragon Shirt in Good condition at 10% discount for $53.32
+No add-ons were bought.
+-----
+Customer Leonardo DiCaprio didn't want to buy the Cable at the list price.
+Clerk Velma offered a 10% discount
+Customer Leonardo DiCaprio left the store without buying a Cable even at discounted price!
+-----
+Customer Clint Eastwood left the store without buying the Shirt as there was no stock.
+-----
+Customer Brad Pitt didn't want to sell the GigBag at the offered price of $32.25
+Clerk Velma offered 10% extra.
+Customer Brad Pitt sold a Used Abstraction 300 GigBag in Excellent condition at 10% extra for $35.48
+-----
+Customer Keanu Reeves was turned away because we are no longer accepting clothing items.
+--------------------CLEANING STORE ITEMS--------------------
+Velma started cleaning the store.
+Velma damaged an item during cleaning.
+The Virtual Diva Vinyl broke and was removed from inventory.
+Velma damaged an item during cleaning.
+The Smooth Noodle Mandolin broke and was removed from inventory.
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Velma left the store for the day.
+
+Tracker: Day 8
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		3				2				5
+Velma		11				2				7
+Daphne		30				11				16
+
+Day 9:
+--------------------ARRIVAL--------------------
+Clerk Daphne arrived at the store on day 9.
+New item: Don Junior has arrived! Clerk Daphneadded it to the stock.
+New item: Virtual Diva has arrived! Clerk Daphneadded it to the stock.
+New item: Runner 200 has arrived! Clerk Daphneadded it to the stock.
+New item: AudioTechnica M50TH has arrived! Clerk Daphneadded it to the stock.
+New item: Beautiful 100 has arrived! Clerk Daphneadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Daphne counted $2088.18 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Daphne calculated the inventory value to be: $858.7
+--------------------MUSIC INVENTORY TUNING--------------------
+Don Junior Guitar changed it's property from false to true.
+Smooth Noodle Bass changed it's property from false to true.
+Attempted to tune Dark Zapper Bass but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Harmonica but couldn't change it's property which was true.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was true.
+Attempted to tune Sony MX MP3Player but couldn't change it's property which was true.
+Runner 200 CassettePlayer changed it's property from false to true.
+AudioTechnica M50TH CassettePlayer changed it's property from false to true.
+Attempted to tune JBL 700BT CDPlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Attempted to tune Bose 100 CDPlayer but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Saxophone but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Lucille Mandolin but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Flute but couldn't change it's property which was true.
+Attempted to tune RocketRon 5000 RecordPlayer but couldn't change it's property which was true.
+Attempted to tune Bose 100 RecordPlayer but couldn't change it's property which was true.
+--------------------PLACING ORDERS--------------------
+--------------------STORE BUSINESS--------------------
+-----
+Customer Tom Cruise bought a Used Morose 400 PracticeAmp in Very Good condition at list price for $45.94
+No add-ons were bought.
+-----
+Customer Mark Wahlberg bought a New Virtual Diva Vinyl in Excellent condition at list price for $8.77
+No add-ons were bought.
+-----
+Customer Leonardo DiCaprio left the store without buying the Shirt as there was no stock.
+-----
+Customer Keanu Reeves bought a New Lucille Mandolin in Very Good condition at list price for $17.07
+The stringed instrument Customer Keanu Reeves bought is not electric.
+Customer Keanu Reeves also bought a New Morose 400 GigBag in Very Good condition at list price for $2.29
+With add-ons, the total price was $19.36
+-----
+Customer Natalie Portman didn't want to sell the Guitar at the offered price of $31.98
+Clerk Daphne offered 10% extra.
+Customer Natalie Portman left the store without selling a Guitar even at extra price!
+-----
+Customer Clint Eastwood sold a New Smooth Noodle Bass in Poor condition at offered price for $8.14
+-----
+Customer Jhonny Cage sold a Used Gibson Les Paul Standard Mandolin in Fair condition at offered price for $11.62
+--------------------CLEANING STORE ITEMS--------------------
+Daphne started cleaning the store.
+Daphne damaged an item during cleaning.
+The Swalla CD broke and was removed from inventory.
+Daphne damaged an item during cleaning.
+The Smooth Noodle Mandolin degraded from Good ($25.48) to Fair ($20.38)
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Daphne left the store for the day.
+
+Tracker: Day 9
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		3				2				5
+Velma		11				2				7
+Daphne		34				13				18
+
+Day 10:
+--------------------ARRIVAL--------------------
+Clerk Daphne arrived at the store on day 10.
+New item: Don Junior has arrived! Clerk Daphneadded it to the stock.
+New item: Dark Zapper has arrived! Clerk Daphneadded it to the stock.
+New item: Swalla has arrived! Clerk Daphneadded it to the stock.
+New item: AudioTechnica M50TH has arrived! Clerk Daphneadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Daphne counted $2142.48 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Daphne calculated the inventory value to be: $955.44
+--------------------MUSIC INVENTORY TUNING--------------------
+Attempted to tune Don Junior Guitar but couldn't change it's property which was true.
+Don Junior Guitar changed it's property from false to true.
+Dark Zapper Guitar changed it's property from false to true.
+Attempted to tune Smooth Noodle Bass but couldn't change it's property which was true.
+Attempted to tune Dark Zapper Bass but couldn't change it's property which was true.
+Smooth Noodle Bass changed it's property from false to true.
+Attempted to tune Rickenbacker 4001S Harmonica but couldn't change it's property which was true.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was true.
+Attempted to tune Sony MX MP3Player but couldn't change it's property which was true.
+Attempted to tune Runner 200 CassettePlayer but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH CassettePlayer but couldn't change it's property which was true.
+AudioTechnica M50TH CassettePlayer changed it's property from false to true.
+Attempted to tune JBL 700BT CDPlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Attempted to tune Bose 100 CDPlayer but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Saxophone but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Flute but couldn't change it's property which was true.
+Attempted to tune RocketRon 5000 RecordPlayer but couldn't change it's property which was true.
+Attempted to tune Bose 100 RecordPlayer but couldn't change it's property which was true.
+--------------------PLACING ORDERS--------------------
+The store purchased the Abstraction 300 PracticeAmp which costs 30.03$
+The store purchased the Abstraction 300 PracticeAmp which costs 48.72$
+The store purchased the Melancholy 50 PracticeAmp which costs 12.58$
+--------------------STORE BUSINESS--------------------
+-----
+Customer Brad Pitt bought a Used Smooth Noodle Bass in Very Good condition at list price for $17.78
+The stringed instrument Customer Brad Pitt bought is electric.
+Customer Brad Pitt also bought a New Beautiful 100 Cable in Very Good condition at list price for $73.39
+With add-ons, the total price was $91.17
+-----
+Customer Clint Eastwood bought a Used Morose 400 Cable in Excellent condition at list price for $45.11
+No add-ons were bought.
+-----
+Customer Tom Cruise didn't want to buy the Vinyl at the list price.
+Clerk Daphne offered a 10% discount
+Customer Tom Cruise left the store without buying a Vinyl even at discounted price!
+-----
+Customer Tom Cruise bought a New Sony MX MP3Player in Good condition at list price for $93.13
+No add-ons were bought.
+-----
+Customer Brad Pitt didn't want to sell the CD at the offered price of $40.39
+Clerk Daphne offered 10% extra.
+Customer Brad Pitt sold a Used Swalla CD in Excellent condition at 10% extra for $44.43
+--------------------CLEANING STORE ITEMS--------------------
+Daphne started cleaning the store.
+Daphne damaged an item during cleaning.
+The Kashmir Vinyl degraded from Very Good ($28.63) to Good ($22.9)
+Daphne damaged an item during cleaning.
+The JBL 700BT MP3Player degraded from Good ($83.97) to Fair ($67.17)
+Daphne damaged an item during cleaning.
+The Abstraction 300 GigBag degraded from Very Good ($75.4) to Good ($60.32)
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Daphne left the store for the day.
+
+Tracker: Day 10
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		3				2				5
+Velma		11				2				7
+Daphne		38				14				21
+
+Day 11:
+--------------------ARRIVAL--------------------
+Clerk Velma arrived at the store on day 11.
+New item: Bleed It Out has arrived! Clerk Velmaadded it to the stock.
+New item: Abstraction 300 has arrived! Clerk Velmaadded it to the stock.
+New item: Abstraction 300 has arrived! Clerk Velmaadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Velma counted $2236.14 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Velma calculated the inventory value to be: $951.66
+--------------------MUSIC INVENTORY TUNING--------------------
+Attempted to tune Don Junior Guitar but couldn't change it's property which was true.
+Attempted to tune Don Junior Guitar but couldn't change it's property which was true.
+Attempted to tune Dark Zapper Guitar but couldn't change it's property which was true.
+Attempted to tune Dark Zapper Bass but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Bass but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Harmonica but couldn't change it's property which was true.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was true.
+Runner 200 CassettePlayer changed it's property from true to false.
+Attempted to tune AudioTechnica M50TH CassettePlayer but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH CassettePlayer but couldn't change it's property which was true.
+JBL 700BT CDPlayer changed it's property from true to false.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Attempted to tune Bose 100 CDPlayer but couldn't change it's property which was true.
+Fender Jazz Bass Saxophone changed it's property from true to false.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Smooth Noodle Mandolin changed it's property from true to false.
+Attempted to tune Rickenbacker 4001S Flute but couldn't change it's property which was true.
+Attempted to tune RocketRon 5000 RecordPlayer but couldn't change it's property which was true.
+Attempted to tune Bose 100 RecordPlayer but couldn't change it's property which was true.
+--------------------PLACING ORDERS--------------------
+The store purchased the Abstraction 300 Cable which costs 9.41$
+The store purchased the Beautiful 100 Cable which costs 5.38$
+The store purchased the Morose 400 Cable which costs 46.61$
+The store purchased the Melancholy 50 PracticeAmp which costs 23.45$
+The store purchased the Melancholy 50 PracticeAmp which costs 1.33$
+The store purchased the Morose 400 PracticeAmp which costs 41.93$
+--------------------STORE BUSINESS--------------------
+-----
+Customer Brad Pitt didn't want to buy the Guitar at the list price.
+Clerk Velma offered a 10% discount
+Customer Brad Pitt bought a New Don Junior Guitar in Fair condition at 10% discount for $72.29
+The stringed instrument Customer Brad Pitt bought is electric.
+Customer Brad Pitt also bought a New Abstraction 300 Strings in Poor condition at list price for $23.61
+With add-ons, the total price was $95.9
+-----
+Customer Brad Pitt bought a New Smooth Noodle Bass in Poor condition at list price for $16.29
+The stringed instrument Customer Brad Pitt bought is not electric.
+No add-ons were bought.
+-----
+Customer Brad Pitt didn't want to buy the RecordPlayer at the list price.
+Clerk Velma offered a 10% discount
+Customer Brad Pitt left the store without buying a RecordPlayer even at discounted price!
+-----
+Customer Jhonny Cage left the store without buying the Cable as there was no stock.
+-----
+Customer Tom Cruise didn't want to sell the Cassette at the offered price of $2.1
+Clerk Velma offered 10% extra.
+Customer Tom Cruise left the store without selling a Cassette even at extra price!
+--------------------CLEANING STORE ITEMS--------------------
+Velma started cleaning the store.
+Velma damaged an item during cleaning.
+The JBL 700BT MP3Player degraded from Fair ($67.17) to Poor ($53.74)
+Velma damaged an item during cleaning.
+The AudioTechnica M50TH CassettePlayer broke and was removed from inventory.
+Velma damaged an item during cleaning.
+The JBL 700BT CDPlayer degraded from Fair ($84.2) to Poor ($67.36)
+Velma damaged an item during cleaning.
+The Abstraction 300 GigBag broke and was removed from inventory.
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Velma left the store for the day.
+
+Tracker: Day 11
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		3				2				5
+Velma		14				2				11
+Daphne		38				14				21
+
+Day 12:
+--------------------ARRIVAL--------------------
+Clerk Velma arrived at the store on day 12.
+New item: Abstraction 300 has arrived! Clerk Velmaadded it to the stock.
+New item: Melancholy 50 has arrived! Clerk Velmaadded it to the stock.
+New item: Melancholy 50 has arrived! Clerk Velmaadded it to the stock.
+New item: Melancholy 50 has arrived! Clerk Velmaadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Velma counted $2220.21 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Velma calculated the inventory value to be: $913.1
+--------------------MUSIC INVENTORY TUNING--------------------
+Attempted to tune Don Junior Guitar but couldn't change it's property which was true.
+Attempted to tune Dark Zapper Guitar but couldn't change it's property which was true.
+Attempted to tune Dark Zapper Bass but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Harmonica but couldn't change it's property which was true.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was true.
+Runner 200 CassettePlayer changed it's property from false to true.
+Attempted to tune AudioTechnica M50TH CassettePlayer but couldn't change it's property which was true.
+Runner 200 CDPlayer changed it's property from true to false.
+Attempted to tune Bose 100 CDPlayer but couldn't change it's property which was true.
+JBL 700BT CDPlayer changed it's property from false to true.
+Fender Jazz Bass Saxophone changed it's property from false to true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Smooth Noodle Mandolin changed it's property from false to true.
+Attempted to tune Rickenbacker 4001S Flute but couldn't change it's property which was true.
+Attempted to tune RocketRon 5000 RecordPlayer but couldn't change it's property which was true.
+Attempted to tune Bose 100 RecordPlayer but couldn't change it's property which was true.
+--------------------PLACING ORDERS--------------------
+The store purchased the Morose 400 Cable which costs 43.23$
+The store purchased the Abstraction 300 Cable which costs 48.58$
+The store purchased the Beautiful 100 Cable which costs 16.02$
+--------------------STORE BUSINESS--------------------
+-----
+Customer Brad Pitt left the store without buying the Cable as there was no stock.
+-----
+Customer Leonardo DiCaprio didn't want to buy the Guitar at the list price.
+Clerk Velma offered a 10% discount
+Customer Leonardo DiCaprio bought a Used Dark Zapper Guitar in Excellent condition at 10% discount for $55.0
+The stringed instrument Customer Leonardo DiCaprio bought is electric.
+No add-ons were bought.
+-----
+Customer Brad Pitt bought a New Melancholy 50 PracticeAmp in Good condition at list price for $46.9
+No add-ons were bought.
+-----
+Customer Natalie Portman didn't want to buy the CDPlayer at the list price.
+Clerk Velma offered a 10% discount
+Customer Natalie Portman bought a Used Runner 200 CDPlayer in Fair condition at 10% discount for $89.69
+No add-ons were bought.
+-----
+Customer Mark Wahlberg left the store without buying the Shirt as there was no stock.
+-----
+Customer Brad Pitt left the store without buying the Bandana as there was no stock.
+-----
+Customer Natalie Portman didn't want to buy the Cassette at the list price.
+Clerk Velma offered a 10% discount
+Customer Natalie Portman bought a Used Swalla Cassette in Good condition at 10% discount for $51.22
+No add-ons were bought.
+-----
+Customer Clint Eastwood didn't want to sell the RecordPlayer at the offered price of $13.62
+Clerk Velma offered 10% extra.
+Customer Clint Eastwood sold a New Bose 100 RecordPlayer in Good condition at 10% extra for $14.98
+--------------------CLEANING STORE ITEMS--------------------
+Velma started cleaning the store.
+Velma damaged an item during cleaning.
+The Gibson Les Paul Standard Mandolin degraded from Excellent ($65.74) to Very Good ($52.59)
+Velma damaged an item during cleaning.
+The Bose 100 RecordPlayer broke and was removed from inventory.
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Velma left the store for the day.
+
+Tracker: Day 12
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		3				2				5
+Velma		18				3				13
+Daphne		38				14				21
+
+Day 13:
+--------------------ARRIVAL--------------------
+Clerk Velma arrived at the store on day 13.
+New item: Abstraction 300 has arrived! Clerk Velmaadded it to the stock.
+New item: Morose 400 has arrived! Clerk Velmaadded it to the stock.
+New item: Abstraction 300 has arrived! Clerk Velmaadded it to the stock.
+New item: Beautiful 100 has arrived! Clerk Velmaadded it to the stock.
+New item: Abstraction 300 has arrived! Clerk Velmaadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Velma counted $2340.21 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Velma calculated the inventory value to be: $907.2
+--------------------MUSIC INVENTORY TUNING--------------------
+Don Junior Guitar changed it's property from true to false.
+Attempted to tune Dark Zapper Bass but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Harmonica but couldn't change it's property which was true.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was true.
+Attempted to tune Runner 200 CassettePlayer but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH CassettePlayer but couldn't change it's property which was true.
+Bose 100 CDPlayer changed it's property from true to false.
+Attempted to tune JBL 700BT CDPlayer but couldn't change it's property which was true.
+Fender Jazz Bass Saxophone changed it's property from true to false.
+Attempted to tune Fender Jazz Bass Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Flute but couldn't change it's property which was true.
+Attempted to tune RocketRon 5000 RecordPlayer but couldn't change it's property which was true.
+Attempted to tune Bose 100 RecordPlayer but couldn't change it's property which was true.
+--------------------PLACING ORDERS--------------------
+--------------------STORE BUSINESS--------------------
+-----
+Customer Leonardo DiCaprio bought a New Abstraction 300 PracticeAmp in Good condition at list price for $97.44
+No add-ons were bought.
+-----
+Customer Mark Wahlberg didn't want to buy the Cassette at the list price.
+Clerk Velma offered a 10% discount
+Customer Mark Wahlberg bought a New Thunder Cassette in Poor condition at 10% discount for $4.46
+No add-ons were bought.
+-----
+Customer Mark Wahlberg didn't want to buy the GigBag at the list price.
+Clerk Velma offered a 10% discount
+Customer Mark Wahlberg left the store without buying a GigBag even at discounted price!
+-----
+Customer Brad Pitt left the store without buying the Shirt as there was no stock.
+-----
+Customer Clint Eastwood sold a Used Morose 400 Strings in Excellent condition at offered price for $13.87
+--------------------CLEANING STORE ITEMS--------------------
+Velma started cleaning the store.
+Velma damaged an item during cleaning.
+The Kashmir Vinyl degraded from Good ($22.9) to Fair ($18.32)
+Velma damaged an item during cleaning.
+The Virtual Diva PaperScore degraded from Very Good ($93.75) to Good ($75.0)
+Velma damaged an item during cleaning.
+The Smooth Noodle Mandolin degraded from Good ($9.17) to Fair ($7.33)
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Velma left the store for the day.
+
+Tracker: Day 13
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		3				2				5
+Velma		20				4				16
+Daphne		38				14				21
+
+Day 14:
+On Sunday, no one worked.
+
+Tracker: Day 14
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		3				2				5
+Velma		20				4				16
+Daphne		38				14				21
+
+Day 15:
+--------------------ARRIVAL--------------------
+Clerk Shaggy arrived at the store on day 15.
+--------------------REGISTER CHECK--------------------
+Clerk Shaggy counted $2428.24 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Shaggy calculated the inventory value to be: $869.87
+--------------------MUSIC INVENTORY TUNING--------------------
+Attempted to tune Don Junior Guitar but couldn't change it's property which was false.
+Attempted to tune Dark Zapper Bass but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Harmonica but couldn't change it's property which was true.
+JBL 700BT MP3Player changed it's property from true to false.
+Runner 200 CassettePlayer changed it's property from true to false.
+Shaggy damaged an item during tuning.
+The AudioTechnica M50TH CassettePlayer degraded from Very Good ($56.54) to Good ($45.24)
+Attempted to tune Bose 100 CDPlayer but couldn't change it's property which was false.
+JBL 700BT CDPlayer changed it's property from true to false.
+Fender Jazz Bass Saxophone changed it's property from false to true.
+Attempted to tune Fender Jazz Bass Mandolin but couldn't change it's property which was true.
+Gibson Les Paul Standard Mandolin changed it's property from true to false.
+Smooth Noodle Mandolin changed it's property from true to false.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Rickenbacker 4001S Flute changed it's property from true to false.
+Attempted to tune RocketRon 5000 RecordPlayer but couldn't change it's property which was true.
+Bose 100 RecordPlayer changed it's property from true to false.
+--------------------PLACING ORDERS--------------------
+The store purchased the One Step Forward Cassette which costs 16.27$
+The store purchased the One Step Forward Cassette which costs 25.66$
+The store purchased the Virtual Diva Cassette which costs 34.47$
+--------------------STORE BUSINESS--------------------
+-----
+Customer Andy Samberg left the store without buying the Shirt as there was no stock.
+-----
+Customer Tom Cruise bought a Used Bleed It Out PaperScore in Very Good condition at list price for $28.04
+No add-ons were bought.
+-----
+Customer Keanu Reeves bought a Used Kashmir CD in Poor condition at list price for $5.87
+No add-ons were bought.
+-----
+Customer Keanu Reeves bought a Used JBL 700BT CDPlayer in Poor condition at list price for $67.36
+No add-ons were bought.
+-----
+Customer Keanu Reeves bought a New Dark Zapper Bass in Good condition at list price for $52.24
+The stringed instrument Customer Keanu Reeves bought is not electric.
+Customer Keanu Reeves also bought a Used Morose 400 Strings in Excellent condition at list price for $27.73
+With add-ons, the total price was $79.97
+-----
+Customer Clint Eastwood left the store without buying the Cassette as there was no stock.
+-----
+Customer Jhonny Cage didn't want to sell the Harmonica at the offered price of $1.73
+Clerk Shaggy offered 10% extra.
+Customer Jhonny Cage sold a Used Lucille Harmonica in Fair condition at 10% extra for $1.91
+-----
+Customer Leonardo DiCaprio was turned away because we are no longer accepting clothing items.
+--------------------CLEANING STORE ITEMS--------------------
+Shaggy started cleaning the store.
+Shaggy damaged an item during cleaning.
+The Abstraction 300 Cable degraded from Very Good ($97.15) to Good ($77.72)
+Shaggy damaged an item during cleaning.
+The Abstraction 300 GigBag degraded from Excellent ($70.96) to Very Good ($56.77)
+Shaggy damaged an item during cleaning.
+The Bose 100 RecordPlayer degraded from Good ($29.96) to Fair ($23.97)
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Shaggy left the store for the day.
+
+Tracker: Day 15
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		8				3				9
+Velma		20				4				16
+Daphne		38				14				21
+
+Day 16:
+--------------------ARRIVAL--------------------
+Clerk Shaggy arrived at the store on day 16.
+New item: One Step Forward has arrived! Clerk Shaggyadded it to the stock.
+New item: One Step Forward has arrived! Clerk Shaggyadded it to the stock.
+New item: Virtual Diva has arrived! Clerk Shaggyadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Shaggy counted $2531.16 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Shaggy calculated the inventory value to be: $841.88
+--------------------MUSIC INVENTORY TUNING--------------------
+Attempted to tune Don Junior Guitar but couldn't change it's property which was false.
+Rickenbacker 4001S Harmonica changed it's property from true to false.
+Attempted to tune Lucille Harmonica but couldn't change it's property which was false.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was false.
+Attempted to tune Runner 200 CassettePlayer but couldn't change it's property which was false.
+AudioTechnica M50TH CassettePlayer changed it's property from false to true.
+Attempted to tune Bose 100 CDPlayer but couldn't change it's property which was false.
+Attempted to tune Fender Jazz Bass Saxophone but couldn't change it's property which was true.
+Fender Jazz Bass Mandolin changed it's property from true to false.
+Gibson Les Paul Standard Mandolin changed it's property from false to true.
+Smooth Noodle Mandolin changed it's property from false to true.
+Gibson Les Paul Standard Mandolin changed it's property from true to false.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Rickenbacker 4001S Flute changed it's property from false to true.
+Attempted to tune RocketRon 5000 RecordPlayer but couldn't change it's property which was true.
+Attempted to tune Bose 100 RecordPlayer but couldn't change it's property which was false.
+--------------------PLACING ORDERS--------------------
+The store purchased the Rickenbacker 4001S Bass which costs 37.02$
+The store purchased the Fender Jazz Bass Bass which costs 26.82$
+The store purchased the Don Junior Bass which costs 12.89$
+--------------------STORE BUSINESS--------------------
+-----
+Customer Leonardo DiCaprio bought a New Abstraction 300 PracticeAmp in Very Good condition at list price for $60.05
+No add-ons were bought.
+-----
+Customer Keanu Reeves didn't want to buy the PracticeAmp at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Keanu Reeves left the store without buying a PracticeAmp even at discounted price!
+-----
+Customer Keanu Reeves left the store without buying the Bass as there was no stock.
+-----
+Customer Andy Samberg didn't want to buy the GigBag at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Andy Samberg bought a Used Abstraction 300 GigBag in Very Good condition at 10% discount for $51.09
+No add-ons were bought.
+-----
+Customer Mark Wahlberg bought a Used Bose 100 CDPlayer in Fair condition at list price for $17.15
+No add-ons were bought.
+-----
+Customer Mark Wahlberg sold a New AudioTechnica M50TH MP3Player in Fair condition at offered price for $15.21
+-----
+Customer Mark Wahlberg didn't want to sell the GigBag at the offered price of $37.46
+Clerk Shaggy offered 10% extra.
+Customer Mark Wahlberg sold a Used Melancholy 50 GigBag in Excellent condition at 10% extra for $41.21
+--------------------CLEANING STORE ITEMS--------------------
+Shaggy started cleaning the store.
+Shaggy damaged an item during cleaning.
+The One Step Forward Cassette degraded from Good ($32.54) to Fair ($26.03)
+Shaggy damaged an item during cleaning.
+The One Step Forward Cassette degraded from Very Good ($51.33) to Good ($41.06)
+Shaggy damaged an item during cleaning.
+The Kashmir Vinyl degraded from Fair ($18.32) to Poor ($14.66)
+Shaggy damaged an item during cleaning.
+The JBL 700BT MP3Player broke and was removed from inventory.
+Shaggy damaged an item during cleaning.
+The AudioTechnica M50TH MP3Player degraded from Fair ($30.42) to Poor ($24.34)
+Shaggy damaged an item during cleaning.
+The Fender Jazz Bass Saxophone degraded from Very Good ($3.21) to Good ($2.57)
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Shaggy left the store for the day.
+
+Tracker: Day 16
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		11				5				15
+Velma		20				4				16
+Daphne		38				14				21
+
+Day 17:
+--------------------ARRIVAL--------------------
+Clerk Daphne arrived at the store on day 17.
+New item: Rickenbacker 4001S has arrived! Clerk Daphneadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Daphne counted $2526.32 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Daphne calculated the inventory value to be: $817.11
+--------------------MUSIC INVENTORY TUNING--------------------
+Don Junior Guitar changed it's property from false to true.
+Rickenbacker 4001S Bass changed it's property from false to true.
+Rickenbacker 4001S Harmonica changed it's property from false to true.
+Lucille Harmonica changed it's property from false to true.
+Attempted to tune AudioTechnica M50TH MP3Player but couldn't change it's property which was true.
+Runner 200 CassettePlayer changed it's property from false to true.
+Attempted to tune AudioTechnica M50TH CassettePlayer but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Saxophone but couldn't change it's property which was true.
+Fender Jazz Bass Mandolin changed it's property from false to true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Gibson Les Paul Standard Mandolin changed it's property from false to true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Flute but couldn't change it's property which was true.
+Attempted to tune RocketRon 5000 RecordPlayer but couldn't change it's property which was true.
+Bose 100 RecordPlayer changed it's property from false to true.
+--------------------PLACING ORDERS--------------------
+The store purchased the Runner 200 CDPlayer which costs 20.54$
+The store purchased the AudioTechnica M50TH CDPlayer which costs 6.72$
+The store purchased the Runner 200 CDPlayer which costs 40.47$
+--------------------STORE BUSINESS--------------------
+-----
+Customer Brad Pitt didn't want to buy the Cable at the list price.
+Clerk Daphne offered a 10% discount
+Customer Brad Pitt left the store without buying a Cable even at discounted price!
+-----
+Customer Clint Eastwood bought a New One Step Forward Cassette in Fair condition at list price for $26.03
+No add-ons were bought.
+-----
+Customer Brad Pitt left the store without buying the CDPlayer as there was no stock.
+-----
+Customer Tom Cruise bought a New Kashmir Vinyl in Poor condition at list price for $14.66
+No add-ons were bought.
+-----
+Customer Brad Pitt left the store without buying the CDPlayer as there was no stock.
+-----
+Customer Mark Wahlberg was turned away because we are no longer accepting clothing items.
+-----
+Customer Clint Eastwood sold a New Rickenbacker 4001S Flute in Good condition at offered price for $10.11
+--------------------CLEANING STORE ITEMS--------------------
+Daphne started cleaning the store.
+Daphne damaged an item during cleaning.
+The Beautiful 100 Cable degraded from Good ($32.05) to Fair ($25.64)
+Daphne damaged an item during cleaning.
+The Fender Jazz Bass Saxophone degraded from Good ($2.57) to Fair ($2.05)
+Daphne damaged an item during cleaning.
+The Smooth Noodle Mandolin degraded from Fair ($7.33) to Poor ($5.87)
+Daphne damaged an item during cleaning.
+The Abstraction 300 Strings degraded from Good ($81.34) to Fair ($65.07)
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Daphne left the store for the day.
+
+Tracker: Day 17
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		11				5				15
+Velma		20				4				16
+Daphne		40				15				25
+
+Day 18:
+--------------------ARRIVAL--------------------
+Clerk Daphne arrived at the store on day 18.
+New item: Don Junior has arrived! Clerk Daphneadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Daphne counted $2489.17 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Daphne calculated the inventory value to be: $809.52
+--------------------MUSIC INVENTORY TUNING--------------------
+Attempted to tune Don Junior Guitar but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Bass but couldn't change it's property which was true.
+Don Junior Bass changed it's property from false to true.
+Attempted to tune Rickenbacker 4001S Harmonica but couldn't change it's property which was true.
+Attempted to tune Lucille Harmonica but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH MP3Player but couldn't change it's property which was true.
+Attempted to tune Runner 200 CassettePlayer but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH CassettePlayer but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Saxophone but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Mandolin but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Flute but couldn't change it's property which was true.
+Rickenbacker 4001S Flute changed it's property from false to true.
+Attempted to tune RocketRon 5000 RecordPlayer but couldn't change it's property which was true.
+Attempted to tune Bose 100 RecordPlayer but couldn't change it's property which was true.
+--------------------PLACING ORDERS--------------------
+The store purchased the American Boy Vinyl which costs 10.21$
+The store purchased the American Boy Vinyl which costs 31.05$
+The store purchased the Thunder Vinyl which costs 13.43$
+The store purchased the Sony MX CDPlayer which costs 46.37$
+The store purchased the JBL 700BT CDPlayer which costs 27.53$
+The store purchased the Runner 200 CDPlayer which costs 46.62$
+--------------------STORE BUSINESS--------------------
+-----
+Customer Mark Wahlberg didn't want to buy the PracticeAmp at the list price.
+Clerk Daphne offered a 10% discount
+Customer Mark Wahlberg bought a New Melancholy 50 PracticeAmp in Good condition at 10% discount for $2.4
+No add-ons were bought.
+-----
+Customer Tom Cruise didn't want to buy the Flute at the list price.
+Clerk Daphne offered a 10% discount
+Customer Tom Cruise bought a Used Rickenbacker 4001S Flute in Poor condition at 10% discount for $38.75
+No add-ons were bought.
+-----
+Customer Keanu Reeves bought a Used Fender Jazz Bass Mandolin in Very Good condition at list price for $19.89
+The stringed instrument Customer Keanu Reeves bought is electric.
+Customer Keanu Reeves also bought a Used Beautiful 100 Cable in Fair condition at list price for $25.64
+Customer Keanu Reeves also bought a New Abstraction 300 Cable in Poor condition at list price for $18.82
+With add-ons, the total price was $64.35
+-----
+Customer Natalie Portman left the store without buying the Shirt as there was no stock.
+-----
+Customer Brad Pitt left the store without buying the CDPlayer as there was no stock.
+-----
+Customer Brad Pitt didn't want to buy the Mandolin at the list price.
+Clerk Daphne offered a 10% discount
+Customer Brad Pitt bought a New Smooth Noodle Mandolin in Fair condition at 10% discount for $18.34
+The stringed instrument Customer Brad Pitt bought is not electric.
+Customer Brad Pitt also bought a Used Morose 400 Cable in Very Good condition at list price for $93.22
+Customer Brad Pitt also bought a New Beautiful 100 Strings in Good condition at list price for $64.58
+With add-ons, the total price was $176.14
+-----
+Customer Natalie Portman left the store without buying the Hat as there was no stock.
+-----
+Customer Mark Wahlberg bought a Used Fender Jazz Bass Saxophone in Fair condition at list price for $2.05
+No add-ons were bought.
+-----
+Customer Leonardo DiCaprio didn't want to sell the PaperScore at the offered price of $12.83
+Clerk Daphne offered 10% extra.
+Customer Leonardo DiCaprio left the store without selling a PaperScore even at extra price!
+-----
+Customer Tom Cruise didn't want to sell the RecordPlayer at the offered price of $19.99
+Clerk Daphne offered 10% extra.
+Customer Tom Cruise sold a New Sony MX RecordPlayer in Excellent condition at 10% extra for $21.99
+-----
+Customer Brad Pitt sold a Used Dark Zapper Bass in Fair condition at offered price for $7.88
+--------------------CLEANING STORE ITEMS--------------------
+Daphne started cleaning the store.
+Daphne damaged an item during cleaning.
+The Dark Zapper Bass degraded from Fair ($15.75) to Poor ($12.6)
+Daphne damaged an item during cleaning.
+The Virtual Diva Cassette broke and was removed from inventory.
+Daphne damaged an item during cleaning.
+The Abstraction 300 Strings degraded from Fair ($65.07) to Poor ($52.06)
+Daphne damaged an item during cleaning.
+The Sony MX RecordPlayer degraded from Excellent ($43.98) to Very Good ($35.19)
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Daphne left the store for the day.
+
+Tracker: Day 18
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		11				5				15
+Velma		20				4				16
+Daphne		49				17				29
+
+Day 19:
+--------------------ARRIVAL--------------------
+Clerk Daphne arrived at the store on day 19.
+New item: Fender Jazz Bass has arrived! Clerk Daphneadded it to the stock.
+New item: Runner 200 has arrived! Clerk Daphneadded it to the stock.
+New item: AudioTechnica M50TH has arrived! Clerk Daphneadded it to the stock.
+New item: Runner 200 has arrived! Clerk Daphneadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Daphne counted $2567.78 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Daphne calculated the inventory value to be: $742.6
+--------------------MUSIC INVENTORY TUNING--------------------
+Attempted to tune Don Junior Guitar but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Bass but couldn't change it's property which was true.
+Attempted to tune Don Junior Bass but couldn't change it's property which was true.
+Dark Zapper Bass changed it's property from false to true.
+Fender Jazz Bass Bass changed it's property from false to true.
+Attempted to tune Rickenbacker 4001S Harmonica but couldn't change it's property which was true.
+Attempted to tune Lucille Harmonica but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH MP3Player but couldn't change it's property which was true.
+Attempted to tune Runner 200 CassettePlayer but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH CassettePlayer but couldn't change it's property which was true.
+Runner 200 CDPlayer changed it's property from false to true.
+AudioTechnica M50TH CDPlayer changed it's property from false to true.
+Runner 200 CDPlayer changed it's property from false to true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Flute but couldn't change it's property which was true.
+Attempted to tune RocketRon 5000 RecordPlayer but couldn't change it's property which was true.
+Attempted to tune Bose 100 RecordPlayer but couldn't change it's property which was true.
+Sony MX RecordPlayer changed it's property from false to true.
+--------------------PLACING ORDERS--------------------
+The store purchased the Kashmir Vinyl which costs 11.16$
+The store purchased the American Boy Vinyl which costs 29.4$
+The store purchased the Virtual Diva Vinyl which costs 3.49$
+The store purchased the Fender Jazz Bass Saxophone which costs 30.04$
+The store purchased the Dark Zapper Saxophone which costs 6.06$
+The store purchased the Don Junior Saxophone which costs 20.9$
+--------------------STORE BUSINESS--------------------
+-----
+Customer Andy Samberg left the store without buying the Bandana as there was no stock.
+-----
+Customer Leonardo DiCaprio left the store without buying the Bandana as there was no stock.
+-----
+Customer Mark Wahlberg bought a Used Runner 200 CassettePlayer in Excellent condition at list price for $53.95
+No add-ons were bought.
+-----
+Customer Jhonny Cage sold a New Muddywood Guitar in Very Good condition at offered price for $11.37
+-----
+Customer Andy Samberg didn't want to sell the MP3Player at the offered price of $9.01
+Clerk Daphne offered 10% extra.
+Customer Andy Samberg sold a Used JBL 700BT MP3Player in Very Good condition at 10% extra for $9.91
+--------------------CLEANING STORE ITEMS--------------------
+Daphne started cleaning the store.
+Daphne damaged an item during cleaning.
+The Abstraction 300 Cable degraded from Good ($77.72) to Fair ($62.18)
+Daphne damaged an item during cleaning.
+The One Step Forward Cassette degraded from Good ($41.06) to Fair ($32.85)
+Daphne damaged an item during cleaning.
+The RocketRon 5000 RecordPlayer broke and was removed from inventory.
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Daphne left the store for the day.
+
+Tracker: Day 19
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		11				5				15
+Velma		20				4				16
+Daphne		50				19				32
+
+Day 20:
+--------------------ARRIVAL--------------------
+Clerk Velma arrived at the store on day 20.
+New item: Kashmir has arrived! Clerk Velmaadded it to the stock.
+New item: American Boy has arrived! Clerk Velmaadded it to the stock.
+New item: Virtual Diva has arrived! Clerk Velmaadded it to the stock.
+New item: Sony MX has arrived! Clerk Velmaadded it to the stock.
+New item: JBL 700BT has arrived! Clerk Velmaadded it to the stock.
+New item: Runner 200 has arrived! Clerk Velmaadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Velma counted $2499.41 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Velma calculated the inventory value to be: $890.71
+--------------------MUSIC INVENTORY TUNING--------------------
+Don Junior Guitar changed it's property from true to false.
+Muddywood Guitar changed it's property from false to true.
+Attempted to tune Rickenbacker 4001S Bass but couldn't change it's property which was true.
+Attempted to tune Don Junior Bass but couldn't change it's property which was true.
+Attempted to tune Dark Zapper Bass but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Bass but couldn't change it's property which was true.
+Velma damaged an item during tuning.
+The Rickenbacker 4001S Harmonica degraded from Very Good ($79.94) to Good ($63.95)
+Attempted to tune Lucille Harmonica but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH MP3Player but couldn't change it's property which was true.
+JBL 700BT MP3Player changed it's property from false to true.
+Attempted to tune AudioTechnica M50TH CassettePlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH CDPlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Sony MX CDPlayer changed it's property from false to true.
+JBL 700BT CDPlayer changed it's property from false to true.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was false.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Rickenbacker 4001S Flute changed it's property from true to false.
+Attempted to tune Bose 100 RecordPlayer but couldn't change it's property which was true.
+Attempted to tune Sony MX RecordPlayer but couldn't change it's property which was true.
+--------------------PLACING ORDERS--------------------
+The store purchased the Rickenbacker 4001S Saxophone which costs 43.27$
+The store purchased the Lucille Saxophone which costs 25.59$
+The store purchased the Dark Zapper Saxophone which costs 29.47$
+--------------------STORE BUSINESS--------------------
+-----
+Customer Natalie Portman bought a New Rickenbacker 4001S Flute in Good condition at list price for $20.22
+No add-ons were bought.
+-----
+Customer Keanu Reeves left the store without buying the Hat as there was no stock.
+-----
+Customer Leonardo DiCaprio bought a New Virtual Diva Vinyl in Good condition at list price for $6.98
+No add-ons were bought.
+-----
+Customer Andy Samberg bought a Used One Step Forward Cassette in Fair condition at list price for $32.85
+No add-ons were bought.
+-----
+Customer Jhonny Cage bought a Used Abstraction 300 Cable in Fair condition at list price for $62.18
+No add-ons were bought.
+-----
+Customer Keanu Reeves left the store without buying the Shirt as there was no stock.
+-----
+Customer Andy Samberg bought a New Abstraction 300 Strings in Poor condition at list price for $52.06
+No add-ons were bought.
+-----
+Customer Natalie Portman sold a Used One Step Forward CD in Good condition at offered price for $12.71
+-----
+Customer Leonardo DiCaprio was turned away because we are no longer accepting clothing items.
+-----
+Customer Jhonny Cage sold a New Rickenbacker 4001S Bass in Excellent condition at offered price for $2.28
+-----
+Customer Leonardo DiCaprio didn't want to sell the CDPlayer at the offered price of $3.85
+Clerk Velma offered 10% extra.
+Customer Leonardo DiCaprio left the store without selling a CDPlayer even at extra price!
+--------------------CLEANING STORE ITEMS--------------------
+Velma started cleaning the store.
+Velma damaged an item during cleaning.
+The Runner 200 CDPlayer degraded from Excellent ($80.94) to Very Good ($64.76)
+Velma damaged an item during cleaning.
+The Runner 200 CDPlayer degraded from Very Good ($93.24) to Good ($74.59)
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Velma left the store for the day.
+
+Tracker: Day 20
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		11				5				15
+Velma		25				6				19
+Daphne		50				19				32
+
+Day 21:
+On Sunday, no one worked.
+
+Tracker: Day 21
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		11				5				15
+Velma		25				6				19
+Daphne		50				19				32
+
+Day 22:
+--------------------ARRIVAL--------------------
+Clerk Shaggy arrived at the store on day 22.
+New item: Fender Jazz Bass has arrived! Clerk Shaggyadded it to the stock.
+New item: Dark Zapper has arrived! Clerk Shaggyadded it to the stock.
+New item: Lucille has arrived! Clerk Shaggyadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Shaggy counted $2560.38 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Shaggy calculated the inventory value to be: $838.87
+--------------------MUSIC INVENTORY TUNING--------------------
+Attempted to tune Don Junior Guitar but couldn't change it's property which was false.
+Attempted to tune Muddywood Guitar but couldn't change it's property which was true.
+Rickenbacker 4001S Bass changed it's property from true to false.
+Don Junior Bass changed it's property from true to false.
+Attempted to tune Dark Zapper Bass but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Bass but couldn't change it's property which was true.
+Rickenbacker 4001S Bass changed it's property from false to true.
+Attempted to tune Rickenbacker 4001S Harmonica but couldn't change it's property which was false.
+Attempted to tune Lucille Harmonica but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH MP3Player but couldn't change it's property which was true.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was true.
+AudioTechnica M50TH CassettePlayer changed it's property from true to false.
+Runner 200 CDPlayer changed it's property from true to false.
+AudioTechnica M50TH CDPlayer changed it's property from true to false.
+Sony MX CDPlayer changed it's property from true to false.
+Attempted to tune JBL 700BT CDPlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was false.
+Attempted to tune Fender Jazz Bass Saxophone but couldn't change it's property which was false.
+Dark Zapper Saxophone changed it's property from false to true.
+Attempted to tune Lucille Saxophone but couldn't change it's property which was false.
+Gibson Les Paul Standard Mandolin changed it's property from true to false.
+Gibson Les Paul Standard Mandolin changed it's property from true to false.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Bose 100 RecordPlayer but couldn't change it's property which was true.
+Attempted to tune Sony MX RecordPlayer but couldn't change it's property which was true.
+--------------------PLACING ORDERS--------------------
+The store purchased the Morose 400 Cable which costs 14.77$
+The store purchased the Beautiful 100 Cable which costs 5.33$
+The store purchased the Melancholy 50 Cable which costs 13.71$
+The store purchased the Muddywood Flute which costs 17.43$
+The store purchased the Gibson Les Paul Standard Flute which costs 5.07$
+The store purchased the Guild Starfire Flute which costs 48.98$
+The store purchased the Morose 400 Strings which costs 6.76$
+The store purchased the Beautiful 100 Strings which costs 45.73$
+The store purchased the Abstraction 300 Strings which costs 47.29$
+The store purchased the Kashmir Cassette which costs 34.14$
+The store purchased the Thunder Cassette which costs 10.19$
+The store purchased the Get Lucky Cassette which costs 17.29$
+--------------------STORE BUSINESS--------------------
+-----
+Customer Jhonny Cage didn't want to buy the PaperScore at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Jhonny Cage bought a Used Swalla PaperScore in Poor condition at 10% discount for $52.99
+No add-ons were bought.
+-----
+Customer Andy Samberg didn't want to buy the PracticeAmp at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Andy Samberg bought a Used Melancholy 50 PracticeAmp in Excellent condition at 10% discount for $22.64
+No add-ons were bought.
+-----
+Customer Mark Wahlberg left the store without buying the Shirt as there was no stock.
+-----
+Customer Keanu Reeves left the store without buying the PracticeAmp as there was no stock.
+-----
+Customer Andy Samberg didn't want to buy the CDPlayer at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Andy Samberg bought a New Runner 200 CDPlayer in Very Good condition at 10% discount for $58.28
+No add-ons were bought.
+-----
+Customer Keanu Reeves didn't want to buy the GigBag at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Keanu Reeves bought a Used Abstraction 300 GigBag in Good condition at 10% discount for $54.29
+No add-ons were bought.
+-----
+Customer Leonardo DiCaprio didn't want to sell the Mandolin at the offered price of $23.37
+Clerk Shaggy offered 10% extra.
+Customer Leonardo DiCaprio left the store without selling a Mandolin even at extra price!
+-----
+Customer Leonardo DiCaprio sold a Used Bleed It Out CD in Poor condition at offered price for $9.95
+--------------------CLEANING STORE ITEMS--------------------
+Shaggy started cleaning the store.
+Shaggy damaged an item during cleaning.
+The Fender Jazz Bass Bass degraded from Good ($53.63) to Fair ($42.9)
+Shaggy damaged an item during cleaning.
+The One Step Forward CD degraded from Good ($25.42) to Fair ($20.33)
+Shaggy damaged an item during cleaning.
+The American Boy Vinyl broke and was removed from inventory.
+Shaggy damaged an item during cleaning.
+The AudioTechnica M50TH MP3Player broke and was removed from inventory.
+Shaggy damaged an item during cleaning.
+The Sony MX CDPlayer degraded from Fair ($92.75) to Poor ($74.2)
+Shaggy damaged an item during cleaning.
+The Runner 200 CDPlayer degraded from Good ($74.59) to Fair ($59.67)
+Shaggy damaged an item during cleaning.
+The Lucille Saxophone broke and was removed from inventory.
+Shaggy damaged an item during cleaning.
+The Gibson Les Paul Standard Mandolin degraded from Very Good ($52.59) to Good ($42.07)
+Shaggy damaged an item during cleaning.
+The Bose 100 RecordPlayer degraded from Fair ($23.97) to Poor ($19.17)
+Shaggy damaged an item during cleaning.
+The Sony MX RecordPlayer degraded from Very Good ($35.19) to Good ($28.15)
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Shaggy left the store for the day.
+
+Tracker: Day 22
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		15				6				25
+Velma		25				6				19
+Daphne		50				19				32
+
+Day 23:
+--------------------ARRIVAL--------------------
+Clerk Daphne arrived at the store on day 23.
+New item: Morose 400 has arrived! Clerk Daphneadded it to the stock.
+New item: Abstraction 300 has arrived! Clerk Daphneadded it to the stock.
+New item: Gibson Les Paul Standard has arrived! Clerk Daphneadded it to the stock.
+New item: Guild Starfire has arrived! Clerk Daphneadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Daphne counted $2471.95 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Daphne calculated the inventory value to be: $774.54
+--------------------MUSIC INVENTORY TUNING--------------------
+Don Junior Guitar changed it's property from false to true.
+Attempted to tune Muddywood Guitar but couldn't change it's property which was true.
+Rickenbacker 4001S Bass changed it's property from false to true.
+Don Junior Bass changed it's property from false to true.
+Attempted to tune Dark Zapper Bass but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Bass but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Bass but couldn't change it's property which was true.
+Rickenbacker 4001S Harmonica changed it's property from false to true.
+Attempted to tune Lucille Harmonica but couldn't change it's property which was true.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was true.
+AudioTechnica M50TH CassettePlayer changed it's property from false to true.
+Runner 200 CDPlayer changed it's property from false to true.
+AudioTechnica M50TH CDPlayer changed it's property from false to true.
+Attempted to tune JBL 700BT CDPlayer but couldn't change it's property which was true.
+Sony MX CDPlayer changed it's property from false to true.
+Runner 200 CDPlayer changed it's property from false to true.
+Fender Jazz Bass Saxophone changed it's property from false to true.
+Attempted to tune Dark Zapper Saxophone but couldn't change it's property which was true.
+Gibson Les Paul Standard Mandolin changed it's property from false to true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Gibson Les Paul Standard Mandolin changed it's property from false to true.
+Gibson Les Paul Standard Flute changed it's property from false to true.
+Guild Starfire Flute changed it's property from false to true.
+Attempted to tune Bose 100 RecordPlayer but couldn't change it's property which was true.
+Attempted to tune Sony MX RecordPlayer but couldn't change it's property which was true.
+--------------------PLACING ORDERS--------------------
+The store purchased the Virtual Diva Cassette which costs 2.01$
+The store purchased the Get Lucky Cassette which costs 44.54$
+The store purchased the Virtual Diva Cassette which costs 20.46$
+The store purchased the Melancholy 50 PracticeAmp which costs 1.09$
+The store purchased the Beautiful 100 PracticeAmp which costs 34.62$
+The store purchased the Abstraction 300 PracticeAmp which costs 31.45$
+--------------------STORE BUSINESS--------------------
+-----
+Customer Mark Wahlberg didn't want to buy the Bass at the list price.
+Clerk Daphne offered a 10% discount
+Customer Mark Wahlberg bought a Used Dark Zapper Bass in Poor condition at 10% discount for $11.34
+The stringed instrument Customer Mark Wahlberg bought is not electric.
+Customer Mark Wahlberg also bought a Used Abstraction 300 Strings in Good condition at list price for $94.57
+With add-ons, the total price was $105.92
+-----
+Customer Clint Eastwood left the store without buying the Shirt as there was no stock.
+-----
+Customer Mark Wahlberg left the store without buying the Hat as there was no stock.
+-----
+Customer Mark Wahlberg was turned away because we are no longer accepting clothing items.
+-----
+Customer Jhonny Cage didn't want to sell the CDPlayer at the offered price of $1.85
+Clerk Daphne offered 10% extra.
+Customer Jhonny Cage sold a Used Sony MX CDPlayer in Poor condition at 10% extra for $2.03
+-----
+Customer Keanu Reeves didn't want to sell the Strings at the offered price of $34.65
+Clerk Daphne offered 10% extra.
+Customer Keanu Reeves left the store without selling a Strings even at extra price!
+-----
+Customer Jhonny Cage sold a Used JBL 700BT CDPlayer in Excellent condition at offered price for $4.14
+--------------------CLEANING STORE ITEMS--------------------
+Daphne started cleaning the store.
+Daphne damaged an item during cleaning.
+The Rickenbacker 4001S Bass degraded from Fair ($74.04) to Poor ($59.23)
+Daphne damaged an item during cleaning.
+The Fender Jazz Bass Saxophone degraded from Fair ($60.08) to Poor ($48.06)
+Daphne damaged an item during cleaning.
+The Dark Zapper Saxophone degraded from Very Good ($12.12) to Good ($9.69)
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Daphne left the store for the day.
+
+Tracker: Day 23
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		15				6				25
+Velma		25				6				19
+Daphne		52				21				35
+
+Day 24:
+--------------------ARRIVAL--------------------
+Clerk Daphne arrived at the store on day 24.
+New item: Beautiful 100 has arrived! Clerk Daphneadded it to the stock.
+New item: Melancholy 50 has arrived! Clerk Daphneadded it to the stock.
+New item: Morose 400 has arrived! Clerk Daphneadded it to the stock.
+New item: Beautiful 100 has arrived! Clerk Daphneadded it to the stock.
+New item: Muddywood has arrived! Clerk Daphneadded it to the stock.
+New item: Get Lucky has arrived! Clerk Daphneadded it to the stock.
+New item: Get Lucky has arrived! Clerk Daphneadded it to the stock.
+New item: Beautiful 100 has arrived! Clerk Daphneadded it to the stock.
+New item: Abstraction 300 has arrived! Clerk Daphneadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Daphne counted $2437.52 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Daphne calculated the inventory value to be: $942.4
+--------------------MUSIC INVENTORY TUNING--------------------
+Attempted to tune Don Junior Guitar but couldn't change it's property which was true.
+Attempted to tune Muddywood Guitar but couldn't change it's property which was true.
+Attempted to tune Don Junior Bass but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Bass but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Bass but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Bass but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Harmonica but couldn't change it's property which was true.
+Attempted to tune Lucille Harmonica but couldn't change it's property which was true.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH CassettePlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH CDPlayer but couldn't change it's property which was true.
+Attempted to tune JBL 700BT CDPlayer but couldn't change it's property which was true.
+Attempted to tune Sony MX CDPlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Sony MX CDPlayer changed it's property from false to true.
+JBL 700BT CDPlayer changed it's property from false to true.
+Attempted to tune Fender Jazz Bass Saxophone but couldn't change it's property which was true.
+Attempted to tune Dark Zapper Saxophone but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Smooth Noodle Mandolin but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Flute but couldn't change it's property which was true.
+Attempted to tune Guild Starfire Flute but couldn't change it's property which was true.
+Muddywood Flute changed it's property from false to true.
+Attempted to tune Bose 100 RecordPlayer but couldn't change it's property which was true.
+Attempted to tune Sony MX RecordPlayer but couldn't change it's property which was true.
+--------------------PLACING ORDERS--------------------
+--------------------STORE BUSINESS--------------------
+-----
+Customer Keanu Reeves didn't want to buy the Mandolin at the list price.
+Clerk Daphne offered a 10% discount
+Customer Keanu Reeves bought a Used Smooth Noodle Mandolin in Poor condition at 10% discount for $5.28
+The stringed instrument Customer Keanu Reeves bought is electric.
+No add-ons were bought.
+-----
+Customer Keanu Reeves bought a Used Beautiful 100 PracticeAmp in Very Good condition at list price for $69.23
+No add-ons were bought.
+-----
+Customer Mark Wahlberg didn't want to buy the RecordPlayer at the list price.
+Clerk Daphne offered a 10% discount
+Customer Mark Wahlberg bought a New Bose 100 RecordPlayer in Poor condition at 10% discount for $17.26
+No add-ons were bought.
+-----
+Customer Mark Wahlberg left the store without buying the Shirt as there was no stock.
+-----
+Customer Brad Pitt didn't want to buy the Cassette at the list price.
+Clerk Daphne offered a 10% discount
+Customer Brad Pitt bought a Used Get Lucky Cassette in Good condition at 10% discount for $31.12
+No add-ons were bought.
+-----
+Customer Leonardo DiCaprio didn't want to buy the Cable at the list price.
+Clerk Daphne offered a 10% discount
+Customer Leonardo DiCaprio left the store without buying a Cable even at discounted price!
+-----
+Customer Keanu Reeves was turned away because we are no longer accepting clothing items.
+-----
+Customer Andy Samberg sold a Used Dark Zapper Saxophone in Very Good condition at offered price for $1.44
+-----
+Customer Brad Pitt sold a New Don Junior Saxophone in Very Good condition at offered price for $33.93
+--------------------CLEANING STORE ITEMS--------------------
+Daphne started cleaning the store.
+Daphne damaged an item during cleaning.
+The Don Junior Guitar degraded from Fair ($87.75) to Poor ($70.2)
+Daphne damaged an item during cleaning.
+The Morose 400 Cable degraded from Very Good ($29.54) to Good ($23.63)
+Daphne damaged an item during cleaning.
+The Bleed It Out CD broke and was removed from inventory.
+Daphne damaged an item during cleaning.
+The JBL 700BT MP3Player degraded from Very Good ($19.81) to Good ($15.85)
+Daphne damaged an item during cleaning.
+The Runner 200 CDPlayer degraded from Very Good ($41.09) to Good ($32.87)
+Daphne damaged an item during cleaning.
+The JBL 700BT CDPlayer degraded from Excellent ($55.06) to Very Good ($44.04)
+Daphne damaged an item during cleaning.
+The Fender Jazz Bass Saxophone broke and was removed from inventory.
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Daphne left the store for the day.
+
+Tracker: Day 24
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		15				6				25
+Velma		25				6				19
+Daphne		56				23				42
+
+Day 25:
+--------------------ARRIVAL--------------------
+Clerk Shaggy arrived at the store on day 25.
+New item: Kashmir has arrived! Clerk Shaggyadded it to the stock.
+New item: Thunder has arrived! Clerk Shaggyadded it to the stock.
+New item: Virtual Diva has arrived! Clerk Shaggyadded it to the stock.
+New item: Virtual Diva has arrived! Clerk Shaggyadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Shaggy counted $2525.04 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Shaggy calculated the inventory value to be: $933.11
+--------------------MUSIC INVENTORY TUNING--------------------
+Attempted to tune Muddywood Guitar but couldn't change it's property which was true.
+Attempted to tune Don Junior Guitar but couldn't change it's property which was true.
+Attempted to tune Don Junior Bass but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Bass but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Bass but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Bass but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Harmonica but couldn't change it's property which was true.
+Lucille Harmonica changed it's property from true to false.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH CassettePlayer but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH CDPlayer but couldn't change it's property which was true.
+Attempted to tune Sony MX CDPlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Attempted to tune Sony MX CDPlayer but couldn't change it's property which was true.
+JBL 700BT CDPlayer changed it's property from true to false.
+Runner 200 CDPlayer changed it's property from true to false.
+JBL 700BT CDPlayer changed it's property from true to false.
+Dark Zapper Saxophone changed it's property from true to false.
+Dark Zapper Saxophone changed it's property from true to false.
+Shaggy damaged an item during tuning.
+The Don Junior Saxophone degraded from Very Good ($67.85) to Good ($54.28)
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Gibson Les Paul Standard Mandolin changed it's property from true to false.
+Gibson Les Paul Standard Flute changed it's property from true to false.
+Guild Starfire Flute changed it's property from true to false.
+Attempted to tune Muddywood Flute but couldn't change it's property which was true.
+Sony MX RecordPlayer changed it's property from true to false.
+--------------------PLACING ORDERS--------------------
+--------------------STORE BUSINESS--------------------
+-----
+Customer Jhonny Cage didn't want to buy the RecordPlayer at the list price.
+Clerk Shaggy offered a 10% discount
+Customer Jhonny Cage bought a New Sony MX RecordPlayer in Good condition at 10% discount for $25.34
+No add-ons were bought.
+-----
+Customer Brad Pitt left the store without buying the Shirt as there was no stock.
+-----
+Customer Natalie Portman didn't want to sell the Harmonica at the offered price of $13.76
+Clerk Shaggy offered 10% extra.
+Customer Natalie Portman sold a New Guild Starfire Harmonica in Good condition at 10% extra for $15.14
+--------------------CLEANING STORE ITEMS--------------------
+Shaggy started cleaning the store.
+Shaggy damaged an item during cleaning.
+The Rickenbacker 4001S Bass broke and was removed from inventory.
+Shaggy damaged an item during cleaning.
+The Virtual Diva Cassette degraded from Good ($40.93) to Fair ($32.74)
+Shaggy damaged an item during cleaning.
+The AudioTechnica M50TH CDPlayer degraded from Excellent ($13.43) to Very Good ($10.74)
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Shaggy left the store for the day.
+
+Tracker: Day 25
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		16				7				29
+Velma		25				6				19
+Daphne		56				23				42
+
+Day 26:
+Daphne was sick on day 25
+--------------------ARRIVAL--------------------
+Clerk Velma arrived at the store on day 26.
+New item: Melancholy 50 has arrived! Clerk Velmaadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Velma counted $2535.23 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Velma calculated the inventory value to be: $890.32
+--------------------MUSIC INVENTORY TUNING--------------------
+Attempted to tune Muddywood Guitar but couldn't change it's property which was true.
+Attempted to tune Don Junior Guitar but couldn't change it's property which was true.
+Attempted to tune Don Junior Bass but couldn't change it's property which was true.
+Attempted to tune Rickenbacker 4001S Bass but couldn't change it's property which was true.
+Velma damaged an item during tuning.
+The Fender Jazz Bass Bass degraded from Fair ($42.9) to Poor ($34.32)
+Attempted to tune Rickenbacker 4001S Harmonica but couldn't change it's property which was true.
+Lucille Harmonica changed it's property from false to true.
+Attempted to tune Guild Starfire Harmonica but couldn't change it's property which was true.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH CassettePlayer but couldn't change it's property which was true.
+Attempted to tune Sony MX CDPlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Attempted to tune Sony MX CDPlayer but couldn't change it's property which was true.
+JBL 700BT CDPlayer changed it's property from false to true.
+Runner 200 CDPlayer changed it's property from false to true.
+JBL 700BT CDPlayer changed it's property from false to true.
+AudioTechnica M50TH CDPlayer changed it's property from true to false.
+Attempted to tune Dark Zapper Saxophone but couldn't change it's property which was false.
+Dark Zapper Saxophone changed it's property from false to true.
+Don Junior Saxophone changed it's property from false to true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Gibson Les Paul Standard Mandolin changed it's property from false to true.
+Gibson Les Paul Standard Flute changed it's property from false to true.
+Guild Starfire Flute changed it's property from false to true.
+Muddywood Flute changed it's property from true to false.
+--------------------PLACING ORDERS--------------------
+The store purchased the Sony MX RecordPlayer which costs 42.9$
+The store purchased the RocketRon 5000 RecordPlayer which costs 3.11$
+The store purchased the AudioTechnica M50TH RecordPlayer which costs 18.35$
+--------------------STORE BUSINESS--------------------
+-----
+Customer Tom Cruise bought a Used Morose 400 Strings in Very Good condition at list price for $13.52
+No add-ons were bought.
+-----
+Customer Jhonny Cage left the store without buying the Hat as there was no stock.
+-----
+Customer Leonardo DiCaprio bought a Used AudioTechnica M50TH CassettePlayer in Good condition at list price for $45.24
+No add-ons were bought.
+-----
+Customer Tom Cruise didn't want to buy the Guitar at the list price.
+Clerk Velma offered a 10% discount
+Customer Tom Cruise bought a Used Don Junior Guitar in Poor condition at 10% discount for $63.18
+The stringed instrument Customer Tom Cruise bought is electric.
+Customer Tom Cruise also bought a Used Melancholy 50 GigBag in Excellent condition at list price for $82.42
+Customer Tom Cruise also bought a Used Beautiful 100 Strings in Poor condition at list price for $91.46
+Customer Tom Cruise also wanted to buy a Strings but there was no stock.
+Customer Tom Cruise also wanted to buy a Strings but there was no stock.
+With add-ons, the total price was $237.06
+-----
+Customer Natalie Portman bought a Used Kashmir Vinyl in Good condition at list price for $22.31
+No add-ons were bought.
+-----
+Customer Brad Pitt left the store without buying the Shirt as there was no stock.
+-----
+Customer Andy Samberg bought a New Muddywood Guitar in Very Good condition at list price for $22.73
+The stringed instrument Customer Andy Samberg bought is not electric.
+Customer Andy Samberg also bought a New Melancholy 50 PracticeAmp in Poor condition at list price for $2.17
+Customer Andy Samberg also wanted to buy a Strings but there was no stock.
+With add-ons, the total price was $24.9
+-----
+Customer Clint Eastwood didn't want to sell the Cassette at the offered price of $5.07
+Clerk Velma offered 10% extra.
+Customer Clint Eastwood sold a New Thunder Cassette in Poor condition at 10% extra for $5.57
+-----
+Customer Tom Cruise was turned away because we are no longer accepting clothing items.
+-----
+Customer Natalie Portman sold a Used One Step Forward Cassette in Very Good condition at offered price for $30.41
+--------------------CLEANING STORE ITEMS--------------------
+Velma started cleaning the store.
+Velma damaged an item during cleaning.
+The Guild Starfire Harmonica degraded from Good ($30.28) to Fair ($24.22)
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Velma left the store for the day.
+
+Tracker: Day 26
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		16				7				29
+Velma		33				8				21
+Daphne		56				23				42
+
+Day 27:
+--------------------ARRIVAL--------------------
+Clerk Velma arrived at the store on day 27.
+--------------------REGISTER CHECK--------------------
+Clerk Velma counted $2777.93 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Velma calculated the inventory value to be: $736.85
+--------------------MUSIC INVENTORY TUNING--------------------
+Attempted to tune Don Junior Bass but couldn't change it's property which was true.
+Rickenbacker 4001S Bass changed it's property from true to false.
+Fender Jazz Bass Bass changed it's property from false to true.
+Attempted to tune Rickenbacker 4001S Harmonica but couldn't change it's property which was true.
+Lucille Harmonica changed it's property from true to false.
+Attempted to tune Guild Starfire Harmonica but couldn't change it's property which was true.
+Attempted to tune JBL 700BT MP3Player but couldn't change it's property which was true.
+Sony MX CDPlayer changed it's property from true to false.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Attempted to tune Sony MX CDPlayer but couldn't change it's property which was true.
+JBL 700BT CDPlayer changed it's property from true to false.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Attempted to tune JBL 700BT CDPlayer but couldn't change it's property which was true.
+AudioTechnica M50TH CDPlayer changed it's property from false to true.
+Dark Zapper Saxophone changed it's property from false to true.
+Attempted to tune Dark Zapper Saxophone but couldn't change it's property which was true.
+Attempted to tune Don Junior Saxophone but couldn't change it's property which was true.
+Gibson Les Paul Standard Mandolin changed it's property from true to false.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Gibson Les Paul Standard Flute changed it's property from true to false.
+Attempted to tune Guild Starfire Flute but couldn't change it's property which was true.
+Muddywood Flute changed it's property from false to true.
+--------------------PLACING ORDERS--------------------
+The store purchased the Lucille Guitar which costs 22.64$
+The store purchased the Lucille Guitar which costs 35.51$
+The store purchased the Don Junior Guitar which costs 17.13$
+The store purchased the American Boy Vinyl which costs 7.39$
+The store purchased the Virtual Diva Vinyl which costs 23.33$
+The store purchased the Thunder Vinyl which costs 35.78$
+The store purchased the AudioTechnica M50TH CassettePlayer which costs 39.0$
+The store purchased the Sony MX CassettePlayer which costs 29.02$
+The store purchased the AudioTechnica M50TH CassettePlayer which costs 42.81$
+The store purchased the Beautiful 100 Strings which costs 16.69$
+The store purchased the Abstraction 300 Strings which costs 21.92$
+The store purchased the Melancholy 50 Strings which costs 5.39$
+The store purchased the Morose 400 GigBag which costs 46.4$
+The store purchased the Morose 400 GigBag which costs 46.08$
+The store purchased the Melancholy 50 GigBag which costs 43.41$
+The store purchased the Bose 100 RecordPlayer which costs 4.7$
+The store purchased the Sony MX RecordPlayer which costs 40.61$
+The store purchased the Bose 100 RecordPlayer which costs 34.49$
+--------------------STORE BUSINESS--------------------
+-----
+Customer Mark Wahlberg bought a New Rickenbacker 4001S Harmonica in Good condition at list price for $63.95
+No add-ons were bought.
+-----
+Customer Brad Pitt didn't want to buy the MP3Player at the list price.
+Clerk Velma offered a 10% discount
+Customer Brad Pitt bought a Used JBL 700BT MP3Player in Good condition at 10% discount for $14.26
+No add-ons were bought.
+-----
+Customer Brad Pitt left the store without buying the Shirt as there was no stock.
+-----
+Customer Keanu Reeves didn't want to sell the Vinyl at the offered price of $11.08
+Clerk Velma offered 10% extra.
+Customer Keanu Reeves sold a New Swalla Vinyl in Fair condition at 10% extra for $12.19
+--------------------CLEANING STORE ITEMS--------------------
+Velma started cleaning the store.
+Velma damaged an item during cleaning.
+The Don Junior Bass degraded from Very Good ($25.77) to Good ($20.62)
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Velma left the store for the day.
+
+Tracker: Day 27
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		16				7				29
+Velma		35				9				22
+Daphne		56				23				42
+
+Day 28:
+On Sunday, no one worked.
+
+Tracker: Day 28
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		16				7				29
+Velma		35				9				22
+Daphne		56				23				42
+
+Day 29:
+--------------------ARRIVAL--------------------
+Clerk Daphne arrived at the store on day 29.
+New item: Lucille has arrived! Clerk Daphneadded it to the stock.
+New item: Don Junior has arrived! Clerk Daphneadded it to the stock.
+New item: Virtual Diva has arrived! Clerk Daphneadded it to the stock.
+New item: AudioTechnica M50TH has arrived! Clerk Daphneadded it to the stock.
+New item: AudioTechnica M50TH has arrived! Clerk Daphneadded it to the stock.
+New item: Beautiful 100 has arrived! Clerk Daphneadded it to the stock.
+New item: Morose 400 has arrived! Clerk Daphneadded it to the stock.
+New item: Sony MX has arrived! Clerk Daphneadded it to the stock.
+New item: RocketRon 5000 has arrived! Clerk Daphneadded it to the stock.
+New item: AudioTechnica M50TH has arrived! Clerk Daphneadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Daphne counted $2331.65 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Daphne calculated the inventory value to be: $984.07
+--------------------MUSIC INVENTORY TUNING--------------------
+Lucille Guitar changed it's property from false to true.
+Don Junior Guitar changed it's property from false to true.
+Rickenbacker 4001S Bass changed it's property from false to true.
+Attempted to tune Fender Jazz Bass Bass but couldn't change it's property which was true.
+Attempted to tune Don Junior Bass but couldn't change it's property which was true.
+Lucille Harmonica changed it's property from false to true.
+Attempted to tune Guild Starfire Harmonica but couldn't change it's property which was true.
+AudioTechnica M50TH CassettePlayer changed it's property from false to true.
+AudioTechnica M50TH CassettePlayer changed it's property from false to true.
+Sony MX CDPlayer changed it's property from false to true.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Attempted to tune Sony MX CDPlayer but couldn't change it's property which was true.
+JBL 700BT CDPlayer changed it's property from false to true.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Attempted to tune JBL 700BT CDPlayer but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH CDPlayer but couldn't change it's property which was true.
+Attempted to tune Dark Zapper Saxophone but couldn't change it's property which was true.
+Attempted to tune Dark Zapper Saxophone but couldn't change it's property which was true.
+Attempted to tune Don Junior Saxophone but couldn't change it's property which was true.
+Gibson Les Paul Standard Mandolin changed it's property from false to true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Gibson Les Paul Standard Flute changed it's property from false to true.
+Attempted to tune Guild Starfire Flute but couldn't change it's property which was true.
+Attempted to tune Muddywood Flute but couldn't change it's property which was true.
+Sony MX RecordPlayer changed it's property from false to true.
+RocketRon 5000 RecordPlayer changed it's property from false to true.
+AudioTechnica M50TH RecordPlayer changed it's property from false to true.
+--------------------PLACING ORDERS--------------------
+The store purchased the AudioTechnica M50TH MP3Player which costs 14.18$
+The store purchased the RocketRon 5000 MP3Player which costs 30.49$
+The store purchased the Sony MX MP3Player which costs 42.38$
+--------------------STORE BUSINESS--------------------
+-----
+Customer Brad Pitt bought a Used Lucille Guitar in Good condition at list price for $71.01
+The stringed instrument Customer Brad Pitt bought is not electric.
+No add-ons were bought.
+-----
+Customer Andy Samberg didn't want to buy the Saxophone at the list price.
+Clerk Daphne offered a 10% discount
+Customer Andy Samberg bought a New Dark Zapper Saxophone in Good condition at 10% discount for $8.73
+No add-ons were bought.
+-----
+Customer Leonardo DiCaprio didn't want to buy the Vinyl at the list price.
+Clerk Daphne offered a 10% discount
+Customer Leonardo DiCaprio left the store without buying a Vinyl even at discounted price!
+-----
+Customer Jhonny Cage sold a Used Beautiful 100 Strings in Poor condition at offered price for $7.99
+-----
+Customer Andy Samberg was turned away because we are no longer accepting clothing items.
+--------------------CLEANING STORE ITEMS--------------------
+Daphne started cleaning the store.
+Daphne damaged an item during cleaning.
+The Kashmir Cassette broke and was removed from inventory.
+Daphne damaged an item during cleaning.
+The Virtual Diva Cassette degraded from Fair ($32.74) to Poor ($26.19)
+Daphne damaged an item during cleaning.
+The Lucille Harmonica degraded from Fair ($3.81) to Poor ($3.05)
+Daphne damaged an item during cleaning.
+The Morose 400 GigBag broke and was removed from inventory.
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Daphne left the store for the day.
+
+Tracker: Day 29
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		16				7				29
+Velma		35				9				22
+Daphne		58				24				46
+
+Day 30:
+--------------------ARRIVAL--------------------
+Clerk Daphne arrived at the store on day 30.
+New item: Lucille has arrived! Clerk Daphneadded it to the stock.
+New item: American Boy has arrived! Clerk Daphneadded it to the stock.
+New item: Thunder has arrived! Clerk Daphneadded it to the stock.
+New item: RocketRon 5000 has arrived! Clerk Daphneadded it to the stock.
+New item: Abstraction 300 has arrived! Clerk Daphneadded it to the stock.
+New item: Melancholy 50 has arrived! Clerk Daphneadded it to the stock.
+New item: Morose 400 has arrived! Clerk Daphneadded it to the stock.
+New item: Melancholy 50 has arrived! Clerk Daphneadded it to the stock.
+--------------------REGISTER CHECK--------------------
+Clerk Daphne counted $2316.35 in the register.
+--------------------INVENTORY STOCK VALUE CHECK--------------------
+Clerk Daphne calculated the inventory value to be: $1083.69
+--------------------MUSIC INVENTORY TUNING--------------------
+Attempted to tune Don Junior Guitar but couldn't change it's property which was true.
+Lucille Guitar changed it's property from false to true.
+Attempted to tune Rickenbacker 4001S Bass but couldn't change it's property which was true.
+Attempted to tune Fender Jazz Bass Bass but couldn't change it's property which was true.
+Attempted to tune Don Junior Bass but couldn't change it's property which was true.
+Attempted to tune Guild Starfire Harmonica but couldn't change it's property which was true.
+Attempted to tune Lucille Harmonica but couldn't change it's property which was true.
+RocketRon 5000 MP3Player changed it's property from false to true.
+Attempted to tune AudioTechnica M50TH CassettePlayer but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH CassettePlayer but couldn't change it's property which was true.
+Attempted to tune Sony MX CDPlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Attempted to tune Sony MX CDPlayer but couldn't change it's property which was true.
+Attempted to tune JBL 700BT CDPlayer but couldn't change it's property which was true.
+Attempted to tune Runner 200 CDPlayer but couldn't change it's property which was true.
+Attempted to tune JBL 700BT CDPlayer but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH CDPlayer but couldn't change it's property which was true.
+Attempted to tune Dark Zapper Saxophone but couldn't change it's property which was true.
+Attempted to tune Don Junior Saxophone but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Mandolin but couldn't change it's property which was true.
+Attempted to tune Gibson Les Paul Standard Flute but couldn't change it's property which was true.
+Attempted to tune Guild Starfire Flute but couldn't change it's property which was true.
+Attempted to tune Muddywood Flute but couldn't change it's property which was true.
+Attempted to tune Sony MX RecordPlayer but couldn't change it's property which was true.
+Attempted to tune RocketRon 5000 RecordPlayer but couldn't change it's property which was true.
+Attempted to tune AudioTechnica M50TH RecordPlayer but couldn't change it's property which was true.
+--------------------PLACING ORDERS--------------------
+--------------------STORE BUSINESS--------------------
+-----
+Customer Mark Wahlberg didn't want to buy the Strings at the list price.
+Clerk Daphne offered a 10% discount
+Customer Mark Wahlberg bought a Used Abstraction 300 Strings in Fair condition at 10% discount for $39.46
+No add-ons were bought.
+-----
+Customer Keanu Reeves left the store without buying the Bandana as there was no stock.
+-----
+Customer Jhonny Cage bought a Used AudioTechnica M50TH CassettePlayer in Good condition at list price for $78.01
+No add-ons were bought.
+-----
+Customer Mark Wahlberg didn't want to sell the Bass at the offered price of $8.2
+Clerk Daphne offered 10% extra.
+Customer Mark Wahlberg sold a Used Rickenbacker 4001S Bass in Fair condition at 10% extra for $9.01
+-----
+Customer Keanu Reeves was turned away because we are no longer accepting clothing items.
+-----
+Customer Tom Cruise sold a Used Bleed It Out Cassette in Fair condition at offered price for $1.37
+-----
+Customer Brad Pitt sold a New Beautiful 100 GigBag in Poor condition at offered price for $2.74
+--------------------CLEANING STORE ITEMS--------------------
+Daphne started cleaning the store.
+Daphne damaged an item during cleaning.
+The Melancholy 50 Cable degraded from Very Good ($27.42) to Good ($21.93)
+Daphne damaged an item during cleaning.
+The Sony MX RecordPlayer degraded from Good ($85.8) to Fair ($68.64)
+--------------------CLOSING THE STORE FOR THE DAY--------------------
+Daphne left the store for the day.
+
+Tracker: Day 30
+Clerk	Items Sold	Items Purchased		Items Damaged
+Shaggy		16				7				29
+Velma		35				9				22
+Daphne		60				27				48
+
+--- FINAL SUMMARY ---
+The amount of money in the register at the end of 30 days was $2420.69
+
+The amount of money added to the register from going to the bank during this time was $1000.0
+
+The items remaining in inventory were as follows:
+Don Junior: $17.13
+Lucille: $22.64
+Rickenbacker 4001S: $2.28
+Fender Jazz Bass: $26.82
+Don Junior: $12.89
+Rickenbacker 4001S: $9.01
+Beautiful 100: $5.33
+Morose 400: $14.77
+Melancholy 50: $13.71
+Swalla: $44.43
+One Step Forward: $12.71
+Swalla: $12.19
+Virtual Diva: $23.33
+American Boy: $7.39
+Thunder: $35.78
+Virtual Diva: $46.87
+RocketRon 5000: $30.49
+AudioTechnica M50TH: $42.81
+Gibson Les Paul Standard: $11.62
+Gibson Les Paul Standard: $32.87
+Gibson Les Paul Standard: $5.07
+Guild Starfire: $48.98
+Muddywood: $17.43
+Beautiful 100: $16.69
+Beautiful 100: $7.99
+Melancholy 50: $5.39
+Get Lucky: $44.54
+Thunder: $10.19
+Virtual Diva: $2.01
+Thunder: $5.57
+One Step Forward: $30.41
+Virtual Diva: $20.46
+Bleed It Out: $1.37
+Guild Starfire: $15.14
+Lucille: $1.91
+Sony MX: $46.37
+Runner 200: $46.62
+Sony MX: $2.03
+JBL 700BT: $4.14
+Runner 200: $20.54
+JBL 700BT: $27.53
+AudioTechnica M50TH: $6.72
+Abstraction 300: $31.45
+Dark Zapper: $1.44
+Don Junior: $33.93
+Morose 400: $46.4
+Melancholy 50: $43.41
+Beautiful 100: $2.74
+RocketRon 5000: $3.11
+AudioTechnica M50TH: $18.35
+Sony MX: $42.9
+
+The total value of all these items is $1035.89
+
+The sold items during this period were as follows:
+On day 1, a Melancholy 50 sold for $14.11
+On day 1, a Tommy Hilfiger 200 sold for $2.22
+On day 1, a Thunder sold for $32.84
+On day 1, a Runner 200 sold for $89.91
+On day 1, a One Step Forward sold for $82.79
+On day 1, a Morose 400 sold for $34.3
+On day 1, a JBL 700BT sold for $8.97
+On day 1, a Abstraction 300 sold for $62.65
+On day 2, a Smooth Noodle sold for $19.67
+On day 2, a United Colors of Benetton Shiner sold for $66.41
+On day 2, a Runner 200 sold for $84.17
+On day 2, a AudioTechnica M50TH sold for $91.2
+On day 2, a Runner 200 sold for $47.06
+On day 3, a Abstraction 300 sold for $79.55
+On day 3, a Rickenbacker 4001S sold for $20.42
+On day 3, a Tommy Hilfiger 200 sold for $11.6
+On day 3, a Thunder sold for $31.0
+On day 3, a Lucille sold for $89.48
+On day 3, a Gibson Les Paul Standard sold for $23.74
+On day 3, a Tommy Hilfiger 200 sold for $12.17
+On day 3, a Melancholy 50 sold for $16.38
+On day 3, a Tommy Hilfiger 200 sold for $23.22
+On day 3, a Fender Jazz Bass sold for $93.56
+On day 4, a Gibson Les Paul Standard sold for $47.44
+On day 4, a United Colors of Benetton Shiner sold for $15.21
+On day 4, a RocketRon 5000 sold for $15.68
+On day 5, a Abstraction 300 sold for $9.97
+On day 5, a Rickenbacker 4001S sold for $17.85
+On day 5, a Muddywood sold for $44.98
+On day 5, a Thunder sold for $67.57
+On day 5, a Sony MX sold for $35.23
+On day 5, a Abstraction 300 sold for $86.59
+On day 5, a Morose 400 sold for $57.83
+On day 5, a Guild Starfire sold for $57.9
+On day 5, a Virtual Diva sold for $51.31
+On day 5, a LVMH Red Dragon sold for $82.17
+On day 6, a Thunder sold for $19.8
+On day 6, a Swalla sold for $43.17
+On day 6, a Beautiful 100 sold for $71.5
+On day 6, a Don Junior sold for $47.06
+On day 6, a Smooth Noodle sold for $16.66
+On day 8, a United Colors of Benetton Shiner sold for $24.97
+On day 8, a JBL 700BT sold for $35.25
+On day 8, a LVMH Red Dragon sold for $53.32
+On day 9, a Virtual Diva sold for $8.77
+On day 9, a Lucille sold for $17.07
+On day 9, a Morose 400 sold for $45.94
+On day 9, a Morose 400 sold for $2.29
+On day 10, a Beautiful 100 sold for $73.39
+On day 10, a Morose 400 sold for $45.11
+On day 10, a Smooth Noodle sold for $17.78
+On day 10, a Sony MX sold for $93.13
+On day 11, a Don Junior sold for $72.29
+On day 11, a Smooth Noodle sold for $16.29
+On day 11, a Abstraction 300 sold for $23.61
+On day 12, a Dark Zapper sold for $55.0
+On day 12, a Swalla sold for $51.22
+On day 12, a Runner 200 sold for $89.69
+On day 12, a Melancholy 50 sold for $46.9
+On day 13, a Thunder sold for $4.46
+On day 13, a Abstraction 300 sold for $97.44
+On day 15, a Dark Zapper sold for $52.24
+On day 15, a Kashmir sold for $5.87
+On day 15, a Bleed It Out sold for $28.04
+On day 15, a Morose 400 sold for $27.73
+On day 15, a JBL 700BT sold for $67.36
+On day 16, a Bose 100 sold for $17.15
+On day 16, a Abstraction 300 sold for $60.05
+On day 16, a Abstraction 300 sold for $51.09
+On day 17, a Kashmir sold for $14.66
+On day 17, a One Step Forward sold for $26.03
+On day 18, a Beautiful 100 sold for $25.64
+On day 18, a Abstraction 300 sold for $18.82
+On day 18, a Morose 400 sold for $93.22
+On day 18, a Beautiful 100 sold for $64.58
+On day 18, a Rickenbacker 4001S sold for $38.75
+On day 18, a Fender Jazz Bass sold for $19.89
+On day 18, a Smooth Noodle sold for $18.34
+On day 18, a Melancholy 50 sold for $2.4
+On day 18, a Fender Jazz Bass sold for $2.05
+On day 19, a Runner 200 sold for $53.95
+On day 20, a Abstraction 300 sold for $62.18
+On day 20, a Virtual Diva sold for $6.98
+On day 20, a Abstraction 300 sold for $52.06
+On day 20, a Rickenbacker 4001S sold for $20.22
+On day 20, a One Step Forward sold for $32.85
+On day 22, a Swalla sold for $52.99
+On day 22, a Runner 200 sold for $58.28
+On day 22, a Melancholy 50 sold for $22.64
+On day 22, a Abstraction 300 sold for $54.29
+On day 23, a Dark Zapper sold for $11.34
+On day 23, a Abstraction 300 sold for $94.57
+On day 24, a Smooth Noodle sold for $5.28
+On day 24, a Get Lucky sold for $31.12
+On day 24, a Beautiful 100 sold for $69.23
+On day 24, a Bose 100 sold for $17.26
+On day 25, a Sony MX sold for $25.34
+On day 26, a Don Junior sold for $63.18
+On day 26, a Muddywood sold for $22.73
+On day 26, a Kashmir sold for $22.31
+On day 26, a AudioTechnica M50TH sold for $45.24
+On day 26, a Morose 400 sold for $13.52
+On day 26, a Beautiful 100 sold for $91.46
+On day 26, a Melancholy 50 sold for $2.17
+On day 26, a Melancholy 50 sold for $82.42
+On day 27, a JBL 700BT sold for $14.26
+On day 27, a Rickenbacker 4001S sold for $63.95
+On day 29, a Lucille sold for $71.01
+On day 29, a Dark Zapper sold for $8.73
+On day 30, a AudioTechnica M50TH sold for $78.01
+On day 30, a Abstraction 300 sold for $39.46
+
+The total value of all the sold items was $4622.22
