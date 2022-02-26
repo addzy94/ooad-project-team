@@ -185,7 +185,7 @@ public class Clerk extends Staff implements Subject{
         setMessage("3 new items were ordered on day " + s.getDay());
     }
 
-    public void OpenTheStore(Store s) {
+    public void OpenTheStoreAuto(Store s) {
 
         System.out.println("--------------------STORE BUSINESS--------------------");
 
@@ -219,6 +219,38 @@ public class Clerk extends Staff implements Subject{
             System.out.println("-----");
             SellItemTransaction(s, customerBroughtItem, customerName);
         }
+        setMessage(numberItemsBought + " items were bought by the store.");
+        setMessage(numberOfItemsSold + " items were sold by the store.");
+    }
+
+    // TODO: create a OpenTheStoreCustom method that handles for the extra condition
+    public void OpenTheStoreCustom(Store s) {
+
+        System.out.println("--------------------STORE BUSINESS--------------------");
+
+        numberItemsBought = 0;
+        numberOfItemsSold = 0;
+
+        // TODO: implement command here
+        String command = "";
+        String customerName = "";
+        CommandController remote = new CommandController();
+        BuyFromClerkCommand buyFromClerk = new BuyFromClerkCommand(this, s, customerName);
+        SellToClerkCommand sellToClerk = new SellToClerkCommand(this, s, customerName);
+
+        // If the customer selects buying an item from the clerk
+//        if(command.equals("1")){
+//            remote.setCommand(buyFromClerk);
+//            remote.buttonPressed();
+//        }
+
+        // If the customer selects selling an item to the clerk
+//        if(command.equals("2")){
+//            remote.setCommand(sellToClerk);
+//            remote.buttonPressed();
+//        }
+
+
         setMessage(numberItemsBought + " items were bought by the store.");
         setMessage(numberOfItemsSold + " items were sold by the store.");
     }

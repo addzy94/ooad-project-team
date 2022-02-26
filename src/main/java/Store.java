@@ -268,7 +268,12 @@ public class Store {
                 ArrayList<String> zeroStockItems = c.DoInventory(this);
                 c.PlaceAnOrder(this, zeroStockItems);
 
-                c.OpenTheStore(this);
+                // Run OpenTheStoreAuto for 10-30 days
+                // if(TODO...)
+                c.OpenTheStoreAuto(this);
+                //TODO: On the next day, run OpenTheStoreCustom method so that the process involves taking parameters entered by the user manually
+                // else(c.OpenTheStoreCustom(this))
+
                 c.CleanStore(this);
                 c.LeaveTheStore(this);
                 c.removeObserver(day_logger);
