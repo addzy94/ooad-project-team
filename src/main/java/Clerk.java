@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Scanner;
 
 /*
 --- INHERITANCE ---
@@ -234,22 +235,71 @@ public class Clerk extends Staff implements Subject{
         // TODO: implement command here
         String command = "";
         String customerName = "";
+        // Prepare commands
         CommandController remote = new CommandController();
+
         BuyFromClerkCommand buyFromClerk = new BuyFromClerkCommand(this, s, customerName);
         SellToClerkCommand sellToClerk = new SellToClerkCommand(this, s, customerName);
+        AskClerkNameCommand askClerkName = new AskClerkNameCommand(this);
+        AskClerkTimeCommand askClerkTime = new AskClerkTimeCommand(this);
+        BuyCustomGuitarKitFromClerkCommand buyCustomGuitarKitFromClerk= new BuyCustomGuitarKitFromClerkCommand(this);
+        SwitchStore switchStore = new SwitchStore(this);
 
-        // If the customer selects buying an item from the clerk
-//        if(command.equals("1")){
-//            remote.setCommand(buyFromClerk);
-//            remote.buttonPressed();
+        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+        System.out.println("Enter Your Choice:");
+        command = myObj.nextLine();  // Read user input
+        // Run the interactions until the user enters 7 to quit.
+//        while(! command.equals("7")){
+//            // If the customer selects switching a store
+//            if(command.equals("1")){
+//                remote.setCommand(switchStore);
+//                remote.buttonPressed();
+//            }
+//
+//            // If the customer selects asking for clerk's name
+//            else if(command.equals("2")){
+//                remote.setCommand(askClerkName);
+//                remote.buttonPressed();
+//            }
+//
+//            // If the customer selects asking the clerk what time it is
+//            else if(command.equals("3")){
+//                remote.setCommand(askClerkTime);
+//                remote.buttonPressed();
+//            }
+//
+//            // If the customer selects selling an item to the clerk
+//            else if(command.equals("4")){
+//                remote.setCommand(sellToClerk);
+//                remote.buttonPressed();
+//            }
+//
+//            // If the customer selects buying an item from the clerk
+//            else if(command.equals("5")){
+//                remote.setCommand(buyFromClerk);
+//                remote.buttonPressed();
+//            }
+//
+//            // If the customer selects buying a custom guitar git from the clerk
+//            else if(command.equals("6")){
+//                remote.setCommand(buyCustomGuitarKitFromClerk);
+//                remote.buttonPressed();
+//            }
+//
+//            // If the customer selects ending the interactions
+//            else if(command.equals("7")){
+//                System.out.println("Customer decided to end the interactions.");
+//            }
+//
+//            // Otherwise wrong command, please try again
+//            else{
+//                System.out.println("Wrong command! Please try again!");
+//            }
+//
+//            // Asking for the next input
+//            System.out.println("Please Enter Your Command:");
+//            command = myObj.nextLine();
 //        }
-
-        // If the customer selects selling an item to the clerk
-//        if(command.equals("2")){
-//            remote.setCommand(sellToClerk);
-//            remote.buttonPressed();
-//        }
-
 
         setMessage(numberItemsBought + " items were bought by the store.");
         setMessage(numberOfItemsSold + " items were sold by the store.");
