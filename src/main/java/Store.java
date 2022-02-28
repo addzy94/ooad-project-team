@@ -53,22 +53,21 @@ public class Store {
         Clerk velma = new Clerk("Velma", 0, 5, new ManualTuningStrategy());
         Clerk daphne = new Clerk("Daphne", 0, 10, new ElectronicTuningStrategy());
 
-        staff.add(shaggy);
-        staff.add(velma);
-        staff.add(daphne);
 
         //Store Tracker and Day Logger both implement an Observer pattern, of which Clerk is the Subject
 
         store_tracker = new Tracker();
-        store_tracker.addStaff(shaggy);
-        store_tracker.addStaff(velma);
-        store_tracker.addStaff(daphne);
-
-        shaggy.registerObserver(store_tracker);
-        velma.registerObserver(store_tracker);
-        daphne.registerObserver(store_tracker);
+        hireClerk(shaggy);
+        hireClerk(velma);
+        hireClerk(daphne);
 
         day_logger = new Logger();
+    }
+
+    public void hireClerk(Clerk c) {
+        staff.add(c);
+        store_tracker.addStaff(c);
+        c.registerObserver(store_tracker);
     }
 
     public void generateInventory(int numberOfObjects, ArrayList<String> itemTypes, boolean isStartDay) {
@@ -356,7 +355,7 @@ public class Store {
         if (chanceOfSick <= 0.1) {
             Clerk c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
             c.setSick(true);
-            System.out.println(c.getName() + "was sick on day " + this.getDay());
+            System.out.println(c.getName() + " was sick on day " + this.getDay());
         }
         
     }

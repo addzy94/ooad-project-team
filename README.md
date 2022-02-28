@@ -27,6 +27,9 @@ For getting common global functionality we make use of **Constants.java** and **
 Both of which are static classes.
 
 ---
+**JUnit tests**:
+
+To run the JUnit tests, please run **src/test/java/StoreTest.java**
 
 ---
 
@@ -65,5 +68,6 @@ ArrayList - https://www.w3schools.com/java/java_arraylist.asp<br>
 HashMap - https://www.geeksforgeeks.org/java-util-hashmap-in-java-with-examples/<br>
 Super - https://www.geeksforgeeks.org/super-keyword/<br>
 Static - https://www.geeksforgeeks.org/static-class-in-java/<br>
+FileWriter - https://www.w3schools.com/java/java_files_create.asp<br>
 
  
