@@ -248,9 +248,9 @@ public class Store {
 
     public void run(int numberOfDays) {
         /*
-        Runs the Store for 'numberOfDays' Days.
+        Runs the Store for 'numberOfDays' Days, plus an extra day for the user to play the role of a customer..
          */
-        for(int i = 1; i <= numberOfDays; i++) {
+        for(int i = 1; i <= numberOfDays + 1; i++) {
             day_logger.instantiate(i);
             System.out.println("Day "+i+":");
             int dayOfTheWeek = i % 7;
@@ -269,10 +269,14 @@ public class Store {
                 c.PlaceAnOrder(this, zeroStockItems);
 
                 // Run OpenTheStoreAuto for 10-30 days
-                // if(TODO...)
-                c.OpenTheStoreAuto(this);
-                //TODO: On the next day, run OpenTheStoreCustom method so that the process involves taking parameters entered by the user manually
-                // else(c.OpenTheStoreCustom(this))
+                if(i <= numberOfDays){
+                    c.OpenTheStoreAuto(this);
+                }
+                // TODO: On the next day, run OpenTheStoreCustom method so that the process involves taking parameters entered by the user manually
+                // Run the special OpenStore method for the last day
+                else{
+                    c.OpenTheStoreCustom(this);
+                }
 
                 c.CleanStore(this);
                 c.LeaveTheStore(this);

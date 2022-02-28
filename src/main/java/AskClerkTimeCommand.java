@@ -5,5 +5,6 @@ public class AskClerkTimeCommand implements Command{
     }
     public void execute(){
         System.out.println("The Clerk " + clerk.getName() + " said: Now the time is " + java.time.LocalTime.now());
+        System.out.println();
     }
 }

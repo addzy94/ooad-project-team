@@ -7,8 +7,9 @@ public class SwitchStore implements Command{
         this.clerk = clerk;
     }
     public void execute(){
-        System.out.println("--------------------ASK FOR CLERK'S NAME COMMAND--------------------");
-        System.out.println("The customer wanted to know the Clerk's name. ");
-        System.out.println("The Clerk's name is: " + clerk.getName() + ".");
+        // both stores run
+        // one of clerk has been set with Active
+        // when switchStore been executed, set the current clerk to Non active
+        // switch to the other clerk, together with the other store's inventory list
     }
 }

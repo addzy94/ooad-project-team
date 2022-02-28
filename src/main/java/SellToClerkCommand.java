@@ -14,8 +14,9 @@ public class SellToClerkCommand implements Command{
         // User can decide whether to accept the buying price the clerk offers at the steps of the sale
 
         // Generate one required item for the customer
-        String customerBroughtItem = Helper.customerRequirements(Constants.CLASS_NAMES, 1).get(1);
+        String customerBroughtItem = Helper.customerRequirements(Constants.CLASS_NAMES, 1).get(0);
         System.out.println("-----");
         clerk.SellItemTransaction(store, customerBroughtItem, customerName);
+        System.out.println();
     }
 }

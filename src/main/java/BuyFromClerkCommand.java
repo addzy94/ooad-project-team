@@ -9,7 +9,7 @@ public class BuyFromClerkCommand implements Command{
     }
     public void execute(){
         //TODO: buy from the clerk
-        // Generate an inventory item that the user wants to buy - normal inventory??
+        // Generate an inventory item that the user wants to buy
         // Buy this item type from the clerk
         // User can decide whether to accept the selling price the clerk offers at the steps of the sale
 
@@ -17,5 +17,6 @@ public class BuyFromClerkCommand implements Command{
         String customerRequiredItem = Helper.customerRequirements(Constants.CLASS_NAMES, 1).get(0);
         System.out.println("-----");
         clerk.BuyItemTransaction(store, customerRequiredItem, customerName);
+        System.out.println();
     }
 }
