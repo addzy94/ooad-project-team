@@ -479,6 +479,212 @@ public class Clerk extends Staff implements Subject{
         return itemChosen;
     }
 
+    public void BuyItemTransactionCustom(Store s, String itemType, String customerName) {
+
+        HashMap<String, ArrayList<Item>> inventory = s.getInventory();
+        HashMap<String, ArrayList<Item>> soldLogBook = s.getSoldLogBook();
+
+        ArrayList<Item> itemsOfRequiredType = inventory.get(itemType);
+        int sizeOfRequiredItems = itemsOfRequiredType.size();
+
+        if (sizeOfRequiredItems == 0) {
+            System.out.println("Customer " + customerName + " left the store without buying the " + itemType + " as there was no stock.");
+        }
+        else {
+
+            // Get a random item, and it's list price from the store
+            Item itemChosen = itemsOfRequiredType.get(Helper.random.nextInt(sizeOfRequiredItems));
+            double listPrice = itemChosen.getListPrice();
+
+
+            // New way for generating initialSellDecision for Project 4:
+
+            boolean initialBuyDecision = false; // Initialize the sell decision here
+
+            System.out.println("Do you want to buy this " + itemChosen.getName() + " at the list price: $" + listPrice + "?");
+            System.out.println("1. Yes!");
+            System.out.println("2. No!");
+
+            String command = "";
+            Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+            System.out.println("Please Enter The Corresponding Number Of Your Choice:");
+            command = myObj.nextLine();  // Read user input
+
+            while(! command.equals("1") && ! command.equals("2")){
+                // Asking for the next input if they haven't input 1 or 2
+                System.out.println("Invalid Input! Please Re-Enter It:");
+                command = myObj.nextLine();
+            }
+
+            if(command.equals("1")){
+                initialBuyDecision = true;
+            }
+            else{
+                initialBuyDecision = false;
+            }
+
+            //Back to the usual code used in Project 3
+
+            if (!initialBuyDecision) {
+                System.out.println("Customer " + customerName + " didn't want to buy the " + itemType + " at the list price.");
+                System.out.println("Clerk " + this.getName() + " offered a 10% discount");
+
+                // New way for generating initialSellDecision for Project 4:
+
+                boolean discountBuyDecision = false; // Initialize the sell decision here
+
+                System.out.println("Do you want to buy this " + itemChosen.getName() + " at the discounted price: $" + listPrice * 0.9 + "?");
+                System.out.println("1. Yes!");
+                System.out.println("2. No!");
+
+                System.out.println("Please Enter The Corresponding Number Of Your Choice:");
+                command = myObj.nextLine();  // Read user input
+
+                while(! command.equals("1") && ! command.equals("2")){
+                    // Asking for the next input if they haven't input 1 or 2
+                    System.out.println("Invalid Input! Please Re-Enter It:");
+                    command = myObj.nextLine();
+                }
+
+                if(command.equals("1")){
+                    discountBuyDecision = true;
+                }
+                else{
+                    discountBuyDecision = false;
+                }
+
+                // Back to normal code used in Project 3
+                if (!discountBuyDecision) {
+                    System.out.println("Customer " + customerName + " didn't buy a " + itemType + " even at discounted price!");
+                }
+                else {
+                    itemChosen.setDaySold(s.getDay());
+                    itemChosen.setSalePrice(.9 * listPrice);
+                    System.out.println("Customer " + customerName + " bought a " +
+                            Constants.NEW_OR_USED_MAPPING.get(itemChosen.getIsNew()) + " " +
+                            itemChosen.getName() + " " + itemType + " in " +
+                            Constants.CONDITION_MAPPING.get(itemChosen.getCondition()) +
+                            " condition at 10% discount for $" + Helper.round(itemChosen.getSalePrice()));
+
+                    // Add that item to the soldLogBook
+                    s.removeFromRegistry(inventory, itemType, itemChosen);
+                    s.addToRegistry(soldLogBook, itemType, itemChosen);
+                    numberOfItemsSold = numberOfItemsSold + 1;
+
+                    /*
+                    Call OptionalSell method, which contains applying decorator pattern to itemChosen for modifying its sale price
+                    if the customer is going to buy more than one item at once
+                    */
+
+                    // Get initial item price
+                    double initialItemPrice = itemChosen.getSalePrice();
+
+                    itemChosen = OptionalBuy(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
+
+                    if (itemChosen.getSalePrice() > initialItemPrice) {
+                        System.out.println("With add-ons, the total price was $" + Helper.round(itemChosen.getSalePrice()));
+                    }
+                    else { System.out.println("No add-ons were bought."); }
+                    s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice()); // Sets the register amount to the sum of the prices of all the items in the transaction
+
+                }
+            }
+            else {
+                itemChosen.setDaySold(s.getDay());
+                itemChosen.setSalePrice(listPrice);
+                System.out.println("Customer " + customerName + " bought a " +
+                        Constants.NEW_OR_USED_MAPPING.get(itemChosen.getIsNew()) + " " +
+                        itemChosen.getName() + " " + itemType + " in " +
+                        Constants.CONDITION_MAPPING.get(itemChosen.getCondition()) +
+                        " condition at list price for $" + Helper.round(itemChosen.getSalePrice()));
+
+                // Add that item to the soldLogBook
+                s.removeFromRegistry(inventory, itemType, itemChosen);
+                s.addToRegistry(soldLogBook, itemType, itemChosen);
+                numberOfItemsSold = numberOfItemsSold + 1;
+
+                /*
+                Call OptionalSell method, which contains applying decorator pattern to itemChosen for modifying its sale price
+                if the customer is going to buy more than one item at once
+                */
+                double initialItemPrice = itemChosen.getSalePrice();
+
+                itemChosen = OptionalBuyCustom(s, itemChosen, customerName); // Run optional sell method for adding the item's sale price under special scenario.
+
+                if (itemChosen.getSalePrice() > initialItemPrice) {
+                    System.out.println("With add-ons, the total price was $" + Helper.round(itemChosen.getSalePrice()));
+                }
+                else { System.out.println("No add-ons were bought."); }
+                s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice()); // Sets the register amount to the sum of the prices of all the items in the transaction
+
+            }
+
+        }
+    }
+
+    public Item OptionalBuyCustom(Store s, Item itemChosen, String customerName){
+        /*
+        Applies decorator pattern to itemChosen for modifying its sale price
+        if the customer is going to buy more than one item at once
+        */
+
+        // Extra condition built for Project 3:
+        if (itemChosen.getDaySold() != -1){ // If item chosen already been sold
+            if (itemChosen instanceof Stringed){ // If a stringed instrument is sold, there is a chance of selling accessories as well.
+                boolean isElectric = ((Stringed) itemChosen).getIsElectric();
+
+                if (isElectric){ // If the stringed instrument is electric, there is:
+                    System.out.println("The stringed instrument Customer " + customerName + " bought is electric.");
+                    int possible_result = Helper.random.nextInt(100);
+                    if (possible_result < 20){ // a 20% chance of selling a single GigBag
+                        itemChosen = new SellAccessory(itemChosen, s, "GigBag", customerName, this);
+                    }
+                    possible_result = Helper.random.nextInt(100); // re-generate another result
+                    if (possible_result < 25){ // a 25% chance of selling a single PracticeAmp
+                        itemChosen = new SellAccessory(itemChosen, s, "PracticeAmp", customerName, this);
+                    }
+                    possible_result = Helper.random.nextInt(100); // re-generate another result
+                    if (possible_result < 30){ // a 30% chance of selling 1 or 2 Cables
+                        int numberOfTimes = Helper.random.nextInt(2); // generate a value that is either 0 or 1
+                        for (int i = numberOfTimes; i < 2; i++){ // Run the loop for 1 or 2 times
+                            itemChosen = new SellAccessory(itemChosen, s, "Cable", customerName, this);
+                        }
+                    }
+                    possible_result = Helper.random.nextInt(100); // re-generate another result
+                    if (possible_result < 40){ // a 40% chance of selling 1 to 3 Strings.
+                        int numberOfTimes = Helper.random.nextInt(3); // generate a value that is either 0, 1, or 2
+                        for (int i = numberOfTimes; i < 3; i++){ // Run the loop for 1 or 2 or 3 times
+                            itemChosen = new SellAccessory(itemChosen, s, "Strings", customerName, this);
+                            //System.out.println("Now price is: "+ itemChosen.getSalePrice());
+                        }
+                    }
+                }
+
+                else{ // If the Stringed instrument is not electric, there is:
+                    System.out.println("The stringed instrument Customer " + customerName + " bought is not electric.");
+                    // Each of these chances of an additional sale is reduced by 10%.
+                    int possible_result = Helper.random.nextInt(100);
+                    if (possible_result < 10){ // a 10% chance of selling a single GigBag
+                        itemChosen = new SellAccessory(itemChosen, s, "GigBag", customerName, this);
+                    }
+                    possible_result = Helper.random.nextInt(100); // re-generate another result
+                    if (possible_result < 15){ // a 15% chance of selling a single PracticeAmp
+                        itemChosen = new SellAccessory(itemChosen, s, "PracticeAmp", customerName, this);
+                    }
+                    possible_result = Helper.random.nextInt(100); // re-generate another result
+                    if (possible_result < 20){ // a 20% chance of selling 1 or 2 Cables
+                        itemChosen = new SellAccessory(itemChosen, s, "Cable", customerName, this);
+                    }
+                    possible_result = Helper.random.nextInt(100); // re-generate another result
+                    if (possible_result < 30){ // a 30% chance of selling 1 to 3 Strings.
+                        itemChosen = new SellAccessory(itemChosen, s, "Strings", customerName, this);
+                    }
+                }
+            }
+        }
+        return itemChosen;
+    }
+
     public boolean[] GenerateBuyDecision(Item itemChosen){
         boolean initialBuyDecision = (Helper.random.nextInt(2) == 0); // 50% of chance of buying an item by default
         boolean discountBuyDecision = (Helper.random.nextInt(4) < 3); // 50% + 25% = 75%, 3/4 of chance of buying the item with discount by default

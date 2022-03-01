@@ -16,7 +16,7 @@ public class BuyFromClerkCommand implements Command{
         // Generate one required item for the customer
         String customerRequiredItem = Helper.customerRequirements(Constants.CLASS_NAMES, 1).get(0);
         System.out.println("-----");
-        clerk.BuyItemTransaction(store, customerRequiredItem, customerName);
+        clerk.BuyItemTransactionCustom(store, customerRequiredItem, customerName);
         System.out.println();
     }
 }
