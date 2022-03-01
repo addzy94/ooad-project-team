@@ -602,6 +602,141 @@ public class Clerk extends Staff implements Subject{
         }
     }
 
+    public void SellItemTransactionCustom(Store s, String itemType, String customerName) {
+
+        HashMap<String, ArrayList<Item>> inventory = s.getInventory();
+        Item customerBroughtItem = s.createItem(itemType);
+
+        // If the customer is selling a clothing item type
+        if (Constants.CLOTHING_ITEM_TYPES.contains(itemType)) {
+            // If we no longer hold stock of any clothing item
+            if (HaveClothingStock(s, Constants.CLOTHING_ITEM_TYPES) == false) {
+                System.out.println("Customer " + customerName + " was turned away because we are no longer accepting clothing items.");
+                return;
+            }
+        }
+
+        int condition = customerBroughtItem.getCondition();
+        boolean isNew = customerBroughtItem.getIsNew();
+        double offeredPrice = Helper.priceEstimator(isNew, condition);
+
+        /*
+         New condition for Project 3:
+         if the item is from customer
+         randomly set condition for equalized/tuned/adjusted as true/false
+        */
+        if (customerBroughtItem instanceof Player){
+            ((Player) customerBroughtItem).setIsEqualized(Helper.random.nextBoolean());
+        }
+        else if (customerBroughtItem instanceof Stringed){
+            ((Stringed) customerBroughtItem).setIsTuned(Helper.random.nextBoolean());
+        }
+        else if (customerBroughtItem instanceof Wind){
+            ((Wind) customerBroughtItem).setIsAdjusted(Helper.random.nextBoolean());
+        }
+
+        double regAmount = s.getRegisterAmount();
+
+        if (offeredPrice <= regAmount) {
+
+            // New way for generating initialSellDecision for Project 4:
+
+            boolean initialSellDecision = false; // Initialize the sell decision here
+
+            System.out.println("Do you want to sell this " + customerBroughtItem.getName() + " at the offered price: $" + offeredPrice + "?");
+            System.out.println("1. Yes!");
+            System.out.println("2. No!");
+
+            String command = "";
+            Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+            System.out.println("Please Enter The Corresponding Number Of Your Choice:");
+            command = myObj.nextLine();  // Read user input
+
+            while(! command.equals("1") && ! command.equals("2")){
+                // Asking for the next input if they haven't input 1 or 2
+                System.out.println("Invalid Input! Please Re-Enter It:");
+                command = myObj.nextLine();
+            }
+
+            if(command.equals("1")){
+                initialSellDecision = true;
+            }
+            else{
+                initialSellDecision = false;
+            }
+
+
+            // Continue using code from Project 3:
+
+            if (!initialSellDecision && (offeredPrice * 1.1) <= regAmount) {
+                System.out.println("Customer " + customerName + " didn't want to sell the " + itemType + " at the offered price of $" + Helper.round(offeredPrice));
+                System.out.println("Clerk " + this.getName() + " offered 10% extra.");
+
+
+                // New way for generating extraSellDecision for Project 4:
+
+                boolean extraSellDecision = false; // Intialize the extra sell decision here
+
+                System.out.println("Do you want to sell this " + customerBroughtItem.getName() + " at the newest offered price: $" + offeredPrice * 1.1 + "?");
+                System.out.println("1. Yes!");
+                System.out.println("2. No!");
+
+                System.out.println("Please Enter The Corresponding Number Of Your Choice:");
+                command = myObj.nextLine();  // Read user input
+
+                while(! command.equals("1") && ! command.equals("2")){
+                    // Asking for the next input if they haven't input 1 or 2
+                    System.out.println("Invalid Input! Please Re-Enter It:");
+                    command = myObj.nextLine();
+                }
+
+                if(command.equals("1")){
+                    extraSellDecision = true;
+                }
+                else{
+                    extraSellDecision = false;
+                }
+
+
+                // Continue using code from Project 3:
+                if (!extraSellDecision) {
+                    System.out.println("Customer " + customerName + " didn't sell a " + itemType + " even at extra price!");
+                }
+                else {
+                    customerBroughtItem.setDayArrived(s.getDay());
+                    customerBroughtItem.setPurchasePrice(offeredPrice * 1.1);
+                    customerBroughtItem.setListPrice(offeredPrice * 1.1 * 2);
+                    System.out.println("Customer " + customerName + " sold a " +
+                            Constants.NEW_OR_USED_MAPPING.get(customerBroughtItem.getIsNew()) + " " +
+                            customerBroughtItem.getName() + " " + itemType + " in " +
+                            Constants.CONDITION_MAPPING.get(customerBroughtItem.getCondition()) +
+                            " condition at 10% extra for $" + Helper.round(customerBroughtItem.getPurchasePrice()));
+
+                    s.setRegisterAmount(s.getRegisterAmount() - customerBroughtItem.getPurchasePrice());
+                    s.addToRegistry(inventory, itemType, customerBroughtItem);
+                    numberItemsBought = numberItemsBought + 1;
+                }
+            }
+            else {
+                customerBroughtItem.setDayArrived(s.getDay());
+                customerBroughtItem.setPurchasePrice(offeredPrice);
+                customerBroughtItem.setListPrice(offeredPrice * 2);
+                System.out.println("Customer " + customerName + " sold a " +
+                        Constants.NEW_OR_USED_MAPPING.get(customerBroughtItem.getIsNew()) + " " +
+                        customerBroughtItem.getName() + " " + itemType + " in " +
+                        Constants.CONDITION_MAPPING.get(customerBroughtItem.getCondition()) +
+                        " condition at offered price for $" + Helper.round(customerBroughtItem.getPurchasePrice()));
+
+                s.setRegisterAmount(s.getRegisterAmount() - customerBroughtItem.getPurchasePrice());
+                s.addToRegistry(inventory, itemType, customerBroughtItem);
+                numberItemsBought = numberItemsBought + 1;
+            }
+        }
+        else {
+            System.out.println("Not enough money in the register to pay for the item.");
+        }
+    }
+
     public void CleanStore(Store s) {
 
         System.out.println("--------------------CLEANING STORE ITEMS--------------------");
