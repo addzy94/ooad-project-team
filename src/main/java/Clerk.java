@@ -234,7 +234,7 @@ public class Clerk extends Staff implements Subject{
 
         // TODO: implement command here
         String command = "";
-        String customerName = "";
+        String customerName = "(controlled by user)";
         // Prepare commands
         CommandController remote = new CommandController();
 
@@ -299,6 +299,7 @@ public class Clerk extends Staff implements Subject{
 
             // If the customer selects ending the interactions
             //TODO: try to let both clerks know that they are done with the OpenStore process
+            // hence stopping OpenStore process for both store
             else if(command.equals("7")){
                 System.out.println("Customer decided to end the interactions.");
                 System.out.println();
