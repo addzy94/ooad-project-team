@@ -50,7 +50,8 @@ public class StoreTest {
         Create a new CD object and add it into the inventory list
         */
         String itemType = "CD";
-        Item test_item = test_store.createItem(itemType);
+        Item test_item = Helper.createItem(itemType);
+        test_item.setDayArrived(test_store.getDay());
         int condition = test_item.getCondition();
         boolean isNew = test_item.getIsNew();
         double offeredPrice = Helper.priceEstimator(isNew, condition);
