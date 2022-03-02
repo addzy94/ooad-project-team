@@ -8,14 +8,10 @@ public class SellToClerkCommand implements Command{
         this.customerName = customerName;
     }
     public void execute(){
-        //TODO: sell to the clerk
-        // Generate a normal inventory item
-        // Sell this item to the clerk
-        // User can decide whether to accept the buying price the clerk offers at the steps of the sale
-
         // Generate one required item for the customer
         String customerBroughtItem = Helper.customerRequirements(Constants.CLASS_NAMES, 1).get(0);
         System.out.println("-----");
+        // Just call the clerk to handle the sell item transaction for the rest of the steps
         clerk.SellItemTransactionCustom(store, customerBroughtItem, customerName);
         System.out.println();
     }

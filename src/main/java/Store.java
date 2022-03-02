@@ -272,7 +272,7 @@ public class Store {
                 if(i <= numberOfDays){
                     c.OpenTheStoreAuto(this);
                 }
-                // TODO: On the next day, run OpenTheStoreCustom method so that the process involves taking parameters entered by the user manually
+                // On the next day, run OpenTheStoreCustom method so that the process involves taking parameters entered by the user manually
                 // Run the special OpenStore method for the last day
                 else{
                     c.OpenTheStoreCustom(this);
