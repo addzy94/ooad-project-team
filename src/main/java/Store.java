@@ -17,9 +17,9 @@ public class Store {
     private Tracker store_tracker;
     private Logger day_logger;
 
-    Store(int n) {
+    Store(int startingStockPerItem) {
         // Assign 3 objects per item (lowest subclass) by the time we initialize a store
-        this.initialize(n);
+        this.initialize(startingStockPerItem);
     }
 
     public void initialize(int numberofObjects) {
@@ -76,7 +76,8 @@ public class Store {
         try {
             for (String itemType: itemTypes) {
                 for(int i = 0; i < numberOfObjects; i++) {
-                    Item item = createItem(itemType);
+                    Item item = Helper.createItem(itemType);
+                    item.setDayArrived(this.getDay());
                     // Just add the item to the inventory if it's the first day.
                     if (isStartDay) {
                         addToRegistry(inventory, itemType, item);
@@ -108,28 +109,6 @@ public class Store {
             System.out.println("Error!");
             e.printStackTrace();
         }
-    }
-
-    public Item createItem(String itemType) {
-
-        Object classInstance = null;
-
-        try {
-            // Initialize a list of class in the following way: [String, Int, bla, bla] for later use of initializing the corresponding item type
-            Class[] parameters = Constants.CLASS_PARAMETER_MAPPING.get(itemType);
-            // Initialize the corresponding class object based on the given String itemType
-            Class classObj = Class.forName(itemType);
-            // Combine the two lines above for really generating a constructor
-            Constructor constructor = classObj.getConstructor(parameters);
-            // Generate an object by calling Helper class that helps you put all the necessary parameter (price, day, etc) for generating it.
-            classInstance = constructor.newInstance(Helper.getParams(itemType, this.day).toArray());
-        }
-        catch(Exception e) {
-            System.out.println("Errors");
-            e.printStackTrace();
-        }
-
-        return ((Item) classInstance);
     }
 
     public void addToRegistry(HashMap<String, ArrayList<Item>> registry, String itemType, Item item) {

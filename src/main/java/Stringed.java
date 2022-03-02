@@ -6,6 +6,10 @@ public abstract class Stringed extends Instrument {
 
     private boolean isTuned;
 
+    public Stringed() {
+        super();
+    }
+
     Stringed (String name, double purchasePrice, int dayArrived, int condition, boolean isNew, boolean isElectric, boolean isTuned) {
         super(name, purchasePrice, dayArrived, condition, isNew);
         this.isElectric = isElectric;

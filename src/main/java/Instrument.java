@@ -6,4 +6,7 @@ public abstract class Instrument extends Item {
         super(name, purchasePrice, dayArrived, condition, isNew);
     }
 
+    public Instrument() {
+
+    }
 }

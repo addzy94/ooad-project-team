@@ -1,0 +1,20 @@
+
+Clerk Daphne arrived at the store on day 15.
+
+Clerk Daphne counted $1977.39 in the register.
+
+There were 21 items in inventory.
+
+The inventory value was $893.59
+
+0 items were damaged during tuning.
+
+3 new items were ordered on day 14
+
+2 items were bought by the store.
+
+4 items were sold by the store.
+
+1 items were damaged during cleaning.
+
+Daphne left the store for the day.
