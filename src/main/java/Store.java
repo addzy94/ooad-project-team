@@ -19,6 +19,8 @@ public class Store {
     private Tracker store_tracker;
     private Logger day_logger;
 
+    private Clerk clerkAtWork;
+
     Store(int n, String name) {
         // Assign 3 objects per item (lowest subclass) by the time we initialize a store
         this.initialize(n);
@@ -248,6 +250,7 @@ public class Store {
         Runs the Store for 'numberOfDays' Days.
          */
         //for(int i = 1; i <= numberOfDays; i++) {
+            this.setClerkAtWork(c);
             day_logger.instantiate(getDay());
             System.out.println("Day "+getDay()+":");
             int dayOfTheWeek = getDay() % 7;
@@ -418,5 +421,13 @@ public class Store {
 
     public void setStoreName(String new_name) {
         storeName = new_name;
+    }
+
+    public Clerk getClerkAtWork(){
+        return clerkAtWork;
+    }
+
+    public void setClerkAtWork(Clerk c){
+        clerkAtWork = c;
     }
 }
