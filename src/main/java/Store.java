@@ -19,10 +19,20 @@ public class Store {
     private Tracker store_tracker;
     private Logger day_logger;
 
+    private Store otherStore;
+
     Store(int n, String name) {
         // Assign 3 objects per item (lowest subclass) by the time we initialize a store
         this.initialize(n);
         storeName = name;
+    }
+
+    public Store getOtherStore(){
+        return this.otherStore;
+    }
+
+    public void setOtherStore(Store otherStore){
+        this.otherStore = otherStore;
     }
 
     public void initialize(int numberofObjects) {
@@ -264,6 +274,42 @@ public class Store {
             c.PlaceAnOrder(this, zeroStockItems);
 
             c.OpenTheStoreAuto(this);
+            c.CleanStore(this);
+            c.LeaveTheStore(this);
+            c.removeObserver(day_logger);
+        }
+        this.day += 1;
+        //add an extra line for separating days
+        day_logger.close();
+        System.out.println();
+        store_tracker.printInfo(this);
+        System.out.println();
+        //}
+
+        //printSummary(numberOfDays);
+    }
+
+    public void runSpecialDay(Clerk c) {
+        /*
+        Runs the Store for 'numberOfDays' Days.
+         */
+        //for(int i = 1; i <= numberOfDays; i++) {
+        day_logger.instantiate(getDay());
+        System.out.println("Day "+getDay()+":");
+        int dayOfTheWeek = getDay() % 7;
+        if (dayOfTheWeek == 0) {
+            System.out.println("On Sunday, no one worked.");
+            resetDays();
+        }
+        else {
+            c.registerObserver(day_logger);
+            c.ArriveAtStore(this);
+            c.CheckRegister(this);
+
+            ArrayList<String> zeroStockItems = c.DoInventory(this);
+            c.PlaceAnOrder(this, zeroStockItems);
+
+            c.OpenTheStoreCustom(this, this.getOtherStore());
             c.CleanStore(this);
             c.LeaveTheStore(this);
             c.removeObserver(day_logger);

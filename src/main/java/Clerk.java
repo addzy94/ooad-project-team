@@ -225,7 +225,7 @@ public class Clerk extends Staff implements Subject{
     }
 
     // a customized OpenTheStore method that handles the decision by taking user input
-    public void OpenTheStoreCustom(Store s) {
+    public void OpenTheStoreCustom(Store s, Store other) {
 
         System.out.println("--------------------STORE BUSINESS--------------------");
 
@@ -242,7 +242,7 @@ public class Clerk extends Staff implements Subject{
         AskClerkNameCommand askClerkName = new AskClerkNameCommand(this);
         AskClerkTimeCommand askClerkTime = new AskClerkTimeCommand(this);
         BuyCustomGuitarKitFromClerkCommand buyCustomGuitarKitFromClerk= new BuyCustomGuitarKitFromClerkCommand(this);
-        SwitchStore switchStore = new SwitchStore(this);
+        SwitchStore switchStore = new SwitchStore(s, other);
 
         // Print menu for OpenStore process
         System.out.println("Please Choose From The Following Actions:");

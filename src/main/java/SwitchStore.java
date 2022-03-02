@@ -2,11 +2,10 @@ public class SwitchStore implements Command{
     //TODO: implement switch store method so that the customer can switch store to interact with at any time
 
     // sample code, not the expected one!
-    Clerk clerk;
-    public SwitchStore(Clerk clerk){
-        //find the other clerk that is still active
-        this.clerk = clerk;
-        //this.clerk = otherClerk;
+    Store store;
+    public SwitchStore(Store thisStore, Store otherStore){
+        //find the other store
+        this.store = otherStore;
     }
     public void execute(){
         // both stores run
@@ -17,5 +16,11 @@ public class SwitchStore implements Command{
         //find the other clerk that is still active
         //and also get the other store as well
         //otherClerk.openStoreCustom(otherStore, xxx,xxx);
+
+//        BuyFromClerkCommand buyFromClerk = new BuyFromClerkCommand(this, s, customerName);
+//        SellToClerkCommand sellToClerk = new SellToClerkCommand(this, s, customerName);
+//        AskClerkNameCommand askClerkName = new AskClerkNameCommand(this);
+//        AskClerkTimeCommand askClerkTime = new AskClerkTimeCommand(this);
+//        BuyCustomGuitarKitFromClerkCommand buyCustomGuitarKitFromClerk= new BuyCustomGuitarKitFromClerkCommand(this);
     }
 }
