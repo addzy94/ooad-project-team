@@ -32,8 +32,8 @@ public class Clerk extends Staff implements Subject{
         int day = s.getDay();
 
         // Change day from [0,29] to [1,30]
-        setMessage("Clerk " + this.getName() + " arrived at the store on day " + (day + 1) + ".");
-        System.out.println("Clerk " + this.getName() + " arrived at the store on day " + (day + 1) + ".");
+        setMessage("Clerk " + this.getName() + " arrived at " + s.getStoreName() + " on day " + (day) + ".");
+        System.out.println("Clerk " + this.getName() + " arrived at " + s.getStoreName() + " on day " + (day) + ".");
 
         // Clerk needs to check orderedItems list
         HashMap<String, ArrayList<Item>> orderedList = s.getOrderedItems();
@@ -580,8 +580,8 @@ public class Clerk extends Staff implements Subject{
 
         System.out.println("--------------------CLOSING THE STORE FOR THE DAY--------------------");
 
-        System.out.println(this.getName() + " left the store for the day.");
-        setMessage(this.getName() + " left the store for the day.");
+        System.out.println(this.getName() + " left " + s.getStoreName() + " for the day.");
+        setMessage(this.getName() + " left " + s.getStoreName() + " for the day.");
         this.setIsActiveWorker(false);
     }
 

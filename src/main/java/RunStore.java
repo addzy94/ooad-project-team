@@ -1,8 +1,42 @@
+import java.util.ArrayList;
+
 public class RunStore {
 
     // Main method that simulates the Store
     public static void main(String[] args) {
-        Store a = new Store(3); // Creates a store with 3 items of each type of the lowest level
-        a.run(30); // Runs the store for 30 days
+        Store northside = new Store(3, "Northside FNMS"); // Creates a store with 3 items of each type of the lowest level
+        Store southside = new Store(3, "Southside FNMS");
+
+        Clerk shaggy = new Clerk("Shaggy", 0, 20, new HaphazardTuningStrategy());
+        Clerk velma = new Clerk("Velma", 0, 5, new ManualTuningStrategy());
+        Clerk daphne = new Clerk("Daphne", 0, 10, new ElectronicTuningStrategy());
+
+        ArrayList<Staff> new_staff = new ArrayList<>();
+
+        new_staff.add(shaggy);
+        new_staff.add(velma);
+        new_staff.add(daphne);
+
+        northside.setStaff(new_staff);
+
+        northside.hireClerk(shaggy);
+        northside.hireClerk(velma);
+        northside.hireClerk(daphne);
+
+        southside.hireClerk(shaggy);
+        southside.hireClerk(velma);
+        southside.hireClerk(daphne);
+
+        //Prompt for number of days
+        for (int i = 1; i <= 30; i++) {
+            northside.sicknessCheck();
+            Clerk a = northside.chooseClerk();
+            Clerk b = southside.chooseClerk();
+            northside.runDay(a);
+            southside.runDay(b);
+        }
+        northside.printSummary(30);
+        southside.printSummary(30);
+        //a.run(30); // Runs the store for 30 days
     }
 }

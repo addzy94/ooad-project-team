@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class Store {
+
+    private String storeName;
     
     private int day;
     private double registerAmount;
@@ -13,13 +15,14 @@ public class Store {
     private HashMap<String, ArrayList<Item>> soldLogBook;
     private HashMap<String, ArrayList<Item>> orderedItems;
 
-    private ArrayList<Staff> staff;
+    private static ArrayList<Staff> staff;
     private Tracker store_tracker;
     private Logger day_logger;
 
-    Store(int n) {
+    Store(int n, String name) {
         // Assign 3 objects per item (lowest subclass) by the time we initialize a store
         this.initialize(n);
+        storeName = name;
     }
 
     public void initialize(int numberofObjects) {
@@ -29,14 +32,14 @@ public class Store {
         on the 0th Day.
          */
 
-        this.day = 0;
+        this.day = 1;
         this.registerAmount = 0;
         this.amountWithdrawnFromBank = 0;
 
         this.inventory = new HashMap<>();
         this.soldLogBook = new HashMap<>();
         this.orderedItems = new HashMap<>();
-        this.staff = new ArrayList<>();
+        //this.staff = new ArrayList<>();
 
         Constants.generateMaps(); // Declares all the constants and initializes them
 
@@ -49,23 +52,17 @@ public class Store {
         --- IDENTITY ---
          */
 
-        Clerk shaggy = new Clerk("Shaggy", 0, 20, new HaphazardTuningStrategy());
-        Clerk velma = new Clerk("Velma", 0, 5, new ManualTuningStrategy());
-        Clerk daphne = new Clerk("Daphne", 0, 10, new ElectronicTuningStrategy());
+        
 
 
         //Store Tracker and Day Logger both implement an Observer pattern, of which Clerk is the Subject
 
         store_tracker = new Tracker();
-        hireClerk(shaggy);
-        hireClerk(velma);
-        hireClerk(daphne);
-
         day_logger = new Logger();
     }
 
     public void hireClerk(Clerk c) {
-        staff.add(c);
+        //staff.add(c);
         store_tracker.addStaff(c);
         c.registerObserver(store_tracker);
     }
@@ -246,21 +243,21 @@ public class Store {
         return zeroStockItems;
     }
 
-    public void run(int numberOfDays) {
+    public void runDay(Clerk c) {
         /*
         Runs the Store for 'numberOfDays' Days.
          */
-        for(int i = 1; i <= numberOfDays; i++) {
-            day_logger.instantiate(i);
-            System.out.println("Day "+i+":");
-            int dayOfTheWeek = i % 7;
+        //for(int i = 1; i <= numberOfDays; i++) {
+            day_logger.instantiate(getDay());
+            System.out.println("Day "+getDay()+":");
+            int dayOfTheWeek = getDay() % 7;
             if (dayOfTheWeek == 0) {
                 System.out.println("On Sunday, no one worked.");
                 resetDays();
             }
             else {
-                sicknessCheck();
-                Clerk c = chooseClerk();
+                //sicknessCheck();
+                //Clerk c = chooseClerk();
                 c.registerObserver(day_logger);
                 c.ArriveAtStore(this);
                 c.CheckRegister(this);
@@ -279,9 +276,9 @@ public class Store {
             System.out.println();
             store_tracker.printInfo(this);
             System.out.println();
-        }
+        //}
         
-        printSummary(numberOfDays);
+        //printSummary(numberOfDays);
     }
 
     public Clerk chooseClerk() {
@@ -291,9 +288,9 @@ public class Store {
         Clerk c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
         // Re-choose a new clerk if he/she has already worked more than 2 days
         
-        if (c.getDaysWorkedInARow() > 2 || c.getSick()) {
+        if (c.getDaysWorkedInARow() > 2 || c.getSick() || c.getIsActiveWorker()) {
         // Keep choosing a clerk until you choose someone who hasn't worked 3 days or is not sick
-            while (c.getDaysWorkedInARow() == 3 || c.getSick()) {
+            while (c.getDaysWorkedInARow() == 3 || c.getSick() || c.getIsActiveWorker()) {
                 c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
             }
         }
@@ -314,7 +311,7 @@ public class Store {
     }
     
     public void printSummary(int days) {
-        System.out.println("--- FINAL SUMMARY ---");
+        System.out.println("--- FINAL SUMMARY FOR STORE " + getStoreName() + " ---");
         System.out.println("The amount of money in the register at the end of " + days + " days was $" + Helper.round(this.registerAmount) + "\n");
         System.out.println("The amount of money added to the register from going to the bank during this time was $" + this.amountWithdrawnFromBank + "\n");
         System.out.println("The items remaining in inventory were as follows:");
@@ -323,6 +320,7 @@ public class Store {
         System.out.println("\nThe sold items during this period were as follows:");
         printSoldItems();
         System.out.println("\nThe total value of all the sold items was $" + Helper.round(calcSoldValue()));
+        System.out.println();
     }
 
     public void printInventory() {
@@ -356,6 +354,20 @@ public class Store {
             Clerk c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
             c.setSick(true);
             System.out.println(c.getName() + " was sick on day " + this.getDay());
+            double chanceOfSick2 = Helper.random.nextDouble();
+            if (chanceOfSick2 <= 0.1) {
+                boolean anotherClerk = false;
+                Clerk c2 = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
+                while (!anotherClerk) {
+                    c2 = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
+                    if (c2.getSick() == false) {
+                        anotherClerk = true;
+                    }
+                }
+                
+                c2.setSick(true);
+                System.out.println(c2.getName() + " was also sick on day " + this.getDay());
+            }
         }
         
     }
@@ -396,7 +408,15 @@ public class Store {
         return staff;
     }
 
-    public void setStaff(ArrayList<Staff> staff) {
-        this.staff = staff;
+    public void setStaff(ArrayList<Staff> new_staff) {
+        staff = new_staff;
+    }
+
+    public String getStoreName() {
+        return storeName;
+    }
+
+    public void setStoreName(String new_name) {
+        storeName = new_name;
     }
 }
