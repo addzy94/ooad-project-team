@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class Store {
 
     private String storeName;
-    
+
     private int day;
     private double registerAmount;
     private double amountWithdrawnFromBank;
@@ -18,8 +18,6 @@ public class Store {
     private static ArrayList<Staff> staff;
     private Tracker store_tracker;
     private Logger day_logger;
-
-    private Clerk clerkAtWork;
 
     Store(int n, String name) {
         // Assign 3 objects per item (lowest subclass) by the time we initialize a store
@@ -54,7 +52,7 @@ public class Store {
         --- IDENTITY ---
          */
 
-        
+
 
 
         //Store Tracker and Day Logger both implement an Observer pattern, of which Clerk is the Subject
@@ -250,54 +248,51 @@ public class Store {
         Runs the Store for 'numberOfDays' Days.
          */
         //for(int i = 1; i <= numberOfDays; i++) {
-            this.setClerkAtWork(c);
-            day_logger.instantiate(getDay());
-            System.out.println("Day "+getDay()+":");
-            int dayOfTheWeek = getDay() % 7;
-            if (dayOfTheWeek == 0) {
-                System.out.println("On Sunday, no one worked.");
-                resetDays();
-            }
-            else {
-                //sicknessCheck();
-                //Clerk c = chooseClerk();
-                c.registerObserver(day_logger);
-                c.ArriveAtStore(this);
-                c.CheckRegister(this);
+        day_logger.instantiate(getDay());
+        System.out.println("Day "+getDay()+":");
+        int dayOfTheWeek = getDay() % 7;
+        if (dayOfTheWeek == 0) {
+            System.out.println("On Sunday, no one worked.");
+            resetDays();
+        }
+        else {
+            c.registerObserver(day_logger);
+            c.ArriveAtStore(this);
+            c.CheckRegister(this);
 
-                ArrayList<String> zeroStockItems = c.DoInventory(this);
-                c.PlaceAnOrder(this, zeroStockItems);
+            ArrayList<String> zeroStockItems = c.DoInventory(this);
+            c.PlaceAnOrder(this, zeroStockItems);
 
-                c.OpenTheStore(this);
-                c.CleanStore(this);
-                c.LeaveTheStore(this);
-                c.removeObserver(day_logger);
-            }
-            this.day += 1;
-            //add an extra line for separating days
-            day_logger.close();
-            System.out.println();
-            store_tracker.printInfo(this);
-            System.out.println();
+            c.OpenTheStoreAuto(this);
+            c.CleanStore(this);
+            c.LeaveTheStore(this);
+            c.removeObserver(day_logger);
+        }
+        this.day += 1;
+        //add an extra line for separating days
+        day_logger.close();
+        System.out.println();
+        store_tracker.printInfo(this);
+        System.out.println();
         //}
-        
+
         //printSummary(numberOfDays);
     }
 
     public Clerk chooseClerk() {
-        
-    
+
+
         // Choose randomly from the current staff list
         Clerk c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
         // Re-choose a new clerk if he/she has already worked more than 2 days
-        
+
         if (c.getDaysWorkedInARow() > 2 || c.getSick() || c.getIsActiveWorker()) {
-        // Keep choosing a clerk until you choose someone who hasn't worked 3 days or is not sick
+            // Keep choosing a clerk until you choose someone who hasn't worked 3 days or is not sick
             while (c.getDaysWorkedInARow() == 3 || c.getSick() || c.getIsActiveWorker()) {
                 c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
             }
         }
-        
+
         // Set that clerk as active worker for today
         c.setIsActiveWorker(true);
         // Call incrementDayWorkedInRow method for handling the details of adding work days and assigning other clerks' work days to 0
@@ -312,7 +307,7 @@ public class Store {
             s.setDaysWorkedInARow(0);
         }
     }
-    
+
     public void printSummary(int days) {
         System.out.println("--- FINAL SUMMARY FOR STORE " + getStoreName() + " ---");
         System.out.println("The amount of money in the register at the end of " + days + " days was $" + Helper.round(this.registerAmount) + "\n");
@@ -347,7 +342,7 @@ public class Store {
     }
 
     public void sicknessCheck() {
-        
+
         for (Staff s: staff) {
             s.setSick(false);
         }
@@ -367,12 +362,12 @@ public class Store {
                         anotherClerk = true;
                     }
                 }
-                
+
                 c2.setSick(true);
                 System.out.println(c2.getName() + " was also sick on day " + this.getDay());
             }
         }
-        
+
     }
 
     public double getRegisterAmount() {
@@ -421,13 +416,5 @@ public class Store {
 
     public void setStoreName(String new_name) {
         storeName = new_name;
-    }
-
-    public Clerk getClerkAtWork(){
-        return clerkAtWork;
-    }
-
-    public void setClerkAtWork(Clerk c){
-        clerkAtWork = c;
     }
 }
