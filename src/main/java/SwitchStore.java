@@ -3,7 +3,7 @@ public class SwitchStore implements Command{
 
     // sample code, not the expected one!
     Store store;
-    public SwitchStore(Store thisStore, Store otherStore){
+    public SwitchStore(Store thisStore, Store otherStore, BuyFromClerkCommand buyFromClerk, SellToClerkCommand sellToClerk, AskClerkNameCommand askClerkName, AskClerkTimeCommand askClerkTime, BuyCustomGuitarKitFromClerkCommand buyCustomGuitarKitFromClerk, String customerName){
         //find the other store
         this.store = otherStore;
     }
@@ -17,9 +17,9 @@ public class SwitchStore implements Command{
         //and also get the other store as well
         //otherClerk.openStoreCustom(otherStore, xxx,xxx);
 
-//        BuyFromClerkCommand buyFromClerk = new BuyFromClerkCommand(this, s, customerName);
+        //buyFromClerk = new BuyFromClerkCommand(this.store.getClerkToday(), this.store, customerName);
 //        SellToClerkCommand sellToClerk = new SellToClerkCommand(this, s, customerName);
-//        AskClerkNameCommand askClerkName = new AskClerkNameCommand(this);
+         //askClerkName = new AskClerkNameCommand(this.store.getClerkToday());
 //        AskClerkTimeCommand askClerkTime = new AskClerkTimeCommand(this);
 //        BuyCustomGuitarKitFromClerkCommand buyCustomGuitarKitFromClerk= new BuyCustomGuitarKitFromClerkCommand(this);
     }

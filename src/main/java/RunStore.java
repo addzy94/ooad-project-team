@@ -13,9 +13,9 @@ public class RunStore {
         Clerk shaggy = new Clerk("Shaggy", 0, 20, new HaphazardTuningStrategy());
         Clerk velma = new Clerk("Velma", 0, 5, new ManualTuningStrategy());
         Clerk daphne = new Clerk("Daphne", 0, 10, new ElectronicTuningStrategy());
-        Clerk scoovy = new Clerk("Shaggy", 0, 20, new HaphazardTuningStrategy());
-        Clerk peter = new Clerk("Velma", 0, 5, new ManualTuningStrategy());
-        Clerk danny = new Clerk("Daphne", 0, 10, new ElectronicTuningStrategy());
+        Clerk scoovy = new Clerk("Scoovy", 0, 20, new HaphazardTuningStrategy());
+        Clerk peter = new Clerk("Peter", 0, 5, new ManualTuningStrategy());
+        Clerk danny = new Clerk("Danny", 0, 10, new ElectronicTuningStrategy());
 
         ArrayList<Staff> new_staff = new ArrayList<>();
 

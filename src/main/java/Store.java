@@ -20,6 +20,7 @@ public class Store {
     private Logger day_logger;
 
     private Store otherStore;
+    private Clerk clerkToday;
 
     Store(int n, String name) {
         // Assign 3 objects per item (lowest subclass) by the time we initialize a store
@@ -33,6 +34,14 @@ public class Store {
 
     public void setOtherStore(Store otherStore){
         this.otherStore = otherStore;
+    }
+
+    public Clerk getClerkToday(){
+        return this.clerkToday;
+    }
+
+    public void setClerkToday(Clerk clerkToday){
+        this.clerkToday = clerkToday;
     }
 
     public void initialize(int numberofObjects) {
@@ -279,6 +288,8 @@ public class Store {
             c.removeObserver(day_logger);
         }
         this.day += 1;
+        //set clerk for today as null
+        this.setClerkToday(null);
         //add an extra line for separating days
         day_logger.close();
         System.out.println();
@@ -343,6 +354,9 @@ public class Store {
         c.setIsActiveWorker(true);
         // Call incrementDayWorkedInRow method for handling the details of adding work days and assigning other clerks' work days to 0
         c.incrementDaysWorkedInARow(this);
+
+        // Set that clerk as the work for this store for today
+        this.setClerkToday(c);
         return c;
     }
 

@@ -225,13 +225,15 @@ public class Clerk extends Staff implements Subject{
     }
 
     // a customized OpenTheStore method that handles the decision by taking user input
-    public void OpenTheStoreCustom(Store s, Store other) {
+    public void OpenTheStoreCustom(Store s, Store otherStore) {
 
         System.out.println("--------------------STORE BUSINESS--------------------");
 
         numberItemsBought = 0;
         numberOfItemsSold = 0;
 
+        boolean isCurrentStore = true; // Check if the customer is shopping in the current store that this clerk stays in.
+        Clerk otherClerk = otherStore.getClerkToday();
         String command = "";
         String customerName = "(controlled by user)";
         // Prepare commands
@@ -241,8 +243,8 @@ public class Clerk extends Staff implements Subject{
         SellToClerkCommand sellToClerk = new SellToClerkCommand(this, s, customerName);
         AskClerkNameCommand askClerkName = new AskClerkNameCommand(this);
         AskClerkTimeCommand askClerkTime = new AskClerkTimeCommand(this);
-        BuyCustomGuitarKitFromClerkCommand buyCustomGuitarKitFromClerk= new BuyCustomGuitarKitFromClerkCommand(this);
-        SwitchStore switchStore = new SwitchStore(s, other);
+        BuyCustomGuitarKitFromClerkCommand buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(this);
+        SwitchStore switchStore = new SwitchStore(s, otherStore, buyFromClerk, sellToClerk, askClerkName, askClerkTime, buyCustomGuitarKitFromClerk, customerName);
 
         // Print menu for OpenStore process
         System.out.println("Please Choose From The Following Actions:");
@@ -262,8 +264,34 @@ public class Clerk extends Staff implements Subject{
         while(! command.equals("7")){
             // If the customer selects switching a store
             if(command.equals("1")){
-                remote.setCommand(switchStore);
-                remote.buttonPressed();
+//                remote.setCommand(switchStore);
+//                remote.buttonPressed();
+                System.out.println("Customer Switched To Another Store!");
+                if(isCurrentStore){ // if the customer is currently at this store, we switch command's reference to the other clerk and the other store
+                    System.out.println("Now The Store is: " + otherStore.getStoreName());
+                    System.out.println();
+
+                    buyFromClerk = new BuyFromClerkCommand(otherClerk, otherStore, customerName);
+                    sellToClerk = new SellToClerkCommand(otherClerk, otherStore, customerName);
+                    askClerkName = new AskClerkNameCommand(otherClerk);
+                    askClerkTime = new AskClerkTimeCommand(otherClerk);
+                    buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(otherClerk);
+
+                    isCurrentStore = false; // re-assign the bool parameter to mark that the customer is currently shopping in the other store
+                }
+                else{ // if if the customer is currently at this store, we switch command's reference back to this clerk and this store
+                    System.out.println("Now The Store is: " + s.getStoreName());
+                    System.out.println();
+
+                    buyFromClerk = new BuyFromClerkCommand(this, s, customerName);
+                    sellToClerk = new SellToClerkCommand(this, s, customerName);
+                    askClerkName = new AskClerkNameCommand(this);
+                    askClerkTime = new AskClerkTimeCommand(this);
+                    buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(this);
+
+                    isCurrentStore = true; // re-assign the bool parameter to mark that the customer is currently shopping in this store
+                }
+
             }
 
             // If the customer selects asking for clerk's name
