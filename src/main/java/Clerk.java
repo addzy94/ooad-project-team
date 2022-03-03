@@ -748,8 +748,8 @@ public class Clerk extends Staff implements Subject{
     public void SellItemTransactionCustom(Store s, String itemType, String customerName) {
 
         HashMap<String, ArrayList<Item>> inventory = s.getInventory();
-        Item customerBroughtItem = s.createItem(itemType);
-
+        Item customerBroughtItem = Helper.createItem(itemType);
+        customerBroughtItem.setDayArrived(s.getDay());
         // If the customer is selling a clothing item type
         if (Constants.CLOTHING_ITEM_TYPES.contains(itemType)) {
             // If we no longer hold stock of any clothing item

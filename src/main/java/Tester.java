@@ -3,7 +3,7 @@
 public class Tester {
     public static void main(String[] args) {
 
-        Store s = new Store(2);
+        Store s = new Store(2, "Test Store");
 
         GuitarFactory nf = new NorthSideFactory();
         CustomStoreGuitar n = new CustomStoreGuitar(nf);

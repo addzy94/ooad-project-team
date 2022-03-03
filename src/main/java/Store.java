@@ -18,12 +18,6 @@ public class Store {
     private static ArrayList<Staff> staff;
     private Tracker store_tracker;
     private Logger day_logger;
-
-<<<<<<< HEAD
-    Store(int startingStockPerItem) {
-        // Assign 3 objects per item (lowest subclass) by the time we initialize a store
-        this.initialize(startingStockPerItem);
-=======
     private Store otherStore;
     private Clerk clerkToday;
 
@@ -47,7 +41,6 @@ public class Store {
 
     public void setClerkToday(Clerk clerkToday){
         this.clerkToday = clerkToday;
->>>>>>> test
     }
 
     public void initialize(int numberofObjects) {
