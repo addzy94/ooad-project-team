@@ -13,7 +13,7 @@ public class StoreTest {
     Initialize a store object for testing
      */
     int n = 2; // Number of items that will be initialized per item type
-    Store test_store = new Store(n);
+    Store test_store = new Store(n, "Test Store");
     ArrayList<Staff> test_staff = test_store.getStaff();
 
     @Test
@@ -70,10 +70,10 @@ public class StoreTest {
         }
         assertEquals(current_size + 1, test_inventory_size_now); // Check if the current list size is only 1 more than the original
     }
-
     @Test
     public void resetWorkDays_test() {
-        test_store.run(1); // Run the store for one day
+
+        test_store.runDay((Clerk) test_staff.get(0)); // Run the store for one day
         assertEquals(1, test_store.getDay()); // Check if the day counter is now 1
 
         Clerk test_clerk = (Clerk) test_staff.get(0); // Find the clerk who has worked for a day

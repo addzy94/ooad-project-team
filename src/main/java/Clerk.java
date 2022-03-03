@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Scanner;
 
 /*
 --- INHERITANCE ---
@@ -32,8 +33,8 @@ public class Clerk extends Staff implements Subject{
         int day = s.getDay();
 
         // Change day from [0,29] to [1,30]
-        setMessage("Clerk " + this.getName() + " arrived at the store on day " + (day + 1) + ".");
-        System.out.println("Clerk " + this.getName() + " arrived at the store on day " + (day + 1) + ".");
+        setMessage("Clerk " + this.getName() + " arrived at " + s.getStoreName() + " on day " + (day) + ".");
+        System.out.println("Clerk " + this.getName() + " arrived at " + s.getStoreName() + " on day " + (day) + ".");
 
         // Clerk needs to check orderedItems list
         HashMap<String, ArrayList<Item>> orderedList = s.getOrderedItems();
@@ -185,7 +186,7 @@ public class Clerk extends Staff implements Subject{
         setMessage("3 new items were ordered on day " + s.getDay());
     }
 
-    public void OpenTheStore(Store s) {
+    public void OpenTheStoreAuto(Store s) {
 
         System.out.println("--------------------STORE BUSINESS--------------------");
 
@@ -219,6 +220,129 @@ public class Clerk extends Staff implements Subject{
             System.out.println("-----");
             SellItemTransaction(s, customerBroughtItem, customerName);
         }
+        setMessage(numberItemsBought + " items were bought by the store.");
+        setMessage(numberOfItemsSold + " items were sold by the store.");
+    }
+
+    // a customized OpenTheStore method that handles the decision by taking user input
+    public void OpenTheStoreCustom(Store s, Store otherStore) {
+
+        System.out.println("--------------------STORE BUSINESS--------------------");
+
+        numberItemsBought = 0;
+        numberOfItemsSold = 0;
+
+        boolean isCurrentStore = true; // Check if the customer is shopping in the current store that this clerk stays in.
+        Clerk otherClerk = otherStore.getClerkToday();
+        String command = "";
+        String customerName = "(controlled by user)";
+        // Prepare commands
+        CommandController remote = new CommandController();
+
+        BuyFromClerkCommand buyFromClerk = new BuyFromClerkCommand(this, s, customerName);
+        SellToClerkCommand sellToClerk = new SellToClerkCommand(this, s, customerName);
+        AskClerkNameCommand askClerkName = new AskClerkNameCommand(this);
+        AskClerkTimeCommand askClerkTime = new AskClerkTimeCommand(this);
+        BuyCustomGuitarKitFromClerkCommand buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(this);
+        SwitchStore switchStore = new SwitchStore(s, otherStore, buyFromClerk, sellToClerk, askClerkName, askClerkTime, buyCustomGuitarKitFromClerk, customerName);
+
+        // Print menu for OpenStore process
+        System.out.println("Please Choose From The Following Actions:");
+        System.out.println("1. Switch Store");
+        System.out.println("2. Ask For Clerk's Name");
+        System.out.println("3. Ask For The Current Time");
+        System.out.println("4. Sell An Item");
+        System.out.println("5. Buy An Item");
+        System.out.println("6. Buy A Custom Guitar Kit");
+        System.out.println("7. End The Shopping Process");
+        System.out.println();
+
+        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+        System.out.println("Enter The Corresponding Number Of Your Choice:");
+        command = myObj.nextLine();  // Read user input
+        // Run the interactions until the user enters 7 to quit.
+        while(! command.equals("7")){
+            // If the customer selects switching a store
+            if(command.equals("1")){
+//                remote.setCommand(switchStore);
+//                remote.buttonPressed();
+                System.out.println("Customer Switched To Another Store!");
+                if(isCurrentStore){ // if the customer is currently at this store, we switch command's reference to the other clerk and the other store
+                    System.out.println("Now The Store is: " + otherStore.getStoreName());
+                    System.out.println();
+
+                    buyFromClerk = new BuyFromClerkCommand(otherClerk, otherStore, customerName);
+                    sellToClerk = new SellToClerkCommand(otherClerk, otherStore, customerName);
+                    askClerkName = new AskClerkNameCommand(otherClerk);
+                    askClerkTime = new AskClerkTimeCommand(otherClerk);
+                    buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(otherClerk);
+
+                    isCurrentStore = false; // re-assign the bool parameter to mark that the customer is currently shopping in the other store
+                }
+                else{ // if if the customer is currently at this store, we switch command's reference back to this clerk and this store
+                    System.out.println("Now The Store is: " + s.getStoreName());
+                    System.out.println();
+
+                    buyFromClerk = new BuyFromClerkCommand(this, s, customerName);
+                    sellToClerk = new SellToClerkCommand(this, s, customerName);
+                    askClerkName = new AskClerkNameCommand(this);
+                    askClerkTime = new AskClerkTimeCommand(this);
+                    buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(this);
+
+                    isCurrentStore = true; // re-assign the bool parameter to mark that the customer is currently shopping in this store
+                }
+
+            }
+
+            // If the customer selects asking for clerk's name
+            else if(command.equals("2")){
+                remote.setCommand(askClerkName);
+                remote.buttonPressed();
+            }
+
+            // If the customer selects asking the clerk what time it is
+            else if(command.equals("3")){
+                remote.setCommand(askClerkTime);
+                remote.buttonPressed();
+            }
+
+            // If the customer selects selling an item to the clerk
+            else if(command.equals("4")){
+                remote.setCommand(sellToClerk);
+                remote.buttonPressed();
+            }
+
+            // If the customer selects buying an item from the clerk
+            else if(command.equals("5")){
+                remote.setCommand(buyFromClerk);
+                remote.buttonPressed();
+            }
+
+            // If the customer selects buying a custom guitar git from the clerk
+            else if(command.equals("6")){
+                remote.setCommand(buyCustomGuitarKitFromClerk);
+                remote.buttonPressed();
+            }
+
+            // If the customer selects ending the interactions
+            //TODO: try to let both clerks know that they are done with the OpenStore process
+            // hence stopping OpenStore process for both store
+            else if(command.equals("7")){
+                System.out.println("Customer decided to end the interactions.");
+                System.out.println();
+            }
+
+            // Otherwise wrong command, please try again
+            else{
+                System.out.println("Wrong command! Please try again!");
+                System.out.println();
+            }
+
+            // Asking for the next input
+            System.out.println("Enter The Corresponding Number Of Your Choice:");
+            command = myObj.nextLine();
+        }
+
         setMessage(numberItemsBought + " items were bought by the store.");
         setMessage(numberOfItemsSold + " items were sold by the store.");
     }
@@ -382,6 +506,121 @@ public class Clerk extends Staff implements Subject{
         return itemChosen;
     }
 
+    public void BuyItemTransactionCustom(Store s, String itemType, String customerName) {
+
+        HashMap<String, ArrayList<Item>> inventory = s.getInventory();
+        HashMap<String, ArrayList<Item>> soldLogBook = s.getSoldLogBook();
+
+        ArrayList<Item> itemsOfRequiredType = inventory.get(itemType);
+        int sizeOfRequiredItems = itemsOfRequiredType.size();
+
+        if (sizeOfRequiredItems == 0) {
+            System.out.println("Customer " + customerName + " didn't buy the " + itemType + " as there was no stock.");
+        }
+        else {
+
+            // Get a random item, and it's list price from the store
+            Item itemChosen = itemsOfRequiredType.get(Helper.random.nextInt(sizeOfRequiredItems));
+            double listPrice = itemChosen.getListPrice();
+
+
+            // New way for generating initialSellDecision for Project 4:
+
+            boolean initialBuyDecision = false; // Initialize the sell decision here
+
+            System.out.println("Do you want to buy this " + itemChosen.getName() + " at the list price: $" + listPrice + "?");
+            System.out.println("1. Yes!");
+            System.out.println("2. No!");
+
+            String command = "";
+            Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+            System.out.println("Please Enter The Corresponding Number Of Your Choice:");
+            command = myObj.nextLine();  // Read user input
+
+            while(! command.equals("1") && ! command.equals("2")){
+                // Asking for the next input if they haven't input 1 or 2
+                System.out.println("Invalid Input! Please Re-Enter It:");
+                command = myObj.nextLine();
+            }
+
+            if(command.equals("1")){
+                initialBuyDecision = true;
+            }
+            else{
+                initialBuyDecision = false;
+            }
+
+            //Back to the usual code used in Project 3
+
+            if (!initialBuyDecision) {
+                System.out.println("Customer " + customerName + " didn't want to buy the " + itemType + " at the list price.");
+                System.out.println("Clerk " + this.getName() + " offered a 10% discount");
+
+                // New way for generating initialSellDecision for Project 4:
+
+                boolean discountBuyDecision = false; // Initialize the sell decision here
+
+                System.out.println("Do you want to buy this " + itemChosen.getName() + " at the discounted price: $" + listPrice * 0.9 + "?");
+                System.out.println("1. Yes!");
+                System.out.println("2. No!");
+
+                System.out.println("Please Enter The Corresponding Number Of Your Choice:");
+                command = myObj.nextLine();  // Read user input
+
+                while(! command.equals("1") && ! command.equals("2")){
+                    // Asking for the next input if they haven't input 1 or 2
+                    System.out.println("Invalid Input! Please Re-Enter It:");
+                    command = myObj.nextLine();
+                }
+
+                if(command.equals("1")){
+                    discountBuyDecision = true;
+                }
+                else{
+                    discountBuyDecision = false;
+                }
+
+                // Back to normal code used in Project 3
+                if (!discountBuyDecision) {
+                    System.out.println("Customer " + customerName + " didn't buy a " + itemType + " even at discounted price!");
+                }
+                else {
+                    itemChosen.setDaySold(s.getDay());
+                    itemChosen.setSalePrice(.9 * listPrice);
+                    System.out.println("Customer " + customerName + " bought a " +
+                            Constants.NEW_OR_USED_MAPPING.get(itemChosen.getIsNew()) + " " +
+                            itemChosen.getName() + " " + itemType + " in " +
+                            Constants.CONDITION_MAPPING.get(itemChosen.getCondition()) +
+                            " condition at 10% discount for $" + Helper.round(itemChosen.getSalePrice()));
+
+                    // Add that item to the soldLogBook
+                    s.removeFromRegistry(inventory, itemType, itemChosen);
+                    s.addToRegistry(soldLogBook, itemType, itemChosen);
+                    numberOfItemsSold = numberOfItemsSold + 1;
+                    s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice()); // Sets the register amount to the sum of the prices of all the items in the transaction
+                }
+            }
+            else {
+                itemChosen.setDaySold(s.getDay());
+                itemChosen.setSalePrice(listPrice);
+                System.out.println("Customer " + customerName + " bought a " +
+                        Constants.NEW_OR_USED_MAPPING.get(itemChosen.getIsNew()) + " " +
+                        itemChosen.getName() + " " + itemType + " in " +
+                        Constants.CONDITION_MAPPING.get(itemChosen.getCondition()) +
+                        " condition at list price for $" + Helper.round(itemChosen.getSalePrice()));
+
+                // Add that item to the soldLogBook, no extra add-on in this case
+                s.removeFromRegistry(inventory, itemType, itemChosen);
+                s.addToRegistry(soldLogBook, itemType, itemChosen);
+                numberOfItemsSold = numberOfItemsSold + 1;
+                s.setRegisterAmount(s.getRegisterAmount() + itemChosen.getSalePrice()); // Sets the register amount to the sum of the prices of all the items in the transaction
+
+            }
+
+        }
+    }
+
+
     public boolean[] GenerateBuyDecision(Item itemChosen){
         boolean initialBuyDecision = (Helper.random.nextInt(2) == 0); // 50% of chance of buying an item by default
         boolean discountBuyDecision = (Helper.random.nextInt(4) < 3); // 50% + 25% = 75%, 3/4 of chance of buying the item with discount by default
@@ -506,6 +745,141 @@ public class Clerk extends Staff implements Subject{
         }
     }
 
+    public void SellItemTransactionCustom(Store s, String itemType, String customerName) {
+
+        HashMap<String, ArrayList<Item>> inventory = s.getInventory();
+        Item customerBroughtItem = s.createItem(itemType);
+
+        // If the customer is selling a clothing item type
+        if (Constants.CLOTHING_ITEM_TYPES.contains(itemType)) {
+            // If we no longer hold stock of any clothing item
+            if (HaveClothingStock(s, Constants.CLOTHING_ITEM_TYPES) == false) {
+                System.out.println("Customer " + customerName + " was turned away because we are no longer accepting clothing items.");
+                return;
+            }
+        }
+
+        int condition = customerBroughtItem.getCondition();
+        boolean isNew = customerBroughtItem.getIsNew();
+        double offeredPrice = Helper.priceEstimator(isNew, condition);
+
+        /*
+         New condition for Project 3:
+         if the item is from customer
+         randomly set condition for equalized/tuned/adjusted as true/false
+        */
+        if (customerBroughtItem instanceof Player){
+            ((Player) customerBroughtItem).setIsEqualized(Helper.random.nextBoolean());
+        }
+        else if (customerBroughtItem instanceof Stringed){
+            ((Stringed) customerBroughtItem).setIsTuned(Helper.random.nextBoolean());
+        }
+        else if (customerBroughtItem instanceof Wind){
+            ((Wind) customerBroughtItem).setIsAdjusted(Helper.random.nextBoolean());
+        }
+
+        double regAmount = s.getRegisterAmount();
+
+        if (offeredPrice <= regAmount) {
+
+            // New way for generating initialSellDecision for Project 4:
+
+            boolean initialSellDecision = false; // Initialize the sell decision here
+
+            System.out.println("Do you want to sell this " + customerBroughtItem.getName() + " at the offered price: $" + offeredPrice + "?");
+            System.out.println("1. Yes!");
+            System.out.println("2. No!");
+
+            String command = "";
+            Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+            System.out.println("Please Enter The Corresponding Number Of Your Choice:");
+            command = myObj.nextLine();  // Read user input
+
+            while(! command.equals("1") && ! command.equals("2")){
+                // Asking for the next input if they haven't input 1 or 2
+                System.out.println("Invalid Input! Please Re-Enter It:");
+                command = myObj.nextLine();
+            }
+
+            if(command.equals("1")){
+                initialSellDecision = true;
+            }
+            else{
+                initialSellDecision = false;
+            }
+
+
+            // Continue using code from Project 3:
+
+            if (!initialSellDecision && (offeredPrice * 1.1) <= regAmount) {
+                System.out.println("Customer " + customerName + " didn't want to sell the " + itemType + " at the offered price of $" + Helper.round(offeredPrice));
+                System.out.println("Clerk " + this.getName() + " offered 10% extra.");
+
+
+                // New way for generating extraSellDecision for Project 4:
+
+                boolean extraSellDecision = false; // Intialize the extra sell decision here
+
+                System.out.println("Do you want to sell this " + customerBroughtItem.getName() + " at the newest offered price: $" + offeredPrice * 1.1 + "?");
+                System.out.println("1. Yes!");
+                System.out.println("2. No!");
+
+                System.out.println("Please Enter The Corresponding Number Of Your Choice:");
+                command = myObj.nextLine();  // Read user input
+
+                while(! command.equals("1") && ! command.equals("2")){
+                    // Asking for the next input if they haven't input 1 or 2
+                    System.out.println("Invalid Input! Please Re-Enter It:");
+                    command = myObj.nextLine();
+                }
+
+                if(command.equals("1")){
+                    extraSellDecision = true;
+                }
+                else{
+                    extraSellDecision = false;
+                }
+
+
+                // Continue using code from Project 3:
+                if (!extraSellDecision) {
+                    System.out.println("Customer " + customerName + " didn't sell a " + itemType + " even at extra price!");
+                }
+                else {
+                    customerBroughtItem.setDayArrived(s.getDay());
+                    customerBroughtItem.setPurchasePrice(offeredPrice * 1.1);
+                    customerBroughtItem.setListPrice(offeredPrice * 1.1 * 2);
+                    System.out.println("Customer " + customerName + " sold a " +
+                            Constants.NEW_OR_USED_MAPPING.get(customerBroughtItem.getIsNew()) + " " +
+                            customerBroughtItem.getName() + " " + itemType + " in " +
+                            Constants.CONDITION_MAPPING.get(customerBroughtItem.getCondition()) +
+                            " condition at 10% extra for $" + Helper.round(customerBroughtItem.getPurchasePrice()));
+
+                    s.setRegisterAmount(s.getRegisterAmount() - customerBroughtItem.getPurchasePrice());
+                    s.addToRegistry(inventory, itemType, customerBroughtItem);
+                    numberItemsBought = numberItemsBought + 1;
+                }
+            }
+            else {
+                customerBroughtItem.setDayArrived(s.getDay());
+                customerBroughtItem.setPurchasePrice(offeredPrice);
+                customerBroughtItem.setListPrice(offeredPrice * 2);
+                System.out.println("Customer " + customerName + " sold a " +
+                        Constants.NEW_OR_USED_MAPPING.get(customerBroughtItem.getIsNew()) + " " +
+                        customerBroughtItem.getName() + " " + itemType + " in " +
+                        Constants.CONDITION_MAPPING.get(customerBroughtItem.getCondition()) +
+                        " condition at offered price for $" + Helper.round(customerBroughtItem.getPurchasePrice()));
+
+                s.setRegisterAmount(s.getRegisterAmount() - customerBroughtItem.getPurchasePrice());
+                s.addToRegistry(inventory, itemType, customerBroughtItem);
+                numberItemsBought = numberItemsBought + 1;
+            }
+        }
+        else {
+            System.out.println("Not enough money in the register to pay for the item.");
+        }
+    }
+
     public void CleanStore(Store s) {
 
         System.out.println("--------------------CLEANING STORE ITEMS--------------------");
@@ -581,8 +955,8 @@ public class Clerk extends Staff implements Subject{
 
         System.out.println("--------------------CLOSING THE STORE FOR THE DAY--------------------");
 
-        System.out.println(this.getName() + " left the store for the day.");
-        setMessage(this.getName() + " left the store for the day.");
+        System.out.println(this.getName() + " left " + s.getStoreName() + " for the day.");
+        setMessage(this.getName() + " left " + s.getStoreName() + " for the day.");
         this.setIsActiveWorker(false);
     }
 
