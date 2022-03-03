@@ -1,0 +1,20 @@
+
+Clerk Scoovy arrived at Southside FNMS on day 8.
+
+Clerk Scoovy counted $1874.11 in the register.
+
+There were 21 items in inventory.
+
+The inventory value was $1110.09
+
+0 items were damaged during tuning.
+
+3 new items were ordered on day 8
+
+1 items were bought by the store.
+
+3 items were sold by the store.
+
+7 items were damaged during cleaning.
+
+Scoovy left Southside FNMS for the day.
