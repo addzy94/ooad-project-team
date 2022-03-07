@@ -9,13 +9,6 @@ public class RunStore {
     // Main method that simulates the Store
     public static void main(String[] args) {
 
-        /*
-        --- IDENTITY ---
-        Following 2 lines display Identity Concept; the creation of objects that
-        have their own identity.
-        --- IDENTITY ---
-         */
-
         //Store Tracker and Day Logger both implement an Observer pattern, of which Clerk is the Subject
 
         initializeObservers();
@@ -23,13 +16,17 @@ public class RunStore {
         hireClerks();
         registerObservers();
 
+        int days = Helper.random.nextInt(30 - 10) + 10; // Generate run days in [10,30]
+
         //Prompt for number of days
-        for (int i = 1; i <= 30; i++) {
+        for (int i = 1; i <= days; i++) {
             simulateDay();
             Store.goToNextDay();
         }
-        printSummaries(30);
-        //a.run(30); // Runs the store for 30 days
+
+        simulateSpecialDay(); // Run a special day that allows the user to control the shopping process
+
+        printSummaries(days + 1);
     }
 
     public static void registerObservers() {
@@ -56,16 +53,15 @@ public class RunStore {
 
         Store.setStaff(staff_pool);
 
-
         store_tracker.addStaff(staff_pool);
-
-
     }
 
     public static void createStores() {
         Store northside = new Store(3, "Northside FNMS", day_logger); // Creates a store with 3 items of each type of the lowest level
         Store southside = new Store(3, "Southside FNMS", day_logger);
 
+        northside.setOtherStore(southside);
+        southside.setOtherStore(northside);
 
         store_tracker.addStore(northside);
         store_tracker.addStore(southside);
@@ -82,6 +78,19 @@ public class RunStore {
 
         for (int i = 0; i < current_stores.size(); i++) {
             current_stores.get(i).runDay();
+        }
+        store_tracker.printInfo();
+    }
+
+    public static void simulateSpecialDay() {
+        Store.sicknessCheck();
+        for (int i = 0; i < current_stores.size(); i++) {
+            current_stores.get(i).chooseClerk();
+        }
+
+        for (int i = 0; i < current_stores.size(); i++) {
+            Clerk currentClerk = current_stores.get(i).getClerkToday();
+            current_stores.get(i).runSpecialDay(currentClerk);
         }
         store_tracker.printInfo();
     }

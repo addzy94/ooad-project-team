@@ -235,6 +235,8 @@ public class Clerk extends Staff implements Subject{
 
         boolean isCurrentStore = true; // Check if the customer is shopping in the current store that this clerk stays in.
         Clerk otherClerk = otherStore.getClerkToday();
+//        System.out.println("The other store for today is: " + otherStore.getStoreName());
+//        System.out.println("The other clerk for today is: " + otherClerk.getName());
         String command = "";
         String customerName = "(controlled by user)";
         // Prepare commands
