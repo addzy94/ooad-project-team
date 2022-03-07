@@ -586,7 +586,7 @@ public class Clerk extends Staff implements Subject{
                     System.out.println("Customer " + customerName + " didn't buy a " + itemType + " even at discounted price!");
                 }
                 else {
-                    itemChosen.setDaySold(s.getDay());
+                    itemChosen.setDaySold(Store.getDay());
                     itemChosen.setSalePrice(.9 * listPrice);
                     System.out.println("Customer " + customerName + " bought a " +
                             Constants.NEW_OR_USED_MAPPING.get(itemChosen.getIsNew()) + " " +
@@ -602,7 +602,7 @@ public class Clerk extends Staff implements Subject{
                 }
             }
             else {
-                itemChosen.setDaySold(s.getDay());
+                itemChosen.setDaySold(Store.getDay());
                 itemChosen.setSalePrice(listPrice);
                 System.out.println("Customer " + customerName + " bought a " +
                         Constants.NEW_OR_USED_MAPPING.get(itemChosen.getIsNew()) + " " +
@@ -668,7 +668,7 @@ public class Clerk extends Staff implements Subject{
 
         HashMap<String, ArrayList<Item>> inventory = s.getInventory();
         Item customerBroughtItem = Helper.createItem(itemType);
-        customerBroughtItem.setDayArrived(s.getDay());
+        customerBroughtItem.setDayArrived(Store.getDay());
 
         // If the customer is selling a clothing item type
         if (Constants.CLOTHING_ITEM_TYPES.contains(itemType)) {
@@ -750,7 +750,7 @@ public class Clerk extends Staff implements Subject{
 
         HashMap<String, ArrayList<Item>> inventory = s.getInventory();
         Item customerBroughtItem = Helper.createItem(itemType);
-        customerBroughtItem.setDayArrived(s.getDay());
+        customerBroughtItem.setDayArrived(Store.getDay());
         // If the customer is selling a clothing item type
         if (Constants.CLOTHING_ITEM_TYPES.contains(itemType)) {
             // If we no longer hold stock of any clothing item
@@ -847,7 +847,7 @@ public class Clerk extends Staff implements Subject{
                     System.out.println("Customer " + customerName + " didn't sell a " + itemType + " even at extra price!");
                 }
                 else {
-                    customerBroughtItem.setDayArrived(s.getDay());
+                    customerBroughtItem.setDayArrived(Store.getDay());
                     customerBroughtItem.setPurchasePrice(offeredPrice * 1.1);
                     customerBroughtItem.setListPrice(offeredPrice * 1.1 * 2);
                     System.out.println("Customer " + customerName + " sold a " +
@@ -862,7 +862,7 @@ public class Clerk extends Staff implements Subject{
                 }
             }
             else {
-                customerBroughtItem.setDayArrived(s.getDay());
+                customerBroughtItem.setDayArrived(Store.getDay());
                 customerBroughtItem.setPurchasePrice(offeredPrice);
                 customerBroughtItem.setListPrice(offeredPrice * 2);
                 System.out.println("Customer " + customerName + " sold a " +

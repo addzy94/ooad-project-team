@@ -13,7 +13,7 @@ public class StoreTest {
     Initialize a store object for testing
      */
     int n = 2; // Number of items that will be initialized per item type
-    Store test_store = new Store(n, "Test Store", null, null);
+    Store test_store = new Store(n, "Test Store", null);
     ArrayList<Staff> test_staff = Store.getStaff();
 
     @Test
@@ -51,7 +51,7 @@ public class StoreTest {
         */
         String itemType = "CD";
         Item test_item = Helper.createItem(itemType);
-        test_item.setDayArrived(test_store.getDay());
+        test_item.setDayArrived(Store.getDay());
         int condition = test_item.getCondition();
         boolean isNew = test_item.getIsNew();
         double offeredPrice = Helper.priceEstimator(isNew, condition);
