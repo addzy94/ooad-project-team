@@ -10,7 +10,11 @@ public class SouthSideFactory implements GuitarFactory {
             return new SouthBridgeFive();
         }
 
-        else { return new SouthBridgeSix(); }
+        else if (bridgeType == BridgeTypes.SOUTH_BRIDGE_SIX) {
+            return new SouthBridgeSix();
+        }
+
+        else { return null; }
     }
 
     public KnobSet createKnobSet(KnobSetTypes knobSetType) {
@@ -23,7 +27,11 @@ public class SouthSideFactory implements GuitarFactory {
             return new SouthKnobSetFive();
         }
 
-        else { return new SouthKnobSetSix(); }
+        else if (knobSetType == KnobSetTypes.SOUTH_KNOBSET_SIX) {
+            return new SouthKnobSetSix();
+        }
+
+        else { return null; }
     }
 
     public Covers createCovers(CoversTypes coverType) {
@@ -36,7 +44,11 @@ public class SouthSideFactory implements GuitarFactory {
             return new SouthCoversFive();
         }
 
-        else { return new SouthCoversSix(); }
+        else if (coverType == CoversTypes.SOUTH_COVERS_SIX) {
+            return new SouthCoversSix();
+        }
+
+        else { return null; }
     }
 
     public Neck createNeck(NeckTypes neckType) {
@@ -49,7 +61,11 @@ public class SouthSideFactory implements GuitarFactory {
             return new SouthNeckFive();
         }
 
-        else { return new SouthNeckSix(); }
+        else if (neckType == NeckTypes.SOUTH_NECK_SIX) {
+            return new SouthNeckSix();
+        }
+
+        else { return null; }
     }
 
     public PickGuard createPickGuard(PickGuardTypes pickGuardType) {
@@ -62,7 +78,11 @@ public class SouthSideFactory implements GuitarFactory {
             return new SouthPickGuardFive();
         }
 
-        else { return new SouthPickGuardSix(); }
+        else if (pickGuardType == PickGuardTypes.SOUTH_PICKGUARD_SIX) {
+            return new SouthPickGuardSix();
+        }
+
+        else { return null; }
     }
 
     public PickUps createPickUps(PickUpsTypes pickUpType) {
@@ -74,7 +94,11 @@ public class SouthSideFactory implements GuitarFactory {
             return new SouthPickUpsFive();
         }
 
-        else { return new SouthPickUpsSix(); }
+        else if (pickUpType == PickUpsTypes.SOUTH_PICKUPS_SIX) {
+            return new SouthPickUpsSix();
+        }
+
+        else { return null; }
     }
 
 }
