@@ -253,7 +253,7 @@ public class Clerk extends Staff implements Subject{
             SellToClerkCommand sellToClerk = new SellToClerkCommand(this, s, customerName);
             AskClerkNameCommand askClerkName = new AskClerkNameCommand(this);
             AskClerkTimeCommand askClerkTime = new AskClerkTimeCommand(this);
-            BuyCustomGuitarKitFromClerkCommand buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(this);
+            BuyCustomGuitarKitFromClerkCommand buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(this, s, customerName);
             SwitchStore switchStore = new SwitchStore(s, otherStore, buyFromClerk, sellToClerk, askClerkName, askClerkTime, buyCustomGuitarKitFromClerk, customerName);
 
             // Print menu for OpenStore process
@@ -288,7 +288,7 @@ public class Clerk extends Staff implements Subject{
                         sellToClerk = new SellToClerkCommand(otherClerk, otherStore, customerName);
                         askClerkName = new AskClerkNameCommand(otherClerk);
                         askClerkTime = new AskClerkTimeCommand(otherClerk);
-                        buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(otherClerk);
+                        buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(otherClerk, otherStore, customerName);
 
                         isCurrentStore = false; // re-assign the bool parameter to mark that the customer is currently shopping in the other store
                     }
@@ -302,7 +302,7 @@ public class Clerk extends Staff implements Subject{
                         sellToClerk = new SellToClerkCommand(this, s, customerName);
                         askClerkName = new AskClerkNameCommand(this);
                         askClerkTime = new AskClerkTimeCommand(this);
-                        buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(this);
+                        buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(this, s, customerName);
 
                         isCurrentStore = true; // re-assign the bool parameter to mark that the customer is currently shopping in this store
                     }
