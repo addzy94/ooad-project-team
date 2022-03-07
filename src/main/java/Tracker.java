@@ -63,7 +63,7 @@ public class Tracker implements Observer{
             }
         }
     }
-    public static Tracker getTracker() {
+    public static synchronized Tracker getTracker() {
         if (myTracker == null) {
             myTracker = new Tracker();
         }

@@ -46,7 +46,7 @@ public class Logger implements Observer{
         }
     }
 
-    public static Logger getLogger() {
+    public static synchronized Logger getLogger() {
         return myLogger;
     }
 }
