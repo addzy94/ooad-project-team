@@ -272,9 +272,11 @@ public class Clerk extends Staff implements Subject{
                 if(command.equals("1")){
 //                remote.setCommand(switchStore);
 //                remote.buttonPressed();
-                    System.out.println("Customer switched to " + otherStore.getStoreName());
-                    setMessage("Customer switched to " + otherStore.getStoreName());
+
+                    
                     if(isCurrentStore){ // if the customer is currently at this store, we switch command's reference to the other clerk and the other store
+                        System.out.println("Customer switched to " + otherStore.getStoreName());
+                        setMessage("Customer switched to " + otherStore.getStoreName());
                         System.out.println("Now The Store is: " + otherStore.getStoreName()); //Delete now?
                         System.out.println();
 
@@ -287,6 +289,8 @@ public class Clerk extends Staff implements Subject{
                         isCurrentStore = false; // re-assign the bool parameter to mark that the customer is currently shopping in the other store
                     }
                     else{ // if if the customer is currently at this store, we switch command's reference back to this clerk and this store
+                        System.out.println("Customer switched to " + s.getStoreName());
+                        setMessage("Customer switched to " + s.getStoreName());
                         System.out.println("Now The Store is: " + s.getStoreName());
                         System.out.println();
 
@@ -351,6 +355,9 @@ public class Clerk extends Staff implements Subject{
 
             setMessage(numberItemsBought + " items were bought by " + s.getStoreName() +".");
             setMessage(numberOfItemsSold + " items were sold by " + s.getStoreName() +".");
+
+            setMessage(otherClerk.getNumberOfItemsBought() + " items were bought by " + otherStore.getStoreName() +".");
+            setMessage(otherClerk.getNumberOfItemsSold() + " items were sold by " + otherStore.getStoreName() +".");
         }
 
         else{
@@ -985,6 +992,14 @@ public class Clerk extends Staff implements Subject{
 
     public void setNumberOfItemsSold(int numberOfItemsSold) {
         this.numberOfItemsSold = numberOfItemsSold;
+    }
+
+    public int getNumberOfItemsBought() {
+        return numberItemsBought;
+    }
+
+    public void setNumberOfItemsBought(int numberOfItemsBought) {
+        this.numberItemsBought = numberOfItemsBought;
     }
 
     public void setStore(Store s) {
