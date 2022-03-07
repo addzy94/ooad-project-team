@@ -1,11 +1,11 @@
 
 Clerk Peter arrived at Southside FNMS on day 17.
 
-Clerk Peter counted $2318.22 in the register.
+Clerk Peter counted $2537.09 in the register.
 
 There were 21 items in inventory.
 
-The inventory value was $888.47
+The inventory value was $871.35
 
 0 items were damaged during tuning.
 
@@ -15,6 +15,6 @@ The inventory value was $888.47
 
 4 items were sold by the store.
 
-4 items were damaged during cleaning.
+1 items were damaged during cleaning.
 
 Peter left Southside FNMS for the day.

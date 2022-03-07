@@ -1,13 +1,13 @@
 
-Clerk Velma arrived at Southside FNMS on day 31.
+Clerk Scoovy arrived at Southside FNMS on day 31.
 
-Clerk Velma counted $2593.97 in the register.
+Clerk Scoovy counted $2980.03 in the register.
 
 There were 21 items in inventory.
 
-The inventory value was $1008.09
+The inventory value was $1137.91
 
-0 items were damaged during tuning.
+2 items were damaged during tuning.
 
 3 new items were ordered on day 31
 
@@ -15,6 +15,6 @@ The inventory value was $1008.09
 
 0 items were sold by the store.
 
-2 items were damaged during cleaning.
+10 items were damaged during cleaning.
 
-Velma left Southside FNMS for the day.
+Scoovy left Southside FNMS for the day.

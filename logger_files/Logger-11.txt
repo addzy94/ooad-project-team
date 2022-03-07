@@ -1,20 +1,20 @@
 
-Clerk Scoovy arrived at Southside FNMS on day 11.
+Clerk Danny arrived at Southside FNMS on day 11.
 
-Clerk Scoovy counted $2230.64 in the register.
+Clerk Danny counted $2378.61 in the register.
 
 There were 21 items in inventory.
 
-The inventory value was $743.72
+The inventory value was $874.61
 
-1 items were damaged during tuning.
+0 items were damaged during tuning.
 
 3 new items were ordered on day 11
 
 1 items were bought by the store.
 
-5 items were sold by the store.
+4 items were sold by the store.
 
-7 items were damaged during cleaning.
+6 items were damaged during cleaning.
 
-Scoovy left Southside FNMS for the day.
+Danny left Southside FNMS for the day.

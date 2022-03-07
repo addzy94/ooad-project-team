@@ -1,11 +1,11 @@
 
 Clerk Daphne arrived at Southside FNMS on day 18.
 
-Clerk Daphne counted $2515.6 in the register.
+Clerk Daphne counted $2407.81 in the register.
 
 There were 21 items in inventory.
 
-The inventory value was $799.95
+The inventory value was $1046.23
 
 0 items were damaged during tuning.
 
@@ -15,6 +15,6 @@ The inventory value was $799.95
 
 4 items were sold by the store.
 
-4 items were damaged during cleaning.
+6 items were damaged during cleaning.
 
 Daphne left Southside FNMS for the day.
