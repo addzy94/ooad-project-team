@@ -261,7 +261,7 @@ public class Clerk extends Staff implements Subject{
             AskClerkNameCommand askClerkName = new AskClerkNameCommand(this);
             AskClerkTimeCommand askClerkTime = new AskClerkTimeCommand(this);
             BuyCustomGuitarKitFromClerkCommand buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(this, s, customerName);
-            SwitchStore switchStore = new SwitchStore(s, otherStore, buyFromClerk, sellToClerk, askClerkName, askClerkTime, buyCustomGuitarKitFromClerk, customerName);
+//            SwitchStore switchStore = new SwitchStore(s, otherStore, buyFromClerk, sellToClerk, askClerkName, askClerkTime, buyCustomGuitarKitFromClerk, customerName);
 
 
             // Print menu for OpenStore process
