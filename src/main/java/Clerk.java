@@ -238,8 +238,12 @@ public class Clerk extends Staff implements Subject{
         if(isServing){ // If the store is still providing service for customer
             boolean isCurrentStore = true; // Check if the customer is shopping in the current store that this clerk stays in.
             Clerk otherClerk = otherStore.getClerkToday();
-//        System.out.println("The other store for today is: " + otherStore.getStoreName());
-//        System.out.println("The other clerk for today is: " + otherClerk.getName());
+
+            System.out.println("This store for today is: " + s.getStoreName());
+            System.out.println("The clerk for today is: " + this.getName() + " who has sold " + this.getNumberOfItemsSold() + " and bought " + this.getNumberOfItemsBought());
+            System.out.println("The other store for today is: " + otherStore.getStoreName());
+            System.out.println("The other clerk for today is: " + otherClerk.getName() + " who has sold " + otherClerk.getNumberOfItemsSold() + " and bought " + this.getNumberOfItemsBought());
+
             String command = "";
             String customerName = "(controlled by user)";
             // Prepare commands

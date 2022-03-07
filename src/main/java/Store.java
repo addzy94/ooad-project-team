@@ -314,7 +314,7 @@ public class Store {
 
     public void shopSpecialDay(Clerk c) {
         /*
-        Runs the Store for 'numberOfDays' Days.
+        Runs the Store for The Last Day.
          */
 //        int dayOfTheWeek = getDay() % 7;
 //        if (dayOfTheWeek == 0) {
@@ -353,7 +353,10 @@ public class Store {
         // Call incrementDayWorkedInRow method for handling the details of adding work days and assigning other clerks' work days to 0
         c.incrementDaysWorkedInARow(this);
 
-        clerkToday = c;
+        c.setNumberOfItemsSold(0);
+        c.setNumberOfItemsBought(0);
+
+        //clerkToday = c;
         this.setClerkToday(c);
 
         return c;
