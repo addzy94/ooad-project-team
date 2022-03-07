@@ -271,7 +271,7 @@ public class Store {
                 ArrayList<String> zeroStockItems = currentClerk.DoInventory(this);
                 currentClerk.PlaceAnOrder(this, zeroStockItems);
 
-                currentClerk.OpenTheStore(this);
+                currentClerk.OpenTheStoreAuto(this);
                 currentClerk.CleanStore(this);
                 currentClerk.LeaveTheStore(this);
                 currentClerk.removeObserver(day_logger);
