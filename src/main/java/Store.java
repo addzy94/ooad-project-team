@@ -18,18 +18,16 @@ public class Store {
     private HashMap<String, ArrayList<Item>> orderedItems;
 
     private static ArrayList<Staff> staff;
-    private Tracker store_tracker;
     private Logger day_logger;
     private Store otherStore;
     private Clerk clerkToday;
 
     private Clerk currentClerk;
 
-    Store(int n, String name, Tracker tracker, Logger logger) {
+    Store(int n, String name, Logger logger) {
         // Assign 3 objects per item (lowest subclass) by the time we initialize a store
         this.initialize(n);
         storeName = name;
-        store_tracker = tracker;
         day_logger = logger;
     }
 
@@ -77,7 +75,7 @@ public class Store {
             for (String itemType: itemTypes) {
                 for(int i = 0; i < numberOfObjects; i++) {
                     Item item = Helper.createItem(itemType);
-                    item.setDayArrived(this.getDay());
+                    item.setDayArrived(getDay());
                     // Just add the item to the inventory if it's the first day.
                     if (isStartDay) {
                         addToRegistry(inventory, itemType, item);
@@ -124,7 +122,7 @@ public class Store {
             // Combine the two lines above for really generating a constructor
             Constructor constructor = classObj.getConstructor(parameters);
             // Generate an object by calling Helper class that helps you put all the necessary parameter (price, day, etc) for generating it.
-            classInstance = constructor.newInstance(Helper.getParams(itemType, day).toArray());
+            classInstance = constructor.newInstance(Helper.getParams(itemType).toArray());
         }
         catch(Exception e) {
             System.out.println("Errors");
@@ -290,32 +288,33 @@ public class Store {
         Runs the Store for 'numberOfDays' Days.
          */
         //for(int i = 1; i <= numberOfDays; i++) {
-        day_logger.instantiate(getDay());
-        System.out.println("Day "+getDay()+":");
-        int dayOfTheWeek = getDay() % 7;
-        if (dayOfTheWeek == 0) {
-            System.out.println("On Sunday, no one worked.");
-            resetDays();
-        }
-        else {
-            c.registerObserver(day_logger);
-            c.ArriveAtStore(this);
-            c.CheckRegister(this);
+            day_logger.instantiate(getDay(), this);
+            System.out.println();
+            System.out.println("Day "+getDay()+":");
+            int dayOfTheWeek = getDay() % 7;
+            if (dayOfTheWeek == 0) {
+                System.out.println("On Sunday, no one worked.");
+                resetDays();
+            }
+            else {
+                //sicknessCheck();
+                //Clerk c = chooseClerk();
+                currentClerk.registerObserver(day_logger);
+                currentClerk.ArriveAtStore(this);
+                currentClerk.CheckRegister(this);
 
-            ArrayList<String> zeroStockItems = c.DoInventory(this);
-            c.PlaceAnOrder(this, zeroStockItems);
+                ArrayList<String> zeroStockItems = currentClerk.DoInventory(this);
+                currentClerk.PlaceAnOrder(this, zeroStockItems);
 
-            c.OpenTheStoreCustom(this, this.getOtherStore());
-            c.CleanStore(this);
-            c.LeaveTheStore(this);
-            c.removeObserver(day_logger);
-        }
-        this.day += 1;
-        //add an extra line for separating days
-        day_logger.close();
-        System.out.println();
-        store_tracker.printInfo(this);
-        System.out.println();
+                currentClerk.OpenTheStoreCustom(this, this.getOtherStore());
+                currentClerk.CleanStore(this);
+                currentClerk.LeaveTheStore(this);
+                currentClerk.removeObserver(day_logger);
+                currentClerk.setStore(null);
+                currentClerk = null;
+            }
+
+            day_logger.close();
         //}
 
         //printSummary(numberOfDays);
