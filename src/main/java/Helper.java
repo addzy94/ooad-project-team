@@ -1,3 +1,4 @@
+import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -23,14 +24,14 @@ public class Helper {
         return price;
     }
 
-    public static ArrayList<Object> getParams(String itemType, int day) {
+    public static ArrayList<Object> getParams(String itemType) {
         /*
         Generates randomized but relevant parameters for each type of Item passed as 'classType'.
          */
 
         ArrayList<Object> params = new ArrayList<>(Arrays.asList(
                 Helper.random.nextDouble(49) + 1, // PurchasePrice
-                day, // Day Arrived
+                0, // Day Arrived
                 Helper.random.nextInt(5) + 1, // Condition (1 to 5 levels)
                 Helper.random.nextBoolean())); // IsNewOrUsed (true is New)
         switch (itemType) {
@@ -107,4 +108,27 @@ public class Helper {
         }
         return items;
     }
+
+    public static Item createItem(String itemType) {
+
+        Object classInstance = null;
+
+        try {
+            // Initialize a list of class in the following way: [String, Int, bla, bla] for later use of initializing the corresponding item type
+            Class[] parameters = Constants.CLASS_PARAMETER_MAPPING.get(itemType);
+            // Initialize the corresponding class object based on the given String itemType
+            Class classObj = Class.forName(itemType);
+            // Combine the two lines above for really generating a constructor
+            Constructor constructor = classObj.getConstructor(parameters);
+            // Generate an object by calling Helper class that helps you put all the necessary parameter (price, day, etc) for generating it.
+            classInstance = constructor.newInstance(Helper.getParams(itemType).toArray());
+        }
+        catch(Exception e) {
+            System.out.println("Errors");
+            e.printStackTrace();
+        }
+
+        return ((Item) classInstance);
+    }
+
 }

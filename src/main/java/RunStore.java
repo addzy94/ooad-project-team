@@ -39,9 +39,13 @@ public class RunStore {
     }
 
     public static void hireClerks() {
+
         Clerk shaggy = new Clerk("Shaggy", 0, 20, new HaphazardTuningStrategy());
         Clerk velma = new Clerk("Velma", 0, 5, new ManualTuningStrategy());
         Clerk daphne = new Clerk("Daphne", 0, 10, new ElectronicTuningStrategy());
+        Clerk scoovy = new Clerk("Scoovy", 0, 20, new HaphazardTuningStrategy());
+        Clerk peter = new Clerk("Peter", 0, 5, new ManualTuningStrategy());
+        Clerk danny = new Clerk("Danny", 0, 10, new ElectronicTuningStrategy());
 
         staff_pool.add(shaggy);
         staff_pool.add(velma);
@@ -49,13 +53,16 @@ public class RunStore {
 
         Store.setStaff(staff_pool);
 
+
         store_tracker.addStaff(staff_pool);
+
 
     }
 
     public static void createStores() {
         Store northside = new Store(3, "Northside FNMS", store_tracker, day_logger); // Creates a store with 3 items of each type of the lowest level
         Store southside = new Store(3, "Southside FNMS", store_tracker, day_logger);
+
 
         store_tracker.addStore(northside);
         store_tracker.addStore(southside);
@@ -69,6 +76,7 @@ public class RunStore {
         for (int i = 0; i < current_stores.size(); i++) {
             current_stores.get(i).chooseClerk();
         }
+
         for (int i = 0; i < current_stores.size(); i++) {
             current_stores.get(i).runDay();
         }

@@ -6,8 +6,10 @@ import java.util.HashMap;
 public class Store {
 
     private String storeName;
+
     
     private static int day;
+
     private double registerAmount;
     private double amountWithdrawnFromBank;
 
@@ -18,6 +20,8 @@ public class Store {
     private static ArrayList<Staff> staff;
     private Tracker store_tracker;
     private Logger day_logger;
+    private Store otherStore;
+    private Clerk clerkToday;
 
     private Clerk currentClerk;
 
@@ -27,6 +31,22 @@ public class Store {
         storeName = name;
         store_tracker = tracker;
         day_logger = logger;
+    }
+
+    public Store getOtherStore(){
+        return this.otherStore;
+    }
+
+    public void setOtherStore(Store otherStore){
+        this.otherStore = otherStore;
+    }
+
+    public Clerk getClerkToday(){
+        return this.clerkToday;
+    }
+
+    public void setClerkToday(Clerk clerkToday){
+        this.clerkToday = clerkToday;
     }
 
     public void initialize(int numberofObjects) {
@@ -48,8 +68,6 @@ public class Store {
         Constants.generateMaps(); // Declares all the constants and initializes them
 
         generateInventory(numberofObjects, Constants.CLASS_NAMES, true);
-
-        
     }
 
     public void generateInventory(int numberOfObjects, ArrayList<String> itemTypes, boolean isStartDay) {
@@ -58,7 +76,8 @@ public class Store {
         try {
             for (String itemType: itemTypes) {
                 for(int i = 0; i < numberOfObjects; i++) {
-                    Item item = createItem(itemType);
+                    Item item = Helper.createItem(itemType);
+                    item.setDayArrived(this.getDay());
                     // Just add the item to the inventory if it's the first day.
                     if (isStartDay) {
                         addToRegistry(inventory, itemType, item);
@@ -91,6 +110,7 @@ public class Store {
             e.printStackTrace();
         }
     }
+
 
     public Item createItem(String itemType) {
 
@@ -260,34 +280,69 @@ public class Store {
             }
 
             day_logger.close();
-
-            
-            
         //}
-        
+
+        //printSummary(numberOfDays);
+    }
+
+    public void runSpecialDay(Clerk c) {
+        /*
+        Runs the Store for 'numberOfDays' Days.
+         */
+        //for(int i = 1; i <= numberOfDays; i++) {
+        day_logger.instantiate(getDay());
+        System.out.println("Day "+getDay()+":");
+        int dayOfTheWeek = getDay() % 7;
+        if (dayOfTheWeek == 0) {
+            System.out.println("On Sunday, no one worked.");
+            resetDays();
+        }
+        else {
+            c.registerObserver(day_logger);
+            c.ArriveAtStore(this);
+            c.CheckRegister(this);
+
+            ArrayList<String> zeroStockItems = c.DoInventory(this);
+            c.PlaceAnOrder(this, zeroStockItems);
+
+            c.OpenTheStoreCustom(this, this.getOtherStore());
+            c.CleanStore(this);
+            c.LeaveTheStore(this);
+            c.removeObserver(day_logger);
+        }
+        this.day += 1;
+        //add an extra line for separating days
+        day_logger.close();
+        System.out.println();
+        store_tracker.printInfo(this);
+        System.out.println();
+        //}
+
         //printSummary(numberOfDays);
     }
 
     public Clerk chooseClerk() {
-        
-    
+
+
         // Choose randomly from the current staff list
         Clerk c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
         // Re-choose a new clerk if he/she has already worked more than 2 days
-        
+
         if (c.getDaysWorkedInARow() > 2 || c.getSick() || c.getIsActiveWorker()) {
-        // Keep choosing a clerk until you choose someone who hasn't worked 3 days or is not sick
+            // Keep choosing a clerk until you choose someone who hasn't worked 3 days or is not sick
             while (c.getDaysWorkedInARow() == 3 || c.getSick() || c.getIsActiveWorker()) {
                 c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
             }
         }
-        
+
         // Set that clerk as active worker for today
         c.setIsActiveWorker(true);
         c.setStore(this);
         // Call incrementDayWorkedInRow method for handling the details of adding work days and assigning other clerks' work days to 0
         c.incrementDaysWorkedInARow(this);
+
         currentClerk = c;
+
         return c;
     }
 
@@ -298,7 +353,7 @@ public class Store {
             s.setDaysWorkedInARow(0);
         }
     }
-    
+
     public void printSummary(int days) {
         System.out.println("--- FINAL SUMMARY FOR STORE " + getStoreName() + " ---");
         System.out.println("The amount of money in the register at the end of " + days + " days was $" + Helper.round(this.registerAmount) + "\n");
@@ -325,15 +380,16 @@ public class Store {
             for(String itemType: soldLogBook.keySet()) {
                 for (Item i: soldLogBook.get(itemType)) {
                     if (i.getDaySold() == j) {
-                        System.out.println("On day " + (i.getDaySold() + 1) + ", a " + i.getName() + " sold for $" + Helper.round(i.getSalePrice()));
+                        System.out.println("On day " + (i.getDaySold()) + ", a " + i.getName() + " sold for $" + Helper.round(i.getSalePrice()));
                     }
                 }
             }
         }
     }
-
+  
     public static void sicknessCheck() {
         
+
         for (Staff s: staff) {
             s.setSick(false);
         }
@@ -353,12 +409,12 @@ public class Store {
                         anotherClerk = true;
                     }
                 }
-                
+
                 c2.setSick(true);
                 System.out.println(c2.getName() + " was also sick on day " + getDay());
             }
         }
-        
+
     }
 
     public double getRegisterAmount() {

@@ -1,20 +1,20 @@
 
-Clerk Velma arrived at the store on day 19.
+Clerk Shaggy arrived at Southside FNMS on day 19.
 
-Clerk Velma counted $2605.59 in the register.
+Clerk Shaggy counted $2671.89 in the register.
 
 There were 21 items in inventory.
 
-The inventory value was $1200.27
+The inventory value was $711.56
 
 0 items were damaged during tuning.
 
-3 new items were ordered on day 18
+3 new items were ordered on day 19
 
-1 items were bought by the store.
+2 items were bought by the store.
 
-4 items were sold by the store.
+6 items were sold by the store.
 
-3 items were damaged during cleaning.
+5 items were damaged during cleaning.
 
-Velma left the store for the day.
+Shaggy left Southside FNMS for the day.

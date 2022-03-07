@@ -1,20 +1,20 @@
 
-Clerk Velma arrived at the store on day 9.
+Clerk Danny arrived at Southside FNMS on day 9.
 
-Clerk Velma counted $2288.76 in the register.
+Clerk Danny counted $2196.77 in the register.
 
 There were 21 items in inventory.
 
-The inventory value was $1038.91
+The inventory value was $836.51
 
 0 items were damaged during tuning.
 
-3 new items were ordered on day 8
+3 new items were ordered on day 9
 
-4 items were bought by the store.
+3 items were bought by the store.
 
-7 items were sold by the store.
+4 items were sold by the store.
 
-1 items were damaged during cleaning.
+3 items were damaged during cleaning.
 
-Velma left the store for the day.
+Danny left Southside FNMS for the day.

@@ -1,20 +1,20 @@
 
-Clerk Daphne arrived at the store on day 8.
+Clerk Shaggy arrived at Southside FNMS on day 8.
 
-Clerk Daphne counted $2269.99 in the register.
+Clerk Shaggy counted $2105.78 in the register.
 
 There were 21 items in inventory.
 
-The inventory value was $1015.58
+The inventory value was $962.53
 
-0 items were damaged during tuning.
+3 items were damaged during tuning.
 
-3 new items were ordered on day 7
+3 new items were ordered on day 8
 
-2 items were bought by the store.
+3 items were bought by the store.
 
-3 items were sold by the store.
+4 items were sold by the store.
 
-2 items were damaged during cleaning.
+9 items were damaged during cleaning.
 
-Daphne left the store for the day.
+Shaggy left Southside FNMS for the day.
