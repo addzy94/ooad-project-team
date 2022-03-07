@@ -16,7 +16,8 @@ public class RunStore {
         hireClerks();
         registerObservers();
 
-        int days = Helper.random.nextInt(30 - 10) + 10; // Generate run days in [10,30]
+        //int days = Helper.random.nextInt(30 - 10) + 10; // Generate run days in [10,30]
+        int days = 30;
 
         //Prompt for number of days
         for (int i = 1; i <= days; i++) {
@@ -79,7 +80,7 @@ public class RunStore {
         for (int i = 0; i < current_stores.size(); i++) {
             current_stores.get(i).runDay();
         }
-        store_tracker.printInfo();
+        //store_tracker.printInfo();
     }
 
     public static void simulateSpecialDay() {
@@ -88,10 +89,18 @@ public class RunStore {
             current_stores.get(i).chooseClerk();
         }
 
+        // Run preparation process for all stores before calling OpenTheStoreCustom method
         for (int i = 0; i < current_stores.size(); i++) {
             Clerk currentClerk = current_stores.get(i).getClerkToday();
-            current_stores.get(i).runSpecialDay(currentClerk);
+            current_stores.get(i).prepareSpecialDay(currentClerk);
         }
+
+        // Run OpenTheStoreCustom method for all stores
+        for (int i = 0; i < current_stores.size(); i++) {
+            Clerk currentClerk = current_stores.get(i).getClerkToday();
+            current_stores.get(i).shopSpecialDay(currentClerk);
+        }
+
         store_tracker.printInfo();
     }
 

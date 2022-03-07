@@ -233,121 +233,129 @@ public class Clerk extends Staff implements Subject{
         numberItemsBought = 0;
         numberOfItemsSold = 0;
 
-        boolean isCurrentStore = true; // Check if the customer is shopping in the current store that this clerk stays in.
-        Clerk otherClerk = otherStore.getClerkToday();
+        boolean isServing = s.getIsServing(); // Check if the user has entered 7 for stopping the OpenTheStoreCustom method for all stores
+
+        if(isServing){ // If the store is still providing service for customer
+            boolean isCurrentStore = true; // Check if the customer is shopping in the current store that this clerk stays in.
+            Clerk otherClerk = otherStore.getClerkToday();
 //        System.out.println("The other store for today is: " + otherStore.getStoreName());
 //        System.out.println("The other clerk for today is: " + otherClerk.getName());
-        String command = "";
-        String customerName = "(controlled by user)";
-        // Prepare commands
-        CommandController remote = new CommandController();
+            String command = "";
+            String customerName = "(controlled by user)";
+            // Prepare commands
+            CommandController remote = new CommandController();
 
-        BuyFromClerkCommand buyFromClerk = new BuyFromClerkCommand(this, s, customerName);
-        SellToClerkCommand sellToClerk = new SellToClerkCommand(this, s, customerName);
-        AskClerkNameCommand askClerkName = new AskClerkNameCommand(this);
-        AskClerkTimeCommand askClerkTime = new AskClerkTimeCommand(this);
-        BuyCustomGuitarKitFromClerkCommand buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(this);
-        SwitchStore switchStore = new SwitchStore(s, otherStore, buyFromClerk, sellToClerk, askClerkName, askClerkTime, buyCustomGuitarKitFromClerk, customerName);
+            BuyFromClerkCommand buyFromClerk = new BuyFromClerkCommand(this, s, customerName);
+            SellToClerkCommand sellToClerk = new SellToClerkCommand(this, s, customerName);
+            AskClerkNameCommand askClerkName = new AskClerkNameCommand(this);
+            AskClerkTimeCommand askClerkTime = new AskClerkTimeCommand(this);
+            BuyCustomGuitarKitFromClerkCommand buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(this);
+            SwitchStore switchStore = new SwitchStore(s, otherStore, buyFromClerk, sellToClerk, askClerkName, askClerkTime, buyCustomGuitarKitFromClerk, customerName);
 
-        // Print menu for OpenStore process
-        System.out.println("Please Choose From The Following Actions:");
-        System.out.println("1. Switch Store");
-        System.out.println("2. Ask For Clerk's Name");
-        System.out.println("3. Ask For The Current Time");
-        System.out.println("4. Sell An Item");
-        System.out.println("5. Buy An Item");
-        System.out.println("6. Buy A Custom Guitar Kit");
-        System.out.println("7. End The Shopping Process");
-        System.out.println();
+            // Print menu for OpenStore process
+            System.out.println("Please Choose From The Following Actions:");
+            System.out.println("1. Switch Store");
+            System.out.println("2. Ask For Clerk's Name");
+            System.out.println("3. Ask For The Current Time");
+            System.out.println("4. Sell An Item");
+            System.out.println("5. Buy An Item");
+            System.out.println("6. Buy A Custom Guitar Kit");
+            System.out.println("7. End The Shopping Process");
+            System.out.println();
 
-        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-        System.out.println("Enter The Corresponding Number Of Your Choice:");
-        command = myObj.nextLine();  // Read user input
-        // Run the interactions until the user enters 7 to quit.
-        while(! command.equals("7")){
-            // If the customer selects switching a store
-            if(command.equals("1")){
+            Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+            System.out.println("Enter The Corresponding Number Of Your Choice:");
+            command = myObj.nextLine();  // Read user input
+            // Run the interactions until the user enters 7 to quit.
+            while(! command.equals("7")){
+                // If the customer selects switching a store
+                if(command.equals("1")){
 //                remote.setCommand(switchStore);
 //                remote.buttonPressed();
-                System.out.println("Customer Switched To Another Store!");
-                if(isCurrentStore){ // if the customer is currently at this store, we switch command's reference to the other clerk and the other store
-                    System.out.println("Now The Store is: " + otherStore.getStoreName());
-                    System.out.println();
+                    System.out.println("Customer Switched To Another Store!");
+                    if(isCurrentStore){ // if the customer is currently at this store, we switch command's reference to the other clerk and the other store
+                        System.out.println("Now The Store is: " + otherStore.getStoreName());
+                        System.out.println();
 
-                    buyFromClerk = new BuyFromClerkCommand(otherClerk, otherStore, customerName);
-                    sellToClerk = new SellToClerkCommand(otherClerk, otherStore, customerName);
-                    askClerkName = new AskClerkNameCommand(otherClerk);
-                    askClerkTime = new AskClerkTimeCommand(otherClerk);
-                    buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(otherClerk);
+                        buyFromClerk = new BuyFromClerkCommand(otherClerk, otherStore, customerName);
+                        sellToClerk = new SellToClerkCommand(otherClerk, otherStore, customerName);
+                        askClerkName = new AskClerkNameCommand(otherClerk);
+                        askClerkTime = new AskClerkTimeCommand(otherClerk);
+                        buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(otherClerk);
 
-                    isCurrentStore = false; // re-assign the bool parameter to mark that the customer is currently shopping in the other store
+                        isCurrentStore = false; // re-assign the bool parameter to mark that the customer is currently shopping in the other store
+                    }
+                    else{ // if if the customer is currently at this store, we switch command's reference back to this clerk and this store
+                        System.out.println("Now The Store is: " + s.getStoreName());
+                        System.out.println();
+
+                        buyFromClerk = new BuyFromClerkCommand(this, s, customerName);
+                        sellToClerk = new SellToClerkCommand(this, s, customerName);
+                        askClerkName = new AskClerkNameCommand(this);
+                        askClerkTime = new AskClerkTimeCommand(this);
+                        buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(this);
+
+                        isCurrentStore = true; // re-assign the bool parameter to mark that the customer is currently shopping in this store
+                    }
+
                 }
-                else{ // if if the customer is currently at this store, we switch command's reference back to this clerk and this store
-                    System.out.println("Now The Store is: " + s.getStoreName());
-                    System.out.println();
 
-                    buyFromClerk = new BuyFromClerkCommand(this, s, customerName);
-                    sellToClerk = new SellToClerkCommand(this, s, customerName);
-                    askClerkName = new AskClerkNameCommand(this);
-                    askClerkTime = new AskClerkTimeCommand(this);
-                    buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(this);
-
-                    isCurrentStore = true; // re-assign the bool parameter to mark that the customer is currently shopping in this store
+                // If the customer selects asking for clerk's name
+                else if(command.equals("2")){
+                    remote.setCommand(askClerkName);
+                    remote.buttonPressed();
                 }
 
+                // If the customer selects asking the clerk what time it is
+                else if(command.equals("3")){
+                    remote.setCommand(askClerkTime);
+                    remote.buttonPressed();
+                }
+
+                // If the customer selects selling an item to the clerk
+                else if(command.equals("4")){
+                    remote.setCommand(sellToClerk);
+                    remote.buttonPressed();
+                }
+
+                // If the customer selects buying an item from the clerk
+                else if(command.equals("5")){
+                    remote.setCommand(buyFromClerk);
+                    remote.buttonPressed();
+                }
+
+                // If the customer selects buying a custom guitar git from the clerk
+                else if(command.equals("6")){
+                    remote.setCommand(buyCustomGuitarKitFromClerk);
+                    remote.buttonPressed();
+                }
+
+                // Otherwise wrong command, please try again
+                else{
+                    System.out.println("Wrong command! Please try again!");
+                    System.out.println();
+                }
+
+                // Asking for the next input
+                System.out.println("Enter The Corresponding Number Of Your Choice:");
+                command = myObj.nextLine();
             }
 
-            // If the customer selects asking for clerk's name
-            else if(command.equals("2")){
-                remote.setCommand(askClerkName);
-                remote.buttonPressed();
-            }
+            // By the time when user pressed 7 to end this interactions
+            System.out.println("Customer decided to end the interactions.");
+            System.out.println();
+            // Set isServing to false for all stores
+            s.setIsServing(false);
+            otherStore.setIsServing(false);
 
-            // If the customer selects asking the clerk what time it is
-            else if(command.equals("3")){
-                remote.setCommand(askClerkTime);
-                remote.buttonPressed();
-            }
-
-            // If the customer selects selling an item to the clerk
-            else if(command.equals("4")){
-                remote.setCommand(sellToClerk);
-                remote.buttonPressed();
-            }
-
-            // If the customer selects buying an item from the clerk
-            else if(command.equals("5")){
-                remote.setCommand(buyFromClerk);
-                remote.buttonPressed();
-            }
-
-            // If the customer selects buying a custom guitar git from the clerk
-            else if(command.equals("6")){
-                remote.setCommand(buyCustomGuitarKitFromClerk);
-                remote.buttonPressed();
-            }
-
-            // If the customer selects ending the interactions
-            //TODO: try to let both clerks know that they are done with the OpenStore process
-            // hence stopping OpenStore process for both store
-            else if(command.equals("7")){
-                System.out.println("Customer decided to end the interactions.");
-                System.out.println();
-            }
-
-            // Otherwise wrong command, please try again
-            else{
-                System.out.println("Wrong command! Please try again!");
-                System.out.println();
-            }
-
-            // Asking for the next input
-            System.out.println("Enter The Corresponding Number Of Your Choice:");
-            command = myObj.nextLine();
+            setMessage(numberItemsBought + " items were bought by the store.");
+            setMessage(numberOfItemsSold + " items were sold by the store.");
         }
 
-        setMessage(numberItemsBought + " items were bought by the store.");
-        setMessage(numberOfItemsSold + " items were sold by the store.");
+        else{
+            System.out.println(s.getStoreName() + "has closed since the user entered has already ended the interactions.");
+        }
+
     }
 
     public void BuyItemTransaction(Store s, String itemType, String customerName) {

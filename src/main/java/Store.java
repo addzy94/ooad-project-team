@@ -22,6 +22,8 @@ public class Store {
     private Store otherStore;
     private Clerk clerkToday;
 
+    private boolean isServing = true;
+
     Store(int n, String name, Logger logger) {
         // Assign 3 objects per item (lowest subclass) by the time we initialize a store
         this.initialize(n);
@@ -43,6 +45,14 @@ public class Store {
 
     public void setClerkToday(Clerk clerkToday){
         this.clerkToday = clerkToday;
+    }
+
+    public boolean getIsServing(){
+        return this.isServing;
+    }
+
+    public void setIsServing(boolean isServing){
+        this.isServing = isServing;
     }
 
     public void initialize(int numberofObjects) {
@@ -246,7 +256,7 @@ public class Store {
 
     public void runDay() {
         /*
-        Runs the Store for one day
+        Runs the Store for One Day
          */
         day_logger.instantiate(getDay(), this);
         System.out.println();
@@ -273,36 +283,58 @@ public class Store {
         day_logger.close();
     }
 
-    public void runSpecialDay(Clerk c) {
+    public void prepareSpecialDay(Clerk c) {
+        /*
+        Runs the Store for One Day
+         */
+        day_logger.instantiate(getDay(), this);
+        System.out.println();
+        System.out.println("Day "+getDay()+":");
+//        int dayOfTheWeek = getDay() % 7;
+//        if (dayOfTheWeek == 0) {
+//            System.out.println("On Sunday, no one worked.");
+//            resetDays();
+//        }
+//        else {
+            clerkToday.registerObserver(day_logger);
+            clerkToday.ArriveAtStore(this);
+            clerkToday.CheckRegister(this);
+
+            ArrayList<String> zeroStockItems = clerkToday.DoInventory(this);
+            clerkToday.PlaceAnOrder(this, zeroStockItems);
+
+//            clerkToday.OpenTheStoreCustom(this, this.getOtherStore());
+//            clerkToday.CleanStore(this);
+//            clerkToday.LeaveTheStore(this);
+//            clerkToday.removeObserver(day_logger);
+//            clerkToday.setStore(null);
+//            this.setClerkToday(null);
+//        }
+
+        day_logger.close();
+    }
+
+    public void shopSpecialDay(Clerk c) {
         /*
         Runs the Store for 'numberOfDays' Days.
          */
-        //for(int i = 1; i <= numberOfDays; i++) {
-            day_logger.instantiate(getDay(), this);
-            System.out.println();
-            System.out.println("Day "+getDay()+":");
-            int dayOfTheWeek = getDay() % 7;
-            if (dayOfTheWeek == 0) {
-                System.out.println("On Sunday, no one worked.");
-                resetDays();
-            }
-            else {
-                clerkToday.registerObserver(day_logger);
-                clerkToday.ArriveAtStore(this);
-                clerkToday.CheckRegister(this);
+        day_logger.instantiate(getDay(), this);
+//        int dayOfTheWeek = getDay() % 7;
+//        if (dayOfTheWeek == 0) {
+//            System.out.println("On Sunday, no one worked.");
+//            resetDays();
+//        }
+//        else {
 
-                ArrayList<String> zeroStockItems = clerkToday.DoInventory(this);
-                clerkToday.PlaceAnOrder(this, zeroStockItems);
+            clerkToday.OpenTheStoreCustom(this, this.getOtherStore());
+            clerkToday.CleanStore(this);
+            clerkToday.LeaveTheStore(this);
+            clerkToday.removeObserver(day_logger);
+            clerkToday.setStore(null);
+            this.setClerkToday(null);
+//        }
 
-                clerkToday.OpenTheStoreCustom(this, this.getOtherStore());
-                clerkToday.CleanStore(this);
-                clerkToday.LeaveTheStore(this);
-                clerkToday.removeObserver(day_logger);
-                clerkToday.setStore(null);
-                this.setClerkToday(null);
-            }
-
-            day_logger.close();
+        day_logger.close();
     }
 
     public Clerk chooseClerk() {
