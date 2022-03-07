@@ -283,59 +283,36 @@ public class Store {
         day_logger.close();
     }
 
+    // Split the normal runDay method into the following two parts:
+    // prepareSpecialDay that handles every step before openTheStore method
     public void prepareSpecialDay(Clerk c) {
         /*
         Runs the Store for One Day
          */
         System.out.println();
         System.out.println("Day "+getDay()+":");
-//        int dayOfTheWeek = getDay() % 7;
-//        if (dayOfTheWeek == 0) {
-//            System.out.println("On Sunday, no one worked.");
-//            resetDays();
-//        }
-//        else {
-            clerkToday.registerObserver(day_logger);
-            clerkToday.ArriveAtStore(this);
-            clerkToday.CheckRegister(this);
+        clerkToday.registerObserver(day_logger);
+        clerkToday.ArriveAtStore(this);
+        clerkToday.CheckRegister(this);
 
-            ArrayList<String> zeroStockItems = clerkToday.DoInventory(this);
-            clerkToday.PlaceAnOrder(this, zeroStockItems);
-
-//            clerkToday.OpenTheStoreCustom(this, this.getOtherStore());
-//            clerkToday.CleanStore(this);
-//            clerkToday.LeaveTheStore(this);
-//            clerkToday.removeObserver(day_logger);
-//            clerkToday.setStore(null);
-//            this.setClerkToday(null);
-//        }
-
+        ArrayList<String> zeroStockItems = clerkToday.DoInventory(this);
+        clerkToday.PlaceAnOrder(this, zeroStockItems);
     }
 
+    // shopSpecialDay that handles every step after preparation process
     public void shopSpecialDay(Clerk c) {
         /*
         Runs the Store for The Last Day.
          */
-//        int dayOfTheWeek = getDay() % 7;
-//        if (dayOfTheWeek == 0) {
-//            System.out.println("On Sunday, no one worked.");
-//            resetDays();
-//        }
-//        else {
-
-            clerkToday.OpenTheStoreCustom(this, this.getOtherStore());
-            clerkToday.CleanStore(this);
-            clerkToday.LeaveTheStore(this);
-            clerkToday.removeObserver(day_logger);
-            clerkToday.setStore(null);
-            this.setClerkToday(null);
-//        }
-
+        clerkToday.OpenTheStoreCustom(this, this.getOtherStore());
+        clerkToday.CleanStore(this);
+        clerkToday.LeaveTheStore(this);
+        clerkToday.removeObserver(day_logger);
+        clerkToday.setStore(null);
+        this.setClerkToday(null);
     }
 
     public Clerk chooseClerk() {
-
-
         // Choose randomly from the current staff list
         Clerk c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
         // Re-choose a new clerk if he/she has already worked more than 2 days
@@ -353,6 +330,7 @@ public class Store {
         // Call incrementDayWorkedInRow method for handling the details of adding work days and assigning other clerks' work days to 0
         c.incrementDaysWorkedInARow(this);
 
+        // Assign number of item sold and bought to 0 by the beginning of the day
         c.setNumberOfItemsSold(0);
         c.setNumberOfItemsBought(0);
 
@@ -404,8 +382,6 @@ public class Store {
     }
   
     public static void sicknessCheck() {
-        
-
         for (Staff s: staff) {
             s.setSick(false);
         }
