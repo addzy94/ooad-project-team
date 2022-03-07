@@ -5,13 +5,15 @@ public class Logger implements Observer{
 
     private FileWriter currentFile;
 
-    public Logger() {
+    private static Logger myLogger = new Logger();
+
+    private Logger() {
         //do nothing
     }
 
-    public void instantiate(int day) {
+    public void instantiate(int day, Store s) {
         try {
-            currentFile = new FileWriter("logger_files/Logger-" + day + ".txt");
+            currentFile = new FileWriter("logger_files/Logger-" + day + "-" + s.getStoreName() + ".txt");
         }
         catch (IOException e) {
             System.out.println("ERROR: Unable to create logger file for day " + day);
@@ -36,5 +38,9 @@ public class Logger implements Observer{
         catch (IOException e) {
             System.out.println("ERROR: Unable to write to file.");
         }
+    }
+
+    public static Logger getLogger() {
+        return myLogger;
     }
 }

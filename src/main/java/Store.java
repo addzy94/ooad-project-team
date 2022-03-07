@@ -7,7 +7,7 @@ public class Store {
 
     private String storeName;
     
-    private int day;
+    private static int day;
     private double registerAmount;
     private double amountWithdrawnFromBank;
 
@@ -19,10 +19,14 @@ public class Store {
     private Tracker store_tracker;
     private Logger day_logger;
 
-    Store(int n, String name) {
+    private Clerk currentClerk;
+
+    Store(int n, String name, Tracker tracker, Logger logger) {
         // Assign 3 objects per item (lowest subclass) by the time we initialize a store
         this.initialize(n);
         storeName = name;
+        store_tracker = tracker;
+        day_logger = logger;
     }
 
     public void initialize(int numberofObjects) {
@@ -32,7 +36,7 @@ public class Store {
         on the 0th Day.
          */
 
-        this.day = 1;
+        day = 1;
         this.registerAmount = 0;
         this.amountWithdrawnFromBank = 0;
 
@@ -45,26 +49,7 @@ public class Store {
 
         generateInventory(numberofObjects, Constants.CLASS_NAMES, true);
 
-        /*
-        --- IDENTITY ---
-        Following 2 lines display Identity Concept; the creation of objects that
-        have their own identity.
-        --- IDENTITY ---
-         */
-
         
-
-
-        //Store Tracker and Day Logger both implement an Observer pattern, of which Clerk is the Subject
-
-        store_tracker = new Tracker();
-        day_logger = new Logger();
-    }
-
-    public void hireClerk(Clerk c) {
-        //staff.add(c);
-        store_tracker.addStaff(c);
-        c.registerObserver(store_tracker);
     }
 
     public void generateInventory(int numberOfObjects, ArrayList<String> itemTypes, boolean isStartDay) {
@@ -119,7 +104,7 @@ public class Store {
             // Combine the two lines above for really generating a constructor
             Constructor constructor = classObj.getConstructor(parameters);
             // Generate an object by calling Helper class that helps you put all the necessary parameter (price, day, etc) for generating it.
-            classInstance = constructor.newInstance(Helper.getParams(itemType, this.day).toArray());
+            classInstance = constructor.newInstance(Helper.getParams(itemType, day).toArray());
         }
         catch(Exception e) {
             System.out.println("Errors");
@@ -159,7 +144,7 @@ public class Store {
         for(String itemType: inventory.keySet()) {
             System.out.println("Type of Item: " + itemType);
             for (Item i: inventory.get(itemType)) {
-                if (i.getDaySold() == -1 && i.getDayArrived() <= this.day) { // If it is not yet sold, display it.
+                if (i.getDaySold() == -1 && i.getDayArrived() <= day) { // If it is not yet sold, display it.
                     System.out.println("\t Name: " + i.getName());
                     System.out.println("\t Purchase Price: " + Helper.round(i.getPurchasePrice()) + "$");
                     System.out.println("\t List Price: " + Helper.round(i.getListPrice()) + "$");
@@ -211,7 +196,7 @@ public class Store {
 
         for(String itemType: inventory.keySet()) {
             for (Item i: inventory.get(itemType)) {
-                if (i.getDayArrived() <= this.getDay()) {
+                if (i.getDayArrived() <= getDay()) {
                     inventoryVal += i.getPurchasePrice();
                 }
             }
@@ -243,12 +228,13 @@ public class Store {
         return zeroStockItems;
     }
 
-    public void runDay(Clerk c) {
+    public void runDay() {
         /*
         Runs the Store for 'numberOfDays' Days.
          */
         //for(int i = 1; i <= numberOfDays; i++) {
-            day_logger.instantiate(getDay());
+            day_logger.instantiate(getDay(), this);
+            System.out.println();
             System.out.println("Day "+getDay()+":");
             int dayOfTheWeek = getDay() % 7;
             if (dayOfTheWeek == 0) {
@@ -258,24 +244,25 @@ public class Store {
             else {
                 //sicknessCheck();
                 //Clerk c = chooseClerk();
-                c.registerObserver(day_logger);
-                c.ArriveAtStore(this);
-                c.CheckRegister(this);
+                currentClerk.registerObserver(day_logger);
+                currentClerk.ArriveAtStore(this);
+                currentClerk.CheckRegister(this);
 
-                ArrayList<String> zeroStockItems = c.DoInventory(this);
-                c.PlaceAnOrder(this, zeroStockItems);
+                ArrayList<String> zeroStockItems = currentClerk.DoInventory(this);
+                currentClerk.PlaceAnOrder(this, zeroStockItems);
 
-                c.OpenTheStore(this);
-                c.CleanStore(this);
-                c.LeaveTheStore(this);
-                c.removeObserver(day_logger);
+                currentClerk.OpenTheStore(this);
+                currentClerk.CleanStore(this);
+                currentClerk.LeaveTheStore(this);
+                currentClerk.removeObserver(day_logger);
+                currentClerk.setStore(null);
+                currentClerk = null;
             }
-            this.day += 1;
-            //add an extra line for separating days
+
             day_logger.close();
-            System.out.println();
-            store_tracker.printInfo(this);
-            System.out.println();
+
+            
+            
         //}
         
         //printSummary(numberOfDays);
@@ -297,8 +284,10 @@ public class Store {
         
         // Set that clerk as active worker for today
         c.setIsActiveWorker(true);
+        c.setStore(this);
         // Call incrementDayWorkedInRow method for handling the details of adding work days and assigning other clerks' work days to 0
         c.incrementDaysWorkedInARow(this);
+        currentClerk = c;
         return c;
     }
 
@@ -332,7 +321,7 @@ public class Store {
     }
 
     public void printSoldItems() {
-        for (int j = 0; j <= this.getDay(); j++) {
+        for (int j = 0; j <= getDay(); j++) {
             for(String itemType: soldLogBook.keySet()) {
                 for (Item i: soldLogBook.get(itemType)) {
                     if (i.getDaySold() == j) {
@@ -343,7 +332,7 @@ public class Store {
         }
     }
 
-    public void sicknessCheck() {
+    public static void sicknessCheck() {
         
         for (Staff s: staff) {
             s.setSick(false);
@@ -353,7 +342,7 @@ public class Store {
         if (chanceOfSick <= 0.1) {
             Clerk c = (Clerk) staff.get(Helper.random.nextInt(staff.size()));
             c.setSick(true);
-            System.out.println(c.getName() + " was sick on day " + this.getDay());
+            System.out.println(c.getName() + " was sick on day " + getDay());
             double chanceOfSick2 = Helper.random.nextDouble();
             if (chanceOfSick2 <= 0.1) {
                 boolean anotherClerk = false;
@@ -366,7 +355,7 @@ public class Store {
                 }
                 
                 c2.setSick(true);
-                System.out.println(c2.getName() + " was also sick on day " + this.getDay());
+                System.out.println(c2.getName() + " was also sick on day " + getDay());
             }
         }
         
@@ -400,15 +389,19 @@ public class Store {
         return soldLogBook;
     }
 
-    public int getDay() {
+    public static int getDay() {
         return day;
     }
 
-    public ArrayList<Staff> getStaff() {
+    public static void goToNextDay() {
+        day = day + 1;
+    }
+
+    public static ArrayList<Staff> getStaff() {
         return staff;
     }
 
-    public void setStaff(ArrayList<Staff> new_staff) {
+    public static void setStaff(ArrayList<Staff> new_staff) {
         staff = new_staff;
     }
 

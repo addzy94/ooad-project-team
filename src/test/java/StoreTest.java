@@ -13,8 +13,8 @@ public class StoreTest {
     Initialize a store object for testing
      */
     int n = 2; // Number of items that will be initialized per item type
-    Store test_store = new Store(n, "Test Store");
-    ArrayList<Staff> test_staff = test_store.getStaff();
+    Store test_store = new Store(n, "Test Store", null, null);
+    ArrayList<Staff> test_staff = Store.getStaff();
 
     @Test
     public void initialize_test() {
@@ -54,7 +54,7 @@ public class StoreTest {
         int condition = test_item.getCondition();
         boolean isNew = test_item.getIsNew();
         double offeredPrice = Helper.priceEstimator(isNew, condition);
-        test_item.setDayArrived(test_store.getDay());
+        test_item.setDayArrived(Store.getDay());
         test_item.setPurchasePrice(offeredPrice);
         test_item.setListPrice(offeredPrice);
         test_store.addToRegistry(test_store.getInventory(), itemType, test_item);
@@ -72,8 +72,8 @@ public class StoreTest {
     @Test
     public void resetWorkDays_test() {
 
-        test_store.runDay((Clerk) test_staff.get(0)); // Run the store for one day
-        assertEquals(1, test_store.getDay()); // Check if the day counter is now 1
+        test_store.runDay(); // Run the store for one day
+        assertEquals(1, Store.getDay()); // Check if the day counter is now 1
 
         Clerk test_clerk = (Clerk) test_staff.get(0); // Find the clerk who has worked for a day
         for(Staff s : test_staff){
