@@ -88,7 +88,7 @@ public class RunStore {
         for (int i = 0; i < current_stores.size(); i++) {
             current_stores.get(i).chooseClerk();
         }
-
+        day_logger.instantiate(-1, null, true);
         // Run preparation process for all stores before calling OpenTheStoreCustom method
         for (int i = 0; i < current_stores.size(); i++) {
             Clerk currentClerk = current_stores.get(i).getClerkToday();
@@ -102,6 +102,7 @@ public class RunStore {
         }
 
         store_tracker.printInfo();
+        day_logger.close();
     }
 
     public static void printSummaries(int days) {

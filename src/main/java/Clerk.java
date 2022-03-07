@@ -99,7 +99,7 @@ public class Clerk extends Staff implements Subject{
 
         int damagedByTuning = 0;
         int totalInventory = s.getInventory().size();
-        setMessage("There were " + totalInventory + " items in inventory.");
+        setMessage("There were " + totalInventory + " items in inventory at " + s.getStoreName() + ".");
         double inventoryValue = Helper.round(s.calcInventoryValue());
         System.out.println("Clerk " + this.getName() + " calculated the inventory value to be: $" + inventoryValue);
         setMessage("The inventory value was $" + inventoryValue);
@@ -175,7 +175,7 @@ public class Clerk extends Staff implements Subject{
                 }
             }
         }
-        setMessage(damagedByTuning + " items were damaged during tuning.");
+        setMessage(damagedByTuning + " items were damaged during tuning at " + s.getStoreName() + ".");
         return zeroStockItems;
     }
 
@@ -184,7 +184,7 @@ public class Clerk extends Staff implements Subject{
         System.out.println("--------------------PLACING ORDERS--------------------");
 
         s.generateInventory(3, zeroStockItems, false);
-        setMessage("3 new items were ordered on day " + Store.getDay());
+        setMessage("3 new items were ordered by " + s.getStoreName() + " on day " + Store.getDay());
     }
 
     public void OpenTheStoreAuto(Store s) {
@@ -221,8 +221,8 @@ public class Clerk extends Staff implements Subject{
             System.out.println("-----");
             SellItemTransaction(s, customerBroughtItem, customerName);
         }
-        setMessage(numberItemsBought + " items were bought by the store.");
-        setMessage(numberOfItemsSold + " items were sold by the store.");
+        setMessage(numberItemsBought + " items were bought by " + s.getStoreName() +".");
+        setMessage(numberOfItemsSold + " items were sold by " + s.getStoreName() +".");
     }
 
     // a customized OpenTheStore method that handles the decision by taking user input
@@ -272,9 +272,10 @@ public class Clerk extends Staff implements Subject{
                 if(command.equals("1")){
 //                remote.setCommand(switchStore);
 //                remote.buttonPressed();
-                    System.out.println("Customer Switched To Another Store!");
+                    System.out.println("Customer switched to " + otherStore.getStoreName());
+                    setMessage("Customer switched to " + otherStore.getStoreName());
                     if(isCurrentStore){ // if the customer is currently at this store, we switch command's reference to the other clerk and the other store
-                        System.out.println("Now The Store is: " + otherStore.getStoreName());
+                        System.out.println("Now The Store is: " + otherStore.getStoreName()); //Delete now?
                         System.out.println();
 
                         buyFromClerk = new BuyFromClerkCommand(otherClerk, otherStore, customerName);
@@ -348,8 +349,8 @@ public class Clerk extends Staff implements Subject{
             s.setIsServing(false);
             otherStore.setIsServing(false);
 
-            setMessage(numberItemsBought + " items were bought by the store.");
-            setMessage(numberOfItemsSold + " items were sold by the store.");
+            setMessage(numberItemsBought + " items were bought by " + s.getStoreName() +".");
+            setMessage(numberOfItemsSold + " items were sold by " + s.getStoreName() +".");
         }
 
         else{
@@ -921,7 +922,7 @@ public class Clerk extends Staff implements Subject{
                 degradeItem(s, itemType, item, "cleaning");
             }
         }
-        setMessage(damaged_count + " items were damaged during cleaning.");
+        setMessage(damaged_count + " items were damaged during cleaning at " + s.getStoreName() + ".");
     }
 
     public void degradeItem(Store s, String itemType, Item item, String activity) {
