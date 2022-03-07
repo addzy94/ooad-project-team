@@ -225,7 +225,7 @@ public class Clerk extends Staff implements Subject{
         setMessage(numberOfItemsSold + " items were sold by " + s.getStoreName() +".");
     }
 
-    // a customized OpenTheStore method that handles the decision by taking user input
+    // a customized OpenTheStore method that handles the decision by taking user input on the last day
     public void OpenTheStoreCustom(Store s, Store otherStore) {
 
         System.out.println("--------------------STORE BUSINESS--------------------");
@@ -246,6 +246,13 @@ public class Clerk extends Staff implements Subject{
 
             String command = "";
             String customerName = "(controlled by user)";
+            /*
+            --- COMMAND ---
+            The clerk class takes care of the OpenTheStore method customized for the last day
+            that runs specific command based on the user's input.
+            This is an example of Command at play.
+            --- COMMAND ---
+             */
             // Prepare commands
             CommandController remote = new CommandController();
 
@@ -255,6 +262,7 @@ public class Clerk extends Staff implements Subject{
             AskClerkTimeCommand askClerkTime = new AskClerkTimeCommand(this);
             BuyCustomGuitarKitFromClerkCommand buyCustomGuitarKitFromClerk = new BuyCustomGuitarKitFromClerkCommand(this, s, customerName);
             SwitchStore switchStore = new SwitchStore(s, otherStore, buyFromClerk, sellToClerk, askClerkName, askClerkTime, buyCustomGuitarKitFromClerk, customerName);
+
 
             // Print menu for OpenStore process
             System.out.println("Please Choose From The Following Actions:");
@@ -274,16 +282,13 @@ public class Clerk extends Staff implements Subject{
             while(! command.equals("7")){
                 // If the customer selects switching a store
                 if(command.equals("1")){
-//                remote.setCommand(switchStore);
-//                remote.buttonPressed();
-
-                    
                     if(isCurrentStore){ // if the customer is currently at this store, we switch command's reference to the other clerk and the other store
                         System.out.println("Customer switched to " + otherStore.getStoreName());
                         setMessage("Customer switched to " + otherStore.getStoreName());
                         System.out.println("Now The Store is: " + otherStore.getStoreName()); //Delete now?
                         System.out.println();
 
+                        // Re-assign those buttons with reference to a different store and different clerk
                         buyFromClerk = new BuyFromClerkCommand(otherClerk, otherStore, customerName);
                         sellToClerk = new SellToClerkCommand(otherClerk, otherStore, customerName);
                         askClerkName = new AskClerkNameCommand(otherClerk);
@@ -292,12 +297,13 @@ public class Clerk extends Staff implements Subject{
 
                         isCurrentStore = false; // re-assign the bool parameter to mark that the customer is currently shopping in the other store
                     }
-                    else{ // if if the customer is currently at this store, we switch command's reference back to this clerk and this store
+                    else{ // if the customer is currently at this store, we switch command's reference back to this clerk and this store
                         System.out.println("Customer switched to " + s.getStoreName());
                         setMessage("Customer switched to " + s.getStoreName());
                         System.out.println("Now The Store is: " + s.getStoreName());
                         System.out.println();
 
+                        // Re-assign those buttons with reference to a different store and different clerk
                         buyFromClerk = new BuyFromClerkCommand(this, s, customerName);
                         sellToClerk = new SellToClerkCommand(this, s, customerName);
                         askClerkName = new AskClerkNameCommand(this);
@@ -339,7 +345,7 @@ public class Clerk extends Staff implements Subject{
                     remote.buttonPressed();
                 }
 
-                // Otherwise wrong command, please try again
+                // Otherwise, wrong command, please try again
                 else{
                     System.out.println("Wrong command! Please try again!");
                     System.out.println();
@@ -529,6 +535,7 @@ public class Clerk extends Staff implements Subject{
         return itemChosen;
     }
 
+    // Customized BuyItemTransaction method that generates buy/not buy decision based on user's input but not on randomly generated number
     public void BuyItemTransactionCustom(Store s, String itemType, String customerName) {
 
         HashMap<String, ArrayList<Item>> inventory = s.getInventory();
@@ -546,9 +553,7 @@ public class Clerk extends Staff implements Subject{
             Item itemChosen = itemsOfRequiredType.get(Helper.random.nextInt(sizeOfRequiredItems));
             double listPrice = itemChosen.getListPrice();
 
-
             // New way for generating initialSellDecision for Project 4:
-
             boolean initialBuyDecision = false; // Initialize the sell decision here
 
             System.out.println("Do you want to buy this " + itemChosen.getName() + " at the list price: $" + listPrice + "?");
@@ -574,7 +579,6 @@ public class Clerk extends Staff implements Subject{
             }
 
             //Back to the usual code used in Project 3
-
             if (!initialBuyDecision) {
                 System.out.println("Customer " + customerName + " didn't want to buy the " + itemType + " at the list price.");
                 System.out.println("Clerk " + this.getName() + " offered a 10% discount");
@@ -642,7 +646,6 @@ public class Clerk extends Staff implements Subject{
 
         }
     }
-
 
     public boolean[] GenerateBuyDecision(Item itemChosen){
         boolean initialBuyDecision = (Helper.random.nextInt(2) == 0); // 50% of chance of buying an item by default
@@ -767,7 +770,7 @@ public class Clerk extends Staff implements Subject{
             System.out.println("Not enough money in the register to pay for the item.");
         }
     }
-
+    // Customized SellItemTransaction method that generates sell/not sell decision based on user's input but not on randomly generated number
     public void SellItemTransactionCustom(Store s, String itemType, String customerName) {
 
         HashMap<String, ArrayList<Item>> inventory = s.getInventory();
@@ -806,7 +809,6 @@ public class Clerk extends Staff implements Subject{
         if (offeredPrice <= regAmount) {
 
             // New way for generating initialSellDecision for Project 4:
-
             boolean initialSellDecision = false; // Initialize the sell decision here
 
             System.out.println("Do you want to sell this " + customerBroughtItem.getName() + " at the offered price: $" + offeredPrice + "?");
@@ -831,16 +833,12 @@ public class Clerk extends Staff implements Subject{
                 initialSellDecision = false;
             }
 
-
             // Continue using code from Project 3:
-
             if (!initialSellDecision && (offeredPrice * 1.1) <= regAmount) {
                 System.out.println("Customer " + customerName + " didn't want to sell the " + itemType + " at the offered price of $" + Helper.round(offeredPrice));
                 System.out.println("Clerk " + this.getName() + " offered 10% extra.");
 
-
                 // New way for generating extraSellDecision for Project 4:
-
                 boolean extraSellDecision = false; // Intialize the extra sell decision here
 
                 System.out.println("Do you want to sell this " + customerBroughtItem.getName() + " at the newest offered price: $" + offeredPrice * 1.1 + "?");
@@ -862,7 +860,6 @@ public class Clerk extends Staff implements Subject{
                 else{
                     extraSellDecision = false;
                 }
-
 
                 // Continue using code from Project 3:
                 if (!extraSellDecision) {

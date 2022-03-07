@@ -8,25 +8,24 @@ public class RunStore {
     private static Logger day_logger;
     // Main method that simulates the Store
     public static void main(String[] args) {
-
         //Store Tracker and Day Logger both implement an Observer pattern, of which Clerk is the Subject
-
         initializeObservers();
         createStores();
         hireClerks();
         registerObservers();
 
-        //int days = Helper.random.nextInt(30 - 10) + 10; // Generate run days in [10,30]
-        int days = 30;
+        int days = Helper.random.nextInt(30 - 10) + 10; // Generate run days in [10,30]
 
-        //Prompt for number of days
+        //Prompt for the given number of days
         for (int i = 1; i <= days; i++) {
             simulateDay();
             Store.goToNextDay();
         }
-
-        simulateSpecialDay(); // Run a special day that allows the user to control the shopping process
-
+        /* Run a special day that allows the user to control the shopping process
+           No need to check if this special day is Sunday or not!
+        */
+        simulateSpecialDay();
+        // Print out summary for all days
         printSummaries(days + 1);
     }
 
@@ -37,21 +36,21 @@ public class RunStore {
     }
 
     public static void hireClerks() {
-
+        // Initialize clerks
         Clerk shaggy = new Clerk("Shaggy", 0, 20, new HaphazardTuningStrategy());
         Clerk velma = new Clerk("Velma", 0, 5, new ManualTuningStrategy());
         Clerk daphne = new Clerk("Daphne", 0, 10, new ElectronicTuningStrategy());
         Clerk scooby = new Clerk("Scooby", 0, 20, new HaphazardTuningStrategy());
         Clerk peter = new Clerk("Peter", 0, 5, new ManualTuningStrategy());
         Clerk danny = new Clerk("Danny", 0, 10, new ElectronicTuningStrategy());
-
+        // Add them to te staff pool
         staff_pool.add(shaggy);
         staff_pool.add(velma);
         staff_pool.add(daphne);
         staff_pool.add(scooby);
         staff_pool.add(peter);
         staff_pool.add(danny);
-
+        // Assign this pool to the universal store class, so that every individual store now have access to this pool
         Store.setStaff(staff_pool);
 
         store_tracker.addStaff(staff_pool);
@@ -80,9 +79,9 @@ public class RunStore {
         for (int i = 0; i < current_stores.size(); i++) {
             current_stores.get(i).runDay();
         }
-        //store_tracker.printInfo();
     }
 
+    // Similar to simulateDay method but with multiple different processes
     public static void simulateSpecialDay() {
         Store.sicknessCheck();
         for (int i = 0; i < current_stores.size(); i++) {
@@ -94,13 +93,12 @@ public class RunStore {
             Clerk currentClerk = current_stores.get(i).getClerkToday();
             current_stores.get(i).prepareSpecialDay(currentClerk);
         }
-
         // Run OpenTheStoreCustom method for all stores
         for (int i = 0; i < current_stores.size(); i++) {
             Clerk currentClerk = current_stores.get(i).getClerkToday();
             current_stores.get(i).shopSpecialDay(currentClerk);
         }
-
+        // Let the track print info after running this special day, instead of calling it the end of simulateDay method
         store_tracker.printInfo();
         day_logger.close();
     }
