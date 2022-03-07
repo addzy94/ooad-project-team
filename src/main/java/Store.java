@@ -258,7 +258,7 @@ public class Store {
         /*
         Runs the Store for One Day
          */
-        day_logger.instantiate(getDay(), this);
+        day_logger.instantiate(getDay(), this, false);
         System.out.println();
         System.out.println("Day "+getDay()+":");
         int dayOfTheWeek = getDay() % 7;
@@ -287,7 +287,6 @@ public class Store {
         /*
         Runs the Store for One Day
          */
-        day_logger.instantiate(getDay(), this);
         System.out.println();
         System.out.println("Day "+getDay()+":");
 //        int dayOfTheWeek = getDay() % 7;
@@ -311,14 +310,12 @@ public class Store {
 //            this.setClerkToday(null);
 //        }
 
-        day_logger.close();
     }
 
     public void shopSpecialDay(Clerk c) {
         /*
         Runs the Store for 'numberOfDays' Days.
          */
-        day_logger.instantiate(getDay(), this);
 //        int dayOfTheWeek = getDay() % 7;
 //        if (dayOfTheWeek == 0) {
 //            System.out.println("On Sunday, no one worked.");
@@ -334,7 +331,6 @@ public class Store {
             this.setClerkToday(null);
 //        }
 
-        day_logger.close();
     }
 
     public Clerk chooseClerk() {

@@ -11,9 +11,15 @@ public class Logger implements Observer{
         //do nothing
     }
 
-    public void instantiate(int day, Store s) {
+    public void instantiate(int day, Store s, boolean custom) {
         try {
-            currentFile = new FileWriter("logger_files/Logger-" + day + "-" + s.getStoreName() + ".txt");
+            if (!custom ) {
+                currentFile = new FileWriter("logger_files/Logger-" + day + "-" + s.getStoreName() + ".txt");
+            }
+            else {
+                currentFile = new FileWriter("logger_files/Logger-Custom-Day.txt");
+            }
+            
         }
         catch (IOException e) {
             System.out.println("ERROR: Unable to create logger file for day " + day);
