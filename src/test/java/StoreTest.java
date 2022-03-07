@@ -14,17 +14,37 @@ public class StoreTest {
      */
     int n = 2; // Number of items that will be initialized per item type
     Store test_store = new Store(n, "Test Store", null);
-    ArrayList<Staff> test_staff = Store.getStaff();
+    private static ArrayList<Staff> staff_pool = new ArrayList<>();
+
+    public static void hireClerks() {
+
+        Clerk shaggy = new Clerk("Shaggy", 0, 20, new HaphazardTuningStrategy());
+        Clerk velma = new Clerk("Velma", 0, 5, new ManualTuningStrategy());
+        Clerk daphne = new Clerk("Daphne", 0, 10, new ElectronicTuningStrategy());
+        Clerk scooby = new Clerk("Scooby", 0, 20, new HaphazardTuningStrategy());
+        Clerk peter = new Clerk("Peter", 0, 5, new ManualTuningStrategy());
+        Clerk danny = new Clerk("Danny", 0, 10, new ElectronicTuningStrategy());
+
+        staff_pool.add(shaggy);
+        staff_pool.add(velma);
+        staff_pool.add(daphne);
+        staff_pool.add(scooby);
+        staff_pool.add(peter);
+        staff_pool.add(danny);
+
+        Store.setStaff(staff_pool);
+    }
 
     @Test
     public void initialize_test() {
-        assertEquals(3, test_staff.size()); // Check if there are really 3 members in the Staff list at this moment
+        hireClerks();
+        assertEquals(6, staff_pool.size()); // Check if there are really 3 members in the Staff list at this moment
         /*
         Check if the stuff members in the stuff list are all Clerks
          */
-        assertTrue(test_staff.get(0) instanceof Clerk);
-        assertTrue(test_staff.get(1) instanceof Clerk);
-        assertTrue(test_staff.get(2) instanceof Clerk);
+        assertTrue(staff_pool.get(0) instanceof Clerk);
+        assertTrue(staff_pool.get(1) instanceof Clerk);
+        assertTrue(staff_pool.get(2) instanceof Clerk);
     }
 
     @Test
@@ -72,12 +92,11 @@ public class StoreTest {
     }
     @Test
     public void resetWorkDays_test() {
-
         test_store.runDay(); // Run the store for one day
         assertEquals(1, Store.getDay()); // Check if the day counter is now 1
 
-        Clerk test_clerk = (Clerk) test_staff.get(0); // Find the clerk who has worked for a day
-        for(Staff s : test_staff){
+        Clerk test_clerk = (Clerk) staff_pool.get(0); // Find the clerk who has worked for a day
+        for(Staff s : staff_pool){
             if(s.getDaysWorkedInARow() == 1){
                 test_clerk = (Clerk) s;
             }
