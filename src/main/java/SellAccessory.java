@@ -29,7 +29,7 @@ public class SellAccessory extends SellDecorator {
             // Get a random accessory of type 'itemType' from the store.
             Item accessoryItemChosen = inventory.get(itemType).get(Helper.random.nextInt(sizeOfRequiredItems));
             double listPrice = accessoryItemChosen.getListPrice();
-            accessoryItemChosen.setDaySold(s.getDay());
+            accessoryItemChosen.setDaySold(Store.getDay());
 
             // Sell it at list price directly.
             accessoryItemChosen.setSalePrice(listPrice);

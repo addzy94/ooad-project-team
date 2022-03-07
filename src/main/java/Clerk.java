@@ -18,6 +18,7 @@ public class Clerk extends Staff implements Subject{
     private String message;
     private int numberItemsBought;
     private int numberOfItemsSold;
+    private Store currentStore;
 
     public Clerk(String name, int daysWorkedInARow, int damage_chance, TuningStrategy tuningStrategy) {
         super(name, daysWorkedInARow);
@@ -30,7 +31,7 @@ public class Clerk extends Staff implements Subject{
 
         System.out.println("--------------------ARRIVAL--------------------");
 
-        int day = s.getDay();
+        int day = Store.getDay();
 
         // Change day from [0,29] to [1,30]
         setMessage("Clerk " + this.getName() + " arrived at " + s.getStoreName() + " on day " + (day) + ".");
@@ -44,7 +45,7 @@ public class Clerk extends Staff implements Subject{
             for (Item item: orderedList.get(itemType)) {
 
                 // If an item arrives today, add it to the temperate arrivesToday hashmap
-                if (item.getDayArrived() == s.getDay()) {
+                if (item.getDayArrived() == Store.getDay()) {
                     System.out.println("New item: " + item.getName() + " has arrived! Clerk " + this.getName() + " added it to the stock.");
                     if (arrivesToday.containsKey(itemType)) {
                         arrivesToday.get(itemType).add(item);
@@ -183,7 +184,7 @@ public class Clerk extends Staff implements Subject{
         System.out.println("--------------------PLACING ORDERS--------------------");
 
         s.generateInventory(3, zeroStockItems, false);
-        setMessage("3 new items were ordered on day " + s.getDay());
+        setMessage("3 new items were ordered on day " + Store.getDay());
     }
 
     public void OpenTheStoreAuto(Store s) {
@@ -379,7 +380,7 @@ public class Clerk extends Staff implements Subject{
                     System.out.println("Customer " + customerName + " left the store without buying a " + itemType + " even at discounted price!");
                 }
                 else {
-                    itemChosen.setDaySold(s.getDay());
+                    itemChosen.setDaySold(Store.getDay());
                     itemChosen.setSalePrice(.9 * listPrice);
                     System.out.println("Customer " + customerName + " bought a " +
                             Constants.NEW_OR_USED_MAPPING.get(itemChosen.getIsNew()) + " " +
@@ -411,7 +412,7 @@ public class Clerk extends Staff implements Subject{
                 }
             }
             else {
-                itemChosen.setDaySold(s.getDay());
+                itemChosen.setDaySold(Store.getDay());
                 itemChosen.setSalePrice(listPrice);
                 System.out.println("Customer " + customerName + " bought a " +
                         Constants.NEW_OR_USED_MAPPING.get(itemChosen.getIsNew()) + " " +
@@ -711,7 +712,7 @@ public class Clerk extends Staff implements Subject{
                     System.out.println("Customer " + customerName + " left the store without selling a " + itemType + " even at extra price!");
                 }
                 else {
-                    customerBroughtItem.setDayArrived(s.getDay());
+                    customerBroughtItem.setDayArrived(Store.getDay());
                     customerBroughtItem.setPurchasePrice(offeredPrice * 1.1);
                     customerBroughtItem.setListPrice(offeredPrice * 1.1 * 2);
                     System.out.println("Customer " + customerName + " sold a " +
@@ -726,7 +727,7 @@ public class Clerk extends Staff implements Subject{
                 }
             }
             else {
-                customerBroughtItem.setDayArrived(s.getDay());
+                customerBroughtItem.setDayArrived(Store.getDay());
                 customerBroughtItem.setPurchasePrice(offeredPrice);
                 customerBroughtItem.setListPrice(offeredPrice * 2);
                 System.out.println("Customer " + customerName + " sold a " +
@@ -957,6 +958,7 @@ public class Clerk extends Staff implements Subject{
 
         System.out.println(this.getName() + " left " + s.getStoreName() + " for the day.");
         setMessage(this.getName() + " left " + s.getStoreName() + " for the day.");
+        System.out.println();
         this.setIsActiveWorker(false);
     }
 
@@ -972,6 +974,14 @@ public class Clerk extends Staff implements Subject{
 
     public void setNumberOfItemsSold(int numberOfItemsSold) {
         this.numberOfItemsSold = numberOfItemsSold;
+    }
+
+    public void setStore(Store s) {
+        currentStore = s;
+    }
+
+    public Store getStore() {
+        return currentStore;
     }
 
     // Observer Methods
