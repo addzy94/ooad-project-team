@@ -7,6 +7,8 @@ A Git Repository for housing OOAD Assignments
 
 ## To check the work we did for Project 3, please visit Project3 branch!
 
+## To check the work we did for Project 4, please visit Project4 branch!
+JUnit Test Output for Project 4: ![picture](https://github.com/addzy94/ooad-project-team/blob/master/JUnite_Test_Output.png)
 ---
 
 **Explanation of Working**:
