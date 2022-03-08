@@ -1,5 +1,9 @@
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -13,7 +17,8 @@ public class StoreTest {
     Initialize a store object for testing
      */
     int n = 2; // Number of items that will be initialized per item type
-    Store test_store = new Store(n, "Test Store", null);
+    Store test_store_a = new Store(n, "Test Store A", null);
+    Store test_store_b = new Store(n, "Test Store B", null);
     private static ArrayList<Staff> staff_pool = new ArrayList<>();
 
     public static void hireClerks() {
@@ -38,18 +43,21 @@ public class StoreTest {
     @Test
     public void initialize_test() {
         hireClerks();
-        assertEquals(6, staff_pool.size()); // Check if there are really 3 members in the Staff list at this moment
+        assertEquals(6, staff_pool.size()); // Check if there are really 6 members in the Staff list at this moment
         /*
         Check if the stuff members in the stuff list are all Clerks
          */
         assertTrue(staff_pool.get(0) instanceof Clerk);
         assertTrue(staff_pool.get(1) instanceof Clerk);
         assertTrue(staff_pool.get(2) instanceof Clerk);
+        assertTrue(staff_pool.get(3) instanceof Clerk);
+        assertTrue(staff_pool.get(4) instanceof Clerk);
+        assertTrue(staff_pool.get(5) instanceof Clerk);
     }
 
     @Test
     public void generateInventory_Test() {
-        HashMap<String, ArrayList<Item>> test_inventory = test_store.getInventory();
+        HashMap<String, ArrayList<Item>> test_inventory = test_store_a.getInventory();
         /*
         Loop through the whole inventory hashmap which contains bunch of array list
         and count the total number of inventories stored in the hashmap
@@ -78,10 +86,10 @@ public class StoreTest {
         test_item.setDayArrived(Store.getDay());
         test_item.setPurchasePrice(offeredPrice);
         test_item.setListPrice(offeredPrice);
-        test_store.addToRegistry(test_store.getInventory(), itemType, test_item);
+        test_store_a.addToRegistry(test_store_a.getInventory(), itemType, test_item);
 
         // Check the size of the current inventory list
-        HashMap<String, ArrayList<Item>> test_inventory = test_store.getInventory();
+        HashMap<String, ArrayList<Item>> test_inventory = test_store_a.getInventory();
         int test_inventory_size_now = 0;
         for(String itemType_new: test_inventory.keySet()) {
             for (Item i: test_inventory.get(itemType_new)) {
@@ -90,20 +98,29 @@ public class StoreTest {
         }
         assertEquals(current_size + 1, test_inventory_size_now); // Check if the current list size is only 1 more than the original
     }
+
     @Test
-    public void resetWorkDays_test() {
-        test_store.runDay(); // Run the store for one day
-        assertEquals(1, Store.getDay()); // Check if the day counter is now 1
+    public void storeConnection_test() {
+        // Connect those two stores together so they always have the reference to each other
+        test_store_a.setOtherStore(test_store_b);
+        test_store_b.setOtherStore(test_store_a);
+        assertEquals(6, staff_pool.size()); // check if there's still 6 members in the pool after the last initialization test
+        // Verify that the two stores are indeed related to each other
+        assertEquals(test_store_b, test_store_a.getOtherStore());
+        assertEquals(test_store_a, test_store_b.getOtherStore());
 
-        Clerk test_clerk = (Clerk) staff_pool.get(0); // Find the clerk who has worked for a day
-        for(Staff s : staff_pool){
-            if(s.getDaysWorkedInARow() == 1){
-                test_clerk = (Clerk) s;
-            }
-        }
-        assertEquals(1, test_clerk.getDaysWorkedInARow()); // Double-check the clerk's dayWorkedInARow counter
-
-        test_store.resetDays(); // Reset work days
-        assertEquals(0, test_clerk.getDaysWorkedInARow()); // Check if resetDays method is working correctly so that it can be used when we reach Sundays
+        // Assign a clerk to store A and a different clerk to store B
+        Clerk shaggy = new Clerk("Shaggy", 0, 20, new HaphazardTuningStrategy());
+        Clerk peter = new Clerk("Peter", 0, 5, new ManualTuningStrategy());
+        test_store_a.setClerkToday(shaggy);
+        test_store_b.setClerkToday(peter);
+        // Verify that the there's always a way to keep tracking the reference to another clerk as well
+        // So we can use them for switchStore command that need constant switch from one store together with one clerk to another store together with another clerk
+        assertEquals(peter.getName(), test_store_a.getOtherStore().getClerkToday().getName());
+        assertEquals(shaggy.getName(), test_store_b.getOtherStore().getClerkToday().getName());
+        assertEquals(peter.getStore(), test_store_a.getOtherStore().getClerkToday().getStore());
+        assertEquals(shaggy.getStore(), test_store_b.getOtherStore().getClerkToday().getStore());
+        assertEquals(peter, test_store_a.getOtherStore().getClerkToday());
+        assertEquals(shaggy, test_store_b.getOtherStore().getClerkToday());
     }
 }
