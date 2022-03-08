@@ -317,6 +317,12 @@ public class Clerk extends Staff implements Subject{
                 else if(command.equals("2")){
                     remote.setCommand(askClerkName);
                     remote.buttonPressed();
+                    if (isCurrentStore) {
+                        setMessage("The customer just met Clerk " + getName() + " at " + s.getStoreName() +".");
+                    }
+                    else {
+                        setMessage("The customer just met Clerk " + otherClerk.getName() + " at " + otherStore.getStoreName() +".");
+                    }
                 }
 
                 // If the customer selects asking the clerk what time it is
@@ -329,18 +335,36 @@ public class Clerk extends Staff implements Subject{
                 else if(command.equals("4")){
                     remote.setCommand(sellToClerk);
                     remote.buttonPressed();
+                    if (isCurrentStore) {
+                        setMessage(s.getStoreName() + " purchased an item from the customer.");
+                    }
+                    else {
+                        setMessage(otherStore.getStoreName() + " purchased an item from the customer.");
+                    }
                 }
 
                 // If the customer selects buying an item from the clerk
                 else if(command.equals("5")){
                     remote.setCommand(buyFromClerk);
                     remote.buttonPressed();
+                    if (isCurrentStore) {
+                        setMessage("The customer purchased an item from " + s.getStoreName() +".");
+                    }
+                    else {
+                        setMessage("The customer purchased an item from " + otherStore.getStoreName() +".");
+                    }
                 }
 
                 // If the customer selects buying a custom guitar git from the clerk
                 else if(command.equals("6")){
                     remote.setCommand(buyCustomGuitarKitFromClerk);
                     remote.buttonPressed();
+                    if (isCurrentStore) {
+                        setMessage("The customer purchased a custom guitar kit from " + s.getStoreName() +".");
+                    }
+                    else {
+                        setMessage("The customer purchased a custom guitar kit from " + otherStore.getStoreName() +".");
+                    }
                 }
 
                 // Otherwise, wrong command, please try again
@@ -357,6 +381,7 @@ public class Clerk extends Staff implements Subject{
             // By the time when user pressed 7 to end this interactions
             System.out.println("Customer decided to end the interactions.");
             System.out.println();
+            setMessage("Customer decided to end the interactions.");
             // Set isServing to false for all stores
             s.setIsServing(false);
             otherStore.setIsServing(false);
