@@ -1,5 +1,4 @@
-Link to the updated UML diagram: https://drive.google.com/file/d/1Ta1UxQnRrGbnut7a-dc59IazheDr5iXl/view?usp=sharing
+Link to the updated UML diagram: https://drive.google.com/file/d/10MnhIlfkOIHvrDzmOywbCFTW41v-xUtz/view?usp=sharing
 
 What has been changed between the version we used in Part 1 and in Part 2: 
 1) delete switchStore command since we applied it into Clerk class directly
-2) set all the subclasses except the lowest ones (no more subclasses inheritated from them) as abstract classes.
