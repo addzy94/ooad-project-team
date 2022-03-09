@@ -1,11 +1,11 @@
 
-Clerk Scooby arrived at Southside FNMS on day 19.
+Clerk Daphne arrived at Southside FNMS on day 19.
 
-Clerk Scooby counted $2102.19 in the register.
+Clerk Daphne counted $2420.08 in the register.
 
 There were 21 items in inventory at Southside FNMS.
 
-The inventory value was $778.91
+The inventory value was $868.83
 
 0 items were damaged during tuning at Southside FNMS.
 
@@ -13,8 +13,8 @@ The inventory value was $778.91
 
 3 items were bought by Southside FNMS.
 
-2 items were sold by Southside FNMS.
+4 items were sold by Southside FNMS.
 
-9 items were damaged during cleaning at Southside FNMS.
+2 items were damaged during cleaning at Southside FNMS.
 
-Scooby left Southside FNMS for the day.
+Daphne left Southside FNMS for the day.

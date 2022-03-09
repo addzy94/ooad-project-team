@@ -1,20 +1,20 @@
 
-Clerk Scooby arrived at Northside FNMS on day 16.
+Clerk Velma arrived at Northside FNMS on day 16.
 
-Clerk Scooby counted $2171.61 in the register.
+Clerk Velma counted $2980.85 in the register.
 
 There were 21 items in inventory at Northside FNMS.
 
-The inventory value was $926.99
+The inventory value was $866.39
 
-0 items were damaged during tuning at Northside FNMS.
+1 items were damaged during tuning at Northside FNMS.
 
 3 new items were ordered by Northside FNMS on day 16
 
 1 items were bought by Northside FNMS.
 
-2 items were sold by Northside FNMS.
+5 items were sold by Northside FNMS.
 
-10 items were damaged during cleaning at Northside FNMS.
+2 items were damaged during cleaning at Northside FNMS.
 
-Scooby left Northside FNMS for the day.
+Velma left Northside FNMS for the day.

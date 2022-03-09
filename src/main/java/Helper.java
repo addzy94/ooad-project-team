@@ -24,6 +24,26 @@ public class Helper {
         return price;
     }
 
+    public static ArrayList<Double> generatePartPrices(int numPartOptions) {
+
+        ArrayList<Double> priceList = new ArrayList<>();
+
+        for (int i = 0; i < numPartOptions; i++) {
+            priceList.add(Helper.random.nextDouble(30));
+        }
+
+        return priceList;
+    }
+
+    // Takes 3 options to print
+    public static void optionsDisplay(String partPrefix, String part, ArrayList<Double> partPrices) {
+
+        System.out.println("Enter between 1, 2, and 3 to choose " + partPrefix + " " + part + " types A, B, or C.");
+        System.out.println("Part A priced at $" + Helper.round(partPrices.get(0)) + ".");
+        System.out.println("Part B priced at $" + Helper.round(partPrices.get(1)) + ".");
+        System.out.println("Part C priced at $" + Helper.round(partPrices.get(2)) + ".");
+    }
+
     public static ArrayList<Object> getParams(String itemType) {
         /*
         Generates randomized but relevant parameters for each type of Item passed as 'classType'.

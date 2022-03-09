@@ -1,20 +1,20 @@
 
-Clerk Scooby arrived at Northside FNMS on day 2.
+Clerk Peter arrived at Northside FNMS on day 2.
 
-Clerk Scooby counted $1309.64 in the register.
+Clerk Peter counted $1142.23 in the register.
 
 There were 21 items in inventory at Northside FNMS.
 
-The inventory value was $1505.72
+The inventory value was $1826.55
 
-1 items were damaged during tuning at Northside FNMS.
+2 items were damaged during tuning at Northside FNMS.
 
 3 new items were ordered by Northside FNMS on day 2
 
-2 items were bought by Northside FNMS.
+1 items were bought by Northside FNMS.
 
-2 items were sold by Northside FNMS.
+4 items were sold by Northside FNMS.
 
-16 items were damaged during cleaning at Northside FNMS.
+4 items were damaged during cleaning at Northside FNMS.
 
-Scooby left Northside FNMS for the day.
+Peter left Northside FNMS for the day.

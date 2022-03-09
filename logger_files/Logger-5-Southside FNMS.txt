@@ -1,11 +1,11 @@
 
-Clerk Peter arrived at Southside FNMS on day 5.
+Clerk Velma arrived at Southside FNMS on day 5.
 
-Clerk Peter counted $1680.14 in the register.
+Clerk Velma counted $1688.16 in the register.
 
 There were 21 items in inventory at Southside FNMS.
 
-The inventory value was $1035.01
+The inventory value was $1222.79
 
 0 items were damaged during tuning at Southside FNMS.
 
@@ -13,8 +13,8 @@ The inventory value was $1035.01
 
 4 items were bought by Southside FNMS.
 
-6 items were sold by Southside FNMS.
+4 items were sold by Southside FNMS.
 
-2 items were damaged during cleaning at Southside FNMS.
+5 items were damaged during cleaning at Southside FNMS.
 
-Peter left Southside FNMS for the day.
+Velma left Southside FNMS for the day.

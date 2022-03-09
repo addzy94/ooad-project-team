@@ -1,20 +1,20 @@
 
-Clerk Daphne arrived at Northside FNMS on day 10.
+Clerk Danny arrived at Northside FNMS on day 10.
 
-Clerk Daphne counted $2169.36 in the register.
+Clerk Danny counted $2105.61 in the register.
 
 There were 21 items in inventory at Northside FNMS.
 
-The inventory value was $816.86
+The inventory value was $1240.59
 
 0 items were damaged during tuning at Northside FNMS.
 
 3 new items were ordered by Northside FNMS on day 10
 
-3 items were bought by Northside FNMS.
+4 items were bought by Northside FNMS.
 
-3 items were sold by Northside FNMS.
+4 items were sold by Northside FNMS.
 
-4 items were damaged during cleaning at Northside FNMS.
+1 items were damaged during cleaning at Northside FNMS.
 
-Daphne left Northside FNMS for the day.
+Danny left Northside FNMS for the day.

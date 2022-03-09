@@ -1,11 +1,11 @@
 
-Clerk Daphne arrived at Northside FNMS on day 13.
+Clerk Shaggy arrived at Northside FNMS on day 13.
 
-Clerk Daphne counted $2201.7 in the register.
+Clerk Shaggy counted $2442.01 in the register.
 
 There were 21 items in inventory at Northside FNMS.
 
-The inventory value was $852.47
+The inventory value was $1240.2
 
 0 items were damaged during tuning at Northside FNMS.
 
@@ -13,8 +13,8 @@ The inventory value was $852.47
 
 1 items were bought by Northside FNMS.
 
-4 items were sold by Northside FNMS.
+5 items were sold by Northside FNMS.
 
-1 items were damaged during cleaning at Northside FNMS.
+10 items were damaged during cleaning at Northside FNMS.
 
-Daphne left Northside FNMS for the day.
+Shaggy left Northside FNMS for the day.

@@ -1,19 +1,19 @@
 
-Clerk Danny arrived at Northside FNMS on day 25.
+Clerk Danny arrived at Northside FNMS on day 29.
 
-Clerk Danny counted $2359.99 in the register.
+Clerk Danny counted $2230.61 in the register.
 
 There were 21 items in inventory at Northside FNMS.
 
-The inventory value was $895.98
+The inventory value was $1053.06
 
 0 items were damaged during tuning at Northside FNMS.
 
-3 new items were ordered by Northside FNMS on day 25
+3 new items were ordered by Northside FNMS on day 29
 
 3 items were bought by Northside FNMS.
 
-4 items were sold by Northside FNMS.
+6 items were sold by Northside FNMS.
 
 4 items were damaged during cleaning at Northside FNMS.
 

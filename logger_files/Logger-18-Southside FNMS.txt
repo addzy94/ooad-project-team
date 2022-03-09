@@ -1,20 +1,20 @@
 
-Clerk Velma arrived at Southside FNMS on day 18.
+Clerk Daphne arrived at Southside FNMS on day 18.
 
-Clerk Velma counted $2186.81 in the register.
+Clerk Daphne counted $2436.64 in the register.
 
 There were 21 items in inventory at Southside FNMS.
 
-The inventory value was $706.22
+The inventory value was $809.23
 
 0 items were damaged during tuning at Southside FNMS.
 
 3 new items were ordered by Southside FNMS on day 18
 
-1 items were bought by Southside FNMS.
+3 items were bought by Southside FNMS.
 
-2 items were sold by Southside FNMS.
+3 items were sold by Southside FNMS.
 
-0 items were damaged during cleaning at Southside FNMS.
+7 items were damaged during cleaning at Southside FNMS.
 
-Velma left Southside FNMS for the day.
+Daphne left Southside FNMS for the day.

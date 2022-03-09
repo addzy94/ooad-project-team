@@ -1,11 +1,11 @@
 
-Clerk Danny arrived at Southside FNMS on day 16.
+Clerk Peter arrived at Southside FNMS on day 16.
 
-Clerk Danny counted $2067.55 in the register.
+Clerk Peter counted $2253.1 in the register.
 
 There were 21 items in inventory at Southside FNMS.
 
-The inventory value was $913.24
+The inventory value was $878.68
 
 0 items were damaged during tuning at Southside FNMS.
 
@@ -13,8 +13,8 @@ The inventory value was $913.24
 
 1 items were bought by Southside FNMS.
 
-6 items were sold by Southside FNMS.
+5 items were sold by Southside FNMS.
 
-5 items were damaged during cleaning at Southside FNMS.
+4 items were damaged during cleaning at Southside FNMS.
 
-Danny left Southside FNMS for the day.
+Peter left Southside FNMS for the day.

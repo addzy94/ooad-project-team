@@ -1,0 +1,20 @@
+
+Clerk Daphne arrived at Northside FNMS on day 26.
+
+Clerk Daphne counted $2366.1 in the register.
+
+There were 21 items in inventory at Northside FNMS.
+
+The inventory value was $935.34
+
+0 items were damaged during tuning at Northside FNMS.
+
+3 new items were ordered by Northside FNMS on day 26
+
+3 items were bought by Northside FNMS.
+
+6 items were sold by Northside FNMS.
+
+7 items were damaged during cleaning at Northside FNMS.
+
+Daphne left Northside FNMS for the day.

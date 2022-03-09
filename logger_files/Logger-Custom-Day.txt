@@ -1,62 +1,54 @@
 
-Clerk Danny arrived at Northside FNMS on day 26.
+Clerk Scooby arrived at Northside FNMS on day 24.
 
-Clerk Danny counted $2093.25 in the register.
+Clerk Scooby counted $3385.74 in the register.
 
 There were 21 items in inventory at Northside FNMS.
 
-The inventory value was $868.89
+The inventory value was $783.72
 
 0 items were damaged during tuning at Northside FNMS.
 
-3 new items were ordered by Northside FNMS on day 26
+3 new items were ordered by Northside FNMS on day 24
 
-Clerk Daphne arrived at Southside FNMS on day 26.
+Clerk Velma arrived at Southside FNMS on day 24.
 
-Clerk Daphne counted $2534.77 in the register.
+Clerk Velma counted $2306.96 in the register.
 
 There were 21 items in inventory at Southside FNMS.
 
-The inventory value was $864.76
+The inventory value was $815.83
 
-0 items were damaged during tuning at Southside FNMS.
+3 items were damaged during tuning at Southside FNMS.
 
-3 new items were ordered by Southside FNMS on day 26
+3 new items were ordered by Southside FNMS on day 24
+
+The customer just met Clerk Scooby at Northside FNMS.
+
+The customer purchased an item from Northside FNMS.
 
 Customer switched to Southside FNMS
-
-The customer just met Clerk Daphne at Southside FNMS.
 
 Customer switched to Northside FNMS
 
-The customer just met Clerk Danny at Northside FNMS.
-
-The customer purchased an item from Northside FNMS.
-
-The customer purchased an item from Northside FNMS.
-
-Northside FNMS purchased an item from the customer.
-
 Customer switched to Southside FNMS
-
-The customer purchased an item from Southside FNMS.
 
 The customer purchased a custom guitar kit from Southside FNMS.
 
 Customer decided to end the interactions.
 
-1 items were bought by Northside FNMS.
+0 items were bought by Northside FNMS.
 
-2 items were sold by Northside FNMS.
+1 items were sold by Northside FNMS.
 
 0 items were bought by Southside FNMS.
 
-4 items were sold by Southside FNMS.
+2 items were sold by Southside FNMS.
 
-4 items were damaged during cleaning at Northside FNMS.
+10 items were damaged during cleaning at Northside FNMS.
 
-Danny left Northside FNMS for the day.
+Scooby left Northside FNMS for the day.
 
-9 items were damaged during cleaning at Southside FNMS.
+2 items were damaged during cleaning at Southside FNMS.
 
-Daphne left Southside FNMS for the day.
+Velma left Southside FNMS for the day.

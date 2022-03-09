@@ -23,6 +23,13 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
         CustomStoreGuitar customStoreGuitar;
         String partPrefix;
 
+        // Part Prices initially 0
+        double partAPrice = 0;
+        double partBPrice = 0;
+        double partCPrice = 0;
+
+        double overallPrice = 0;
+
         if (this.store.getStoreName().equals("Northside FNMS")) {
             guitarFactory = new NorthSideFactory();
             partPrefix = "North";
@@ -34,7 +41,7 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
         customStoreGuitar = new CustomStoreGuitar(guitarFactory);
 
         Scanner myObj = new Scanner(System.in);
-        String command = "";
+        String command = null;
 
         ArrayList<String> validChoices = new ArrayList<>(Arrays.asList("1", "2", "3"));
 
@@ -45,20 +52,28 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
         PickGuardTypes pickGuardType = null;
         PickUpsTypes pickUpsType = null;
 
+        ArrayList<Double> partPrices;
+
+        partPrices = Helper.generatePartPrices(3);
+
         // Run the interactions until the user a valid
         while (!validChoices.contains(command)) {
 
-            System.out.println("Enter between 1, 2, and 3 to choose " + partPrefix + " Bridge types.");
+            Helper.optionsDisplay(partPrefix, "Bridge", partPrices);
             command = myObj.nextLine();
 
             if (command.equals("1")) {
+
+                overallPrice += partPrices.get(Integer.parseInt(command) - 1);
                 if (store.getStoreName().equals("Northside FNMS")) {
                     bridgeType = BridgeTypes.NORTH_BRIDGE_ONE;
                 } else {
                     bridgeType = BridgeTypes.SOUTH_BRIDGE_FOUR;
                 }
+
             }
             else if (command.equals("2")) {
+                overallPrice += partPrices.get(Integer.parseInt(command) - 1);
                 if (store.getStoreName().equals("Northside FNMS")) {
                     bridgeType = BridgeTypes.NORTH_BRIDGE_TWO;
                 } else {
@@ -66,6 +81,8 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
                 }
             }
             else if (command.equals("3")) {
+
+                overallPrice += partPrices.get(Integer.parseInt(command) - 1);
                 if (store.getStoreName().equals("Northside FNMS")) {
                     bridgeType = BridgeTypes.NORTH_BRIDGE_THREE;
                 } else {
@@ -78,14 +95,17 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
         }
 
         command = null;
+        partPrices = Helper.generatePartPrices(3);
 
         // Run the interactions until the user a valid
         while (!validChoices.contains(command)) {
 
-            System.out.println("Enter between 1, 2, and 3 to choose " + partPrefix + " Knob Set types.");
+            Helper.optionsDisplay(partPrefix, "Knob Set",  partPrices);
             command = myObj.nextLine();
 
             if (command.equals("1")) {
+
+                overallPrice += partPrices.get(Integer.parseInt(command) - 1);
                 if (store.getStoreName().equals("Northside FNMS")) {
                     knobSetType = KnobSetTypes.NORTH_KNOBSET_ONE;
                 } else {
@@ -93,6 +113,8 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
                 }
             }
             else if (command.equals("2")) {
+
+                overallPrice += partPrices.get(Integer.parseInt(command) - 1);
                 if (store.getStoreName().equals("Northside FNMS")) {
                     knobSetType = KnobSetTypes.NORTH_KNOBSET_TWO;
                 } else {
@@ -100,6 +122,8 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
                 }
             }
             else if (command.equals("3")) {
+
+                overallPrice += partPrices.get(Integer.parseInt(command) - 1);
                 if (store.getStoreName().equals("Northside FNMS")) {
                     knobSetType = KnobSetTypes.NORTH_KNOBSET_THREE;
                 } else {
@@ -112,14 +136,17 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
         }
 
         command = null;
+        partPrices = Helper.generatePartPrices(3);
 
         // Run the interactions until the user a valid
         while (!validChoices.contains(command)) {
 
-            System.out.println("Enter between 1, 2, and 3 to choose " + partPrefix + " Neck types.");
+            Helper.optionsDisplay(partPrefix, "Neck",  partPrices);
             command = myObj.nextLine();
 
             if (command.equals("1")) {
+
+                overallPrice += partPrices.get(Integer.parseInt(command) - 1);
                 if (store.getStoreName().equals("Northside FNMS")) {
                     neckType = NeckTypes.NORTH_NECK_ONE;
                 } else {
@@ -127,6 +154,8 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
                 }
             }
             else if (command.equals("2")) {
+
+                overallPrice += partPrices.get(Integer.parseInt(command) - 1);
                 if (store.getStoreName().equals("Northside FNMS")) {
                     neckType = NeckTypes.NORTH_NECK_TWO;
                 } else {
@@ -134,6 +163,8 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
                 }
             }
             else if (command.equals("3")) {
+
+                overallPrice += partPrices.get(Integer.parseInt(command) - 1);
                 if (store.getStoreName().equals("Northside FNMS")) {
                     neckType = NeckTypes.NORTH_NECK_THREE;
                 } else {
@@ -145,14 +176,17 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
             }
         }
         command = null;
+        partPrices = Helper.generatePartPrices(3);
 
         // Run the interactions until the user a valid
         while (!validChoices.contains(command)) {
 
-            System.out.println("Enter between 1, 2, and 3 to choose " + partPrefix + " Covers types.");
+            Helper.optionsDisplay(partPrefix, "Covers",  partPrices);
             command = myObj.nextLine();
 
             if (command.equals("1")) {
+
+                overallPrice += partPrices.get(Integer.parseInt(command) - 1);
                 if (store.getStoreName().equals("Northside FNMS")) {
                     coversType = CoversTypes.NORTH_COVERS_ONE;
                 } else {
@@ -160,6 +194,8 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
                 }
             }
             else if (command.equals("2")) {
+
+                overallPrice += partPrices.get(Integer.parseInt(command) - 1);
                 if (store.getStoreName().equals("Northside FNMS")) {
                     coversType = CoversTypes.NORTH_COVERS_TWO;
                 } else {
@@ -167,6 +203,8 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
                 }
             }
             else if (command.equals("3")) {
+
+                overallPrice += partPrices.get(Integer.parseInt(command) - 1);
                 if (store.getStoreName().equals("Northside FNMS")) {
                     coversType = CoversTypes.NORTH_COVERS_THREE;
                 } else {
@@ -179,14 +217,17 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
         }
 
         command = null;
+        partPrices = Helper.generatePartPrices(3);
 
         // Run the interactions until the user a valid
         while (!validChoices.contains(command)) {
 
-            System.out.println("Enter between 1, 2, and 3 to choose " + partPrefix + " Pick Guard types.");
+            Helper.optionsDisplay(partPrefix, "Pick Guard",  partPrices);
             command = myObj.nextLine();
 
             if (command.equals("1")) {
+
+                overallPrice += partPrices.get(Integer.parseInt(command) - 1);
                 if (store.getStoreName().equals("Northside FNMS")) {
                     pickGuardType = PickGuardTypes.NORTH_PICKGUARD_ONE;
                 } else {
@@ -194,6 +235,8 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
                 }
             }
             else if (command.equals("2")) {
+
+                overallPrice += partPrices.get(Integer.parseInt(command) - 1);
                 if (store.getStoreName().equals("Northside FNMS")) {
                     pickGuardType = PickGuardTypes.NORTH_PICKGUARD_TWO;
                 } else {
@@ -201,6 +244,8 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
                 }
             }
             else if (command.equals("3")) {
+
+                overallPrice += partPrices.get(Integer.parseInt(command) - 1);
                 if (store.getStoreName().equals("Northside FNMS")) {
                     pickGuardType = PickGuardTypes.NORTH_PICKGUARD_THREE;
                 } else {
@@ -213,14 +258,17 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
         }
 
         command = null;
+        partPrices = Helper.generatePartPrices(3);
 
         // Run the interactions until the user a valid
         while (!validChoices.contains(command)) {
 
-            System.out.println("Enter between 1, 2, and 3 to choose " + partPrefix + " PickUps types.");
+            Helper.optionsDisplay(partPrefix, "Pick Ups",  partPrices);
             command = myObj.nextLine();
 
             if (command.equals("1")) {
+
+                overallPrice += partPrices.get(Integer.parseInt(command) - 1);
                 if (store.getStoreName().equals("Northside FNMS")) {
                     pickUpsType = PickUpsTypes.NORTH_PICKUPS_ONE;
                 } else {
@@ -228,6 +276,8 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
                 }
             }
             else if (command.equals("2")) {
+
+                overallPrice += partPrices.get(Integer.parseInt(command) - 1);
                 if (store.getStoreName().equals("Northside FNMS")) {
                     pickUpsType = PickUpsTypes.NORTH_PICKUPS_TWO;
                 } else {
@@ -235,6 +285,8 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
                 }
             }
             else if (command.equals("3")) {
+
+                overallPrice += partPrices.get(Integer.parseInt(command) - 1);
                 if (store.getStoreName().equals("Northside FNMS")) {
                     pickUpsType = PickUpsTypes.NORTH_PICKUPS_THREE;
                 } else {
@@ -257,8 +309,17 @@ public class BuyCustomGuitarKitFromClerkCommand implements Command {
                 pickUpsType);
 
         item.setDayArrived(store.getDay());
+        item.setListPrice(overallPrice);
+
+        System.out.println("The overall price of the guitar is: $" + Helper.round(overallPrice));
 
         store.addToRegistry(store.getInventory(), "Custom Guitar", item);
         clerk.BuyItemTransaction(store, "Custom Guitar", customerName);
+
+        // Set aside the item from inventory if customer didn't buy it
+        ArrayList<Item> customGuitarsList = store.getInventory().get("Custom Guitar");
+        if (customGuitarsList.contains(item)) {
+            customGuitarsList.remove(item);
+        }
     }
 }

@@ -1,20 +1,20 @@
 
-Clerk Danny arrived at Southside FNMS on day 13.
+Clerk Daphne arrived at Southside FNMS on day 13.
 
-Clerk Danny counted $1831.97 in the register.
+Clerk Daphne counted $2046.78 in the register.
 
 There were 21 items in inventory at Southside FNMS.
 
-The inventory value was $967.71
+The inventory value was $1033.9
 
 0 items were damaged during tuning at Southside FNMS.
 
 3 new items were ordered by Southside FNMS on day 13
 
-0 items were bought by Southside FNMS.
+3 items were bought by Southside FNMS.
 
-5 items were sold by Southside FNMS.
+3 items were sold by Southside FNMS.
 
-7 items were damaged during cleaning at Southside FNMS.
+4 items were damaged during cleaning at Southside FNMS.
 
-Danny left Southside FNMS for the day.
+Daphne left Southside FNMS for the day.

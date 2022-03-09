@@ -1,0 +1,20 @@
+
+Clerk Peter arrived at Northside FNMS on day 30.
+
+Clerk Peter counted $2455.52 in the register.
+
+There were 21 items in inventory at Northside FNMS.
+
+The inventory value was $889.68
+
+0 items were damaged during tuning at Northside FNMS.
+
+3 new items were ordered by Northside FNMS on day 30
+
+2 items were bought by Northside FNMS.
+
+4 items were sold by Northside FNMS.
+
+3 items were damaged during cleaning at Northside FNMS.
+
+Peter left Northside FNMS for the day.

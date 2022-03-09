@@ -1,20 +1,20 @@
 
-Clerk Peter arrived at Southside FNMS on day 22.
+Clerk Shaggy arrived at Southside FNMS on day 22.
 
-Clerk Peter counted $2377.55 in the register.
+Clerk Shaggy counted $2336.21 in the register.
 
 There were 21 items in inventory at Southside FNMS.
 
-The inventory value was $780.63
+The inventory value was $865.07
 
 0 items were damaged during tuning at Southside FNMS.
 
 3 new items were ordered by Southside FNMS on day 22
 
-1 items were bought by Southside FNMS.
+3 items were bought by Southside FNMS.
 
-7 items were sold by Southside FNMS.
+3 items were sold by Southside FNMS.
 
-1 items were damaged during cleaning at Southside FNMS.
+14 items were damaged during cleaning at Southside FNMS.
 
-Peter left Southside FNMS for the day.
+Shaggy left Southside FNMS for the day.

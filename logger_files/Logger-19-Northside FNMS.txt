@@ -1,20 +1,20 @@
 
-Clerk Daphne arrived at Northside FNMS on day 19.
+Clerk Scooby arrived at Northside FNMS on day 19.
 
-Clerk Daphne counted $2308.48 in the register.
+Clerk Scooby counted $2858.79 in the register.
 
 There were 21 items in inventory at Northside FNMS.
 
-The inventory value was $695.8
+The inventory value was $1148.66
 
 0 items were damaged during tuning at Northside FNMS.
 
 3 new items were ordered by Northside FNMS on day 19
 
-3 items were bought by Northside FNMS.
+1 items were bought by Northside FNMS.
 
-3 items were sold by Northside FNMS.
+1 items were sold by Northside FNMS.
 
-7 items were damaged during cleaning at Northside FNMS.
+5 items were damaged during cleaning at Northside FNMS.
 
-Daphne left Northside FNMS for the day.
+Scooby left Northside FNMS for the day.

@@ -1,20 +1,20 @@
 
 Clerk Velma arrived at Northside FNMS on day 11.
 
-Clerk Velma counted $2143.78 in the register.
+Clerk Velma counted $2216.68 in the register.
 
 There were 21 items in inventory at Northside FNMS.
 
-The inventory value was $874.73
+The inventory value was $1304.67
 
-0 items were damaged during tuning at Northside FNMS.
+1 items were damaged during tuning at Northside FNMS.
 
 3 new items were ordered by Northside FNMS on day 11
 
-1 items were bought by Northside FNMS.
+4 items were bought by Northside FNMS.
 
-5 items were sold by Northside FNMS.
+8 items were sold by Northside FNMS.
 
-4 items were damaged during cleaning at Northside FNMS.
+1 items were damaged during cleaning at Northside FNMS.
 
 Velma left Northside FNMS for the day.

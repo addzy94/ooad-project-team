@@ -1,20 +1,20 @@
 
-Clerk Shaggy arrived at Northside FNMS on day 12.
+Clerk Velma arrived at Northside FNMS on day 12.
 
-Clerk Shaggy counted $2264.32 in the register.
+Clerk Velma counted $2442.86 in the register.
 
 There were 21 items in inventory at Northside FNMS.
 
-The inventory value was $835.69
+The inventory value was $1227.54
 
-2 items were damaged during tuning at Northside FNMS.
+1 items were damaged during tuning at Northside FNMS.
 
 3 new items were ordered by Northside FNMS on day 12
 
 2 items were bought by Northside FNMS.
 
-3 items were sold by Northside FNMS.
+1 items were sold by Northside FNMS.
 
-6 items were damaged during cleaning at Northside FNMS.
+0 items were damaged during cleaning at Northside FNMS.
 
-Shaggy left Northside FNMS for the day.
+Velma left Northside FNMS for the day.

@@ -1,20 +1,20 @@
 
-Clerk Danny arrived at Southside FNMS on day 20.
+Clerk Shaggy arrived at Southside FNMS on day 20.
 
-Clerk Danny counted $2015.18 in the register.
+Clerk Shaggy counted $2388.81 in the register.
 
 There were 21 items in inventory at Southside FNMS.
 
-The inventory value was $1022.27
+The inventory value was $947.17
 
-0 items were damaged during tuning at Southside FNMS.
+1 items were damaged during tuning at Southside FNMS.
 
 3 new items were ordered by Southside FNMS on day 20
 
-2 items were bought by Southside FNMS.
+1 items were bought by Southside FNMS.
 
-6 items were sold by Southside FNMS.
+2 items were sold by Southside FNMS.
 
-4 items were damaged during cleaning at Southside FNMS.
+8 items were damaged during cleaning at Southside FNMS.
 
-Danny left Southside FNMS for the day.
+Shaggy left Southside FNMS for the day.
