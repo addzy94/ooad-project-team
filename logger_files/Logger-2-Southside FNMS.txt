@@ -1,0 +1,20 @@
+
+Clerk Velma arrived at Southside FNMS on day 2.
+
+Clerk Velma counted $1277.02 in the register.
+
+There were 21 items in inventory at Southside FNMS.
+
+The inventory value was $1267.74
+
+1 items were damaged during tuning at Southside FNMS.
+
+3 new items were ordered by Southside FNMS on day 2
+
+3 items were bought by Southside FNMS.
+
+6 items were sold by Southside FNMS.
+
+1 items were damaged during cleaning at Southside FNMS.
+
+Velma left Southside FNMS for the day.

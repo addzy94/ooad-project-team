@@ -1,0 +1,22 @@
+
+Clerk Daphne arrived at Northside FNMS on day 1.
+
+Clerk Daphne counted $0.0 in the register.
+
+Clerk Daphne withdrew $1000 from the bank, making new register amount as: $1000.0
+
+There were 21 items in inventory at Northside FNMS.
+
+The inventory value was $1695.06
+
+0 items were damaged during tuning at Northside FNMS.
+
+3 new items were ordered by Northside FNMS on day 1
+
+4 items were bought by Northside FNMS.
+
+5 items were sold by Northside FNMS.
+
+5 items were damaged during cleaning at Northside FNMS.
+
+Daphne left Northside FNMS for the day.

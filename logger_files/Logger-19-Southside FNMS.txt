@@ -1,0 +1,20 @@
+
+Clerk Scooby arrived at Southside FNMS on day 19.
+
+Clerk Scooby counted $2102.19 in the register.
+
+There were 21 items in inventory at Southside FNMS.
+
+The inventory value was $778.91
+
+0 items were damaged during tuning at Southside FNMS.
+
+3 new items were ordered by Southside FNMS on day 19
+
+3 items were bought by Southside FNMS.
+
+2 items were sold by Southside FNMS.
+
+9 items were damaged during cleaning at Southside FNMS.
+
+Scooby left Southside FNMS for the day.
